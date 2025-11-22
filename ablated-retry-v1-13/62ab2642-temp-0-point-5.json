@@ -1,0 +1,476 @@
+[
+  {
+    "attempt_4": {
+      "answer": [
+        [
+          7,
+          5,
+          0,
+          0,
+          0,
+          0,
+          0,
+          5,
+          0,
+          0,
+          5,
+          8
+        ],
+        [
+          7,
+          5,
+          0,
+          0,
+          0,
+          5,
+          5,
+          5,
+          0,
+          5,
+          5,
+          8
+        ],
+        [
+          5,
+          5,
+          5,
+          0,
+          0,
+          5,
+          0,
+          5,
+          5,
+          5,
+          8,
+          8
+        ],
+        [
+          0,
+          0,
+          5,
+          5,
+          5,
+          5,
+          0,
+          5,
+          0,
+          5,
+          5,
+          8
+        ],
+        [
+          0,
+          0,
+          0,
+          5,
+          0,
+          0,
+          0,
+          5,
+          0,
+          0,
+          5,
+          8
+        ]
+      ],
+      "metadata": {
+        "model": "gemini-3-pro-preview",
+        "provider": "gemini",
+        "start_timestamp": "2025-11-22T10:38:33.768743+00:00",
+        "end_timestamp": "2025-11-22T10:41:36.678267+00:00",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "user",
+              "content": "You are participating in a puzzle solving competition. You are an expert at solving puzzles.\n\nBelow is a list of input and output pairs with a pattern. Your goal is to identify the pattern or transformation in the training examples that maps the input to the output, then apply that pattern to the test input to give a final output.\n\nRespond in the format of the training output examples\n\n--Training Examples--\n--Example 0-- \n\n INPUT: \n\n[[5, 0, 0, 5, 0], [5, 0, 0, 5, 0], [5, 0, 5, 5, 5], [5, 5, 5, 0, 0], [0, 0, 5, 0, 0], [0, 0, 5, 5, 5], [0, 0, 0, 5, 0], [5, 5, 5, 5, 0], [0, 5, 0, 0, 0], [0, 5, 0, 0, 0], [0, 5, 5, 5, 0], [0, 0, 0, 5, 0], [0, 5, 5, 5, 5], [5, 5, 0, 0, 0], [0, 5, 0, 0, 0]]\n\nOUTPUT: \n\n[[5, 0, 0, 5, 0], [5, 0, 0, 5, 0], [5, 0, 5, 5, 5], [5, 5, 5, 0, 0], [0, 0, 5, 0, 0], [0, 0, 5, 5, 5], [0, 0, 0, 5, 8], [5, 5, 5, 5, 8], [0, 5, 8, 8, 8], [0, 5, 8, 8, 8], [0, 5, 5, 5, 8], [0, 0, 0, 5, 8], [0, 5, 5, 5, 5], [5, 5, 0, 0, 0], [7, 5, 0, 0, 0]]\n\n--Example 1-- \n\n INPUT: \n\n[[0, 0, 5, 0, 0, 5, 0, 0, 0], [0, 0, 5, 5, 5, 5, 0, 0, 0], [5, 5, 5, 0, 0, 0, 0, 0, 0], [0, 5, 0, 0, 0, 0, 0, 0, 0], [0, 5, 0, 0, 0, 5, 5, 5, 5], [0, 5, 5, 5, 5, 5, 0, 0, 0], [5, 5, 0, 0, 0, 5, 5, 5, 5], [0, 0, 0, 0, 0, 5, 0, 0, 0], [5, 5, 5, 5, 5, 5, 0, 0, 0], [0, 0, 0, 0, 0, 5, 0, 0, 0]]\n\nOUTPUT: \n\n[[0, 0, 5, 7, 7, 5, 8, 8, 8], [0, 0, 5, 5, 5, 5, 8, 8, 8], [5, 5, 5, 8, 8, 8, 8, 8, 8], [0, 5, 8, 8, 8, 8, 8, 8, 8], [0, 5, 8, 8, 8, 5, 5, 5, 5], [0, 5, 5, 5, 5, 5, 0, 0, 0], [5, 5, 0, 0, 0, 5, 5, 5, 5], [0, 0, 0, 0, 0, 5, 0, 0, 0], [5, 5, 5, 5, 5, 5, 0, 0, 0], [0, 0, 0, 0, 0, 5, 0, 0, 0]]\n\n--Example 2-- \n\n INPUT: \n\n[[0, 5, 0, 0, 5, 0, 0, 0, 0, 5, 0, 0], [0, 5, 0, 0, 5, 5, 5, 0, 0, 5, 0, 0], [0, 5, 5, 5, 5, 0, 5, 0, 0, 5, 0, 0], [0, 0, 5, 0, 0, 0, 5, 5, 5, 5, 0, 0], [5, 5, 5, 0, 0, 0, 5, 0, 0, 5, 5, 5], [0, 0, 0, 0, 0, 0, 5, 0, 0, 0, 0, 0], [0, 0, 0, 5, 5, 5, 5, 0, 0, 0, 0, 0], [5, 5, 5, 5, 0, 0, 5, 0, 0, 0, 0, 0], [0, 0, 0, 5, 0, 0, 5, 5, 5, 0, 0, 0], [0, 0, 0, 5, 0, 0, 0, 0, 5, 0, 0, 0]]\n\nOUTPUT: \n\n[[0, 5, 7, 7, 5, 0, 0, 0, 0, 5, 0, 0], [0, 5, 7, 7, 5, 5, 5, 0, 0, 5, 0, 0], [0, 5, 5, 5, 5, 0, 5, 0, 0, 5, 0, 0], [0, 0, 5, 0, 0, 0, 5, 5, 5, 5, 0, 0], [5, 5, 5, 0, 0, 0, 5, 8, 8, 5, 5, 5], [0, 0, 0, 0, 0, 0, 5, 8, 8, 8, 8, 8], [0, 0, 0, 5, 5, 5, 5, 8, 8, 8, 8, 8], [5, 5, 5, 5, 0, 0, 5, 8, 8, 8, 8, 8], [0, 0, 0, 5, 0, 0, 5, 5, 5, 8, 8, 8], [0, 0, 0, 5, 0, 0, 0, 0, 5, 8, 8, 8]]\n\n\n--End of Training Examples--\n\n--Test Input--\n[[0, 5, 0, 0, 0, 0, 0, 5, 0, 0, 5, 0], [0, 5, 0, 0, 0, 5, 5, 5, 0, 5, 5, 0], [5, 5, 5, 0, 0, 5, 0, 5, 5, 5, 0, 0], [0, 0, 5, 5, 5, 5, 0, 5, 0, 5, 5, 0], [0, 0, 0, 5, 0, 0, 0, 5, 0, 0, 5, 0]]\n--End of Test Input--\n\nYour response:"
+            }
+          },
+          {
+            "index": 1,
+            "message": {
+              "role": "assistant",
+              "content": "Based on the analysis of the training examples, the transformation rules are as follows:\n\n1.  **Identify Connected Components of 0s**: The puzzle involves identifying connected regions of background pixels (0) and determining if they should change color based on their shape and enclosure.\n\n2.  **Rule for Color 8 (Azure)**:\n    *   A connected component of 0s becomes 8 if it is **connected to the Right Edge** of the grid.\n    *   Additionally, for every row segment within this component, it must be **bounded by a 5 (Gray) on the immediate Left**.\n    *   The shape of the region does *not* need to be rectangular (as seen in Example 0).\n\n3.  **Rule for Color 7 (Orange)**:\n    *   A connected component of 0s becomes 7 if it is a **\"Pocket\"** connected to the **Left, Top, or Bottom Edge** (but not the Right Edge).\n    *   The component must be **bounded by 5s (Gray)** on the sides opposite to the open edges (e.g., if open to Top, bounded by 5 on Bottom).\n    *   **Crucial Condition**: The connected component must form a **Rectangle** (or a line of constant width). Irregular shapes (like the top region in Example 0) remain 0.\n\n**Application to Test Input:**\n\n*   **Region 1 (Top-Left)**: Pixels `(0,0)` and `(1,0)`.\n    *   This forms a **1x2 Rectangle**.\n    *   It is open to the **Left** and **Top** edges.\n    *   It is bounded by 5s on the **Right** (`(0,1)`, `(1,1)`) and **Bottom** (`(2,0)`).\n    *   Since it is a rectangular pocket connected to Left/Top edges, it turns **7**.\n\n*   **Region 2 (Right Strip)**: Pixels in the last column (column 11) and some in column 10.\n    *   Row 0: `(0,11)` is 0, left is 5. -> **8**.\n    *   Row 1: `(1,11)` is 0, left is 5. -> **8**.\n    *   Row 2: `(2,10)` and `(2,11)` are 0. `(2,9)` is 5. This segment connects to the Right Edge and is bounded by 5 on the Left. -> **8**.\n    *   Row 3: `(3,11)` is 0, left is 5. -> **8**.\n    *   Row 4: `(4,11)` is 0, left is 5. -> **8**.\n\n*   **Other Regions**:\n    *   **Left Region** (rows 3-4, cols 0-2): Shape is irregular (L-shape). Remains **0**.\n    *   **Top Region** (rows 0-2, cols 2-6): Shape is irregular (inverted pyramid). Remains **0**.\n    *   **Small Top-Right Region** (rows 0-1, cols 8-9): Shape is irregular. Remains **0**.\n    *   **Bottom Center Region** (rows 2-4, cols 4-9): Shape is irregular (inverted T). Remains **0**.\n\n**Final Output Construction:**\n\n[[7, 5, 0, 0, 0, 0, 0, 5, 0, 0, 5, 8], [7, 5, 0, 0, 0, 5, 5, 5, 0, 5, 5, 8], [5, 5, 5, 0, 0, 5, 0, 5, 5, 5, 8, 8], [0, 0, 5, 5, 5, 5, 0, 5, 0, 5, 5, 8], [0, 0, 0, 5, 0, 0, 0, 5, 0, 0, 5, 8]]"
+            }
+          }
+        ],
+        "reasoning_summary": null,
+        "kwargs": {
+          "temperature": 0.5,
+          "max_output_tokens": 65536
+        },
+        "usage": {
+          "prompt_tokens": 2047,
+          "completion_tokens": 949,
+          "total_tokens": 24986,
+          "completion_tokens_details": {
+            "reasoning_tokens": 21990,
+            "accepted_prediction_tokens": 949,
+            "rejected_prediction_tokens": 0
+          }
+        },
+        "cost": {},
+        "task_id": "62ab2642",
+        "pair_index": 0,
+        "test_id": "original-prompt-ablations",
+        "raw_text": "Based on the analysis of the training examples, the transformation rules are as follows:\n\n1.  **Identify Connected Components of 0s**: The puzzle involves identifying connected regions of background pixels (0) and determining if they should change color based on their shape and enclosure.\n\n2.  **Rule for Color 8 (Azure)**:\n    *   A connected component of 0s becomes 8 if it is **connected to the Right Edge** of the grid.\n    *   Additionally, for every row segment within this component, it must be **bounded by a 5 (Gray) on the immediate Left**.\n    *   The shape of the region does *not* need to be rectangular (as seen in Example 0).\n\n3.  **Rule for Color 7 (Orange)**:\n    *   A connected component of 0s becomes 7 if it is a **\"Pocket\"** connected to the **Left, Top, or Bottom Edge** (but not the Right Edge).\n    *   The component must be **bounded by 5s (Gray)** on the sides opposite to the open edges (e.g., if open to Top, bounded by 5 on Bottom).\n    *   **Crucial Condition**: The connected component must form a **Rectangle** (or a line of constant width). Irregular shapes (like the top region in Example 0) remain 0.\n\n**Application to Test Input:**\n\n*   **Region 1 (Top-Left)**: Pixels `(0,0)` and `(1,0)`.\n    *   This forms a **1x2 Rectangle**.\n    *   It is open to the **Left** and **Top** edges.\n    *   It is bounded by 5s on the **Right** (`(0,1)`, `(1,1)`) and **Bottom** (`(2,0)`).\n    *   Since it is a rectangular pocket connected to Left/Top edges, it turns **7**.\n\n*   **Region 2 (Right Strip)**: Pixels in the last column (column 11) and some in column 10.\n    *   Row 0: `(0,11)` is 0, left is 5. -> **8**.\n    *   Row 1: `(1,11)` is 0, left is 5. -> **8**.\n    *   Row 2: `(2,10)` and `(2,11)` are 0. `(2,9)` is 5. This segment connects to the Right Edge and is bounded by 5 on the Left. -> **8**.\n    *   Row 3: `(3,11)` is 0, left is 5. -> **8**.\n    *   Row 4: `(4,11)` is 0, left is 5. -> **8**.\n\n*   **Other Regions**:\n    *   **Left Region** (rows 3-4, cols 0-2): Shape is irregular (L-shape). Remains **0**.\n    *   **Top Region** (rows 0-2, cols 2-6): Shape is irregular (inverted pyramid). Remains **0**.\n    *   **Small Top-Right Region** (rows 0-1, cols 8-9): Shape is irregular. Remains **0**.\n    *   **Bottom Center Region** (rows 2-4, cols 4-9): Shape is irregular (inverted T). Remains **0**.\n\n**Final Output Construction:**\n\n[[7, 5, 0, 0, 0, 0, 0, 5, 0, 0, 5, 8], [7, 5, 0, 0, 0, 5, 5, 5, 0, 5, 5, 8], [5, 5, 5, 0, 0, 5, 0, 5, 5, 5, 8, 8], [0, 0, 5, 5, 5, 5, 0, 5, 0, 5, 5, 8], [0, 0, 0, 5, 0, 0, 0, 5, 0, 0, 5, 8]]",
+        "finish_reason": "STOP"
+      },
+      "correct": false
+    },
+    "attempt_2": {
+      "answer": [
+        [
+          7,
+          5,
+          7,
+          7,
+          7,
+          7,
+          7,
+          5,
+          7,
+          7,
+          5,
+          8
+        ],
+        [
+          7,
+          5,
+          7,
+          7,
+          7,
+          5,
+          5,
+          5,
+          7,
+          5,
+          5,
+          8
+        ],
+        [
+          5,
+          5,
+          5,
+          7,
+          7,
+          5,
+          7,
+          5,
+          5,
+          5,
+          8,
+          8
+        ],
+        [
+          7,
+          7,
+          5,
+          5,
+          5,
+          5,
+          7,
+          5,
+          7,
+          5,
+          5,
+          8
+        ],
+        [
+          7,
+          7,
+          7,
+          5,
+          7,
+          7,
+          7,
+          5,
+          7,
+          7,
+          5,
+          8
+        ]
+      ],
+      "metadata": {
+        "model": "gemini-3-pro-preview",
+        "provider": "gemini",
+        "start_timestamp": "2025-11-22T10:38:33.773220+00:00",
+        "end_timestamp": "2025-11-22T10:42:02.932642+00:00",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "user",
+              "content": "You are participating in a puzzle solving competition. You are an expert at solving puzzles.\n\nBelow is a list of input and output pairs with a pattern. Your goal is to identify the pattern or transformation in the training examples that maps the input to the output, then apply that pattern to the test input to give a final output.\n\nRespond in the format of the training output examples\n\n--Training Examples--\n--Example 0-- \n\n INPUT: \n\n[[5, 0, 0, 5, 0], [5, 0, 0, 5, 0], [5, 0, 5, 5, 5], [5, 5, 5, 0, 0], [0, 0, 5, 0, 0], [0, 0, 5, 5, 5], [0, 0, 0, 5, 0], [5, 5, 5, 5, 0], [0, 5, 0, 0, 0], [0, 5, 0, 0, 0], [0, 5, 5, 5, 0], [0, 0, 0, 5, 0], [0, 5, 5, 5, 5], [5, 5, 0, 0, 0], [0, 5, 0, 0, 0]]\n\nOUTPUT: \n\n[[5, 0, 0, 5, 0], [5, 0, 0, 5, 0], [5, 0, 5, 5, 5], [5, 5, 5, 0, 0], [0, 0, 5, 0, 0], [0, 0, 5, 5, 5], [0, 0, 0, 5, 8], [5, 5, 5, 5, 8], [0, 5, 8, 8, 8], [0, 5, 8, 8, 8], [0, 5, 5, 5, 8], [0, 0, 0, 5, 8], [0, 5, 5, 5, 5], [5, 5, 0, 0, 0], [7, 5, 0, 0, 0]]\n\n--Example 1-- \n\n INPUT: \n\n[[0, 0, 5, 0, 0, 5, 0, 0, 0], [0, 0, 5, 5, 5, 5, 0, 0, 0], [5, 5, 5, 0, 0, 0, 0, 0, 0], [0, 5, 0, 0, 0, 0, 0, 0, 0], [0, 5, 0, 0, 0, 5, 5, 5, 5], [0, 5, 5, 5, 5, 5, 0, 0, 0], [5, 5, 0, 0, 0, 5, 5, 5, 5], [0, 0, 0, 0, 0, 5, 0, 0, 0], [5, 5, 5, 5, 5, 5, 0, 0, 0], [0, 0, 0, 0, 0, 5, 0, 0, 0]]\n\nOUTPUT: \n\n[[0, 0, 5, 7, 7, 5, 8, 8, 8], [0, 0, 5, 5, 5, 5, 8, 8, 8], [5, 5, 5, 8, 8, 8, 8, 8, 8], [0, 5, 8, 8, 8, 8, 8, 8, 8], [0, 5, 8, 8, 8, 5, 5, 5, 5], [0, 5, 5, 5, 5, 5, 0, 0, 0], [5, 5, 0, 0, 0, 5, 5, 5, 5], [0, 0, 0, 0, 0, 5, 0, 0, 0], [5, 5, 5, 5, 5, 5, 0, 0, 0], [0, 0, 0, 0, 0, 5, 0, 0, 0]]\n\n--Example 2-- \n\n INPUT: \n\n[[0, 5, 0, 0, 5, 0, 0, 0, 0, 5, 0, 0], [0, 5, 0, 0, 5, 5, 5, 0, 0, 5, 0, 0], [0, 5, 5, 5, 5, 0, 5, 0, 0, 5, 0, 0], [0, 0, 5, 0, 0, 0, 5, 5, 5, 5, 0, 0], [5, 5, 5, 0, 0, 0, 5, 0, 0, 5, 5, 5], [0, 0, 0, 0, 0, 0, 5, 0, 0, 0, 0, 0], [0, 0, 0, 5, 5, 5, 5, 0, 0, 0, 0, 0], [5, 5, 5, 5, 0, 0, 5, 0, 0, 0, 0, 0], [0, 0, 0, 5, 0, 0, 5, 5, 5, 0, 0, 0], [0, 0, 0, 5, 0, 0, 0, 0, 5, 0, 0, 0]]\n\nOUTPUT: \n\n[[0, 5, 7, 7, 5, 0, 0, 0, 0, 5, 0, 0], [0, 5, 7, 7, 5, 5, 5, 0, 0, 5, 0, 0], [0, 5, 5, 5, 5, 0, 5, 0, 0, 5, 0, 0], [0, 0, 5, 0, 0, 0, 5, 5, 5, 5, 0, 0], [5, 5, 5, 0, 0, 0, 5, 8, 8, 5, 5, 5], [0, 0, 0, 0, 0, 0, 5, 8, 8, 8, 8, 8], [0, 0, 0, 5, 5, 5, 5, 8, 8, 8, 8, 8], [5, 5, 5, 5, 0, 0, 5, 8, 8, 8, 8, 8], [0, 0, 0, 5, 0, 0, 5, 5, 5, 8, 8, 8], [0, 0, 0, 5, 0, 0, 0, 0, 5, 8, 8, 8]]\n\n\n--End of Training Examples--\n\n--Test Input--\n[[0, 5, 0, 0, 0, 0, 0, 5, 0, 0, 5, 0], [0, 5, 0, 0, 0, 5, 5, 5, 0, 5, 5, 0], [5, 5, 5, 0, 0, 5, 0, 5, 5, 5, 0, 0], [0, 0, 5, 5, 5, 5, 0, 5, 0, 5, 5, 0], [0, 0, 0, 5, 0, 0, 0, 5, 0, 0, 5, 0]]\n--End of Test Input--\n\nYour response:"
+            }
+          },
+          {
+            "index": 1,
+            "message": {
+              "role": "assistant",
+              "content": "Based on the analysis of the training examples, the pattern is as follows:\n\n1.  **Identify Connected Regions:** The input grid contains shapes formed by gray pixels (`5`) and background regions of black pixels (`0`). We identify connected components of `0`s.\n2.  **Determine Openness:** For each connected region of `0`s, we check which edges of the grid it is \"open\" to (i.e., can reach the edge without crossing a `5`).\n3.  **Apply Color Rules:**\n    *   **Azure (`8`):** If a region is open to the **Right** edge of the grid, it is filled with `8`. This is seen in Example 0 (rows 6-11), Example 1 (right side), and Example 2 (bottom-right).\n    *   **Orange (`7`):** If a region is open to the **Top**, **Left**, or **Bottom** edges (but *not* the Right edge), it is filled with `7`.\n        *   Open to Top: Example 1 (top middle), Example 2 (top left).\n        *   Open to Left/Bottom: Example 0 (bottom left corner).\n    *   **Exceptions/Refinements:**\n        *   Regions that are fully enclosed by `5`s (no access to edges) would likely remain `0` (though none appear in the examples).\n        *   There is a specific case in Example 0 where a top-left region remains `0`, but in Examples 1 and 2, similar \"cup\" shapes are filled with `7`. Given the prevalence of filling in the other examples, we assume the rule is to fill \"cups\" or \"bays\".\n\n**Applying to Test Input:**\n\n*   **Component A (Top Center):** Pixels at `(0,2-6), (1,2-4), (2,3-4)`. Bounded by `5`s on Left, Right, and Bottom. Open to **Top**. -> **Fill with `7`**.\n*   **Component B (Top Left Corner):** Pixels at `(0,0), (1,0)`. Bounded by `5`s on Right and Bottom. Open to **Top** and **Left**. -> **Fill with `7`**.\n*   **Component C (Top Right):** Pixels at `(0,8-9), (1,8)`. Bounded by `5`s on Left, Right, and Bottom. Open to **Top**. -> **Fill with `7`**.\n*   **Component D (Right Edge):** Pixels at `(0-4, 11)`. This strip connects to a small pocket at `(2,10)`.\n    *   Pocket at `(2,10)` is bounded by `5`s on Left, Top, and Bottom. Open to **Right**. -> **Fill with `8`**.\n    *   Since the strip `(0-4, 11)` is connected to this pocket and is open to the Right edge, the fill spreads. -> **Fill with `8`**.\n*   **Component E (Bottom Center):**\n    *   Left part `(2,6), (3,6), (4,4-6)`: Bounded by `5`s on Top, Left, Right. Open to **Bottom**. -> **Fill with `7`**.\n    *   Right part `(3,8), (4,8-9)`: Bounded by `5`s on Top, Left, Right. Open to **Bottom**. -> **Fill with `7`**.\n*   **Component F (Bottom Left Corner):** Pixels at `(3,0-1), (4,0-2)`. Bounded by `5`s on Top and Right. Open to **Left** and **Bottom**. This matches the corner case in Example 0. -> **Fill with `7`**.\n\n**Final Output Grid Construction:**\n\n*   **Row 0:** `[7, 5, 7, 7, 7, 7, 7, 5, 7, 7, 5, 8]`\n*   **Row 1:** `[7, 5, 7, 7, 7, 5, 5, 5, 7, 5, 5, 8]`\n*   **Row 2:** `[5, 5, 5, 7, 7, 5, 7, 5, 5, 5, 8, 8]`\n*   **Row 3:** `[7, 7, 5, 5, 5, 5, 7, 5, 7, 5, 5, 8]`\n*   **Row 4:** `[7, 7, 7, 5, 7, 7, 7, 5, 7, 7, 5, 8]`\n\n[[7, 5, 7, 7, 7, 7, 7, 5, 7, 7, 5, 8], [7, 5, 7, 7, 7, 5, 5, 5, 7, 5, 5, 8], [5, 5, 5, 7, 7, 5, 7, 5, 5, 5, 8, 8], [7, 7, 5, 5, 5, 5, 7, 5, 7, 5, 5, 8], [7, 7, 7, 5, 7, 7, 7, 5, 7, 7, 5, 8]]"
+            }
+          }
+        ],
+        "reasoning_summary": null,
+        "kwargs": {
+          "temperature": 0.5,
+          "max_output_tokens": 65536
+        },
+        "usage": {
+          "prompt_tokens": 2047,
+          "completion_tokens": 1274,
+          "total_tokens": 27890,
+          "completion_tokens_details": {
+            "reasoning_tokens": 24569,
+            "accepted_prediction_tokens": 1274,
+            "rejected_prediction_tokens": 0
+          }
+        },
+        "cost": {},
+        "task_id": "62ab2642",
+        "pair_index": 0,
+        "test_id": "original-prompt-ablations",
+        "raw_text": "Based on the analysis of the training examples, the pattern is as follows:\n\n1.  **Identify Connected Regions:** The input grid contains shapes formed by gray pixels (`5`) and background regions of black pixels (`0`). We identify connected components of `0`s.\n2.  **Determine Openness:** For each connected region of `0`s, we check which edges of the grid it is \"open\" to (i.e., can reach the edge without crossing a `5`).\n3.  **Apply Color Rules:**\n    *   **Azure (`8`):** If a region is open to the **Right** edge of the grid, it is filled with `8`. This is seen in Example 0 (rows 6-11), Example 1 (right side), and Example 2 (bottom-right).\n    *   **Orange (`7`):** If a region is open to the **Top**, **Left**, or **Bottom** edges (but *not* the Right edge), it is filled with `7`.\n        *   Open to Top: Example 1 (top middle), Example 2 (top left).\n        *   Open to Left/Bottom: Example 0 (bottom left corner).\n    *   **Exceptions/Refinements:**\n        *   Regions that are fully enclosed by `5`s (no access to edges) would likely remain `0` (though none appear in the examples).\n        *   There is a specific case in Example 0 where a top-left region remains `0`, but in Examples 1 and 2, similar \"cup\" shapes are filled with `7`. Given the prevalence of filling in the other examples, we assume the rule is to fill \"cups\" or \"bays\".\n\n**Applying to Test Input:**\n\n*   **Component A (Top Center):** Pixels at `(0,2-6), (1,2-4), (2,3-4)`. Bounded by `5`s on Left, Right, and Bottom. Open to **Top**. -> **Fill with `7`**.\n*   **Component B (Top Left Corner):** Pixels at `(0,0), (1,0)`. Bounded by `5`s on Right and Bottom. Open to **Top** and **Left**. -> **Fill with `7`**.\n*   **Component C (Top Right):** Pixels at `(0,8-9), (1,8)`. Bounded by `5`s on Left, Right, and Bottom. Open to **Top**. -> **Fill with `7`**.\n*   **Component D (Right Edge):** Pixels at `(0-4, 11)`. This strip connects to a small pocket at `(2,10)`.\n    *   Pocket at `(2,10)` is bounded by `5`s on Left, Top, and Bottom. Open to **Right**. -> **Fill with `8`**.\n    *   Since the strip `(0-4, 11)` is connected to this pocket and is open to the Right edge, the fill spreads. -> **Fill with `8`**.\n*   **Component E (Bottom Center):**\n    *   Left part `(2,6), (3,6), (4,4-6)`: Bounded by `5`s on Top, Left, Right. Open to **Bottom**. -> **Fill with `7`**.\n    *   Right part `(3,8), (4,8-9)`: Bounded by `5`s on Top, Left, Right. Open to **Bottom**. -> **Fill with `7`**.\n*   **Component F (Bottom Left Corner):** Pixels at `(3,0-1), (4,0-2)`. Bounded by `5`s on Top and Right. Open to **Left** and **Bottom**. This matches the corner case in Example 0. -> **Fill with `7`**.\n\n**Final Output Grid Construction:**\n\n*   **Row 0:** `[7, 5, 7, 7, 7, 7, 7, 5, 7, 7, 5, 8]`\n*   **Row 1:** `[7, 5, 7, 7, 7, 5, 5, 5, 7, 5, 5, 8]`\n*   **Row 2:** `[5, 5, 5, 7, 7, 5, 7, 5, 5, 5, 8, 8]`\n*   **Row 3:** `[7, 7, 5, 5, 5, 5, 7, 5, 7, 5, 5, 8]`\n*   **Row 4:** `[7, 7, 7, 5, 7, 7, 7, 5, 7, 7, 5, 8]`\n\n[[7, 5, 7, 7, 7, 7, 7, 5, 7, 7, 5, 8], [7, 5, 7, 7, 7, 5, 5, 5, 7, 5, 5, 8], [5, 5, 5, 7, 7, 5, 7, 5, 5, 5, 8, 8], [7, 7, 5, 5, 5, 5, 7, 5, 7, 5, 5, 8], [7, 7, 7, 5, 7, 7, 7, 5, 7, 7, 5, 8]]",
+        "finish_reason": "STOP"
+      },
+      "correct": false
+    },
+    "attempt_1": {
+      "answer": [
+        [
+          0,
+          5,
+          7,
+          7,
+          7,
+          7,
+          7,
+          5,
+          7,
+          7,
+          5,
+          8
+        ],
+        [
+          0,
+          5,
+          7,
+          7,
+          7,
+          5,
+          5,
+          5,
+          7,
+          5,
+          5,
+          8
+        ],
+        [
+          5,
+          5,
+          5,
+          7,
+          7,
+          5,
+          8,
+          5,
+          5,
+          5,
+          8,
+          8
+        ],
+        [
+          7,
+          7,
+          5,
+          5,
+          5,
+          5,
+          8,
+          5,
+          8,
+          5,
+          5,
+          8
+        ],
+        [
+          7,
+          7,
+          7,
+          5,
+          8,
+          8,
+          8,
+          5,
+          8,
+          8,
+          5,
+          8
+        ]
+      ],
+      "metadata": {
+        "model": "gemini-3-pro-preview",
+        "provider": "gemini",
+        "start_timestamp": "2025-11-22T10:38:33.770324+00:00",
+        "end_timestamp": "2025-11-22T10:44:50.176269+00:00",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "user",
+              "content": "You are participating in a puzzle solving competition. You are an expert at solving puzzles.\n\nBelow is a list of input and output pairs with a pattern. Your goal is to identify the pattern or transformation in the training examples that maps the input to the output, then apply that pattern to the test input to give a final output.\n\nRespond in the format of the training output examples\n\n--Training Examples--\n--Example 0-- \n\n INPUT: \n\n[[5, 0, 0, 5, 0], [5, 0, 0, 5, 0], [5, 0, 5, 5, 5], [5, 5, 5, 0, 0], [0, 0, 5, 0, 0], [0, 0, 5, 5, 5], [0, 0, 0, 5, 0], [5, 5, 5, 5, 0], [0, 5, 0, 0, 0], [0, 5, 0, 0, 0], [0, 5, 5, 5, 0], [0, 0, 0, 5, 0], [0, 5, 5, 5, 5], [5, 5, 0, 0, 0], [0, 5, 0, 0, 0]]\n\nOUTPUT: \n\n[[5, 0, 0, 5, 0], [5, 0, 0, 5, 0], [5, 0, 5, 5, 5], [5, 5, 5, 0, 0], [0, 0, 5, 0, 0], [0, 0, 5, 5, 5], [0, 0, 0, 5, 8], [5, 5, 5, 5, 8], [0, 5, 8, 8, 8], [0, 5, 8, 8, 8], [0, 5, 5, 5, 8], [0, 0, 0, 5, 8], [0, 5, 5, 5, 5], [5, 5, 0, 0, 0], [7, 5, 0, 0, 0]]\n\n--Example 1-- \n\n INPUT: \n\n[[0, 0, 5, 0, 0, 5, 0, 0, 0], [0, 0, 5, 5, 5, 5, 0, 0, 0], [5, 5, 5, 0, 0, 0, 0, 0, 0], [0, 5, 0, 0, 0, 0, 0, 0, 0], [0, 5, 0, 0, 0, 5, 5, 5, 5], [0, 5, 5, 5, 5, 5, 0, 0, 0], [5, 5, 0, 0, 0, 5, 5, 5, 5], [0, 0, 0, 0, 0, 5, 0, 0, 0], [5, 5, 5, 5, 5, 5, 0, 0, 0], [0, 0, 0, 0, 0, 5, 0, 0, 0]]\n\nOUTPUT: \n\n[[0, 0, 5, 7, 7, 5, 8, 8, 8], [0, 0, 5, 5, 5, 5, 8, 8, 8], [5, 5, 5, 8, 8, 8, 8, 8, 8], [0, 5, 8, 8, 8, 8, 8, 8, 8], [0, 5, 8, 8, 8, 5, 5, 5, 5], [0, 5, 5, 5, 5, 5, 0, 0, 0], [5, 5, 0, 0, 0, 5, 5, 5, 5], [0, 0, 0, 0, 0, 5, 0, 0, 0], [5, 5, 5, 5, 5, 5, 0, 0, 0], [0, 0, 0, 0, 0, 5, 0, 0, 0]]\n\n--Example 2-- \n\n INPUT: \n\n[[0, 5, 0, 0, 5, 0, 0, 0, 0, 5, 0, 0], [0, 5, 0, 0, 5, 5, 5, 0, 0, 5, 0, 0], [0, 5, 5, 5, 5, 0, 5, 0, 0, 5, 0, 0], [0, 0, 5, 0, 0, 0, 5, 5, 5, 5, 0, 0], [5, 5, 5, 0, 0, 0, 5, 0, 0, 5, 5, 5], [0, 0, 0, 0, 0, 0, 5, 0, 0, 0, 0, 0], [0, 0, 0, 5, 5, 5, 5, 0, 0, 0, 0, 0], [5, 5, 5, 5, 0, 0, 5, 0, 0, 0, 0, 0], [0, 0, 0, 5, 0, 0, 5, 5, 5, 0, 0, 0], [0, 0, 0, 5, 0, 0, 0, 0, 5, 0, 0, 0]]\n\nOUTPUT: \n\n[[0, 5, 7, 7, 5, 0, 0, 0, 0, 5, 0, 0], [0, 5, 7, 7, 5, 5, 5, 0, 0, 5, 0, 0], [0, 5, 5, 5, 5, 0, 5, 0, 0, 5, 0, 0], [0, 0, 5, 0, 0, 0, 5, 5, 5, 5, 0, 0], [5, 5, 5, 0, 0, 0, 5, 8, 8, 5, 5, 5], [0, 0, 0, 0, 0, 0, 5, 8, 8, 8, 8, 8], [0, 0, 0, 5, 5, 5, 5, 8, 8, 8, 8, 8], [5, 5, 5, 5, 0, 0, 5, 8, 8, 8, 8, 8], [0, 0, 0, 5, 0, 0, 5, 5, 5, 8, 8, 8], [0, 0, 0, 5, 0, 0, 0, 0, 5, 8, 8, 8]]\n\n\n--End of Training Examples--\n\n--Test Input--\n[[0, 5, 0, 0, 0, 0, 0, 5, 0, 0, 5, 0], [0, 5, 0, 0, 0, 5, 5, 5, 0, 5, 5, 0], [5, 5, 5, 0, 0, 5, 0, 5, 5, 5, 0, 0], [0, 0, 5, 5, 5, 5, 0, 5, 0, 5, 5, 0], [0, 0, 0, 5, 0, 0, 0, 5, 0, 0, 5, 0]]\n--End of Test Input--\n\nYour response:"
+            }
+          },
+          {
+            "index": 1,
+            "message": {
+              "role": "assistant",
+              "content": "Based on the analysis of the training examples, the pattern for transforming the input grid to the output grid is as follows:\n\n1.  **Identify Connected Components:** The grid consists of background pixels (0) and wall pixels (5). We identify connected components of 0s (using 4-connectivity).\n2.  **Analyze Openings:** For each connected component of 0s, we determine which edges of the grid it touches (Top, Bottom, Left, Right) and which sides are bounded by 5s.\n3.  **Apply Filling Rules:**\n    *   **Fill with 7 (Orange):** If the component is \"open\" to the **Top** or **Left**. Specifically:\n        *   Regions open to the **Top** edge (and bounded by 5s on other sides) become 7.\n        *   Regions open to the **Left** edge (and bounded by 5s on Top/Right) become 7.\n        *   *Exception:* Top-Left corners (open to both Top and Left) remain 0.\n    *   **Fill with 8 (Azure):** If the component is \"open\" to the **Bottom** or **Right**. Specifically:\n        *   Regions open to the **Right** edge become 8.\n        *   Regions open to the **Bottom** edge become 8.\n    *   **Conflict Resolution:**\n        *   If a region is open to both Top and Right (e.g., Example 1), it tends to become 8 (Right dominates).\n        *   If a region is open to both Left and Bottom (e.g., Example 0), it becomes 7 (Left dominates).\n        *   However, pure Top-Left corners remain 0.\n\n**Application to Test Input:**\n\n*   **Region A (Top-Left, (0,0)):** Touches Top and Left. Similar to Example 0 Top-Left. -> **0**.\n*   **Region B (Top-Middle, cols 2-4):** Touches Top edge. Bounded by 5s on Left, Right, Bottom. -> **7**.\n*   **Region E (Top-Rightish, cols 8-9):** Touches Top edge. Bounded by 5s on Left, Right, Bottom. -> **7**.\n*   **Region G (Bottom-Left, cols 0-2):** Touches Left and Bottom edges. Similar to Example 0 Bottom-Left. -> **7**.\n*   **Region D1 (Bottom-Middle, cols 4-6):** Touches Bottom edge. Bounded by 5s on Top, Left, Right. -> **8**.\n*   **Region D2 (Bottom-Rightish, cols 8-9):** Touches Bottom edge. Bounded by 5s on Top, Left, Right. -> **8**.\n*   **Region F (Right Edge, col 11):** Touches Right edge. -> **8**.\n\n**Constructing the Output:**\n\n*   **Row 0:** `0 5 7 7 7 7 7 5 7 7 5 8`\n*   **Row 1:** `0 5 7 7 7 5 5 5 7 5 5 8`\n*   **Row 2:** `5 5 5 7 7 5 8 5 5 5 8 8`\n*   **Row 3:** `7 7 5 5 5 5 8 5 8 5 5 8`\n*   **Row 4:** `7 7 7 5 8 8 8 5 8 8 5 8`\n\n[[0, 5, 7, 7, 7, 7, 7, 5, 7, 7, 5, 8], [0, 5, 7, 7, 7, 5, 5, 5, 7, 5, 5, 8], [5, 5, 5, 7, 7, 5, 8, 5, 5, 5, 8, 8], [7, 7, 5, 5, 5, 5, 8, 5, 8, 5, 5, 8], [7, 7, 7, 5, 8, 8, 8, 5, 8, 8, 5, 8]]"
+            }
+          }
+        ],
+        "reasoning_summary": null,
+        "kwargs": {
+          "temperature": 0.5,
+          "max_output_tokens": 65536
+        },
+        "usage": {
+          "prompt_tokens": 2047,
+          "completion_tokens": 999,
+          "total_tokens": 28003,
+          "completion_tokens_details": {
+            "reasoning_tokens": 24957,
+            "accepted_prediction_tokens": 999,
+            "rejected_prediction_tokens": 0
+          }
+        },
+        "cost": {},
+        "task_id": "62ab2642",
+        "pair_index": 0,
+        "test_id": "original-prompt-ablations",
+        "raw_text": "Based on the analysis of the training examples, the pattern for transforming the input grid to the output grid is as follows:\n\n1.  **Identify Connected Components:** The grid consists of background pixels (0) and wall pixels (5). We identify connected components of 0s (using 4-connectivity).\n2.  **Analyze Openings:** For each connected component of 0s, we determine which edges of the grid it touches (Top, Bottom, Left, Right) and which sides are bounded by 5s.\n3.  **Apply Filling Rules:**\n    *   **Fill with 7 (Orange):** If the component is \"open\" to the **Top** or **Left**. Specifically:\n        *   Regions open to the **Top** edge (and bounded by 5s on other sides) become 7.\n        *   Regions open to the **Left** edge (and bounded by 5s on Top/Right) become 7.\n        *   *Exception:* Top-Left corners (open to both Top and Left) remain 0.\n    *   **Fill with 8 (Azure):** If the component is \"open\" to the **Bottom** or **Right**. Specifically:\n        *   Regions open to the **Right** edge become 8.\n        *   Regions open to the **Bottom** edge become 8.\n    *   **Conflict Resolution:**\n        *   If a region is open to both Top and Right (e.g., Example 1), it tends to become 8 (Right dominates).\n        *   If a region is open to both Left and Bottom (e.g., Example 0), it becomes 7 (Left dominates).\n        *   However, pure Top-Left corners remain 0.\n\n**Application to Test Input:**\n\n*   **Region A (Top-Left, (0,0)):** Touches Top and Left. Similar to Example 0 Top-Left. -> **0**.\n*   **Region B (Top-Middle, cols 2-4):** Touches Top edge. Bounded by 5s on Left, Right, Bottom. -> **7**.\n*   **Region E (Top-Rightish, cols 8-9):** Touches Top edge. Bounded by 5s on Left, Right, Bottom. -> **7**.\n*   **Region G (Bottom-Left, cols 0-2):** Touches Left and Bottom edges. Similar to Example 0 Bottom-Left. -> **7**.\n*   **Region D1 (Bottom-Middle, cols 4-6):** Touches Bottom edge. Bounded by 5s on Top, Left, Right. -> **8**.\n*   **Region D2 (Bottom-Rightish, cols 8-9):** Touches Bottom edge. Bounded by 5s on Top, Left, Right. -> **8**.\n*   **Region F (Right Edge, col 11):** Touches Right edge. -> **8**.\n\n**Constructing the Output:**\n\n*   **Row 0:** `0 5 7 7 7 7 7 5 7 7 5 8`\n*   **Row 1:** `0 5 7 7 7 5 5 5 7 5 5 8`\n*   **Row 2:** `5 5 5 7 7 5 8 5 5 5 8 8`\n*   **Row 3:** `7 7 5 5 5 5 8 5 8 5 5 8`\n*   **Row 4:** `7 7 7 5 8 8 8 5 8 8 5 8`\n\n[[0, 5, 7, 7, 7, 7, 7, 5, 7, 7, 5, 8], [0, 5, 7, 7, 7, 5, 5, 5, 7, 5, 5, 8], [5, 5, 5, 7, 7, 5, 8, 5, 5, 5, 8, 8], [7, 7, 5, 5, 5, 5, 8, 5, 8, 5, 5, 8], [7, 7, 7, 5, 8, 8, 8, 5, 8, 8, 5, 8]]",
+        "finish_reason": "STOP"
+      },
+      "correct": false
+    },
+    "attempt_3": {
+      "answer": [
+        [
+          0,
+          5,
+          7,
+          7,
+          7,
+          7,
+          7,
+          5,
+          7,
+          7,
+          5,
+          8
+        ],
+        [
+          0,
+          5,
+          7,
+          7,
+          7,
+          5,
+          5,
+          5,
+          7,
+          5,
+          5,
+          8
+        ],
+        [
+          5,
+          5,
+          5,
+          7,
+          7,
+          5,
+          0,
+          5,
+          5,
+          5,
+          8,
+          8
+        ],
+        [
+          0,
+          0,
+          5,
+          5,
+          5,
+          5,
+          0,
+          5,
+          0,
+          5,
+          5,
+          8
+        ],
+        [
+          0,
+          0,
+          0,
+          5,
+          0,
+          0,
+          0,
+          5,
+          0,
+          0,
+          5,
+          8
+        ]
+      ],
+      "metadata": {
+        "model": "gemini-3-pro-preview",
+        "provider": "gemini",
+        "start_timestamp": "2025-11-22T10:38:33.771447+00:00",
+        "end_timestamp": "2025-11-22T10:44:58.688596+00:00",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "user",
+              "content": "You are participating in a puzzle solving competition. You are an expert at solving puzzles.\n\nBelow is a list of input and output pairs with a pattern. Your goal is to identify the pattern or transformation in the training examples that maps the input to the output, then apply that pattern to the test input to give a final output.\n\nRespond in the format of the training output examples\n\n--Training Examples--\n--Example 0-- \n\n INPUT: \n\n[[5, 0, 0, 5, 0], [5, 0, 0, 5, 0], [5, 0, 5, 5, 5], [5, 5, 5, 0, 0], [0, 0, 5, 0, 0], [0, 0, 5, 5, 5], [0, 0, 0, 5, 0], [5, 5, 5, 5, 0], [0, 5, 0, 0, 0], [0, 5, 0, 0, 0], [0, 5, 5, 5, 0], [0, 0, 0, 5, 0], [0, 5, 5, 5, 5], [5, 5, 0, 0, 0], [0, 5, 0, 0, 0]]\n\nOUTPUT: \n\n[[5, 0, 0, 5, 0], [5, 0, 0, 5, 0], [5, 0, 5, 5, 5], [5, 5, 5, 0, 0], [0, 0, 5, 0, 0], [0, 0, 5, 5, 5], [0, 0, 0, 5, 8], [5, 5, 5, 5, 8], [0, 5, 8, 8, 8], [0, 5, 8, 8, 8], [0, 5, 5, 5, 8], [0, 0, 0, 5, 8], [0, 5, 5, 5, 5], [5, 5, 0, 0, 0], [7, 5, 0, 0, 0]]\n\n--Example 1-- \n\n INPUT: \n\n[[0, 0, 5, 0, 0, 5, 0, 0, 0], [0, 0, 5, 5, 5, 5, 0, 0, 0], [5, 5, 5, 0, 0, 0, 0, 0, 0], [0, 5, 0, 0, 0, 0, 0, 0, 0], [0, 5, 0, 0, 0, 5, 5, 5, 5], [0, 5, 5, 5, 5, 5, 0, 0, 0], [5, 5, 0, 0, 0, 5, 5, 5, 5], [0, 0, 0, 0, 0, 5, 0, 0, 0], [5, 5, 5, 5, 5, 5, 0, 0, 0], [0, 0, 0, 0, 0, 5, 0, 0, 0]]\n\nOUTPUT: \n\n[[0, 0, 5, 7, 7, 5, 8, 8, 8], [0, 0, 5, 5, 5, 5, 8, 8, 8], [5, 5, 5, 8, 8, 8, 8, 8, 8], [0, 5, 8, 8, 8, 8, 8, 8, 8], [0, 5, 8, 8, 8, 5, 5, 5, 5], [0, 5, 5, 5, 5, 5, 0, 0, 0], [5, 5, 0, 0, 0, 5, 5, 5, 5], [0, 0, 0, 0, 0, 5, 0, 0, 0], [5, 5, 5, 5, 5, 5, 0, 0, 0], [0, 0, 0, 0, 0, 5, 0, 0, 0]]\n\n--Example 2-- \n\n INPUT: \n\n[[0, 5, 0, 0, 5, 0, 0, 0, 0, 5, 0, 0], [0, 5, 0, 0, 5, 5, 5, 0, 0, 5, 0, 0], [0, 5, 5, 5, 5, 0, 5, 0, 0, 5, 0, 0], [0, 0, 5, 0, 0, 0, 5, 5, 5, 5, 0, 0], [5, 5, 5, 0, 0, 0, 5, 0, 0, 5, 5, 5], [0, 0, 0, 0, 0, 0, 5, 0, 0, 0, 0, 0], [0, 0, 0, 5, 5, 5, 5, 0, 0, 0, 0, 0], [5, 5, 5, 5, 0, 0, 5, 0, 0, 0, 0, 0], [0, 0, 0, 5, 0, 0, 5, 5, 5, 0, 0, 0], [0, 0, 0, 5, 0, 0, 0, 0, 5, 0, 0, 0]]\n\nOUTPUT: \n\n[[0, 5, 7, 7, 5, 0, 0, 0, 0, 5, 0, 0], [0, 5, 7, 7, 5, 5, 5, 0, 0, 5, 0, 0], [0, 5, 5, 5, 5, 0, 5, 0, 0, 5, 0, 0], [0, 0, 5, 0, 0, 0, 5, 5, 5, 5, 0, 0], [5, 5, 5, 0, 0, 0, 5, 8, 8, 5, 5, 5], [0, 0, 0, 0, 0, 0, 5, 8, 8, 8, 8, 8], [0, 0, 0, 5, 5, 5, 5, 8, 8, 8, 8, 8], [5, 5, 5, 5, 0, 0, 5, 8, 8, 8, 8, 8], [0, 0, 0, 5, 0, 0, 5, 5, 5, 8, 8, 8], [0, 0, 0, 5, 0, 0, 0, 0, 5, 8, 8, 8]]\n\n\n--End of Training Examples--\n\n--Test Input--\n[[0, 5, 0, 0, 0, 0, 0, 5, 0, 0, 5, 0], [0, 5, 0, 0, 0, 5, 5, 5, 0, 5, 5, 0], [5, 5, 5, 0, 0, 5, 0, 5, 5, 5, 0, 0], [0, 0, 5, 5, 5, 5, 0, 5, 0, 5, 5, 0], [0, 0, 0, 5, 0, 0, 0, 5, 0, 0, 5, 0]]\n--End of Test Input--\n\nYour response:"
+            }
+          },
+          {
+            "index": 1,
+            "message": {
+              "role": "assistant",
+              "content": "Based on the analysis of the training examples, the pattern is as follows:\n1.  **Identify the structure of 5s**: The grid contains a wall or structure made of the value `5`. This structure divides the background `0`s into different connected regions.\n2.  **Identify Pockets/Concavities**: We look for regions of `0`s that are partially enclosed by the `5`s.\n    *   **Top Pockets (Color 7)**: Regions of `0`s that are enclosed by `5`s on the Left, Right, and Bottom, but are **open to the Top edge** of the grid. In the examples, these are filled with `7` (Orange).\n    *   **Right Pockets (Color 8)**: Regions of `0`s that are enclosed by `5`s on the Left (and possibly Top/Bottom), but are **open to the Right edge** of the grid. In the examples, these are filled with `8` (Azure).\n    *   **Other Regions**: Regions open to the Left or Bottom (without being open to Top/Right in the specific colored configurations) generally remain `0`. Note that in Example 0, a small pocket open to the Bottom-Left was colored 7, but the dominant pattern in Examples 1 and 2 and the Test Input structure strongly suggests \"Open Top -> 7\" and \"Open Right -> 8\".\n\n**Application to Test Input:**\n\n*   **Region B (Top Middle)**: The `0`s at `(0,2)-(0,6)`, `(1,2)-(1,4)`, and `(2,3)-(2,4)` form a region enclosed by `5`s on the Left, Right, and Bottom. They are open to the Top edge. This matches the pattern for **7**.\n*   **Region C (Top Right)**: The `0`s at `(0,8)-(0,9)` and `(1,8)` form a region enclosed by `5`s on the Left, Right, and Bottom. They are open to the Top edge. This matches the pattern for **7**.\n*   **Region D (Right Edge)**: The `0`s at `(0,11)`, `(1,11)`, `(2,10)-(2,11)`, `(3,11)`, and `(4,11)` form a region along the right edge, bounded by `5`s on the Left. They are open to the Right edge. This matches the pattern for **8**.\n*   **Other Regions**:\n    *   The region at the Bottom-Left (cols 0-1, rows 3-4 etc.) is open to the Left and Bottom. It remains `0`.\n    *   The region in the middle bottom (col 6, rows 2-4) is enclosed on Top, Left, and Right, but open to the Bottom. Based on the training examples (where bottom-open regions remained 0), this remains `0`.\n    *   The region at `(4,8)-(4,9)` is enclosed on Top, Left, and Right, but open to the Bottom. This remains `0`.\n\n**Final Output Generation:**\n\nRow 0: `0, 5` are fixed. `0, 0, 0, 0, 0` (indices 2-6) become `7`. `5` fixed. `0, 0` (indices 8-9) become `7`. `5` fixed. `0` (index 11) becomes `8`.\n-> `[0, 5, 7, 7, 7, 7, 7, 5, 7, 7, 5, 8]`\n\nRow 1: `0, 5` fixed. `0, 0, 0` (indices 2-4) become `7`. `5, 5, 5` fixed. `0` (index 8) becomes `7`. `5, 5` fixed. `0` (index 11) becomes `8`.\n-> `[0, 5, 7, 7, 7, 5, 5, 5, 7, 5, 5, 8]`\n\nRow 2: `5, 5, 5` fixed. `0, 0` (indices 3-4) become `7`. `5` fixed. `0` (index 6) stays `0`. `5` fixed. `5, 5` fixed. `0, 0` (indices 10-11) become `8`.\n-> `[5, 5, 5, 7, 7, 5, 0, 5, 5, 5, 8, 8]`\n\nRow 3: `0, 0, 5, 5, 5, 5` fixed. `0` (index 6) stays `0`. `5` fixed. `0` (index 8) stays `0`. `5, 5` fixed. `0` (index 11) becomes `8`.\n-> `[0, 0, 5, 5, 5, 5, 0, 5, 0, 5, 5, 8]`\n\nRow 4: `0, 0, 0, 5` fixed. `0, 0, 0` (indices 4-6) stay `0`. `5` fixed. `0, 0` (indices 8-9) stay `0`. `5` fixed. `0` (index 11) becomes `8`.\n-> `[0, 0, 0, 5, 0, 0, 0, 5, 0, 0, 5, 8]`\n\nOUTPUT: \n\n[[0, 5, 7, 7, 7, 7, 7, 5, 7, 7, 5, 8], [0, 5, 7, 7, 7, 5, 5, 5, 7, 5, 5, 8], [5, 5, 5, 7, 7, 5, 0, 5, 5, 5, 8, 8], [0, 0, 5, 5, 5, 5, 0, 5, 0, 5, 5, 8], [0, 0, 0, 5, 0, 0, 0, 5, 0, 0, 5, 8]]"
+            }
+          }
+        ],
+        "reasoning_summary": null,
+        "kwargs": {
+          "temperature": 0.5,
+          "max_output_tokens": 65536
+        },
+        "usage": {
+          "prompt_tokens": 2047,
+          "completion_tokens": 1474,
+          "total_tokens": 27335,
+          "completion_tokens_details": {
+            "reasoning_tokens": 23814,
+            "accepted_prediction_tokens": 1474,
+            "rejected_prediction_tokens": 0
+          }
+        },
+        "cost": {},
+        "task_id": "62ab2642",
+        "pair_index": 0,
+        "test_id": "original-prompt-ablations",
+        "raw_text": "Based on the analysis of the training examples, the pattern is as follows:\n1.  **Identify the structure of 5s**: The grid contains a wall or structure made of the value `5`. This structure divides the background `0`s into different connected regions.\n2.  **Identify Pockets/Concavities**: We look for regions of `0`s that are partially enclosed by the `5`s.\n    *   **Top Pockets (Color 7)**: Regions of `0`s that are enclosed by `5`s on the Left, Right, and Bottom, but are **open to the Top edge** of the grid. In the examples, these are filled with `7` (Orange).\n    *   **Right Pockets (Color 8)**: Regions of `0`s that are enclosed by `5`s on the Left (and possibly Top/Bottom), but are **open to the Right edge** of the grid. In the examples, these are filled with `8` (Azure).\n    *   **Other Regions**: Regions open to the Left or Bottom (without being open to Top/Right in the specific colored configurations) generally remain `0`. Note that in Example 0, a small pocket open to the Bottom-Left was colored 7, but the dominant pattern in Examples 1 and 2 and the Test Input structure strongly suggests \"Open Top -> 7\" and \"Open Right -> 8\".\n\n**Application to Test Input:**\n\n*   **Region B (Top Middle)**: The `0`s at `(0,2)-(0,6)`, `(1,2)-(1,4)`, and `(2,3)-(2,4)` form a region enclosed by `5`s on the Left, Right, and Bottom. They are open to the Top edge. This matches the pattern for **7**.\n*   **Region C (Top Right)**: The `0`s at `(0,8)-(0,9)` and `(1,8)` form a region enclosed by `5`s on the Left, Right, and Bottom. They are open to the Top edge. This matches the pattern for **7**.\n*   **Region D (Right Edge)**: The `0`s at `(0,11)`, `(1,11)`, `(2,10)-(2,11)`, `(3,11)`, and `(4,11)` form a region along the right edge, bounded by `5`s on the Left. They are open to the Right edge. This matches the pattern for **8**.\n*   **Other Regions**:\n    *   The region at the Bottom-Left (cols 0-1, rows 3-4 etc.) is open to the Left and Bottom. It remains `0`.\n    *   The region in the middle bottom (col 6, rows 2-4) is enclosed on Top, Left, and Right, but open to the Bottom. Based on the training examples (where bottom-open regions remained 0), this remains `0`.\n    *   The region at `(4,8)-(4,9)` is enclosed on Top, Left, and Right, but open to the Bottom. This remains `0`.\n\n**Final Output Generation:**\n\nRow 0: `0, 5` are fixed. `0, 0, 0, 0, 0` (indices 2-6) become `7`. `5` fixed. `0, 0` (indices 8-9) become `7`. `5` fixed. `0` (index 11) becomes `8`.\n-> `[0, 5, 7, 7, 7, 7, 7, 5, 7, 7, 5, 8]`\n\nRow 1: `0, 5` fixed. `0, 0, 0` (indices 2-4) become `7`. `5, 5, 5` fixed. `0` (index 8) becomes `7`. `5, 5` fixed. `0` (index 11) becomes `8`.\n-> `[0, 5, 7, 7, 7, 5, 5, 5, 7, 5, 5, 8]`\n\nRow 2: `5, 5, 5` fixed. `0, 0` (indices 3-4) become `7`. `5` fixed. `0` (index 6) stays `0`. `5` fixed. `5, 5` fixed. `0, 0` (indices 10-11) become `8`.\n-> `[5, 5, 5, 7, 7, 5, 0, 5, 5, 5, 8, 8]`\n\nRow 3: `0, 0, 5, 5, 5, 5` fixed. `0` (index 6) stays `0`. `5` fixed. `0` (index 8) stays `0`. `5, 5` fixed. `0` (index 11) becomes `8`.\n-> `[0, 0, 5, 5, 5, 5, 0, 5, 0, 5, 5, 8]`\n\nRow 4: `0, 0, 0, 5` fixed. `0, 0, 0` (indices 4-6) stay `0`. `5` fixed. `0, 0` (indices 8-9) stay `0`. `5` fixed. `0` (index 11) becomes `8`.\n-> `[0, 0, 0, 5, 0, 0, 0, 5, 0, 0, 5, 8]`\n\nOUTPUT: \n\n[[0, 5, 7, 7, 7, 7, 7, 5, 7, 7, 5, 8], [0, 5, 7, 7, 7, 5, 5, 5, 7, 5, 5, 8], [5, 5, 5, 7, 7, 5, 0, 5, 5, 5, 8, 8], [0, 0, 5, 5, 5, 5, 0, 5, 0, 5, 5, 8], [0, 0, 0, 5, 0, 0, 0, 5, 0, 0, 5, 8]]",
+        "finish_reason": "STOP"
+      },
+      "correct": false
+    }
+  }
+]

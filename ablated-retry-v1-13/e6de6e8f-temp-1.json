@@ -1,0 +1,484 @@
+[
+  {
+    "attempt_1": {
+      "answer": [
+        [
+          0,
+          0,
+          0,
+          3,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          2,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          2,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          2,
+          2,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          2,
+          2,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          2,
+          2,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          2,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          2,
+          0,
+          0
+        ]
+      ],
+      "metadata": {
+        "model": "gemini-3-pro-preview",
+        "provider": "gemini",
+        "start_timestamp": "2025-11-22T11:20:42.513940+00:00",
+        "end_timestamp": "2025-11-22T11:24:20.938522+00:00",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "user",
+              "content": "You are participating in a puzzle solving competition. You are an expert at solving puzzles.\n\nBelow is a list of input and output pairs with a pattern. Your goal is to identify the pattern or transformation in the training examples that maps the input to the output, then apply that pattern to the test input to give a final output.\n\nRespond in the format of the training output examples\n\n--Training Examples--\n--Example 0-- \n\n INPUT: \n\n[[2, 0, 0, 0, 2, 0, 2, 0, 2, 0, 0, 2], [2, 2, 0, 2, 2, 0, 2, 0, 2, 2, 0, 2]]\n\nOUTPUT: \n\n[[0, 0, 0, 3, 0, 0, 0], [0, 0, 0, 2, 2, 0, 0], [0, 0, 0, 2, 2, 0, 0], [0, 0, 0, 2, 0, 0, 0], [0, 0, 0, 2, 0, 0, 0], [0, 0, 0, 2, 2, 0, 0], [0, 0, 0, 0, 2, 0, 0], [0, 0, 0, 0, 2, 0, 0]]\n\n--Example 1-- \n\n INPUT: \n\n[[0, 2, 0, 2, 0, 0, 2, 0, 0, 2, 0, 2], [2, 2, 0, 2, 2, 0, 2, 2, 0, 2, 0, 2]]\n\nOUTPUT: \n\n[[0, 0, 0, 3, 0, 0, 0], [0, 0, 2, 2, 0, 0, 0], [0, 0, 2, 2, 0, 0, 0], [0, 0, 0, 2, 2, 0, 0], [0, 0, 0, 0, 2, 0, 0], [0, 0, 0, 0, 2, 0, 0], [0, 0, 0, 0, 2, 0, 0], [0, 0, 0, 0, 2, 0, 0]]\n\n--Example 2-- \n\n INPUT: \n\n[[2, 0, 0, 2, 0, 0, 2, 0, 0, 2, 0, 2], [2, 2, 0, 2, 2, 0, 2, 2, 0, 2, 0, 2]]\n\nOUTPUT: \n\n[[0, 0, 0, 3, 0, 0, 0], [0, 0, 0, 2, 2, 0, 0], [0, 0, 0, 0, 2, 2, 0], [0, 0, 0, 0, 0, 2, 2], [0, 0, 0, 0, 0, 0, 2], [0, 0, 0, 0, 0, 0, 2], [0, 0, 0, 0, 0, 0, 2], [0, 0, 0, 0, 0, 0, 2]]\n\n\n--End of Training Examples--\n\n--Test Input--\n[[2, 0, 2, 0, 0, 2, 0, 0, 0, 2, 0, 2], [2, 0, 2, 2, 0, 2, 2, 0, 2, 2, 0, 2]]\n--End of Test Input--\n\nYour response:"
+            }
+          },
+          {
+            "index": 1,
+            "message": {
+              "role": "assistant",
+              "content": "Based on the analysis of the training examples, the pattern governing the transformation is as follows:\n\n1.  **Input Interpretation**: The input grid (2 rows, 12 columns) defines a sequence of \"Groups\" of `2`s in the bottom row (Row 1).\n    *   Each contiguous block of `2`s in Input Row 1 forms a Group.\n    *   **Group Properties**:\n        *   **Width**: The number of columns in the group (1 or 2).\n        *   **Type**: determined by the pattern of the top row (Row 0) within the group's columns.\n            *   **L (Left)**: Row 0 has a `2` at the left-most column of the group (e.g., `2` above `2 2`, or `2` above `2 0` in a width 2 group, or `2` above `2 0` is not width 2... In the examples, Type L corresponds to `Top=2` at the left index of the group). **Effect**: Pushes the block to the Right (Expand Right or Shift Right).\n            *   **R (Right)**: Row 0 has a `2` at the right-most column of the group (e.g., `0 2` above `2 2`). **Effect**: Pushes the block to the Left (Expand Left, Shift Left, or Hold against Right momentum).\n            *   **C (Center/Single)**: Row 0 has a `2` aligned with a single-width group. **Effect**: Shrinks or maintains the block. It selects the Left or Right component of the previous block based on the previous momentum (if prev was Right-moving, pick Right; else pick Left).\n\n2.  **Transition Rules**:\n    *   The output grid represents a falling path starting from the `3` at `(0, 3)`.\n    *   Initially, the block is at `{3}` (Width 1).\n    *   For each Group in the input sequence, a new row is generated in the output.\n    *   **Momentum Logic**:\n        *   **L** adds Rightward momentum. If the block can expand right, it does (`{3}` -> `{3,4}`). If it is already width 2, it shifts right (`{3,4}` -> `{4,5}`).\n        *   **R** adds Leftward momentum (or opposes Rightward momentum). If the previous move was `L` (Right), `R` causes a **Hold** (`{4,5}` -> `{4,5}`).\n        *   **C** reduces width to 1. It selects the column based on momentum. If held/left, keeps left (`{4,5}` -> `{4}`).\n    *   **Special Rule (The \"Wait\" Step)**: If a **Type C** group is followed immediately by a **Type L** group, an extra row is inserted which repeats the previous state (a \"Hold\" or \"Wait\" step) before executing the `L` action.\n\n3.  **Applying to Test Input**:\n    *   **Groups**:\n        1.  **G1**: Index 0. Width 1. Top `2`. **Type C**.\n        2.  **G2**: Indices 2,3. Width 2. Top `2 0`. **Type L**.\n        3.  **G3**: Indices 5,6. Width 2. Top `2 0`. **Type L**.\n        4.  **G4**: Indices 8,9. Width 2. Top `0 2`. **Type R**.\n        5.  **G5**: Index 11. Width 1. Top `2`. **Type C**.\n    \n    *   **Simulation**:\n        *   **Start**: `{3}`.\n        *   **Step 1 (G1 - C)**: Width 1. Stay at `{3}`. -> **Row 1**: `[0, 0, 0, 2, 0, 0, 0]`\n        *   **Transition G1(C) -> G2(L)**: Triggers \"Wait\" step. Repeat `{3}`. -> **Row 2**: `[0, 0, 0, 2, 0, 0, 0]`\n        *   **Step 2 (G2 - L)**: Width 2. Expand Right from `{3}` to `{3,4}`. -> **Row 3**: `[0, 0, 0, 2, 2, 0, 0]`\n        *   **Step 3 (G3 - L)**: Width 2. Shift Right from `{3,4}` to `{4,5}`. -> **Row 4**: `[0, 0, 0, 0, 2, 2, 0]`\n        *   **Step 4 (G4 - R)**: Width 2. Opposes previous L. Hold at `{4,5}`. -> **Row 5**: `[0, 0, 0, 0, 2, 2, 0]`\n        *   **Step 5 (G5 - C)**: Width 1. Previous was R (Hold/Left). Keep Left side `{4}`. -> **Row 6**: `[0, 0, 0, 0, 2, 0, 0]`\n        *   **Remaining**: Repeat last state. -> **Row 7**: `[0, 0, 0, 0, 2, 0, 0]`\n\nOUTPUT:\n\n[[0, 0, 0, 3, 0, 0, 0], [0, 0, 0, 2, 0, 0, 0], [0, 0, 0, 2, 0, 0, 0], [0, 0, 0, 2, 2, 0, 0], [0, 0, 0, 0, 2, 2, 0], [0, 0, 0, 0, 2, 2, 0], [0, 0, 0, 0, 2, 0, 0], [0, 0, 0, 0, 2, 0, 0]]"
+            }
+          }
+        ],
+        "reasoning_summary": null,
+        "kwargs": {
+          "temperature": 1.0,
+          "max_output_tokens": 65536
+        },
+        "usage": {
+          "prompt_tokens": 949,
+          "completion_tokens": 1408,
+          "total_tokens": 28102,
+          "completion_tokens_details": {
+            "reasoning_tokens": 25745,
+            "accepted_prediction_tokens": 1408,
+            "rejected_prediction_tokens": 0
+          }
+        },
+        "cost": {},
+        "task_id": "e6de6e8f",
+        "pair_index": 0,
+        "test_id": "original-prompt-ablations",
+        "raw_text": "Based on the analysis of the training examples, the pattern governing the transformation is as follows:\n\n1.  **Input Interpretation**: The input grid (2 rows, 12 columns) defines a sequence of \"Groups\" of `2`s in the bottom row (Row 1).\n    *   Each contiguous block of `2`s in Input Row 1 forms a Group.\n    *   **Group Properties**:\n        *   **Width**: The number of columns in the group (1 or 2).\n        *   **Type**: determined by the pattern of the top row (Row 0) within the group's columns.\n            *   **L (Left)**: Row 0 has a `2` at the left-most column of the group (e.g., `2` above `2 2`, or `2` above `2 0` in a width 2 group, or `2` above `2 0` is not width 2... In the examples, Type L corresponds to `Top=2` at the left index of the group). **Effect**: Pushes the block to the Right (Expand Right or Shift Right).\n            *   **R (Right)**: Row 0 has a `2` at the right-most column of the group (e.g., `0 2` above `2 2`). **Effect**: Pushes the block to the Left (Expand Left, Shift Left, or Hold against Right momentum).\n            *   **C (Center/Single)**: Row 0 has a `2` aligned with a single-width group. **Effect**: Shrinks or maintains the block. It selects the Left or Right component of the previous block based on the previous momentum (if prev was Right-moving, pick Right; else pick Left).\n\n2.  **Transition Rules**:\n    *   The output grid represents a falling path starting from the `3` at `(0, 3)`.\n    *   Initially, the block is at `{3}` (Width 1).\n    *   For each Group in the input sequence, a new row is generated in the output.\n    *   **Momentum Logic**:\n        *   **L** adds Rightward momentum. If the block can expand right, it does (`{3}` -> `{3,4}`). If it is already width 2, it shifts right (`{3,4}` -> `{4,5}`).\n        *   **R** adds Leftward momentum (or opposes Rightward momentum). If the previous move was `L` (Right), `R` causes a **Hold** (`{4,5}` -> `{4,5}`).\n        *   **C** reduces width to 1. It selects the column based on momentum. If held/left, keeps left (`{4,5}` -> `{4}`).\n    *   **Special Rule (The \"Wait\" Step)**: If a **Type C** group is followed immediately by a **Type L** group, an extra row is inserted which repeats the previous state (a \"Hold\" or \"Wait\" step) before executing the `L` action.\n\n3.  **Applying to Test Input**:\n    *   **Groups**:\n        1.  **G1**: Index 0. Width 1. Top `2`. **Type C**.\n        2.  **G2**: Indices 2,3. Width 2. Top `2 0`. **Type L**.\n        3.  **G3**: Indices 5,6. Width 2. Top `2 0`. **Type L**.\n        4.  **G4**: Indices 8,9. Width 2. Top `0 2`. **Type R**.\n        5.  **G5**: Index 11. Width 1. Top `2`. **Type C**.\n    \n    *   **Simulation**:\n        *   **Start**: `{3}`.\n        *   **Step 1 (G1 - C)**: Width 1. Stay at `{3}`. -> **Row 1**: `[0, 0, 0, 2, 0, 0, 0]`\n        *   **Transition G1(C) -> G2(L)**: Triggers \"Wait\" step. Repeat `{3}`. -> **Row 2**: `[0, 0, 0, 2, 0, 0, 0]`\n        *   **Step 2 (G2 - L)**: Width 2. Expand Right from `{3}` to `{3,4}`. -> **Row 3**: `[0, 0, 0, 2, 2, 0, 0]`\n        *   **Step 3 (G3 - L)**: Width 2. Shift Right from `{3,4}` to `{4,5}`. -> **Row 4**: `[0, 0, 0, 0, 2, 2, 0]`\n        *   **Step 4 (G4 - R)**: Width 2. Opposes previous L. Hold at `{4,5}`. -> **Row 5**: `[0, 0, 0, 0, 2, 2, 0]`\n        *   **Step 5 (G5 - C)**: Width 1. Previous was R (Hold/Left). Keep Left side `{4}`. -> **Row 6**: `[0, 0, 0, 0, 2, 0, 0]`\n        *   **Remaining**: Repeat last state. -> **Row 7**: `[0, 0, 0, 0, 2, 0, 0]`\n\nOUTPUT:\n\n[[0, 0, 0, 3, 0, 0, 0], [0, 0, 0, 2, 0, 0, 0], [0, 0, 0, 2, 0, 0, 0], [0, 0, 0, 2, 2, 0, 0], [0, 0, 0, 0, 2, 2, 0], [0, 0, 0, 0, 2, 2, 0], [0, 0, 0, 0, 2, 0, 0], [0, 0, 0, 0, 2, 0, 0]]",
+        "finish_reason": "STOP"
+      },
+      "correct": true
+    },
+    "attempt_3": {
+      "answer": [
+        [
+          0,
+          0,
+          0,
+          3,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          2,
+          2,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          2,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          2,
+          2,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          2,
+          2,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          2,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          2,
+          2,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          2,
+          2,
+          0
+        ]
+      ],
+      "metadata": {
+        "model": "gemini-3-pro-preview",
+        "provider": "gemini",
+        "start_timestamp": "2025-11-22T11:26:33.385181+00:00",
+        "end_timestamp": "2025-11-22T11:29:10.007761+00:00",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "user",
+              "content": "You are participating in a puzzle solving competition. You are an expert at solving puzzles.\n\nBelow is a list of input and output pairs with a pattern. Your goal is to identify the pattern or transformation in the training examples that maps the input to the output, then apply that pattern to the test input to give a final output.\n\nRespond in the format of the training output examples\n\n--Training Examples--\n--Example 0-- \n\n INPUT: \n\n[[2, 0, 0, 0, 2, 0, 2, 0, 2, 0, 0, 2], [2, 2, 0, 2, 2, 0, 2, 0, 2, 2, 0, 2]]\n\nOUTPUT: \n\n[[0, 0, 0, 3, 0, 0, 0], [0, 0, 0, 2, 2, 0, 0], [0, 0, 0, 2, 2, 0, 0], [0, 0, 0, 2, 0, 0, 0], [0, 0, 0, 2, 0, 0, 0], [0, 0, 0, 2, 2, 0, 0], [0, 0, 0, 0, 2, 0, 0], [0, 0, 0, 0, 2, 0, 0]]\n\n--Example 1-- \n\n INPUT: \n\n[[0, 2, 0, 2, 0, 0, 2, 0, 0, 2, 0, 2], [2, 2, 0, 2, 2, 0, 2, 2, 0, 2, 0, 2]]\n\nOUTPUT: \n\n[[0, 0, 0, 3, 0, 0, 0], [0, 0, 2, 2, 0, 0, 0], [0, 0, 2, 2, 0, 0, 0], [0, 0, 0, 2, 2, 0, 0], [0, 0, 0, 0, 2, 0, 0], [0, 0, 0, 0, 2, 0, 0], [0, 0, 0, 0, 2, 0, 0], [0, 0, 0, 0, 2, 0, 0]]\n\n--Example 2-- \n\n INPUT: \n\n[[2, 0, 0, 2, 0, 0, 2, 0, 0, 2, 0, 2], [2, 2, 0, 2, 2, 0, 2, 2, 0, 2, 0, 2]]\n\nOUTPUT: \n\n[[0, 0, 0, 3, 0, 0, 0], [0, 0, 0, 2, 2, 0, 0], [0, 0, 0, 0, 2, 2, 0], [0, 0, 0, 0, 0, 2, 2], [0, 0, 0, 0, 0, 0, 2], [0, 0, 0, 0, 0, 0, 2], [0, 0, 0, 0, 0, 0, 2], [0, 0, 0, 0, 0, 0, 2]]\n\n\n--End of Training Examples--\n\n--Test Input--\n[[2, 0, 2, 0, 0, 2, 0, 0, 0, 2, 0, 2], [2, 0, 2, 2, 0, 2, 2, 0, 2, 2, 0, 2]]\n--End of Test Input--\n\nYour response:"
+            }
+          },
+          {
+            "index": 1,
+            "message": {
+              "role": "assistant",
+              "content": "Based on the analysis of the training examples, the input lists `A` and `B` form a sequence of pairs `(A[i], B[i])` that control the generation of the output grid rows, starting from a seed at row 0, column 3 (value 3). The grid generation behaves like a state machine where the state is defined by the current occupied columns (Single or Pair).\n\nThe transformation rules inferred are:\n1.  **State: Single `S(x)`**\n    *   Input `(2, 2)`: Expand Right -> `P(x, x+1)`.\n    *   Input `(0, 2)`: Expand Left -> `P(x-1, x)`.\n2.  **State: Pair `P(L, R)`**\n    *   Input `(0, 2)`: If preceding action was Expand/Start, then **Copy** `P(L, R)`. If preceding action was Shift, then **Shift Right** `P(L+1, R+1)`. (Based on Ex 0 vs Ex 2). The Test Input follows the pattern of Ex 0 (Vertical).\n    *   Input `(0, 0)`:\n        *   If preceding action was `(0, 2)` Copy: **Reduce Left** -> `S(L)`. (Ex 0).\n        *   If preceding action was `(2, 2)` Exp R: **Reduce Right** -> `S(R)`. (Ex 0).\n    *   Input `(2, 2)`: **Expand/Copy** logic implies maintaining width or expanding from single. For a Pair, this seems to reset or maintain based on context, but in the Test trace, we only encounter `(2, 2)` from a Single state.\n\n**Trace for Test Input:**\n`A: [2, 0, 2, 0, 0, 2, 0, 0, ...]`\n`B: [2, 0, 2, 2, 0, 2, 2, 0, ...]`\n\n*   **Row 0:** Start at col 3. Value 3.\n*   **Step 1 (Row 1):** Input `(2, 2)`. State S(3). Action: Expand Right. New State: **3, 4**.\n*   **Step 2 (Row 2):** Input `(0, 0)`. State P(3, 4). Previous `(2, 2)` Exp R. Matches Ex 0 logic (Red R). Action: Reduce Right. New State: **4**.\n*   **Step 3 (Row 3):** Input `(2, 2)`. State S(4). Action: Expand Right. New State: **4, 5**.\n*   **Step 4 (Row 4):** Input `(0, 2)`. State P(4, 5). Previous `(2, 2)` Exp R. Matches Ex 0 logic. Action: Copy. New State: **4, 5**.\n*   **Step 5 (Row 5):** Input `(0, 0)`. State P(4, 5). Previous `(0, 2)` Copy. Matches Ex 0 logic (Red L). Action: Reduce Left. New State: **4**.\n*   **Step 6 (Row 6):** Input `(2, 2)`. State S(4). Action: Expand Right. New State: **4, 5**.\n*   **Step 7 (Row 7):** Input `(0, 2)`. State P(4, 5). Previous `(2, 2)` Exp R. Matches Ex 0 logic. Action: Copy. New State: **4, 5**.\n\n**Final Output Grid:**\n\n[[0, 0, 0, 3, 0, 0, 0], [0, 0, 0, 2, 2, 0, 0], [0, 0, 0, 0, 2, 0, 0], [0, 0, 0, 0, 2, 2, 0], [0, 0, 0, 0, 2, 2, 0], [0, 0, 0, 0, 2, 0, 0], [0, 0, 0, 0, 2, 2, 0], [0, 0, 0, 0, 2, 2, 0]]"
+            }
+          }
+        ],
+        "reasoning_summary": null,
+        "kwargs": {
+          "temperature": 1.0,
+          "max_output_tokens": 65536
+        },
+        "usage": {
+          "prompt_tokens": 949,
+          "completion_tokens": 1020,
+          "total_tokens": 21478,
+          "completion_tokens_details": {
+            "reasoning_tokens": 19509,
+            "accepted_prediction_tokens": 1020,
+            "rejected_prediction_tokens": 0
+          }
+        },
+        "cost": {},
+        "task_id": "e6de6e8f",
+        "pair_index": 0,
+        "test_id": "original-prompt-ablations",
+        "raw_text": "Based on the analysis of the training examples, the input lists `A` and `B` form a sequence of pairs `(A[i], B[i])` that control the generation of the output grid rows, starting from a seed at row 0, column 3 (value 3). The grid generation behaves like a state machine where the state is defined by the current occupied columns (Single or Pair).\n\nThe transformation rules inferred are:\n1.  **State: Single `S(x)`**\n    *   Input `(2, 2)`: Expand Right -> `P(x, x+1)`.\n    *   Input `(0, 2)`: Expand Left -> `P(x-1, x)`.\n2.  **State: Pair `P(L, R)`**\n    *   Input `(0, 2)`: If preceding action was Expand/Start, then **Copy** `P(L, R)`. If preceding action was Shift, then **Shift Right** `P(L+1, R+1)`. (Based on Ex 0 vs Ex 2). The Test Input follows the pattern of Ex 0 (Vertical).\n    *   Input `(0, 0)`:\n        *   If preceding action was `(0, 2)` Copy: **Reduce Left** -> `S(L)`. (Ex 0).\n        *   If preceding action was `(2, 2)` Exp R: **Reduce Right** -> `S(R)`. (Ex 0).\n    *   Input `(2, 2)`: **Expand/Copy** logic implies maintaining width or expanding from single. For a Pair, this seems to reset or maintain based on context, but in the Test trace, we only encounter `(2, 2)` from a Single state.\n\n**Trace for Test Input:**\n`A: [2, 0, 2, 0, 0, 2, 0, 0, ...]`\n`B: [2, 0, 2, 2, 0, 2, 2, 0, ...]`\n\n*   **Row 0:** Start at col 3. Value 3.\n*   **Step 1 (Row 1):** Input `(2, 2)`. State S(3). Action: Expand Right. New State: **3, 4**.\n*   **Step 2 (Row 2):** Input `(0, 0)`. State P(3, 4). Previous `(2, 2)` Exp R. Matches Ex 0 logic (Red R). Action: Reduce Right. New State: **4**.\n*   **Step 3 (Row 3):** Input `(2, 2)`. State S(4). Action: Expand Right. New State: **4, 5**.\n*   **Step 4 (Row 4):** Input `(0, 2)`. State P(4, 5). Previous `(2, 2)` Exp R. Matches Ex 0 logic. Action: Copy. New State: **4, 5**.\n*   **Step 5 (Row 5):** Input `(0, 0)`. State P(4, 5). Previous `(0, 2)` Copy. Matches Ex 0 logic (Red L). Action: Reduce Left. New State: **4**.\n*   **Step 6 (Row 6):** Input `(2, 2)`. State S(4). Action: Expand Right. New State: **4, 5**.\n*   **Step 7 (Row 7):** Input `(0, 2)`. State P(4, 5). Previous `(2, 2)` Exp R. Matches Ex 0 logic. Action: Copy. New State: **4, 5**.\n\n**Final Output Grid:**\n\n[[0, 0, 0, 3, 0, 0, 0], [0, 0, 0, 2, 2, 0, 0], [0, 0, 0, 0, 2, 0, 0], [0, 0, 0, 0, 2, 2, 0], [0, 0, 0, 0, 2, 2, 0], [0, 0, 0, 0, 2, 0, 0], [0, 0, 0, 0, 2, 2, 0], [0, 0, 0, 0, 2, 2, 0]]",
+        "finish_reason": "STOP"
+      },
+      "correct": false
+    },
+    "attempt_2": {
+      "answer": [
+        [
+          0,
+          0,
+          0,
+          3,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          2,
+          2,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          2,
+          2,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          2,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          2,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          2,
+          2,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          2,
+          2,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          2,
+          2,
+          0
+        ]
+      ],
+      "metadata": {
+        "model": "gemini-3-pro-preview",
+        "provider": "gemini",
+        "start_timestamp": "2025-11-22T11:26:33.372993+00:00",
+        "end_timestamp": "2025-11-22T11:29:40.088344+00:00",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "user",
+              "content": "You are participating in a puzzle solving competition. You are an expert at solving puzzles.\n\nBelow is a list of input and output pairs with a pattern. Your goal is to identify the pattern or transformation in the training examples that maps the input to the output, then apply that pattern to the test input to give a final output.\n\nRespond in the format of the training output examples\n\n--Training Examples--\n--Example 0-- \n\n INPUT: \n\n[[2, 0, 0, 0, 2, 0, 2, 0, 2, 0, 0, 2], [2, 2, 0, 2, 2, 0, 2, 0, 2, 2, 0, 2]]\n\nOUTPUT: \n\n[[0, 0, 0, 3, 0, 0, 0], [0, 0, 0, 2, 2, 0, 0], [0, 0, 0, 2, 2, 0, 0], [0, 0, 0, 2, 0, 0, 0], [0, 0, 0, 2, 0, 0, 0], [0, 0, 0, 2, 2, 0, 0], [0, 0, 0, 0, 2, 0, 0], [0, 0, 0, 0, 2, 0, 0]]\n\n--Example 1-- \n\n INPUT: \n\n[[0, 2, 0, 2, 0, 0, 2, 0, 0, 2, 0, 2], [2, 2, 0, 2, 2, 0, 2, 2, 0, 2, 0, 2]]\n\nOUTPUT: \n\n[[0, 0, 0, 3, 0, 0, 0], [0, 0, 2, 2, 0, 0, 0], [0, 0, 2, 2, 0, 0, 0], [0, 0, 0, 2, 2, 0, 0], [0, 0, 0, 0, 2, 0, 0], [0, 0, 0, 0, 2, 0, 0], [0, 0, 0, 0, 2, 0, 0], [0, 0, 0, 0, 2, 0, 0]]\n\n--Example 2-- \n\n INPUT: \n\n[[2, 0, 0, 2, 0, 0, 2, 0, 0, 2, 0, 2], [2, 2, 0, 2, 2, 0, 2, 2, 0, 2, 0, 2]]\n\nOUTPUT: \n\n[[0, 0, 0, 3, 0, 0, 0], [0, 0, 0, 2, 2, 0, 0], [0, 0, 0, 0, 2, 2, 0], [0, 0, 0, 0, 0, 2, 2], [0, 0, 0, 0, 0, 0, 2], [0, 0, 0, 0, 0, 0, 2], [0, 0, 0, 0, 0, 0, 2], [0, 0, 0, 0, 0, 0, 2]]\n\n\n--End of Training Examples--\n\n--Test Input--\n[[2, 0, 2, 0, 0, 2, 0, 0, 0, 2, 0, 2], [2, 0, 2, 2, 0, 2, 2, 0, 2, 2, 0, 2]]\n--End of Test Input--\n\nYour response:"
+            }
+          },
+          {
+            "index": 1,
+            "message": {
+              "role": "assistant",
+              "content": "The pattern identified involves interpreting the input as a sequence of commands that control the movement and shape of a path of `2`s on the grid.\n\n**Input Parsing:**\nThe input consists of pairs of rows of length 12. These columns are grouped into commands based on `0` delimiters (columns with `[0, 0]`).\n- **Command 'L' (Right):** Columns `[2, 0]` then `[2, 2]`. (Code `2,0` in R1). Expands or shifts the path to the right.\n- **Command 'J' (Left):** Columns `[0, 2]` then `[2, 2]`. (Code `0,2` in R1). Expands or shifts the path to the left.\n- **Command 'I' (Vertical):** Column `[2, 2]`. (Code `2` in R1). Maintains or toggles width based on position.\n\n**Row Duration Rule:**\n- If a command is followed by the **same** direction (L->L, J->J), it generates **1 row**.\n- If a command is followed by a **different** direction (L->J, J->I, etc.), it generates **2 rows**.\n- The 'I' command typically generates **1 row** (or fills the remainder).\n\n**State Transition Logic:**\nStarting State: Path at column 3, Width 1 (`{3}`).\n1.  **Group 1: 'I' (Vertical).**\n    -   Context: Start at `{3}`. 'I' at column 3 expands to Width 2.\n    -   New State: `{3, 4}`.\n    -   Duration: 1 row (First step/I rule).\n    -   Output Row 1: `[0, 0, 0, 2, 2, 0, 0]`\n\n2.  **Group 2: 'L' (Right).**\n    -   Context: From `{3, 4}`. Next command is 'L' (Same).\n    -   Action: Shift Right (Maintain Width 2).\n    -   New State: `{4, 5}`.\n    -   Duration: 1 row.\n    -   Output Row 2: `[0, 0, 0, 0, 2, 2, 0]`\n\n3.  **Group 3: 'L' (Right).**\n    -   Context: From `{4, 5}`. Next command is 'J' (Different).\n    -   Action: End Right Move (Shrink to rightmost).\n    -   New State: `{5}`.\n    -   Duration: 2 rows.\n    -   Output Rows 3, 4: `[0, 0, 0, 0, 0, 2, 0]`\n\n4.  **Group 4: 'J' (Left).**\n    -   Context: From `{5}`. Next command is 'I' (Different).\n    -   Action: Start Left Move (Expand Left).\n    -   New State: `{4, 5}`.\n    -   Duration: 2 rows.\n    -   Output Rows 5, 6: `[0, 0, 0, 0, 2, 2, 0]`\n\n5.  **Group 5: 'I' (Vertical).**\n    -   Context: From `{4, 5}`. Filler.\n    -   Action: Maintain state.\n    -   New State: `{4, 5}`.\n    -   Duration: Remaining 1 row.\n    -   Output Row 7: `[0, 0, 0, 0, 2, 2, 0]`\n\n**Final Output Construction:**\n\n[[0, 0, 0, 3, 0, 0, 0], [0, 0, 0, 2, 2, 0, 0], [0, 0, 0, 0, 2, 2, 0], [0, 0, 0, 0, 0, 2, 0], [0, 0, 0, 0, 0, 2, 0], [0, 0, 0, 0, 2, 2, 0], [0, 0, 0, 0, 2, 2, 0], [0, 0, 0, 0, 2, 2, 0]]"
+            }
+          }
+        ],
+        "reasoning_summary": null,
+        "kwargs": {
+          "temperature": 1.0,
+          "max_output_tokens": 65536
+        },
+        "usage": {
+          "prompt_tokens": 949,
+          "completion_tokens": 1013,
+          "total_tokens": 24482,
+          "completion_tokens_details": {
+            "reasoning_tokens": 22520,
+            "accepted_prediction_tokens": 1013,
+            "rejected_prediction_tokens": 0
+          }
+        },
+        "cost": {},
+        "task_id": "e6de6e8f",
+        "pair_index": 0,
+        "test_id": "original-prompt-ablations",
+        "raw_text": "The pattern identified involves interpreting the input as a sequence of commands that control the movement and shape of a path of `2`s on the grid.\n\n**Input Parsing:**\nThe input consists of pairs of rows of length 12. These columns are grouped into commands based on `0` delimiters (columns with `[0, 0]`).\n- **Command 'L' (Right):** Columns `[2, 0]` then `[2, 2]`. (Code `2,0` in R1). Expands or shifts the path to the right.\n- **Command 'J' (Left):** Columns `[0, 2]` then `[2, 2]`. (Code `0,2` in R1). Expands or shifts the path to the left.\n- **Command 'I' (Vertical):** Column `[2, 2]`. (Code `2` in R1). Maintains or toggles width based on position.\n\n**Row Duration Rule:**\n- If a command is followed by the **same** direction (L->L, J->J), it generates **1 row**.\n- If a command is followed by a **different** direction (L->J, J->I, etc.), it generates **2 rows**.\n- The 'I' command typically generates **1 row** (or fills the remainder).\n\n**State Transition Logic:**\nStarting State: Path at column 3, Width 1 (`{3}`).\n1.  **Group 1: 'I' (Vertical).**\n    -   Context: Start at `{3}`. 'I' at column 3 expands to Width 2.\n    -   New State: `{3, 4}`.\n    -   Duration: 1 row (First step/I rule).\n    -   Output Row 1: `[0, 0, 0, 2, 2, 0, 0]`\n\n2.  **Group 2: 'L' (Right).**\n    -   Context: From `{3, 4}`. Next command is 'L' (Same).\n    -   Action: Shift Right (Maintain Width 2).\n    -   New State: `{4, 5}`.\n    -   Duration: 1 row.\n    -   Output Row 2: `[0, 0, 0, 0, 2, 2, 0]`\n\n3.  **Group 3: 'L' (Right).**\n    -   Context: From `{4, 5}`. Next command is 'J' (Different).\n    -   Action: End Right Move (Shrink to rightmost).\n    -   New State: `{5}`.\n    -   Duration: 2 rows.\n    -   Output Rows 3, 4: `[0, 0, 0, 0, 0, 2, 0]`\n\n4.  **Group 4: 'J' (Left).**\n    -   Context: From `{5}`. Next command is 'I' (Different).\n    -   Action: Start Left Move (Expand Left).\n    -   New State: `{4, 5}`.\n    -   Duration: 2 rows.\n    -   Output Rows 5, 6: `[0, 0, 0, 0, 2, 2, 0]`\n\n5.  **Group 5: 'I' (Vertical).**\n    -   Context: From `{4, 5}`. Filler.\n    -   Action: Maintain state.\n    -   New State: `{4, 5}`.\n    -   Duration: Remaining 1 row.\n    -   Output Row 7: `[0, 0, 0, 0, 2, 2, 0]`\n\n**Final Output Construction:**\n\n[[0, 0, 0, 3, 0, 0, 0], [0, 0, 0, 2, 2, 0, 0], [0, 0, 0, 0, 2, 2, 0], [0, 0, 0, 0, 0, 2, 0], [0, 0, 0, 0, 0, 2, 0], [0, 0, 0, 0, 2, 2, 0], [0, 0, 0, 0, 2, 2, 0], [0, 0, 0, 0, 2, 2, 0]]",
+        "finish_reason": "STOP"
+      },
+      "correct": false
+    },
+    "attempt_4": {
+      "answer": [
+        [
+          0,
+          0,
+          0,
+          3,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          2,
+          2,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          2,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          2,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          2,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          2,
+          2,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          2,
+          2,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          2,
+          0
+        ]
+      ],
+      "metadata": {
+        "model": "gemini-3-pro-preview",
+        "provider": "gemini",
+        "start_timestamp": "2025-11-22T11:26:33.380447+00:00",
+        "end_timestamp": "2025-11-22T11:30:10.959248+00:00",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "user",
+              "content": "You are participating in a puzzle solving competition. You are an expert at solving puzzles.\n\nBelow is a list of input and output pairs with a pattern. Your goal is to identify the pattern or transformation in the training examples that maps the input to the output, then apply that pattern to the test input to give a final output.\n\nRespond in the format of the training output examples\n\n--Training Examples--\n--Example 0-- \n\n INPUT: \n\n[[2, 0, 0, 0, 2, 0, 2, 0, 2, 0, 0, 2], [2, 2, 0, 2, 2, 0, 2, 0, 2, 2, 0, 2]]\n\nOUTPUT: \n\n[[0, 0, 0, 3, 0, 0, 0], [0, 0, 0, 2, 2, 0, 0], [0, 0, 0, 2, 2, 0, 0], [0, 0, 0, 2, 0, 0, 0], [0, 0, 0, 2, 0, 0, 0], [0, 0, 0, 2, 2, 0, 0], [0, 0, 0, 0, 2, 0, 0], [0, 0, 0, 0, 2, 0, 0]]\n\n--Example 1-- \n\n INPUT: \n\n[[0, 2, 0, 2, 0, 0, 2, 0, 0, 2, 0, 2], [2, 2, 0, 2, 2, 0, 2, 2, 0, 2, 0, 2]]\n\nOUTPUT: \n\n[[0, 0, 0, 3, 0, 0, 0], [0, 0, 2, 2, 0, 0, 0], [0, 0, 2, 2, 0, 0, 0], [0, 0, 0, 2, 2, 0, 0], [0, 0, 0, 0, 2, 0, 0], [0, 0, 0, 0, 2, 0, 0], [0, 0, 0, 0, 2, 0, 0], [0, 0, 0, 0, 2, 0, 0]]\n\n--Example 2-- \n\n INPUT: \n\n[[2, 0, 0, 2, 0, 0, 2, 0, 0, 2, 0, 2], [2, 2, 0, 2, 2, 0, 2, 2, 0, 2, 0, 2]]\n\nOUTPUT: \n\n[[0, 0, 0, 3, 0, 0, 0], [0, 0, 0, 2, 2, 0, 0], [0, 0, 0, 0, 2, 2, 0], [0, 0, 0, 0, 0, 2, 2], [0, 0, 0, 0, 0, 0, 2], [0, 0, 0, 0, 0, 0, 2], [0, 0, 0, 0, 0, 0, 2], [0, 0, 0, 0, 0, 0, 2]]\n\n\n--End of Training Examples--\n\n--Test Input--\n[[2, 0, 2, 0, 0, 2, 0, 0, 0, 2, 0, 2], [2, 0, 2, 2, 0, 2, 2, 0, 2, 2, 0, 2]]\n--End of Test Input--\n\nYour response:"
+            }
+          },
+          {
+            "index": 1,
+            "message": {
+              "role": "assistant",
+              "content": "Based on the analysis of the training examples, the input consists of 12 columns which can be parsed into a sequence of \"instructions\" or \"bits\" that determine the path of the \"snake\" in the output grid (7 columns x 8 rows).\n\n**Pattern Extraction:**\n1.  **Parsing Input:**\n    -   The input is read column by column.\n    -   Columns `[0,0]` are spacers and define the boundaries of \"Groups\".\n    -   Non-zero columns contain a bit of information in the top row. `2` corresponds to a \"Right\" tendency, `0` corresponds to a \"Left\" tendency.\n    -   The sequence of non-zero columns forms a bit stream.\n    -   Groups of bits map to output rows. The first group (Col 0) maps to Row 1. Subsequent groups (pairs of bits separated by spacers) map to pairs of rows (e.g., Group 2 maps to R2, R3).\n\n2.  **State Machine:**\n    -   **State:** Defined by the `(Left_Index, Width)` of the `2`s in the row.\n    -   **Start:** Row 0 is always `3` at index 3. State `(3, 1)`.\n    -   **Transitions:** Determine the next row's state based on the current bit `C`, the lookahead bit `N` (first bit of next group), and the current Alignment (Left-Anchored `L-A` or Right-Anchored `R-A`).\n\n    **Logic Derived:**\n    -   **Width 1 (Neutral/L-A):** `2` -> Expand Right (Width 2, L-A). `0` -> Expand Left (Width 2, R-A).\n    -   **Width 1 (R-A):** `2` -> Stay. `0` -> Expand Left (if N=`0`) or Stay (if N=`2`).\n    -   **Width 2:**\n        -   `2` (Right) usually causes a shift/shrink towards right or keeps right.\n        -   `0` (Left) usually causes a shift/shrink towards left or keeps left.\n        -   Specific interactions found:\n            -   `2` on L-A -> Shrink Left (becomes R-A).\n            -   `0` on L-A -> Stay (if N=`0`) or Shift Right (if N=`2`).\n            -   `2` on R-A/Shifted -> Shrink Left.\n            -   `0` on Shifted -> Shift Right.\n\n**Applying to Test Input:**\n-   **Bit Sequence:** `2` (G1), `2, 0` (G2), `2, 0` (G3), `0, 2` (G4), `2` (G5).\n-   **Lookaheads:** G1->`2`, G2->`2`, G3->`0`, G4->`2`.\n\n**Trace:**\n-   **R0:** `3` at 3. State (3,1).\n-   **G1 (`2`):** Width 1, `2` -> **Expand Right**.\n    -   **R1:** `2 2` at 3. State (3,2). (L-A)\n-   **G2.1 (`2`):** Width 2, L-A, `2`, N=`0`. Rule: Shrink Left.\n    -   **R2:** `2` at 4. State (4,1). (R-A)\n-   **G2.2 (`0`):** Width 1, R-A, `0`, N=`2`. Rule: Stay.\n    -   **R3:** `2` at 4. State (4,1). (R-A)\n-   **G3.1 (`2`):** Width 1, R-A, `2`, N=`0`. Rule: Stay.\n    -   **R4:** `2` at 4. State (4,1). (R-A)\n-   **G3.2 (`0`):** Width 1, R-A, `0`, N=`0`. Rule: Expand Left.\n    -   **R5:** `2 2` at 3. State (3,2). (L-A/Shifted from R-A)\n-   **G4.1 (`0`):** Width 2, `0`, N=`2`. Rule: Shift Right.\n    -   **R6:** `2 2` at 4. State (4,2).\n-   **G4.2 (`2`):** Width 2, `2`, N=`2`. Rule: Shrink Left.\n    -   **R7:** `2` at 5. State (5,1).\n\n**Constructing Output:**\n\nOUTPUT: \n\n[[0, 0, 0, 3, 0, 0, 0], [0, 0, 0, 2, 2, 0, 0], [0, 0, 0, 0, 2, 0, 0], [0, 0, 0, 0, 2, 0, 0], [0, 0, 0, 0, 2, 0, 0], [0, 0, 0, 2, 2, 0, 0], [0, 0, 0, 0, 2, 2, 0], [0, 0, 0, 0, 0, 2, 0]]"
+            }
+          }
+        ],
+        "reasoning_summary": null,
+        "kwargs": {
+          "temperature": 1.0,
+          "max_output_tokens": 65536
+        },
+        "usage": {
+          "prompt_tokens": 949,
+          "completion_tokens": 1263,
+          "total_tokens": 27397,
+          "completion_tokens_details": {
+            "reasoning_tokens": 25185,
+            "accepted_prediction_tokens": 1263,
+            "rejected_prediction_tokens": 0
+          }
+        },
+        "cost": {},
+        "task_id": "e6de6e8f",
+        "pair_index": 0,
+        "test_id": "original-prompt-ablations",
+        "raw_text": "Based on the analysis of the training examples, the input consists of 12 columns which can be parsed into a sequence of \"instructions\" or \"bits\" that determine the path of the \"snake\" in the output grid (7 columns x 8 rows).\n\n**Pattern Extraction:**\n1.  **Parsing Input:**\n    -   The input is read column by column.\n    -   Columns `[0,0]` are spacers and define the boundaries of \"Groups\".\n    -   Non-zero columns contain a bit of information in the top row. `2` corresponds to a \"Right\" tendency, `0` corresponds to a \"Left\" tendency.\n    -   The sequence of non-zero columns forms a bit stream.\n    -   Groups of bits map to output rows. The first group (Col 0) maps to Row 1. Subsequent groups (pairs of bits separated by spacers) map to pairs of rows (e.g., Group 2 maps to R2, R3).\n\n2.  **State Machine:**\n    -   **State:** Defined by the `(Left_Index, Width)` of the `2`s in the row.\n    -   **Start:** Row 0 is always `3` at index 3. State `(3, 1)`.\n    -   **Transitions:** Determine the next row's state based on the current bit `C`, the lookahead bit `N` (first bit of next group), and the current Alignment (Left-Anchored `L-A` or Right-Anchored `R-A`).\n\n    **Logic Derived:**\n    -   **Width 1 (Neutral/L-A):** `2` -> Expand Right (Width 2, L-A). `0` -> Expand Left (Width 2, R-A).\n    -   **Width 1 (R-A):** `2` -> Stay. `0` -> Expand Left (if N=`0`) or Stay (if N=`2`).\n    -   **Width 2:**\n        -   `2` (Right) usually causes a shift/shrink towards right or keeps right.\n        -   `0` (Left) usually causes a shift/shrink towards left or keeps left.\n        -   Specific interactions found:\n            -   `2` on L-A -> Shrink Left (becomes R-A).\n            -   `0` on L-A -> Stay (if N=`0`) or Shift Right (if N=`2`).\n            -   `2` on R-A/Shifted -> Shrink Left.\n            -   `0` on Shifted -> Shift Right.\n\n**Applying to Test Input:**\n-   **Bit Sequence:** `2` (G1), `2, 0` (G2), `2, 0` (G3), `0, 2` (G4), `2` (G5).\n-   **Lookaheads:** G1->`2`, G2->`2`, G3->`0`, G4->`2`.\n\n**Trace:**\n-   **R0:** `3` at 3. State (3,1).\n-   **G1 (`2`):** Width 1, `2` -> **Expand Right**.\n    -   **R1:** `2 2` at 3. State (3,2). (L-A)\n-   **G2.1 (`2`):** Width 2, L-A, `2`, N=`0`. Rule: Shrink Left.\n    -   **R2:** `2` at 4. State (4,1). (R-A)\n-   **G2.2 (`0`):** Width 1, R-A, `0`, N=`2`. Rule: Stay.\n    -   **R3:** `2` at 4. State (4,1). (R-A)\n-   **G3.1 (`2`):** Width 1, R-A, `2`, N=`0`. Rule: Stay.\n    -   **R4:** `2` at 4. State (4,1). (R-A)\n-   **G3.2 (`0`):** Width 1, R-A, `0`, N=`0`. Rule: Expand Left.\n    -   **R5:** `2 2` at 3. State (3,2). (L-A/Shifted from R-A)\n-   **G4.1 (`0`):** Width 2, `0`, N=`2`. Rule: Shift Right.\n    -   **R6:** `2 2` at 4. State (4,2).\n-   **G4.2 (`2`):** Width 2, `2`, N=`2`. Rule: Shrink Left.\n    -   **R7:** `2` at 5. State (5,1).\n\n**Constructing Output:**\n\nOUTPUT: \n\n[[0, 0, 0, 3, 0, 0, 0], [0, 0, 0, 2, 2, 0, 0], [0, 0, 0, 0, 2, 0, 0], [0, 0, 0, 0, 2, 0, 0], [0, 0, 0, 0, 2, 0, 0], [0, 0, 0, 2, 2, 0, 0], [0, 0, 0, 0, 2, 2, 0], [0, 0, 0, 0, 0, 2, 0]]",
+        "finish_reason": "STOP"
+      },
+      "correct": false
+    }
+  }
+]

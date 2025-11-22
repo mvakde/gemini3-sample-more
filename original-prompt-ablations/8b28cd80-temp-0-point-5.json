@@ -1,0 +1,1182 @@
+[
+  {
+    "attempt_4": {
+      "answer": [
+        [
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6
+        ],
+        [
+          6,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          6,
+          0,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6
+        ],
+        [
+          6,
+          0,
+          6,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          6,
+          0,
+          6,
+          0,
+          6,
+          6,
+          6,
+          6,
+          6
+        ],
+        [
+          6,
+          0,
+          6,
+          0,
+          6,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          6,
+          0,
+          6,
+          0,
+          6,
+          0,
+          6,
+          6,
+          6
+        ],
+        [
+          6,
+          0,
+          6,
+          0,
+          6,
+          0,
+          6,
+          0,
+          0
+        ],
+        [
+          6,
+          0,
+          6,
+          0,
+          6,
+          0,
+          6,
+          0,
+          6
+        ]
+      ],
+      "metadata": {
+        "model": "gemini-3-pro-preview",
+        "provider": "gemini",
+        "start_timestamp": "2025-11-22T12:29:23.417830+00:00",
+        "end_timestamp": "2025-11-22T12:31:51.956380+00:00",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "user",
+              "content": "You are participating in a puzzle solving competition. You are an expert at solving puzzles.\n\nBelow is a list of input and output pairs with a pattern. Your goal is to identify the pattern or transformation in the training examples that maps the input to the output, then apply that pattern to the test input to give a final output.\n\nRespond in the format of the training output examples\n\n--Training Examples--\n--Example 0-- \n\n INPUT: \n\n[[0, 0, 0], [0, 4, 0], [0, 0, 0]]\n\nOUTPUT: \n\n[[4, 0, 4, 4, 4, 4, 4, 4, 4], [4, 0, 4, 0, 0, 0, 0, 0, 4], [4, 0, 4, 0, 4, 4, 4, 0, 4], [4, 0, 4, 0, 4, 0, 4, 0, 4], [4, 0, 4, 0, 4, 0, 4, 0, 4], [4, 0, 4, 0, 0, 0, 4, 0, 4], [4, 0, 4, 4, 4, 4, 4, 0, 4], [4, 0, 0, 0, 0, 0, 0, 0, 4], [4, 4, 4, 4, 4, 4, 4, 4, 4]]\n\n--Example 1-- \n\n INPUT: \n\n[[0, 0, 0], [5, 0, 0], [0, 0, 0]]\n\nOUTPUT: \n\n[[5, 5, 5, 5, 5, 0, 5, 0, 5], [0, 0, 0, 0, 5, 0, 5, 0, 5], [5, 5, 5, 0, 5, 0, 5, 0, 5], [5, 0, 5, 0, 5, 0, 5, 0, 5], [5, 0, 5, 0, 5, 0, 5, 0, 5], [0, 0, 5, 0, 5, 0, 5, 0, 5], [5, 5, 5, 0, 5, 0, 5, 0, 5], [0, 0, 0, 0, 5, 0, 5, 0, 5], [5, 5, 5, 5, 5, 0, 5, 0, 5]]\n\n--Example 2-- \n\n INPUT: \n\n[[0, 3, 0], [0, 0, 0], [0, 0, 0]]\n\nOUTPUT: \n\n[[3, 0, 3, 0, 3, 0, 3, 0, 3], [3, 0, 3, 0, 0, 0, 3, 0, 3], [3, 0, 3, 3, 3, 3, 3, 0, 3], [3, 0, 0, 0, 0, 0, 0, 0, 3], [3, 3, 3, 3, 3, 3, 3, 3, 3], [0, 0, 0, 0, 0, 0, 0, 0, 0], [3, 3, 3, 3, 3, 3, 3, 3, 3], [0, 0, 0, 0, 0, 0, 0, 0, 0], [3, 3, 3, 3, 3, 3, 3, 3, 3]]\n\n--Example 3-- \n\n INPUT: \n\n[[0, 0, 0], [0, 0, 8], [0, 0, 0]]\n\nOUTPUT: \n\n[[8, 0, 8, 0, 8, 0, 8, 8, 8], [8, 0, 8, 0, 8, 0, 8, 0, 0], [8, 0, 8, 0, 8, 0, 8, 0, 8], [8, 0, 8, 0, 8, 0, 8, 0, 8], [8, 0, 8, 0, 8, 0, 8, 0, 8], [8, 0, 8, 0, 8, 0, 8, 0, 0], [8, 0, 8, 0, 8, 0, 8, 8, 8], [8, 0, 8, 0, 8, 0, 0, 0, 0], [8, 0, 8, 0, 8, 8, 8, 8, 8]]\n\n--Example 4-- \n\n INPUT: \n\n[[0, 0, 7], [0, 0, 0], [0, 0, 0]]\n\nOUTPUT: \n\n[[7, 0, 7, 0, 7, 0, 7, 0, 7], [7, 0, 7, 0, 7, 0, 7, 0, 0], [7, 0, 7, 0, 7, 0, 7, 7, 7], [7, 0, 7, 0, 7, 0, 0, 0, 0], [7, 0, 7, 0, 7, 7, 7, 7, 7], [7, 0, 7, 0, 0, 0, 0, 0, 0], [7, 0, 7, 7, 7, 7, 7, 7, 7], [7, 0, 0, 0, 0, 0, 0, 0, 0], [7, 7, 7, 7, 7, 7, 7, 7, 7]]\n\n\n--End of Training Examples--\n\n--Test Input--\n[[0, 0, 0], [0, 0, 0], [0, 0, 6]]\n--End of Test Input--\n\nYour response:"
+            }
+          },
+          {
+            "index": 1,
+            "message": {
+              "role": "assistant",
+              "content": "The pattern maps the position of the single non-zero pixel in the 3x3 input grid to a specific 9x9 pattern. The pattern is a recursive \"maze\" or \"comb\" structure that is anchored at the corner or side *opposite* to the input pixel's position.\n\nSpecifically, for the corner inputs:\n*   **Example 4 (Input Top-Right):** The output pattern is anchored at the **Bottom-Left**. The bottom row and left column are solid. The pattern \"decays\" as it moves towards the Top-Right.\n*   **Test Input (Input Bottom-Right):** By symmetry (vertical flip of Example 4), the output pattern should be anchored at the **Top-Left**. The top row and left column should be solid. The pattern \"decays\" as it moves towards the Bottom-Right.\n\n**Logic for Test Input (2, 2) with Color 6:**\n1.  **Anchor:** Top-Left (0, 0).\n2.  **Base Grid:** All pixels at even coordinates $(y, x)$ are filled with 6.\n3.  **Horizontal Segments:** A segment connects $(y, x-1)$ and $(y, x+1)$ if the distance from the left edge is greater than or equal to the distance from the top edge ($x-1 \\ge y$).\n4.  **Vertical Segments:** A segment connects $(y-1, x)$ and $(y+1, x)$ if the distance from the top edge is greater than or equal to the distance from the left edge ($y-1 \\ge x$).\n\n**Generating the Output:**\n*   **Row 0:** Solid (Anchor row). `[6, 6, 6, 6, 6, 6, 6, 6, 6]`\n*   **Row 1:** Vertical connection only at col 0 ($0 \\ge 0$). `[6, 0, 0, 0, 0, 0, 0, 0, 0]`\n*   **Row 2:** Horizontal segments for $x \\ge 3$. `[6, 0, 6, 6, 6, 6, 6, 6, 6]`\n*   **Row 3:** Vertical connections for $x \\le 2$. `[6, 0, 6, 0, 0, 0, 0, 0, 0]`\n*   **Row 4:** Horizontal segments for $x \\ge 5$. `[6, 0, 6, 0, 6, 6, 6, 6, 6]`\n*   **Row 5:** Vertical connections for $x \\le 4$. `[6, 0, 6, 0, 6, 0, 0, 0, 0]`\n*   **Row 6:** Horizontal segments for $x \\ge 7$. `[6, 0, 6, 0, 6, 0, 6, 6, 6]`\n*   **Row 7:** Vertical connections for $x \\le 6$. `[6, 0, 6, 0, 6, 0, 6, 0, 0]`\n*   **Row 8:** No horizontal segments ($x \\ge 9$). `[6, 0, 6, 0, 6, 0, 6, 0, 6]`\n\nOUTPUT: \n\n[[6, 6, 6, 6, 6, 6, 6, 6, 6], [6, 0, 0, 0, 0, 0, 0, 0, 0], [6, 0, 6, 6, 6, 6, 6, 6, 6], [6, 0, 6, 0, 0, 0, 0, 0, 0], [6, 0, 6, 0, 6, 6, 6, 6, 6], [6, 0, 6, 0, 6, 0, 0, 0, 0], [6, 0, 6, 0, 6, 0, 6, 6, 6], [6, 0, 6, 0, 6, 0, 6, 0, 0], [6, 0, 6, 0, 6, 0, 6, 0, 6]]"
+            }
+          }
+        ],
+        "reasoning_summary": null,
+        "kwargs": {
+          "temperature": 0.5,
+          "max_output_tokens": 65536
+        },
+        "usage": {
+          "prompt_tokens": 1568,
+          "completion_tokens": 1012,
+          "total_tokens": 20276,
+          "completion_tokens_details": {
+            "reasoning_tokens": 17696,
+            "accepted_prediction_tokens": 1012,
+            "rejected_prediction_tokens": 0
+          }
+        },
+        "cost": {},
+        "task_id": "8b28cd80",
+        "pair_index": 0,
+        "test_id": "original-prompt-ablations",
+        "raw_text": "The pattern maps the position of the single non-zero pixel in the 3x3 input grid to a specific 9x9 pattern. The pattern is a recursive \"maze\" or \"comb\" structure that is anchored at the corner or side *opposite* to the input pixel's position.\n\nSpecifically, for the corner inputs:\n*   **Example 4 (Input Top-Right):** The output pattern is anchored at the **Bottom-Left**. The bottom row and left column are solid. The pattern \"decays\" as it moves towards the Top-Right.\n*   **Test Input (Input Bottom-Right):** By symmetry (vertical flip of Example 4), the output pattern should be anchored at the **Top-Left**. The top row and left column should be solid. The pattern \"decays\" as it moves towards the Bottom-Right.\n\n**Logic for Test Input (2, 2) with Color 6:**\n1.  **Anchor:** Top-Left (0, 0).\n2.  **Base Grid:** All pixels at even coordinates $(y, x)$ are filled with 6.\n3.  **Horizontal Segments:** A segment connects $(y, x-1)$ and $(y, x+1)$ if the distance from the left edge is greater than or equal to the distance from the top edge ($x-1 \\ge y$).\n4.  **Vertical Segments:** A segment connects $(y-1, x)$ and $(y+1, x)$ if the distance from the top edge is greater than or equal to the distance from the left edge ($y-1 \\ge x$).\n\n**Generating the Output:**\n*   **Row 0:** Solid (Anchor row). `[6, 6, 6, 6, 6, 6, 6, 6, 6]`\n*   **Row 1:** Vertical connection only at col 0 ($0 \\ge 0$). `[6, 0, 0, 0, 0, 0, 0, 0, 0]`\n*   **Row 2:** Horizontal segments for $x \\ge 3$. `[6, 0, 6, 6, 6, 6, 6, 6, 6]`\n*   **Row 3:** Vertical connections for $x \\le 2$. `[6, 0, 6, 0, 0, 0, 0, 0, 0]`\n*   **Row 4:** Horizontal segments for $x \\ge 5$. `[6, 0, 6, 0, 6, 6, 6, 6, 6]`\n*   **Row 5:** Vertical connections for $x \\le 4$. `[6, 0, 6, 0, 6, 0, 0, 0, 0]`\n*   **Row 6:** Horizontal segments for $x \\ge 7$. `[6, 0, 6, 0, 6, 0, 6, 6, 6]`\n*   **Row 7:** Vertical connections for $x \\le 6$. `[6, 0, 6, 0, 6, 0, 6, 0, 0]`\n*   **Row 8:** No horizontal segments ($x \\ge 9$). `[6, 0, 6, 0, 6, 0, 6, 0, 6]`\n\nOUTPUT: \n\n[[6, 6, 6, 6, 6, 6, 6, 6, 6], [6, 0, 0, 0, 0, 0, 0, 0, 0], [6, 0, 6, 6, 6, 6, 6, 6, 6], [6, 0, 6, 0, 0, 0, 0, 0, 0], [6, 0, 6, 0, 6, 6, 6, 6, 6], [6, 0, 6, 0, 6, 0, 0, 0, 0], [6, 0, 6, 0, 6, 0, 6, 6, 6], [6, 0, 6, 0, 6, 0, 6, 0, 0], [6, 0, 6, 0, 6, 0, 6, 0, 6]]",
+        "finish_reason": "STOP"
+      },
+      "correct": false
+    },
+    "attempt_2": {
+      "answer": [
+        [
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6
+        ],
+        [
+          6,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          6,
+          0,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6
+        ],
+        [
+          6,
+          0,
+          6,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          6,
+          0,
+          6,
+          0,
+          6,
+          6,
+          6,
+          6,
+          6
+        ],
+        [
+          6,
+          0,
+          6,
+          0,
+          6,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          6,
+          0,
+          6,
+          0,
+          6,
+          0,
+          6,
+          6,
+          6
+        ],
+        [
+          6,
+          0,
+          6,
+          0,
+          6,
+          0,
+          6,
+          0,
+          0
+        ],
+        [
+          6,
+          0,
+          6,
+          0,
+          6,
+          0,
+          6,
+          0,
+          6
+        ]
+      ],
+      "metadata": {
+        "model": "gemini-3-pro-preview",
+        "provider": "gemini",
+        "start_timestamp": "2025-11-22T12:29:23.418430+00:00",
+        "end_timestamp": "2025-11-22T12:32:12.302637+00:00",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "user",
+              "content": "You are participating in a puzzle solving competition. You are an expert at solving puzzles.\n\nBelow is a list of input and output pairs with a pattern. Your goal is to identify the pattern or transformation in the training examples that maps the input to the output, then apply that pattern to the test input to give a final output.\n\nRespond in the format of the training output examples\n\n--Training Examples--\n--Example 0-- \n\n INPUT: \n\n[[0, 0, 0], [0, 4, 0], [0, 0, 0]]\n\nOUTPUT: \n\n[[4, 0, 4, 4, 4, 4, 4, 4, 4], [4, 0, 4, 0, 0, 0, 0, 0, 4], [4, 0, 4, 0, 4, 4, 4, 0, 4], [4, 0, 4, 0, 4, 0, 4, 0, 4], [4, 0, 4, 0, 4, 0, 4, 0, 4], [4, 0, 4, 0, 0, 0, 4, 0, 4], [4, 0, 4, 4, 4, 4, 4, 0, 4], [4, 0, 0, 0, 0, 0, 0, 0, 4], [4, 4, 4, 4, 4, 4, 4, 4, 4]]\n\n--Example 1-- \n\n INPUT: \n\n[[0, 0, 0], [5, 0, 0], [0, 0, 0]]\n\nOUTPUT: \n\n[[5, 5, 5, 5, 5, 0, 5, 0, 5], [0, 0, 0, 0, 5, 0, 5, 0, 5], [5, 5, 5, 0, 5, 0, 5, 0, 5], [5, 0, 5, 0, 5, 0, 5, 0, 5], [5, 0, 5, 0, 5, 0, 5, 0, 5], [0, 0, 5, 0, 5, 0, 5, 0, 5], [5, 5, 5, 0, 5, 0, 5, 0, 5], [0, 0, 0, 0, 5, 0, 5, 0, 5], [5, 5, 5, 5, 5, 0, 5, 0, 5]]\n\n--Example 2-- \n\n INPUT: \n\n[[0, 3, 0], [0, 0, 0], [0, 0, 0]]\n\nOUTPUT: \n\n[[3, 0, 3, 0, 3, 0, 3, 0, 3], [3, 0, 3, 0, 0, 0, 3, 0, 3], [3, 0, 3, 3, 3, 3, 3, 0, 3], [3, 0, 0, 0, 0, 0, 0, 0, 3], [3, 3, 3, 3, 3, 3, 3, 3, 3], [0, 0, 0, 0, 0, 0, 0, 0, 0], [3, 3, 3, 3, 3, 3, 3, 3, 3], [0, 0, 0, 0, 0, 0, 0, 0, 0], [3, 3, 3, 3, 3, 3, 3, 3, 3]]\n\n--Example 3-- \n\n INPUT: \n\n[[0, 0, 0], [0, 0, 8], [0, 0, 0]]\n\nOUTPUT: \n\n[[8, 0, 8, 0, 8, 0, 8, 8, 8], [8, 0, 8, 0, 8, 0, 8, 0, 0], [8, 0, 8, 0, 8, 0, 8, 0, 8], [8, 0, 8, 0, 8, 0, 8, 0, 8], [8, 0, 8, 0, 8, 0, 8, 0, 8], [8, 0, 8, 0, 8, 0, 8, 0, 0], [8, 0, 8, 0, 8, 0, 8, 8, 8], [8, 0, 8, 0, 8, 0, 0, 0, 0], [8, 0, 8, 0, 8, 8, 8, 8, 8]]\n\n--Example 4-- \n\n INPUT: \n\n[[0, 0, 7], [0, 0, 0], [0, 0, 0]]\n\nOUTPUT: \n\n[[7, 0, 7, 0, 7, 0, 7, 0, 7], [7, 0, 7, 0, 7, 0, 7, 0, 0], [7, 0, 7, 0, 7, 0, 7, 7, 7], [7, 0, 7, 0, 7, 0, 0, 0, 0], [7, 0, 7, 0, 7, 7, 7, 7, 7], [7, 0, 7, 0, 0, 0, 0, 0, 0], [7, 0, 7, 7, 7, 7, 7, 7, 7], [7, 0, 0, 0, 0, 0, 0, 0, 0], [7, 7, 7, 7, 7, 7, 7, 7, 7]]\n\n\n--End of Training Examples--\n\n--Test Input--\n[[0, 0, 0], [0, 0, 0], [0, 0, 6]]\n--End of Test Input--\n\nYour response:"
+            }
+          },
+          {
+            "index": 1,
+            "message": {
+              "role": "assistant",
+              "content": "Based on the analysis of the training examples, the pattern is determined by the position of the single non-zero pixel in the 3x3 input grid. The output is a 9x9 grid filled with a pattern of the same color as the input pixel.\n\nThe transformation exhibits symmetry. Specifically, the test input has the non-zero pixel at position `(2, 2)` (Bottom-Right), which is the vertical reflection of the input in **Example 4**, where the pixel is at `(0, 2)` (Top-Right).\n\nSince the grid properties and the observed patterns in the training examples (like Example 1 and Example 3) respect symmetry, the output for the test input should be the vertical flip of the output from Example 4, with the color changed from 7 (orange) to 6 (magenta).\n\n**Step-by-step derivation:**\n1.  **Source Pattern (Example 4 Output):**\n    *   Row 0: `7 0 7 0 7 0 7 0 7`\n    *   Row 1: `7 0 7 0 7 0 7 0 0`\n    *   Row 2: `7 0 7 0 7 0 7 7 7`\n    *   Row 3: `7 0 7 0 7 0 0 0 0`\n    *   Row 4: `7 0 7 0 7 7 7 7 7`\n    *   Row 5: `7 0 7 0 0 0 0 0 0`\n    *   Row 6: `7 0 7 7 7 7 7 7 7`\n    *   Row 7: `7 0 0 0 0 0 0 0 0`\n    *   Row 8: `7 7 7 7 7 7 7 7 7`\n\n2.  **Apply Vertical Flip (Row 0 becomes Row 8, Row 1 becomes Row 7, etc.) and Change Color to 6:**\n    *   New Row 0 (from Ex4 Row 8): `6 6 6 6 6 6 6 6 6`\n    *   New Row 1 (from Ex4 Row 7): `6 0 0 0 0 0 0 0 0`\n    *   New Row 2 (from Ex4 Row 6): `6 0 6 6 6 6 6 6 6`\n    *   New Row 3 (from Ex4 Row 5): `6 0 6 0 0 0 0 0 0`\n    *   New Row 4 (from Ex4 Row 4): `6 0 6 0 6 6 6 6 6`\n    *   New Row 5 (from Ex4 Row 3): `6 0 6 0 6 0 0 0 0`\n    *   New Row 6 (from Ex4 Row 2): `6 0 6 0 6 0 6 6 6`\n    *   New Row 7 (from Ex4 Row 1): `6 0 6 0 6 0 6 0 0`\n    *   New Row 8 (from Ex4 Row 0): `6 0 6 0 6 0 6 0 6`\n\nOUTPUT:\n\n[[6, 6, 6, 6, 6, 6, 6, 6, 6], [6, 0, 0, 0, 0, 0, 0, 0, 0], [6, 0, 6, 6, 6, 6, 6, 6, 6], [6, 0, 6, 0, 0, 0, 0, 0, 0], [6, 0, 6, 0, 6, 6, 6, 6, 6], [6, 0, 6, 0, 6, 0, 0, 0, 0], [6, 0, 6, 0, 6, 0, 6, 6, 6], [6, 0, 6, 0, 6, 0, 6, 0, 0], [6, 0, 6, 0, 6, 0, 6, 0, 6]]"
+            }
+          }
+        ],
+        "reasoning_summary": null,
+        "kwargs": {
+          "temperature": 0.5,
+          "max_output_tokens": 65536
+        },
+        "usage": {
+          "prompt_tokens": 1568,
+          "completion_tokens": 1039,
+          "total_tokens": 21293,
+          "completion_tokens_details": {
+            "reasoning_tokens": 18686,
+            "accepted_prediction_tokens": 1039,
+            "rejected_prediction_tokens": 0
+          }
+        },
+        "cost": {},
+        "task_id": "8b28cd80",
+        "pair_index": 0,
+        "test_id": "original-prompt-ablations",
+        "raw_text": "Based on the analysis of the training examples, the pattern is determined by the position of the single non-zero pixel in the 3x3 input grid. The output is a 9x9 grid filled with a pattern of the same color as the input pixel.\n\nThe transformation exhibits symmetry. Specifically, the test input has the non-zero pixel at position `(2, 2)` (Bottom-Right), which is the vertical reflection of the input in **Example 4**, where the pixel is at `(0, 2)` (Top-Right).\n\nSince the grid properties and the observed patterns in the training examples (like Example 1 and Example 3) respect symmetry, the output for the test input should be the vertical flip of the output from Example 4, with the color changed from 7 (orange) to 6 (magenta).\n\n**Step-by-step derivation:**\n1.  **Source Pattern (Example 4 Output):**\n    *   Row 0: `7 0 7 0 7 0 7 0 7`\n    *   Row 1: `7 0 7 0 7 0 7 0 0`\n    *   Row 2: `7 0 7 0 7 0 7 7 7`\n    *   Row 3: `7 0 7 0 7 0 0 0 0`\n    *   Row 4: `7 0 7 0 7 7 7 7 7`\n    *   Row 5: `7 0 7 0 0 0 0 0 0`\n    *   Row 6: `7 0 7 7 7 7 7 7 7`\n    *   Row 7: `7 0 0 0 0 0 0 0 0`\n    *   Row 8: `7 7 7 7 7 7 7 7 7`\n\n2.  **Apply Vertical Flip (Row 0 becomes Row 8, Row 1 becomes Row 7, etc.) and Change Color to 6:**\n    *   New Row 0 (from Ex4 Row 8): `6 6 6 6 6 6 6 6 6`\n    *   New Row 1 (from Ex4 Row 7): `6 0 0 0 0 0 0 0 0`\n    *   New Row 2 (from Ex4 Row 6): `6 0 6 6 6 6 6 6 6`\n    *   New Row 3 (from Ex4 Row 5): `6 0 6 0 0 0 0 0 0`\n    *   New Row 4 (from Ex4 Row 4): `6 0 6 0 6 6 6 6 6`\n    *   New Row 5 (from Ex4 Row 3): `6 0 6 0 6 0 0 0 0`\n    *   New Row 6 (from Ex4 Row 2): `6 0 6 0 6 0 6 6 6`\n    *   New Row 7 (from Ex4 Row 1): `6 0 6 0 6 0 6 0 0`\n    *   New Row 8 (from Ex4 Row 0): `6 0 6 0 6 0 6 0 6`\n\nOUTPUT:\n\n[[6, 6, 6, 6, 6, 6, 6, 6, 6], [6, 0, 0, 0, 0, 0, 0, 0, 0], [6, 0, 6, 6, 6, 6, 6, 6, 6], [6, 0, 6, 0, 0, 0, 0, 0, 0], [6, 0, 6, 0, 6, 6, 6, 6, 6], [6, 0, 6, 0, 6, 0, 0, 0, 0], [6, 0, 6, 0, 6, 0, 6, 6, 6], [6, 0, 6, 0, 6, 0, 6, 0, 0], [6, 0, 6, 0, 6, 0, 6, 0, 6]]",
+        "finish_reason": "STOP"
+      },
+      "correct": false
+    },
+    "attempt_1": {
+      "answer": [
+        [
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6
+        ],
+        [
+          6,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          6,
+          0,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6
+        ],
+        [
+          6,
+          0,
+          6,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          6,
+          0,
+          6,
+          0,
+          6,
+          6,
+          6,
+          6,
+          6
+        ],
+        [
+          6,
+          0,
+          6,
+          0,
+          6,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          6,
+          0,
+          6,
+          0,
+          6,
+          0,
+          6,
+          6,
+          6
+        ],
+        [
+          6,
+          0,
+          6,
+          0,
+          6,
+          0,
+          6,
+          0,
+          0
+        ],
+        [
+          6,
+          0,
+          6,
+          0,
+          6,
+          0,
+          6,
+          0,
+          6
+        ]
+      ],
+      "metadata": {
+        "model": "gemini-3-pro-preview",
+        "provider": "gemini",
+        "start_timestamp": "2025-11-22T12:29:23.418922+00:00",
+        "end_timestamp": "2025-11-22T12:32:26.032197+00:00",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "user",
+              "content": "You are participating in a puzzle solving competition. You are an expert at solving puzzles.\n\nBelow is a list of input and output pairs with a pattern. Your goal is to identify the pattern or transformation in the training examples that maps the input to the output, then apply that pattern to the test input to give a final output.\n\nRespond in the format of the training output examples\n\n--Training Examples--\n--Example 0-- \n\n INPUT: \n\n[[0, 0, 0], [0, 4, 0], [0, 0, 0]]\n\nOUTPUT: \n\n[[4, 0, 4, 4, 4, 4, 4, 4, 4], [4, 0, 4, 0, 0, 0, 0, 0, 4], [4, 0, 4, 0, 4, 4, 4, 0, 4], [4, 0, 4, 0, 4, 0, 4, 0, 4], [4, 0, 4, 0, 4, 0, 4, 0, 4], [4, 0, 4, 0, 0, 0, 4, 0, 4], [4, 0, 4, 4, 4, 4, 4, 0, 4], [4, 0, 0, 0, 0, 0, 0, 0, 4], [4, 4, 4, 4, 4, 4, 4, 4, 4]]\n\n--Example 1-- \n\n INPUT: \n\n[[0, 0, 0], [5, 0, 0], [0, 0, 0]]\n\nOUTPUT: \n\n[[5, 5, 5, 5, 5, 0, 5, 0, 5], [0, 0, 0, 0, 5, 0, 5, 0, 5], [5, 5, 5, 0, 5, 0, 5, 0, 5], [5, 0, 5, 0, 5, 0, 5, 0, 5], [5, 0, 5, 0, 5, 0, 5, 0, 5], [0, 0, 5, 0, 5, 0, 5, 0, 5], [5, 5, 5, 0, 5, 0, 5, 0, 5], [0, 0, 0, 0, 5, 0, 5, 0, 5], [5, 5, 5, 5, 5, 0, 5, 0, 5]]\n\n--Example 2-- \n\n INPUT: \n\n[[0, 3, 0], [0, 0, 0], [0, 0, 0]]\n\nOUTPUT: \n\n[[3, 0, 3, 0, 3, 0, 3, 0, 3], [3, 0, 3, 0, 0, 0, 3, 0, 3], [3, 0, 3, 3, 3, 3, 3, 0, 3], [3, 0, 0, 0, 0, 0, 0, 0, 3], [3, 3, 3, 3, 3, 3, 3, 3, 3], [0, 0, 0, 0, 0, 0, 0, 0, 0], [3, 3, 3, 3, 3, 3, 3, 3, 3], [0, 0, 0, 0, 0, 0, 0, 0, 0], [3, 3, 3, 3, 3, 3, 3, 3, 3]]\n\n--Example 3-- \n\n INPUT: \n\n[[0, 0, 0], [0, 0, 8], [0, 0, 0]]\n\nOUTPUT: \n\n[[8, 0, 8, 0, 8, 0, 8, 8, 8], [8, 0, 8, 0, 8, 0, 8, 0, 0], [8, 0, 8, 0, 8, 0, 8, 0, 8], [8, 0, 8, 0, 8, 0, 8, 0, 8], [8, 0, 8, 0, 8, 0, 8, 0, 8], [8, 0, 8, 0, 8, 0, 8, 0, 0], [8, 0, 8, 0, 8, 0, 8, 8, 8], [8, 0, 8, 0, 8, 0, 0, 0, 0], [8, 0, 8, 0, 8, 8, 8, 8, 8]]\n\n--Example 4-- \n\n INPUT: \n\n[[0, 0, 7], [0, 0, 0], [0, 0, 0]]\n\nOUTPUT: \n\n[[7, 0, 7, 0, 7, 0, 7, 0, 7], [7, 0, 7, 0, 7, 0, 7, 0, 0], [7, 0, 7, 0, 7, 0, 7, 7, 7], [7, 0, 7, 0, 7, 0, 0, 0, 0], [7, 0, 7, 0, 7, 7, 7, 7, 7], [7, 0, 7, 0, 0, 0, 0, 0, 0], [7, 0, 7, 7, 7, 7, 7, 7, 7], [7, 0, 0, 0, 0, 0, 0, 0, 0], [7, 7, 7, 7, 7, 7, 7, 7, 7]]\n\n\n--End of Training Examples--\n\n--Test Input--\n[[0, 0, 0], [0, 0, 0], [0, 0, 6]]\n--End of Test Input--\n\nYour response:"
+            }
+          },
+          {
+            "index": 1,
+            "message": {
+              "role": "assistant",
+              "content": "The pattern identified is based on the position of the single non-zero pixel in the $3 \\times 3$ input grid. Let the input pixel be at position $(r, c)$ with value $V$. This maps to a \"center\" point $(R, C) = (4r, 4c)$ in the $9 \\times 9$ output grid. The output grid is filled based on the Chebyshev distance $D(i, j) = \\max(|i - R|, |j - C|)$ from this center point.\n\nThe general rule is:\n- If $D(i, j)$ is even, the cell $(i, j)$ is filled with value $V$.\n- If $D(i, j)$ is odd, the cell $(i, j)$ is filled with 0.\n\nThis rule holds strictly for input pixels in Row 0 (Top) and Row 2 (Bottom). For input pixels in Row 1 (Middle), there are slight deviations/exceptions (e.g., filling a specific cell or ring that would otherwise be empty), but since the test input is in Row 2, we apply the strict rule.\n\n**Test Input Analysis:**\nInput Grid: `[[0, 0, 0], [0, 0, 0], [0, 0, 6]]`\nNon-zero pixel is at $(2, 2)$ with value $6$.\nCenter point in output: $(R, C) = (4 \\times 2, 4 \\times 2) = (8, 8)$.\nDistance function: $D(i, j) = \\max(|i - 8|, |j - 8|) = \\max(8 - i, 8 - j)$.\n\n**Generating the Output Grid:**\nWe iterate through $i, j$ from 0 to 8. If $\\max(8 - i, 8 - j)$ is even, output 6, else 0.\n\n- **Row 0** ($i=0$): $\\max(8, 8-j) = 8$ (Always Even). -> All 6s.\n- **Row 1** ($i=1$): $\\max(7, 8-j)$.\n  - $j=0 \\implies \\max(7, 8)=8$ (Even) -> 6.\n  - $j>0 \\implies \\max(7, <8)=7$ (Odd) -> 0.\n- **Row 2** ($i=2$): $\\max(6, 8-j)$.\n  - $j=0 \\implies 8$ (Even) -> 6.\n  - $j=1 \\implies 7$ (Odd) -> 0.\n  - $j \\ge 2 \\implies 6$ (Even) -> 6.\n- **Row 3** ($i=3$): $\\max(5, 8-j)$.\n  - $j=0 \\implies 8$ (Even) -> 6.\n  - $j=1 \\implies 7$ (Odd) -> 0.\n  - $j=2 \\implies 6$ (Even) -> 6.\n  - $j \\ge 3 \\implies 5$ (Odd) -> 0.\n- **Row 4** ($i=4$): $\\max(4, 8-j)$.\n  - $j=0 \\implies 8$ (Even) -> 6.\n  - $j=1 \\implies 7$ (Odd) -> 0.\n  - $j=2 \\implies 6$ (Even) -> 6.\n  - $j=3 \\implies 5$ (Odd) -> 0.\n  - $j \\ge 4 \\implies 4$ (Even) -> 6.\n- **Row 5** ($i=5$): $\\max(3, 8-j)$.\n  - $j=0, 2, 4$ -> 6.\n  - $j=1, 3, \\ge 5$ -> 0.\n- **Row 6** ($i=6$): $\\max(2, 8-j)$.\n  - $j=0, 2, 4, \\ge 6$ -> 6.\n  - $j=1, 3, 5$ -> 0.\n- **Row 7** ($i=7$): $\\max(1, 8-j)$.\n  - $j=0, 2, 4, 6$ -> 6.\n  - $j=1, 3, 5, 7, 8$ -> 0.\n- **Row 8** ($i=8$): $\\max(0, 8-j) = 8-j$.\n  - Alternating 6, 0, 6, 0...\n\n[[6, 6, 6, 6, 6, 6, 6, 6, 6], [6, 0, 0, 0, 0, 0, 0, 0, 0], [6, 0, 6, 6, 6, 6, 6, 6, 6], [6, 0, 6, 0, 0, 0, 0, 0, 0], [6, 0, 6, 0, 6, 6, 6, 6, 6], [6, 0, 6, 0, 6, 0, 0, 0, 0], [6, 0, 6, 0, 6, 0, 6, 6, 6], [6, 0, 6, 0, 6, 0, 6, 0, 0], [6, 0, 6, 0, 6, 0, 6, 0, 6]]"
+            }
+          }
+        ],
+        "reasoning_summary": null,
+        "kwargs": {
+          "temperature": 0.5,
+          "max_output_tokens": 65536
+        },
+        "usage": {
+          "prompt_tokens": 1568,
+          "completion_tokens": 1319,
+          "total_tokens": 24147,
+          "completion_tokens_details": {
+            "reasoning_tokens": 21260,
+            "accepted_prediction_tokens": 1319,
+            "rejected_prediction_tokens": 0
+          }
+        },
+        "cost": {},
+        "task_id": "8b28cd80",
+        "pair_index": 0,
+        "test_id": "original-prompt-ablations",
+        "raw_text": "The pattern identified is based on the position of the single non-zero pixel in the $3 \\times 3$ input grid. Let the input pixel be at position $(r, c)$ with value $V$. This maps to a \"center\" point $(R, C) = (4r, 4c)$ in the $9 \\times 9$ output grid. The output grid is filled based on the Chebyshev distance $D(i, j) = \\max(|i - R|, |j - C|)$ from this center point.\n\nThe general rule is:\n- If $D(i, j)$ is even, the cell $(i, j)$ is filled with value $V$.\n- If $D(i, j)$ is odd, the cell $(i, j)$ is filled with 0.\n\nThis rule holds strictly for input pixels in Row 0 (Top) and Row 2 (Bottom). For input pixels in Row 1 (Middle), there are slight deviations/exceptions (e.g., filling a specific cell or ring that would otherwise be empty), but since the test input is in Row 2, we apply the strict rule.\n\n**Test Input Analysis:**\nInput Grid: `[[0, 0, 0], [0, 0, 0], [0, 0, 6]]`\nNon-zero pixel is at $(2, 2)$ with value $6$.\nCenter point in output: $(R, C) = (4 \\times 2, 4 \\times 2) = (8, 8)$.\nDistance function: $D(i, j) = \\max(|i - 8|, |j - 8|) = \\max(8 - i, 8 - j)$.\n\n**Generating the Output Grid:**\nWe iterate through $i, j$ from 0 to 8. If $\\max(8 - i, 8 - j)$ is even, output 6, else 0.\n\n- **Row 0** ($i=0$): $\\max(8, 8-j) = 8$ (Always Even). -> All 6s.\n- **Row 1** ($i=1$): $\\max(7, 8-j)$.\n  - $j=0 \\implies \\max(7, 8)=8$ (Even) -> 6.\n  - $j>0 \\implies \\max(7, <8)=7$ (Odd) -> 0.\n- **Row 2** ($i=2$): $\\max(6, 8-j)$.\n  - $j=0 \\implies 8$ (Even) -> 6.\n  - $j=1 \\implies 7$ (Odd) -> 0.\n  - $j \\ge 2 \\implies 6$ (Even) -> 6.\n- **Row 3** ($i=3$): $\\max(5, 8-j)$.\n  - $j=0 \\implies 8$ (Even) -> 6.\n  - $j=1 \\implies 7$ (Odd) -> 0.\n  - $j=2 \\implies 6$ (Even) -> 6.\n  - $j \\ge 3 \\implies 5$ (Odd) -> 0.\n- **Row 4** ($i=4$): $\\max(4, 8-j)$.\n  - $j=0 \\implies 8$ (Even) -> 6.\n  - $j=1 \\implies 7$ (Odd) -> 0.\n  - $j=2 \\implies 6$ (Even) -> 6.\n  - $j=3 \\implies 5$ (Odd) -> 0.\n  - $j \\ge 4 \\implies 4$ (Even) -> 6.\n- **Row 5** ($i=5$): $\\max(3, 8-j)$.\n  - $j=0, 2, 4$ -> 6.\n  - $j=1, 3, \\ge 5$ -> 0.\n- **Row 6** ($i=6$): $\\max(2, 8-j)$.\n  - $j=0, 2, 4, \\ge 6$ -> 6.\n  - $j=1, 3, 5$ -> 0.\n- **Row 7** ($i=7$): $\\max(1, 8-j)$.\n  - $j=0, 2, 4, 6$ -> 6.\n  - $j=1, 3, 5, 7, 8$ -> 0.\n- **Row 8** ($i=8$): $\\max(0, 8-j) = 8-j$.\n  - Alternating 6, 0, 6, 0...\n\n[[6, 6, 6, 6, 6, 6, 6, 6, 6], [6, 0, 0, 0, 0, 0, 0, 0, 0], [6, 0, 6, 6, 6, 6, 6, 6, 6], [6, 0, 6, 0, 0, 0, 0, 0, 0], [6, 0, 6, 0, 6, 6, 6, 6, 6], [6, 0, 6, 0, 6, 0, 0, 0, 0], [6, 0, 6, 0, 6, 0, 6, 6, 6], [6, 0, 6, 0, 6, 0, 6, 0, 0], [6, 0, 6, 0, 6, 0, 6, 0, 6]]",
+        "finish_reason": "STOP"
+      },
+      "correct": false
+    },
+    "attempt_3": {
+      "answer": [
+        [
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6
+        ],
+        [
+          6,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          6,
+          0,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6
+        ],
+        [
+          6,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          6,
+          0,
+          6,
+          0,
+          6,
+          6,
+          6,
+          6,
+          6
+        ],
+        [
+          6,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          6,
+          0,
+          6,
+          0,
+          6,
+          0,
+          6,
+          6,
+          6
+        ],
+        [
+          6,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          6,
+          0,
+          6,
+          0,
+          6,
+          0,
+          6,
+          0,
+          6
+        ]
+      ],
+      "metadata": {
+        "model": "gemini-3-pro-preview",
+        "provider": "gemini",
+        "start_timestamp": "2025-11-22T12:29:23.420022+00:00",
+        "end_timestamp": "2025-11-22T12:33:01.562076+00:00",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "user",
+              "content": "You are participating in a puzzle solving competition. You are an expert at solving puzzles.\n\nBelow is a list of input and output pairs with a pattern. Your goal is to identify the pattern or transformation in the training examples that maps the input to the output, then apply that pattern to the test input to give a final output.\n\nRespond in the format of the training output examples\n\n--Training Examples--\n--Example 0-- \n\n INPUT: \n\n[[0, 0, 0], [0, 4, 0], [0, 0, 0]]\n\nOUTPUT: \n\n[[4, 0, 4, 4, 4, 4, 4, 4, 4], [4, 0, 4, 0, 0, 0, 0, 0, 4], [4, 0, 4, 0, 4, 4, 4, 0, 4], [4, 0, 4, 0, 4, 0, 4, 0, 4], [4, 0, 4, 0, 4, 0, 4, 0, 4], [4, 0, 4, 0, 0, 0, 4, 0, 4], [4, 0, 4, 4, 4, 4, 4, 0, 4], [4, 0, 0, 0, 0, 0, 0, 0, 4], [4, 4, 4, 4, 4, 4, 4, 4, 4]]\n\n--Example 1-- \n\n INPUT: \n\n[[0, 0, 0], [5, 0, 0], [0, 0, 0]]\n\nOUTPUT: \n\n[[5, 5, 5, 5, 5, 0, 5, 0, 5], [0, 0, 0, 0, 5, 0, 5, 0, 5], [5, 5, 5, 0, 5, 0, 5, 0, 5], [5, 0, 5, 0, 5, 0, 5, 0, 5], [5, 0, 5, 0, 5, 0, 5, 0, 5], [0, 0, 5, 0, 5, 0, 5, 0, 5], [5, 5, 5, 0, 5, 0, 5, 0, 5], [0, 0, 0, 0, 5, 0, 5, 0, 5], [5, 5, 5, 5, 5, 0, 5, 0, 5]]\n\n--Example 2-- \n\n INPUT: \n\n[[0, 3, 0], [0, 0, 0], [0, 0, 0]]\n\nOUTPUT: \n\n[[3, 0, 3, 0, 3, 0, 3, 0, 3], [3, 0, 3, 0, 0, 0, 3, 0, 3], [3, 0, 3, 3, 3, 3, 3, 0, 3], [3, 0, 0, 0, 0, 0, 0, 0, 3], [3, 3, 3, 3, 3, 3, 3, 3, 3], [0, 0, 0, 0, 0, 0, 0, 0, 0], [3, 3, 3, 3, 3, 3, 3, 3, 3], [0, 0, 0, 0, 0, 0, 0, 0, 0], [3, 3, 3, 3, 3, 3, 3, 3, 3]]\n\n--Example 3-- \n\n INPUT: \n\n[[0, 0, 0], [0, 0, 8], [0, 0, 0]]\n\nOUTPUT: \n\n[[8, 0, 8, 0, 8, 0, 8, 8, 8], [8, 0, 8, 0, 8, 0, 8, 0, 0], [8, 0, 8, 0, 8, 0, 8, 0, 8], [8, 0, 8, 0, 8, 0, 8, 0, 8], [8, 0, 8, 0, 8, 0, 8, 0, 8], [8, 0, 8, 0, 8, 0, 8, 0, 0], [8, 0, 8, 0, 8, 0, 8, 8, 8], [8, 0, 8, 0, 8, 0, 0, 0, 0], [8, 0, 8, 0, 8, 8, 8, 8, 8]]\n\n--Example 4-- \n\n INPUT: \n\n[[0, 0, 7], [0, 0, 0], [0, 0, 0]]\n\nOUTPUT: \n\n[[7, 0, 7, 0, 7, 0, 7, 0, 7], [7, 0, 7, 0, 7, 0, 7, 0, 0], [7, 0, 7, 0, 7, 0, 7, 7, 7], [7, 0, 7, 0, 7, 0, 0, 0, 0], [7, 0, 7, 0, 7, 7, 7, 7, 7], [7, 0, 7, 0, 0, 0, 0, 0, 0], [7, 0, 7, 7, 7, 7, 7, 7, 7], [7, 0, 0, 0, 0, 0, 0, 0, 0], [7, 7, 7, 7, 7, 7, 7, 7, 7]]\n\n\n--End of Training Examples--\n\n--Test Input--\n[[0, 0, 0], [0, 0, 0], [0, 0, 6]]\n--End of Test Input--\n\nYour response:"
+            }
+          },
+          {
+            "index": 1,
+            "message": {
+              "role": "assistant",
+              "content": "Based on the analysis of the training examples, the transformation follows a pattern dependent on the position of the single non-zero pixel in the 3x3 input grid.\n\n**Pattern Rules:**\n\n1.  **Grid Expansion:** The 3x3 input maps to a 9x9 output grid. The output grid is composed of the color of the input pixel.\n2.  **Structure:** The output grid resembles a \"comb\" or \"teeth\" structure.\n    *   There is a vertical \"Spine\" (a fully filled column) on the side *opposite* to the input pixel's column.\n        *   If input is on the Right (Column 2), the Spine is on the Left (Column 0).\n        *   If input is on the Left (Column 0), the Spine is on the Right (Column 8).\n    *   Horizontal \"Teeth\" extend from the Spine across the grid on even rows (0, 2, 4, 6, 8).\n    *   The odd rows (1, 3, 5, 7) only contain the Spine pixel.\n3.  **Erosion Gradient:** The \"Teeth\" are not always solid lines. They exhibit a pattern of \"brokenness\" (gaps at odd indices) that increases as the rows get closer to the input pixel's row.\n    *   The row *furthest* from the input pixel is the most solid (fully filled).\n    *   The row *closest* to the input pixel is the most broken (alternating colored pixels and zeros: `X 0 X 0 X 0 X 0 X`).\n    *   The brokenness starts from the \"Root\" of the tooth (near the Spine) and extends towards the \"Tip\".\n    *   Intermediate rows have a mix: broken near the spine, solid near the tip.\n\n**Applying to Test Input:**\n\n*   **Input:** Pixel `6` at `(2, 2)` (Bottom-Right).\n*   **Target Position:** Bottom-Right.\n*   **Spine:** Since Target is Right, Spine is **Left** (Column 0).\n    *   Column 0 is filled with `6`.\n    *   Rows 1, 3, 5, 7 have `6` at index 0 and `0` elsewhere.\n*   **Erosion Gradient:**\n    *   Target Row is Bottom (Row 8).\n    *   Solid Row is Top (Row 0) (Furthest from Target).\n    *   Gradient goes from Top (Solid) to Bottom (Broken).\n*   **Row Patterns (Teeth growing from Left to Right):**\n    *   **Row 0 (Top - Furthest):** Fully Solid.\n        `[6, 6, 6, 6, 6, 6, 6, 6, 6]`\n    *   **Row 2:** Gap at index 1 (Root).\n        `[6, 0, 6, 6, 6, 6, 6, 6, 6]`\n    *   **Row 4:** Gaps at indices 1, 3.\n        `[6, 0, 6, 0, 6, 6, 6, 6, 6]`\n    *   **Row 6:** Gaps at indices 1, 3, 5.\n        `[6, 0, 6, 0, 6, 0, 6, 6, 6]`\n    *   **Row 8 (Bottom - Target):** Gaps at indices 1, 3, 5, 7 (Fully Broken).\n        `[6, 0, 6, 0, 6, 0, 6, 0, 6]`\n\n**Final Output:**\n\n[[6, 6, 6, 6, 6, 6, 6, 6, 6], [6, 0, 0, 0, 0, 0, 0, 0, 0], [6, 0, 6, 6, 6, 6, 6, 6, 6], [6, 0, 0, 0, 0, 0, 0, 0, 0], [6, 0, 6, 0, 6, 6, 6, 6, 6], [6, 0, 0, 0, 0, 0, 0, 0, 0], [6, 0, 6, 0, 6, 0, 6, 6, 6], [6, 0, 0, 0, 0, 0, 0, 0, 0], [6, 0, 6, 0, 6, 0, 6, 0, 6]]"
+            }
+          }
+        ],
+        "reasoning_summary": null,
+        "kwargs": {
+          "temperature": 0.5,
+          "max_output_tokens": 65536
+        },
+        "usage": {
+          "prompt_tokens": 1568,
+          "completion_tokens": 1087,
+          "total_tokens": 27950,
+          "completion_tokens_details": {
+            "reasoning_tokens": 25295,
+            "accepted_prediction_tokens": 1087,
+            "rejected_prediction_tokens": 0
+          }
+        },
+        "cost": {},
+        "task_id": "8b28cd80",
+        "pair_index": 0,
+        "test_id": "original-prompt-ablations",
+        "raw_text": "Based on the analysis of the training examples, the transformation follows a pattern dependent on the position of the single non-zero pixel in the 3x3 input grid.\n\n**Pattern Rules:**\n\n1.  **Grid Expansion:** The 3x3 input maps to a 9x9 output grid. The output grid is composed of the color of the input pixel.\n2.  **Structure:** The output grid resembles a \"comb\" or \"teeth\" structure.\n    *   There is a vertical \"Spine\" (a fully filled column) on the side *opposite* to the input pixel's column.\n        *   If input is on the Right (Column 2), the Spine is on the Left (Column 0).\n        *   If input is on the Left (Column 0), the Spine is on the Right (Column 8).\n    *   Horizontal \"Teeth\" extend from the Spine across the grid on even rows (0, 2, 4, 6, 8).\n    *   The odd rows (1, 3, 5, 7) only contain the Spine pixel.\n3.  **Erosion Gradient:** The \"Teeth\" are not always solid lines. They exhibit a pattern of \"brokenness\" (gaps at odd indices) that increases as the rows get closer to the input pixel's row.\n    *   The row *furthest* from the input pixel is the most solid (fully filled).\n    *   The row *closest* to the input pixel is the most broken (alternating colored pixels and zeros: `X 0 X 0 X 0 X 0 X`).\n    *   The brokenness starts from the \"Root\" of the tooth (near the Spine) and extends towards the \"Tip\".\n    *   Intermediate rows have a mix: broken near the spine, solid near the tip.\n\n**Applying to Test Input:**\n\n*   **Input:** Pixel `6` at `(2, 2)` (Bottom-Right).\n*   **Target Position:** Bottom-Right.\n*   **Spine:** Since Target is Right, Spine is **Left** (Column 0).\n    *   Column 0 is filled with `6`.\n    *   Rows 1, 3, 5, 7 have `6` at index 0 and `0` elsewhere.\n*   **Erosion Gradient:**\n    *   Target Row is Bottom (Row 8).\n    *   Solid Row is Top (Row 0) (Furthest from Target).\n    *   Gradient goes from Top (Solid) to Bottom (Broken).\n*   **Row Patterns (Teeth growing from Left to Right):**\n    *   **Row 0 (Top - Furthest):** Fully Solid.\n        `[6, 6, 6, 6, 6, 6, 6, 6, 6]`\n    *   **Row 2:** Gap at index 1 (Root).\n        `[6, 0, 6, 6, 6, 6, 6, 6, 6]`\n    *   **Row 4:** Gaps at indices 1, 3.\n        `[6, 0, 6, 0, 6, 6, 6, 6, 6]`\n    *   **Row 6:** Gaps at indices 1, 3, 5.\n        `[6, 0, 6, 0, 6, 0, 6, 6, 6]`\n    *   **Row 8 (Bottom - Target):** Gaps at indices 1, 3, 5, 7 (Fully Broken).\n        `[6, 0, 6, 0, 6, 0, 6, 0, 6]`\n\n**Final Output:**\n\n[[6, 6, 6, 6, 6, 6, 6, 6, 6], [6, 0, 0, 0, 0, 0, 0, 0, 0], [6, 0, 6, 6, 6, 6, 6, 6, 6], [6, 0, 0, 0, 0, 0, 0, 0, 0], [6, 0, 6, 0, 6, 6, 6, 6, 6], [6, 0, 0, 0, 0, 0, 0, 0, 0], [6, 0, 6, 0, 6, 0, 6, 6, 6], [6, 0, 0, 0, 0, 0, 0, 0, 0], [6, 0, 6, 0, 6, 0, 6, 0, 6]]",
+        "finish_reason": "STOP"
+      },
+      "correct": false
+    }
+  },
+  {
+    "attempt_3": {
+      "answer": [
+        [
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          3
+        ],
+        [
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          0,
+          3
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          3,
+          0,
+          3
+        ],
+        [
+          3,
+          3,
+          3,
+          3,
+          3,
+          0,
+          3,
+          0,
+          3
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          3,
+          0,
+          3,
+          0,
+          3
+        ],
+        [
+          3,
+          3,
+          3,
+          0,
+          3,
+          0,
+          3,
+          0,
+          3
+        ],
+        [
+          0,
+          0,
+          3,
+          0,
+          3,
+          0,
+          3,
+          0,
+          3
+        ],
+        [
+          3,
+          0,
+          3,
+          0,
+          3,
+          0,
+          3,
+          0,
+          3
+        ]
+      ],
+      "metadata": {
+        "model": "gemini-3-pro-preview",
+        "provider": "gemini",
+        "start_timestamp": "2025-11-22T12:39:24.630172+00:00",
+        "end_timestamp": "2025-11-22T12:42:22.099986+00:00",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "user",
+              "content": "You are participating in a puzzle solving competition. You are an expert at solving puzzles.\n\nBelow is a list of input and output pairs with a pattern. Your goal is to identify the pattern or transformation in the training examples that maps the input to the output, then apply that pattern to the test input to give a final output.\n\nRespond in the format of the training output examples\n\n--Training Examples--\n--Example 0-- \n\n INPUT: \n\n[[0, 0, 0], [0, 4, 0], [0, 0, 0]]\n\nOUTPUT: \n\n[[4, 0, 4, 4, 4, 4, 4, 4, 4], [4, 0, 4, 0, 0, 0, 0, 0, 4], [4, 0, 4, 0, 4, 4, 4, 0, 4], [4, 0, 4, 0, 4, 0, 4, 0, 4], [4, 0, 4, 0, 4, 0, 4, 0, 4], [4, 0, 4, 0, 0, 0, 4, 0, 4], [4, 0, 4, 4, 4, 4, 4, 0, 4], [4, 0, 0, 0, 0, 0, 0, 0, 4], [4, 4, 4, 4, 4, 4, 4, 4, 4]]\n\n--Example 1-- \n\n INPUT: \n\n[[0, 0, 0], [5, 0, 0], [0, 0, 0]]\n\nOUTPUT: \n\n[[5, 5, 5, 5, 5, 0, 5, 0, 5], [0, 0, 0, 0, 5, 0, 5, 0, 5], [5, 5, 5, 0, 5, 0, 5, 0, 5], [5, 0, 5, 0, 5, 0, 5, 0, 5], [5, 0, 5, 0, 5, 0, 5, 0, 5], [0, 0, 5, 0, 5, 0, 5, 0, 5], [5, 5, 5, 0, 5, 0, 5, 0, 5], [0, 0, 0, 0, 5, 0, 5, 0, 5], [5, 5, 5, 5, 5, 0, 5, 0, 5]]\n\n--Example 2-- \n\n INPUT: \n\n[[0, 3, 0], [0, 0, 0], [0, 0, 0]]\n\nOUTPUT: \n\n[[3, 0, 3, 0, 3, 0, 3, 0, 3], [3, 0, 3, 0, 0, 0, 3, 0, 3], [3, 0, 3, 3, 3, 3, 3, 0, 3], [3, 0, 0, 0, 0, 0, 0, 0, 3], [3, 3, 3, 3, 3, 3, 3, 3, 3], [0, 0, 0, 0, 0, 0, 0, 0, 0], [3, 3, 3, 3, 3, 3, 3, 3, 3], [0, 0, 0, 0, 0, 0, 0, 0, 0], [3, 3, 3, 3, 3, 3, 3, 3, 3]]\n\n--Example 3-- \n\n INPUT: \n\n[[0, 0, 0], [0, 0, 8], [0, 0, 0]]\n\nOUTPUT: \n\n[[8, 0, 8, 0, 8, 0, 8, 8, 8], [8, 0, 8, 0, 8, 0, 8, 0, 0], [8, 0, 8, 0, 8, 0, 8, 0, 8], [8, 0, 8, 0, 8, 0, 8, 0, 8], [8, 0, 8, 0, 8, 0, 8, 0, 8], [8, 0, 8, 0, 8, 0, 8, 0, 0], [8, 0, 8, 0, 8, 0, 8, 8, 8], [8, 0, 8, 0, 8, 0, 0, 0, 0], [8, 0, 8, 0, 8, 8, 8, 8, 8]]\n\n--Example 4-- \n\n INPUT: \n\n[[0, 0, 7], [0, 0, 0], [0, 0, 0]]\n\nOUTPUT: \n\n[[7, 0, 7, 0, 7, 0, 7, 0, 7], [7, 0, 7, 0, 7, 0, 7, 0, 0], [7, 0, 7, 0, 7, 0, 7, 7, 7], [7, 0, 7, 0, 7, 0, 0, 0, 0], [7, 0, 7, 0, 7, 7, 7, 7, 7], [7, 0, 7, 0, 0, 0, 0, 0, 0], [7, 0, 7, 7, 7, 7, 7, 7, 7], [7, 0, 0, 0, 0, 0, 0, 0, 0], [7, 7, 7, 7, 7, 7, 7, 7, 7]]\n\n\n--End of Training Examples--\n\n--Test Input--\n[[0, 0, 0], [0, 0, 0], [3, 0, 0]]\n--End of Test Input--\n\nYour response:"
+            }
+          },
+          {
+            "index": 1,
+            "message": {
+              "role": "assistant",
+              "content": "Based on the analysis of the training examples, the transformation follows these rules:\n\n1.  **Input Analysis**: The input is a 3x3 grid with a single non-zero pixel. The position of this pixel determines the pattern of the 9x9 output grid, and the value of the pixel determines the color.\n2.  **Pattern Mapping**:\n    *   The output grid is a specific maze-like pattern associated with the input pixel's position.\n    *   Comparing Example 4 (Input position (0, 2), Top Right) and the Test Input (Input position (2, 0), Bottom Left), we observe that the positions are 180-degree rotations of each other around the center of the 3x3 grid.\n    *   Comparing Example 1 (1, 0) and Example 3 (1, 2), which are also 180-degree rotations of each other, the output grids are 180-degree rotations of each other.\n3.  **Transformation**:\n    *   Take the output pattern for the Top Right position (Example 4).\n    *   Rotate it 180 degrees.\n    *   Replace the color 7 with the Test Input color 3.\n\n**Step-by-step construction:**\n\n*   **Example 4 Output (Color 7):**\n    *   Row 0: `7 0 7 0 7 0 7 0 7`\n    *   Row 1: `7 0 7 0 7 0 7 0 0`\n    *   Row 2: `7 0 7 0 7 0 7 7 7`\n    *   Row 3: `7 0 7 0 7 0 0 0 0`\n    *   Row 4: `7 0 7 0 7 7 7 7 7`\n    *   Row 5: `7 0 7 0 0 0 0 0 0`\n    *   Row 6: `7 0 7 7 7 7 7 7 7`\n    *   Row 7: `7 0 0 0 0 0 0 0 0`\n    *   Row 8: `7 7 7 7 7 7 7 7 7`\n\n*   **Test Output (Color 3, Rotated 180 degrees):**\n    *   New Row 0 = Reverse(Ex4 Row 8) = `3 3 3 3 3 3 3 3 3`\n    *   New Row 1 = Reverse(Ex4 Row 7) = `0 0 0 0 0 0 0 0 3`\n    *   New Row 2 = Reverse(Ex4 Row 6) = `3 3 3 3 3 3 3 0 3`\n    *   New Row 3 = Reverse(Ex4 Row 5) = `0 0 0 0 0 0 3 0 3`\n    *   New Row 4 = Reverse(Ex4 Row 4) = `3 3 3 3 3 0 3 0 3`\n    *   New Row 5 = Reverse(Ex4 Row 3) = `0 0 0 0 3 0 3 0 3`\n    *   New Row 6 = Reverse(Ex4 Row 2) = `3 3 3 0 3 0 3 0 3`\n    *   New Row 7 = Reverse(Ex4 Row 1) = `0 0 3 0 3 0 3 0 3`\n    *   New Row 8 = Reverse(Ex4 Row 0) = `3 0 3 0 3 0 3 0 3`\n\n[[3, 3, 3, 3, 3, 3, 3, 3, 3], [0, 0, 0, 0, 0, 0, 0, 0, 3], [3, 3, 3, 3, 3, 3, 3, 0, 3], [0, 0, 0, 0, 0, 0, 3, 0, 3], [3, 3, 3, 3, 3, 0, 3, 0, 3], [0, 0, 0, 0, 3, 0, 3, 0, 3], [3, 3, 3, 0, 3, 0, 3, 0, 3], [0, 0, 3, 0, 3, 0, 3, 0, 3], [3, 0, 3, 0, 3, 0, 3, 0, 3]]"
+            }
+          }
+        ],
+        "reasoning_summary": null,
+        "kwargs": {
+          "temperature": 0.5,
+          "max_output_tokens": 65536
+        },
+        "usage": {
+          "prompt_tokens": 1568,
+          "completion_tokens": 1131,
+          "total_tokens": 23481,
+          "completion_tokens_details": {
+            "reasoning_tokens": 20782,
+            "accepted_prediction_tokens": 1131,
+            "rejected_prediction_tokens": 0
+          }
+        },
+        "cost": {},
+        "task_id": "8b28cd80",
+        "pair_index": 1,
+        "test_id": "original-prompt-ablations",
+        "raw_text": "Based on the analysis of the training examples, the transformation follows these rules:\n\n1.  **Input Analysis**: The input is a 3x3 grid with a single non-zero pixel. The position of this pixel determines the pattern of the 9x9 output grid, and the value of the pixel determines the color.\n2.  **Pattern Mapping**:\n    *   The output grid is a specific maze-like pattern associated with the input pixel's position.\n    *   Comparing Example 4 (Input position (0, 2), Top Right) and the Test Input (Input position (2, 0), Bottom Left), we observe that the positions are 180-degree rotations of each other around the center of the 3x3 grid.\n    *   Comparing Example 1 (1, 0) and Example 3 (1, 2), which are also 180-degree rotations of each other, the output grids are 180-degree rotations of each other.\n3.  **Transformation**:\n    *   Take the output pattern for the Top Right position (Example 4).\n    *   Rotate it 180 degrees.\n    *   Replace the color 7 with the Test Input color 3.\n\n**Step-by-step construction:**\n\n*   **Example 4 Output (Color 7):**\n    *   Row 0: `7 0 7 0 7 0 7 0 7`\n    *   Row 1: `7 0 7 0 7 0 7 0 0`\n    *   Row 2: `7 0 7 0 7 0 7 7 7`\n    *   Row 3: `7 0 7 0 7 0 0 0 0`\n    *   Row 4: `7 0 7 0 7 7 7 7 7`\n    *   Row 5: `7 0 7 0 0 0 0 0 0`\n    *   Row 6: `7 0 7 7 7 7 7 7 7`\n    *   Row 7: `7 0 0 0 0 0 0 0 0`\n    *   Row 8: `7 7 7 7 7 7 7 7 7`\n\n*   **Test Output (Color 3, Rotated 180 degrees):**\n    *   New Row 0 = Reverse(Ex4 Row 8) = `3 3 3 3 3 3 3 3 3`\n    *   New Row 1 = Reverse(Ex4 Row 7) = `0 0 0 0 0 0 0 0 3`\n    *   New Row 2 = Reverse(Ex4 Row 6) = `3 3 3 3 3 3 3 0 3`\n    *   New Row 3 = Reverse(Ex4 Row 5) = `0 0 0 0 0 0 3 0 3`\n    *   New Row 4 = Reverse(Ex4 Row 4) = `3 3 3 3 3 0 3 0 3`\n    *   New Row 5 = Reverse(Ex4 Row 3) = `0 0 0 0 3 0 3 0 3`\n    *   New Row 6 = Reverse(Ex4 Row 2) = `3 3 3 0 3 0 3 0 3`\n    *   New Row 7 = Reverse(Ex4 Row 1) = `0 0 3 0 3 0 3 0 3`\n    *   New Row 8 = Reverse(Ex4 Row 0) = `3 0 3 0 3 0 3 0 3`\n\n[[3, 3, 3, 3, 3, 3, 3, 3, 3], [0, 0, 0, 0, 0, 0, 0, 0, 3], [3, 3, 3, 3, 3, 3, 3, 0, 3], [0, 0, 0, 0, 0, 0, 3, 0, 3], [3, 3, 3, 3, 3, 0, 3, 0, 3], [0, 0, 0, 0, 3, 0, 3, 0, 3], [3, 3, 3, 0, 3, 0, 3, 0, 3], [0, 0, 3, 0, 3, 0, 3, 0, 3], [3, 0, 3, 0, 3, 0, 3, 0, 3]]",
+        "finish_reason": "STOP"
+      },
+      "correct": false
+    },
+    "attempt_2": {
+      "answer": [
+        [
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          3
+        ],
+        [
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          0,
+          3
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          3,
+          0,
+          3
+        ],
+        [
+          3,
+          3,
+          3,
+          3,
+          3,
+          0,
+          3,
+          0,
+          3
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          3,
+          0,
+          3,
+          0,
+          3
+        ],
+        [
+          3,
+          3,
+          3,
+          0,
+          3,
+          0,
+          3,
+          0,
+          3
+        ],
+        [
+          0,
+          0,
+          3,
+          0,
+          3,
+          0,
+          3,
+          0,
+          3
+        ],
+        [
+          3,
+          0,
+          3,
+          0,
+          3,
+          0,
+          3,
+          0,
+          3
+        ]
+      ],
+      "metadata": {
+        "model": "gemini-3-pro-preview",
+        "provider": "gemini",
+        "start_timestamp": "2025-11-22T12:39:24.632371+00:00",
+        "end_timestamp": "2025-11-22T12:42:35.259082+00:00",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "user",
+              "content": "You are participating in a puzzle solving competition. You are an expert at solving puzzles.\n\nBelow is a list of input and output pairs with a pattern. Your goal is to identify the pattern or transformation in the training examples that maps the input to the output, then apply that pattern to the test input to give a final output.\n\nRespond in the format of the training output examples\n\n--Training Examples--\n--Example 0-- \n\n INPUT: \n\n[[0, 0, 0], [0, 4, 0], [0, 0, 0]]\n\nOUTPUT: \n\n[[4, 0, 4, 4, 4, 4, 4, 4, 4], [4, 0, 4, 0, 0, 0, 0, 0, 4], [4, 0, 4, 0, 4, 4, 4, 0, 4], [4, 0, 4, 0, 4, 0, 4, 0, 4], [4, 0, 4, 0, 4, 0, 4, 0, 4], [4, 0, 4, 0, 0, 0, 4, 0, 4], [4, 0, 4, 4, 4, 4, 4, 0, 4], [4, 0, 0, 0, 0, 0, 0, 0, 4], [4, 4, 4, 4, 4, 4, 4, 4, 4]]\n\n--Example 1-- \n\n INPUT: \n\n[[0, 0, 0], [5, 0, 0], [0, 0, 0]]\n\nOUTPUT: \n\n[[5, 5, 5, 5, 5, 0, 5, 0, 5], [0, 0, 0, 0, 5, 0, 5, 0, 5], [5, 5, 5, 0, 5, 0, 5, 0, 5], [5, 0, 5, 0, 5, 0, 5, 0, 5], [5, 0, 5, 0, 5, 0, 5, 0, 5], [0, 0, 5, 0, 5, 0, 5, 0, 5], [5, 5, 5, 0, 5, 0, 5, 0, 5], [0, 0, 0, 0, 5, 0, 5, 0, 5], [5, 5, 5, 5, 5, 0, 5, 0, 5]]\n\n--Example 2-- \n\n INPUT: \n\n[[0, 3, 0], [0, 0, 0], [0, 0, 0]]\n\nOUTPUT: \n\n[[3, 0, 3, 0, 3, 0, 3, 0, 3], [3, 0, 3, 0, 0, 0, 3, 0, 3], [3, 0, 3, 3, 3, 3, 3, 0, 3], [3, 0, 0, 0, 0, 0, 0, 0, 3], [3, 3, 3, 3, 3, 3, 3, 3, 3], [0, 0, 0, 0, 0, 0, 0, 0, 0], [3, 3, 3, 3, 3, 3, 3, 3, 3], [0, 0, 0, 0, 0, 0, 0, 0, 0], [3, 3, 3, 3, 3, 3, 3, 3, 3]]\n\n--Example 3-- \n\n INPUT: \n\n[[0, 0, 0], [0, 0, 8], [0, 0, 0]]\n\nOUTPUT: \n\n[[8, 0, 8, 0, 8, 0, 8, 8, 8], [8, 0, 8, 0, 8, 0, 8, 0, 0], [8, 0, 8, 0, 8, 0, 8, 0, 8], [8, 0, 8, 0, 8, 0, 8, 0, 8], [8, 0, 8, 0, 8, 0, 8, 0, 8], [8, 0, 8, 0, 8, 0, 8, 0, 0], [8, 0, 8, 0, 8, 0, 8, 8, 8], [8, 0, 8, 0, 8, 0, 0, 0, 0], [8, 0, 8, 0, 8, 8, 8, 8, 8]]\n\n--Example 4-- \n\n INPUT: \n\n[[0, 0, 7], [0, 0, 0], [0, 0, 0]]\n\nOUTPUT: \n\n[[7, 0, 7, 0, 7, 0, 7, 0, 7], [7, 0, 7, 0, 7, 0, 7, 0, 0], [7, 0, 7, 0, 7, 0, 7, 7, 7], [7, 0, 7, 0, 7, 0, 0, 0, 0], [7, 0, 7, 0, 7, 7, 7, 7, 7], [7, 0, 7, 0, 0, 0, 0, 0, 0], [7, 0, 7, 7, 7, 7, 7, 7, 7], [7, 0, 0, 0, 0, 0, 0, 0, 0], [7, 7, 7, 7, 7, 7, 7, 7, 7]]\n\n\n--End of Training Examples--\n\n--Test Input--\n[[0, 0, 0], [0, 0, 0], [3, 0, 0]]\n--End of Test Input--\n\nYour response:"
+            }
+          },
+          {
+            "index": 1,
+            "message": {
+              "role": "assistant",
+              "content": "The pattern identified maps the position of a single non-zero pixel in a 3x3 input grid to a specific 9x9 geometric pattern. The value of the input pixel determines the color (value) of the pattern in the output.\n\nThe specific pattern for corner inputs (like the test input) is a set of nested \"L\" shapes.\n- **Input (0, 2) [Top-Right]:** The L-shapes are anchored at the anti-diagonal, with walls extending **Up** (verticals) and **Right** (horizontals).\n- **Input (2, 0) [Bottom-Left]:** This is the 180-degree rotation of the Top-Right case. The L-shapes are anchored at the anti-diagonal, with walls extending **Down** (verticals) and **Left** (horizontals).\n\nFor the Test Input at `(2, 0)` with value `3`:\n- The \"corners\" of the L-shapes are at `(0,8)`, `(2,6)`, `(4,4)`, `(6,2)`, and `(8,0)`.\n- **Vertical walls** extend from the corner **Down** to the bottom edge (Row 8). These are at columns 8, 6, 4, 2, and 0.\n- **Horizontal walls** extend from the corner **Left** to the left edge (Column 0). These are at rows 0, 2, 4, 6, and 8.\n\nConstructing the grid row by row:\n- **Row 0:** Horizontal wall for the outermost L. Fills the entire row.\n  `[3, 3, 3, 3, 3, 3, 3, 3, 3]`\n- **Row 1:** Only the vertical wall at Col 8 passes through.\n  `[0, 0, 0, 0, 0, 0, 0, 0, 3]`\n- **Row 2:** Horizontal wall for the second L (Cols 0-6) and vertical wall at Col 8.\n  `[3, 3, 3, 3, 3, 3, 3, 0, 3]`\n- **Row 3:** Vertical walls at Col 6 and Col 8.\n  `[0, 0, 0, 0, 0, 0, 3, 0, 3]`\n- **Row 4:** Horizontal wall for the third L (Cols 0-4) and vertical walls at Col 6, 8.\n  `[3, 3, 3, 3, 3, 0, 3, 0, 3]`\n- **Row 5:** Vertical walls at Col 4, 6, 8.\n  `[0, 0, 0, 0, 3, 0, 3, 0, 3]`\n- **Row 6:** Horizontal wall for the fourth L (Cols 0-2) and vertical walls at Col 4, 6, 8.\n  `[3, 3, 3, 0, 3, 0, 3, 0, 3]`\n- **Row 7:** Vertical walls at Col 2, 4, 6, 8.\n  `[0, 0, 3, 0, 3, 0, 3, 0, 3]`\n- **Row 8:** Horizontal wall (point) at Col 0 and vertical walls at Col 0, 2, 4, 6, 8.\n  `[3, 0, 3, 0, 3, 0, 3, 0, 3]`\n\nOUTPUT: \n\n[[3, 3, 3, 3, 3, 3, 3, 3, 3], [0, 0, 0, 0, 0, 0, 0, 0, 3], [3, 3, 3, 3, 3, 3, 3, 0, 3], [0, 0, 0, 0, 0, 0, 3, 0, 3], [3, 3, 3, 3, 3, 0, 3, 0, 3], [0, 0, 0, 0, 3, 0, 3, 0, 3], [3, 3, 3, 0, 3, 0, 3, 0, 3], [0, 0, 3, 0, 3, 0, 3, 0, 3], [3, 0, 3, 0, 3, 0, 3, 0, 3]]"
+            }
+          }
+        ],
+        "reasoning_summary": null,
+        "kwargs": {
+          "temperature": 0.5,
+          "max_output_tokens": 65536
+        },
+        "usage": {
+          "prompt_tokens": 1568,
+          "completion_tokens": 1086,
+          "total_tokens": 25713,
+          "completion_tokens_details": {
+            "reasoning_tokens": 23059,
+            "accepted_prediction_tokens": 1086,
+            "rejected_prediction_tokens": 0
+          }
+        },
+        "cost": {},
+        "task_id": "8b28cd80",
+        "pair_index": 1,
+        "test_id": "original-prompt-ablations",
+        "raw_text": "The pattern identified maps the position of a single non-zero pixel in a 3x3 input grid to a specific 9x9 geometric pattern. The value of the input pixel determines the color (value) of the pattern in the output.\n\nThe specific pattern for corner inputs (like the test input) is a set of nested \"L\" shapes.\n- **Input (0, 2) [Top-Right]:** The L-shapes are anchored at the anti-diagonal, with walls extending **Up** (verticals) and **Right** (horizontals).\n- **Input (2, 0) [Bottom-Left]:** This is the 180-degree rotation of the Top-Right case. The L-shapes are anchored at the anti-diagonal, with walls extending **Down** (verticals) and **Left** (horizontals).\n\nFor the Test Input at `(2, 0)` with value `3`:\n- The \"corners\" of the L-shapes are at `(0,8)`, `(2,6)`, `(4,4)`, `(6,2)`, and `(8,0)`.\n- **Vertical walls** extend from the corner **Down** to the bottom edge (Row 8). These are at columns 8, 6, 4, 2, and 0.\n- **Horizontal walls** extend from the corner **Left** to the left edge (Column 0). These are at rows 0, 2, 4, 6, and 8.\n\nConstructing the grid row by row:\n- **Row 0:** Horizontal wall for the outermost L. Fills the entire row.\n  `[3, 3, 3, 3, 3, 3, 3, 3, 3]`\n- **Row 1:** Only the vertical wall at Col 8 passes through.\n  `[0, 0, 0, 0, 0, 0, 0, 0, 3]`\n- **Row 2:** Horizontal wall for the second L (Cols 0-6) and vertical wall at Col 8.\n  `[3, 3, 3, 3, 3, 3, 3, 0, 3]`\n- **Row 3:** Vertical walls at Col 6 and Col 8.\n  `[0, 0, 0, 0, 0, 0, 3, 0, 3]`\n- **Row 4:** Horizontal wall for the third L (Cols 0-4) and vertical walls at Col 6, 8.\n  `[3, 3, 3, 3, 3, 0, 3, 0, 3]`\n- **Row 5:** Vertical walls at Col 4, 6, 8.\n  `[0, 0, 0, 0, 3, 0, 3, 0, 3]`\n- **Row 6:** Horizontal wall for the fourth L (Cols 0-2) and vertical walls at Col 4, 6, 8.\n  `[3, 3, 3, 0, 3, 0, 3, 0, 3]`\n- **Row 7:** Vertical walls at Col 2, 4, 6, 8.\n  `[0, 0, 3, 0, 3, 0, 3, 0, 3]`\n- **Row 8:** Horizontal wall (point) at Col 0 and vertical walls at Col 0, 2, 4, 6, 8.\n  `[3, 0, 3, 0, 3, 0, 3, 0, 3]`\n\nOUTPUT: \n\n[[3, 3, 3, 3, 3, 3, 3, 3, 3], [0, 0, 0, 0, 0, 0, 0, 0, 3], [3, 3, 3, 3, 3, 3, 3, 0, 3], [0, 0, 0, 0, 0, 0, 3, 0, 3], [3, 3, 3, 3, 3, 0, 3, 0, 3], [0, 0, 0, 0, 3, 0, 3, 0, 3], [3, 3, 3, 0, 3, 0, 3, 0, 3], [0, 0, 3, 0, 3, 0, 3, 0, 3], [3, 0, 3, 0, 3, 0, 3, 0, 3]]",
+        "finish_reason": "STOP"
+      },
+      "correct": false
+    },
+    "attempt_1": {
+      "answer": [
+        [
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          3
+        ],
+        [
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          0,
+          3
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          3,
+          0,
+          3
+        ],
+        [
+          3,
+          3,
+          3,
+          3,
+          3,
+          0,
+          3,
+          0,
+          3
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          3,
+          0,
+          3,
+          0,
+          3
+        ],
+        [
+          3,
+          3,
+          3,
+          0,
+          3,
+          0,
+          3,
+          0,
+          3
+        ],
+        [
+          0,
+          0,
+          3,
+          0,
+          3,
+          0,
+          3,
+          0,
+          3
+        ],
+        [
+          3,
+          0,
+          3,
+          0,
+          3,
+          0,
+          3,
+          0,
+          3
+        ]
+      ],
+      "metadata": {
+        "model": "gemini-3-pro-preview",
+        "provider": "gemini",
+        "start_timestamp": "2025-11-22T12:39:24.629683+00:00",
+        "end_timestamp": "2025-11-22T12:42:39.849508+00:00",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "user",
+              "content": "You are participating in a puzzle solving competition. You are an expert at solving puzzles.\n\nBelow is a list of input and output pairs with a pattern. Your goal is to identify the pattern or transformation in the training examples that maps the input to the output, then apply that pattern to the test input to give a final output.\n\nRespond in the format of the training output examples\n\n--Training Examples--\n--Example 0-- \n\n INPUT: \n\n[[0, 0, 0], [0, 4, 0], [0, 0, 0]]\n\nOUTPUT: \n\n[[4, 0, 4, 4, 4, 4, 4, 4, 4], [4, 0, 4, 0, 0, 0, 0, 0, 4], [4, 0, 4, 0, 4, 4, 4, 0, 4], [4, 0, 4, 0, 4, 0, 4, 0, 4], [4, 0, 4, 0, 4, 0, 4, 0, 4], [4, 0, 4, 0, 0, 0, 4, 0, 4], [4, 0, 4, 4, 4, 4, 4, 0, 4], [4, 0, 0, 0, 0, 0, 0, 0, 4], [4, 4, 4, 4, 4, 4, 4, 4, 4]]\n\n--Example 1-- \n\n INPUT: \n\n[[0, 0, 0], [5, 0, 0], [0, 0, 0]]\n\nOUTPUT: \n\n[[5, 5, 5, 5, 5, 0, 5, 0, 5], [0, 0, 0, 0, 5, 0, 5, 0, 5], [5, 5, 5, 0, 5, 0, 5, 0, 5], [5, 0, 5, 0, 5, 0, 5, 0, 5], [5, 0, 5, 0, 5, 0, 5, 0, 5], [0, 0, 5, 0, 5, 0, 5, 0, 5], [5, 5, 5, 0, 5, 0, 5, 0, 5], [0, 0, 0, 0, 5, 0, 5, 0, 5], [5, 5, 5, 5, 5, 0, 5, 0, 5]]\n\n--Example 2-- \n\n INPUT: \n\n[[0, 3, 0], [0, 0, 0], [0, 0, 0]]\n\nOUTPUT: \n\n[[3, 0, 3, 0, 3, 0, 3, 0, 3], [3, 0, 3, 0, 0, 0, 3, 0, 3], [3, 0, 3, 3, 3, 3, 3, 0, 3], [3, 0, 0, 0, 0, 0, 0, 0, 3], [3, 3, 3, 3, 3, 3, 3, 3, 3], [0, 0, 0, 0, 0, 0, 0, 0, 0], [3, 3, 3, 3, 3, 3, 3, 3, 3], [0, 0, 0, 0, 0, 0, 0, 0, 0], [3, 3, 3, 3, 3, 3, 3, 3, 3]]\n\n--Example 3-- \n\n INPUT: \n\n[[0, 0, 0], [0, 0, 8], [0, 0, 0]]\n\nOUTPUT: \n\n[[8, 0, 8, 0, 8, 0, 8, 8, 8], [8, 0, 8, 0, 8, 0, 8, 0, 0], [8, 0, 8, 0, 8, 0, 8, 0, 8], [8, 0, 8, 0, 8, 0, 8, 0, 8], [8, 0, 8, 0, 8, 0, 8, 0, 8], [8, 0, 8, 0, 8, 0, 8, 0, 0], [8, 0, 8, 0, 8, 0, 8, 8, 8], [8, 0, 8, 0, 8, 0, 0, 0, 0], [8, 0, 8, 0, 8, 8, 8, 8, 8]]\n\n--Example 4-- \n\n INPUT: \n\n[[0, 0, 7], [0, 0, 0], [0, 0, 0]]\n\nOUTPUT: \n\n[[7, 0, 7, 0, 7, 0, 7, 0, 7], [7, 0, 7, 0, 7, 0, 7, 0, 0], [7, 0, 7, 0, 7, 0, 7, 7, 7], [7, 0, 7, 0, 7, 0, 0, 0, 0], [7, 0, 7, 0, 7, 7, 7, 7, 7], [7, 0, 7, 0, 0, 0, 0, 0, 0], [7, 0, 7, 7, 7, 7, 7, 7, 7], [7, 0, 0, 0, 0, 0, 0, 0, 0], [7, 7, 7, 7, 7, 7, 7, 7, 7]]\n\n\n--End of Training Examples--\n\n--Test Input--\n[[0, 0, 0], [0, 0, 0], [3, 0, 0]]\n--End of Test Input--\n\nYour response:"
+            }
+          },
+          {
+            "index": 1,
+            "message": {
+              "role": "assistant",
+              "content": "Based on the analysis of the training examples, the transformation follows a pattern where the input 3x3 grid determines the structure of the output 9x9 grid. The single non-zero pixel in the input grid dictates the color and the orientation of a \"spiral\" or \"maze\" pattern.\n\nSpecifically:\n1.  **Color:** The non-zero color in the input is used for the pattern in the output.\n2.  **Pattern Orientation:** The position of the non-zero pixel determines the rotation of the pattern.\n    *   Input (1, 0) [Middle Left] and Input (1, 2) [Middle Right] produce patterns that are 180-degree rotations of each other.\n    *   Input (0, 2) [Top Right] produces a specific corner-based spiral pattern.\n    *   The Test Input has the non-zero pixel at (2, 0) [Bottom Left]. This is the 180-degree rotation of the position (0, 2).\n    *   Therefore, the output pattern for the Test Input should be the 180-degree rotation of the output pattern for Example 4 (Input at (0, 2)), with the color changed to 3 (Green).\n\n**Steps to construct the output:**\n1.  Take the output grid from Example 4 (color 7).\n2.  Rotate the grid 180 degrees (which is equivalent to reversing the order of rows, and then reversing the order of elements in each row).\n3.  Replace the color 7 with the color 3 from the test input.\n\n**Construction:**\n*   **Example 4 Row 8** `[7, 7, 7, 7, 7, 7, 7, 7, 7]` becomes **Test Row 0** `[3, 3, 3, 3, 3, 3, 3, 3, 3]`.\n*   **Example 4 Row 7** `[7, 0, 0, 0, 0, 0, 0, 0, 0]` becomes **Test Row 1** (reversed) `[0, 0, 0, 0, 0, 0, 0, 0, 3]`.\n*   **Example 4 Row 6** `[7, 0, 7, 7, 7, 7, 7, 7, 7]` becomes **Test Row 2** (reversed) `[3, 3, 3, 3, 3, 3, 3, 0, 3]`.\n*   **Example 4 Row 5** `[7, 0, 7, 0, 0, 0, 0, 0, 0]` becomes **Test Row 3** (reversed) `[0, 0, 0, 0, 0, 0, 3, 0, 3]`.\n*   **Example 4 Row 4** `[7, 0, 7, 0, 7, 7, 7, 7, 7]` becomes **Test Row 4** (reversed) `[3, 3, 3, 3, 3, 0, 3, 0, 3]`.\n*   **Example 4 Row 3** `[7, 0, 7, 0, 7, 0, 0, 0, 0]` becomes **Test Row 5** (reversed) `[0, 0, 0, 0, 3, 0, 3, 0, 3]`.\n*   **Example 4 Row 2** `[7, 0, 7, 0, 7, 0, 7, 7, 7]` becomes **Test Row 6** (reversed) `[3, 3, 3, 0, 3, 0, 3, 0, 3]`.\n*   **Example 4 Row 1** `[7, 0, 7, 0, 7, 0, 7, 0, 0]` becomes **Test Row 7** (reversed) `[0, 0, 3, 0, 3, 0, 3, 0, 3]`.\n*   **Example 4 Row 0** `[7, 0, 7, 0, 7, 0, 7, 0, 7]` becomes **Test Row 8** (reversed) `[3, 0, 3, 0, 3, 0, 3, 0, 3]`.\n\n**Output:**\n\n[[3, 3, 3, 3, 3, 3, 3, 3, 3], [0, 0, 0, 0, 0, 0, 0, 0, 3], [3, 3, 3, 3, 3, 3, 3, 0, 3], [0, 0, 0, 0, 0, 0, 3, 0, 3], [3, 3, 3, 3, 3, 0, 3, 0, 3], [0, 0, 0, 0, 3, 0, 3, 0, 3], [3, 3, 3, 0, 3, 0, 3, 0, 3], [0, 0, 3, 0, 3, 0, 3, 0, 3], [3, 0, 3, 0, 3, 0, 3, 0, 3]]"
+            }
+          }
+        ],
+        "reasoning_summary": null,
+        "kwargs": {
+          "temperature": 0.5,
+          "max_output_tokens": 65536
+        },
+        "usage": {
+          "prompt_tokens": 1568,
+          "completion_tokens": 1299,
+          "total_tokens": 22543,
+          "completion_tokens_details": {
+            "reasoning_tokens": 19676,
+            "accepted_prediction_tokens": 1299,
+            "rejected_prediction_tokens": 0
+          }
+        },
+        "cost": {},
+        "task_id": "8b28cd80",
+        "pair_index": 1,
+        "test_id": "original-prompt-ablations",
+        "raw_text": "Based on the analysis of the training examples, the transformation follows a pattern where the input 3x3 grid determines the structure of the output 9x9 grid. The single non-zero pixel in the input grid dictates the color and the orientation of a \"spiral\" or \"maze\" pattern.\n\nSpecifically:\n1.  **Color:** The non-zero color in the input is used for the pattern in the output.\n2.  **Pattern Orientation:** The position of the non-zero pixel determines the rotation of the pattern.\n    *   Input (1, 0) [Middle Left] and Input (1, 2) [Middle Right] produce patterns that are 180-degree rotations of each other.\n    *   Input (0, 2) [Top Right] produces a specific corner-based spiral pattern.\n    *   The Test Input has the non-zero pixel at (2, 0) [Bottom Left]. This is the 180-degree rotation of the position (0, 2).\n    *   Therefore, the output pattern for the Test Input should be the 180-degree rotation of the output pattern for Example 4 (Input at (0, 2)), with the color changed to 3 (Green).\n\n**Steps to construct the output:**\n1.  Take the output grid from Example 4 (color 7).\n2.  Rotate the grid 180 degrees (which is equivalent to reversing the order of rows, and then reversing the order of elements in each row).\n3.  Replace the color 7 with the color 3 from the test input.\n\n**Construction:**\n*   **Example 4 Row 8** `[7, 7, 7, 7, 7, 7, 7, 7, 7]` becomes **Test Row 0** `[3, 3, 3, 3, 3, 3, 3, 3, 3]`.\n*   **Example 4 Row 7** `[7, 0, 0, 0, 0, 0, 0, 0, 0]` becomes **Test Row 1** (reversed) `[0, 0, 0, 0, 0, 0, 0, 0, 3]`.\n*   **Example 4 Row 6** `[7, 0, 7, 7, 7, 7, 7, 7, 7]` becomes **Test Row 2** (reversed) `[3, 3, 3, 3, 3, 3, 3, 0, 3]`.\n*   **Example 4 Row 5** `[7, 0, 7, 0, 0, 0, 0, 0, 0]` becomes **Test Row 3** (reversed) `[0, 0, 0, 0, 0, 0, 3, 0, 3]`.\n*   **Example 4 Row 4** `[7, 0, 7, 0, 7, 7, 7, 7, 7]` becomes **Test Row 4** (reversed) `[3, 3, 3, 3, 3, 0, 3, 0, 3]`.\n*   **Example 4 Row 3** `[7, 0, 7, 0, 7, 0, 0, 0, 0]` becomes **Test Row 5** (reversed) `[0, 0, 0, 0, 3, 0, 3, 0, 3]`.\n*   **Example 4 Row 2** `[7, 0, 7, 0, 7, 0, 7, 7, 7]` becomes **Test Row 6** (reversed) `[3, 3, 3, 0, 3, 0, 3, 0, 3]`.\n*   **Example 4 Row 1** `[7, 0, 7, 0, 7, 0, 7, 0, 0]` becomes **Test Row 7** (reversed) `[0, 0, 3, 0, 3, 0, 3, 0, 3]`.\n*   **Example 4 Row 0** `[7, 0, 7, 0, 7, 0, 7, 0, 7]` becomes **Test Row 8** (reversed) `[3, 0, 3, 0, 3, 0, 3, 0, 3]`.\n\n**Output:**\n\n[[3, 3, 3, 3, 3, 3, 3, 3, 3], [0, 0, 0, 0, 0, 0, 0, 0, 3], [3, 3, 3, 3, 3, 3, 3, 0, 3], [0, 0, 0, 0, 0, 0, 3, 0, 3], [3, 3, 3, 3, 3, 0, 3, 0, 3], [0, 0, 0, 0, 3, 0, 3, 0, 3], [3, 3, 3, 0, 3, 0, 3, 0, 3], [0, 0, 3, 0, 3, 0, 3, 0, 3], [3, 0, 3, 0, 3, 0, 3, 0, 3]]",
+        "finish_reason": "STOP"
+      },
+      "correct": false
+    },
+    "attempt_4": {
+      "answer": [
+        [
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          3
+        ],
+        [
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          0,
+          3
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          3,
+          0,
+          3
+        ],
+        [
+          3,
+          3,
+          3,
+          3,
+          3,
+          0,
+          3,
+          0,
+          3
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          3,
+          0,
+          3,
+          0,
+          3
+        ],
+        [
+          3,
+          3,
+          3,
+          0,
+          3,
+          0,
+          3,
+          0,
+          3
+        ],
+        [
+          0,
+          0,
+          3,
+          0,
+          3,
+          0,
+          3,
+          0,
+          3
+        ],
+        [
+          3,
+          0,
+          3,
+          0,
+          3,
+          0,
+          3,
+          0,
+          3
+        ]
+      ],
+      "metadata": {
+        "model": "gemini-3-pro-preview",
+        "provider": "gemini",
+        "start_timestamp": "2025-11-22T12:39:24.625937+00:00",
+        "end_timestamp": "2025-11-22T12:42:45.786598+00:00",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "user",
+              "content": "You are participating in a puzzle solving competition. You are an expert at solving puzzles.\n\nBelow is a list of input and output pairs with a pattern. Your goal is to identify the pattern or transformation in the training examples that maps the input to the output, then apply that pattern to the test input to give a final output.\n\nRespond in the format of the training output examples\n\n--Training Examples--\n--Example 0-- \n\n INPUT: \n\n[[0, 0, 0], [0, 4, 0], [0, 0, 0]]\n\nOUTPUT: \n\n[[4, 0, 4, 4, 4, 4, 4, 4, 4], [4, 0, 4, 0, 0, 0, 0, 0, 4], [4, 0, 4, 0, 4, 4, 4, 0, 4], [4, 0, 4, 0, 4, 0, 4, 0, 4], [4, 0, 4, 0, 4, 0, 4, 0, 4], [4, 0, 4, 0, 0, 0, 4, 0, 4], [4, 0, 4, 4, 4, 4, 4, 0, 4], [4, 0, 0, 0, 0, 0, 0, 0, 4], [4, 4, 4, 4, 4, 4, 4, 4, 4]]\n\n--Example 1-- \n\n INPUT: \n\n[[0, 0, 0], [5, 0, 0], [0, 0, 0]]\n\nOUTPUT: \n\n[[5, 5, 5, 5, 5, 0, 5, 0, 5], [0, 0, 0, 0, 5, 0, 5, 0, 5], [5, 5, 5, 0, 5, 0, 5, 0, 5], [5, 0, 5, 0, 5, 0, 5, 0, 5], [5, 0, 5, 0, 5, 0, 5, 0, 5], [0, 0, 5, 0, 5, 0, 5, 0, 5], [5, 5, 5, 0, 5, 0, 5, 0, 5], [0, 0, 0, 0, 5, 0, 5, 0, 5], [5, 5, 5, 5, 5, 0, 5, 0, 5]]\n\n--Example 2-- \n\n INPUT: \n\n[[0, 3, 0], [0, 0, 0], [0, 0, 0]]\n\nOUTPUT: \n\n[[3, 0, 3, 0, 3, 0, 3, 0, 3], [3, 0, 3, 0, 0, 0, 3, 0, 3], [3, 0, 3, 3, 3, 3, 3, 0, 3], [3, 0, 0, 0, 0, 0, 0, 0, 3], [3, 3, 3, 3, 3, 3, 3, 3, 3], [0, 0, 0, 0, 0, 0, 0, 0, 0], [3, 3, 3, 3, 3, 3, 3, 3, 3], [0, 0, 0, 0, 0, 0, 0, 0, 0], [3, 3, 3, 3, 3, 3, 3, 3, 3]]\n\n--Example 3-- \n\n INPUT: \n\n[[0, 0, 0], [0, 0, 8], [0, 0, 0]]\n\nOUTPUT: \n\n[[8, 0, 8, 0, 8, 0, 8, 8, 8], [8, 0, 8, 0, 8, 0, 8, 0, 0], [8, 0, 8, 0, 8, 0, 8, 0, 8], [8, 0, 8, 0, 8, 0, 8, 0, 8], [8, 0, 8, 0, 8, 0, 8, 0, 8], [8, 0, 8, 0, 8, 0, 8, 0, 0], [8, 0, 8, 0, 8, 0, 8, 8, 8], [8, 0, 8, 0, 8, 0, 0, 0, 0], [8, 0, 8, 0, 8, 8, 8, 8, 8]]\n\n--Example 4-- \n\n INPUT: \n\n[[0, 0, 7], [0, 0, 0], [0, 0, 0]]\n\nOUTPUT: \n\n[[7, 0, 7, 0, 7, 0, 7, 0, 7], [7, 0, 7, 0, 7, 0, 7, 0, 0], [7, 0, 7, 0, 7, 0, 7, 7, 7], [7, 0, 7, 0, 7, 0, 0, 0, 0], [7, 0, 7, 0, 7, 7, 7, 7, 7], [7, 0, 7, 0, 0, 0, 0, 0, 0], [7, 0, 7, 7, 7, 7, 7, 7, 7], [7, 0, 0, 0, 0, 0, 0, 0, 0], [7, 7, 7, 7, 7, 7, 7, 7, 7]]\n\n\n--End of Training Examples--\n\n--Test Input--\n[[0, 0, 0], [0, 0, 0], [3, 0, 0]]\n--End of Test Input--\n\nYour response:"
+            }
+          },
+          {
+            "index": 1,
+            "message": {
+              "role": "assistant",
+              "content": "The problem asks us to transform a $3 \\times 3$ input grid into a $9 \\times 9$ output grid.\nThe input grid contains a single non-zero pixel with color $C$ at position $(r, c)$.\nThe output grid is a pattern drawn with color $C$ and background 0.\n\n**Pattern Analysis:**\nObserving the training examples, we can see a relationship between the position of the non-zero pixel in the input and the orientation of the pattern in the output.\n- Example 4: Input at $(0, 2)$ (Top-Right). The output pattern has solid \"walls\" (L-shapes) concentrated at the Bottom-Left.\n- Example 2: Input at $(0, 1)$ (Top-Middle). The output pattern has solid lines at the Bottom.\n- Example 1: Input at $(1, 0)$ (Middle-Left). The output pattern has solid lines at the Right.\n- Example 3: Input at $(1, 2)$ (Middle-Right). The output pattern has solid lines at the Left.\n\nThis suggests that the pattern is oriented such that the \"solid\" part is opposite to the input pixel's location. The pattern consists of nested L-shapes or spiral segments.\n\n**Symmetry and Transformation:**\nThe grid and the problem have rotational symmetry.\nThe Test Input has the non-zero pixel at $(2, 0)$ (Bottom-Left).\nThis is the $180^\\circ$ rotation of the input in Example 4, which is at $(0, 2)$ (Top-Right).\nTherefore, the output for the Test Input should be the $180^\\circ$ rotation of the output for Example 4, with the color changed from 7 to 3.\n\n**Applying the Transformation:**\n1.  Take the output of Example 4 (color 7).\n2.  Rotate it $180^\\circ$. This is equivalent to reversing the order of the rows, and then reversing the order of elements in each row.\n3.  Replace color 7 with color 3.\n\n**Step-by-Step Construction:**\n\n*Example 4 Output (Rows 0-8):*\nR0: `7 0 7 0 7 0 7 0 7`\nR1: `7 0 7 0 7 0 7 0 0`\nR2: `7 0 7 0 7 0 7 7 7`\nR3: `7 0 7 0 7 0 0 0 0`\nR4: `7 0 7 0 7 7 7 7 7`\nR5: `7 0 7 0 0 0 0 0 0`\nR6: `7 0 7 7 7 7 7 7 7`\nR7: `7 0 0 0 0 0 0 0 0`\nR8: `7 7 7 7 7 7 7 7 7`\n\n*Rotated Output (New Rows 0-8 correspond to Old Rows 8-0 reversed):*\n\n-   **New Row 0** (Reverse of Old R8): `7 7 7 7 7 7 7 7 7` $\\rightarrow$ `3 3 3 3 3 3 3 3 3`\n-   **New Row 1** (Reverse of Old R7): `0 0 0 0 0 0 0 0 7` $\\rightarrow$ `0 0 0 0 0 0 0 0 3`\n-   **New Row 2** (Reverse of Old R6): `7 7 7 7 7 7 7 0 7` $\\rightarrow$ `3 3 3 3 3 3 3 0 3`\n-   **New Row 3** (Reverse of Old R5): `0 0 0 0 0 0 7 0 7` $\\rightarrow$ `0 0 0 0 0 0 3 0 3`\n-   **New Row 4** (Reverse of Old R4): `7 7 7 7 7 0 7 0 7` $\\rightarrow$ `3 3 3 3 3 0 3 0 3`\n-   **New Row 5** (Reverse of Old R3): `0 0 0 0 7 0 7 0 7` $\\rightarrow$ `0 0 0 0 3 0 3 0 3`\n-   **New Row 6** (Reverse of Old R2): `7 7 7 0 7 0 7 0 7` $\\rightarrow$ `3 3 3 0 3 0 3 0 3`\n-   **New Row 7** (Reverse of Old R1): `0 0 7 0 7 0 7 0 7` $\\rightarrow$ `0 0 3 0 3 0 3 0 3`\n-   **New Row 8** (Reverse of Old R0): `7 0 7 0 7 0 7 0 7` $\\rightarrow$ `3 0 3 0 3 0 3 0 3`\n\n**Final Output:**\n[[3, 3, 3, 3, 3, 3, 3, 3, 3], [0, 0, 0, 0, 0, 0, 0, 0, 3], [3, 3, 3, 3, 3, 3, 3, 0, 3], [0, 0, 0, 0, 0, 0, 3, 0, 3], [3, 3, 3, 3, 3, 0, 3, 0, 3], [0, 0, 0, 0, 3, 0, 3, 0, 3], [3, 3, 3, 0, 3, 0, 3, 0, 3], [0, 0, 3, 0, 3, 0, 3, 0, 3], [3, 0, 3, 0, 3, 0, 3, 0, 3]]"
+            }
+          }
+        ],
+        "reasoning_summary": null,
+        "kwargs": {
+          "temperature": 0.5,
+          "max_output_tokens": 65536
+        },
+        "usage": {
+          "prompt_tokens": 1568,
+          "completion_tokens": 1468,
+          "total_tokens": 26062,
+          "completion_tokens_details": {
+            "reasoning_tokens": 23026,
+            "accepted_prediction_tokens": 1468,
+            "rejected_prediction_tokens": 0
+          }
+        },
+        "cost": {},
+        "task_id": "8b28cd80",
+        "pair_index": 1,
+        "test_id": "original-prompt-ablations",
+        "raw_text": "The problem asks us to transform a $3 \\times 3$ input grid into a $9 \\times 9$ output grid.\nThe input grid contains a single non-zero pixel with color $C$ at position $(r, c)$.\nThe output grid is a pattern drawn with color $C$ and background 0.\n\n**Pattern Analysis:**\nObserving the training examples, we can see a relationship between the position of the non-zero pixel in the input and the orientation of the pattern in the output.\n- Example 4: Input at $(0, 2)$ (Top-Right). The output pattern has solid \"walls\" (L-shapes) concentrated at the Bottom-Left.\n- Example 2: Input at $(0, 1)$ (Top-Middle). The output pattern has solid lines at the Bottom.\n- Example 1: Input at $(1, 0)$ (Middle-Left). The output pattern has solid lines at the Right.\n- Example 3: Input at $(1, 2)$ (Middle-Right). The output pattern has solid lines at the Left.\n\nThis suggests that the pattern is oriented such that the \"solid\" part is opposite to the input pixel's location. The pattern consists of nested L-shapes or spiral segments.\n\n**Symmetry and Transformation:**\nThe grid and the problem have rotational symmetry.\nThe Test Input has the non-zero pixel at $(2, 0)$ (Bottom-Left).\nThis is the $180^\\circ$ rotation of the input in Example 4, which is at $(0, 2)$ (Top-Right).\nTherefore, the output for the Test Input should be the $180^\\circ$ rotation of the output for Example 4, with the color changed from 7 to 3.\n\n**Applying the Transformation:**\n1.  Take the output of Example 4 (color 7).\n2.  Rotate it $180^\\circ$. This is equivalent to reversing the order of the rows, and then reversing the order of elements in each row.\n3.  Replace color 7 with color 3.\n\n**Step-by-Step Construction:**\n\n*Example 4 Output (Rows 0-8):*\nR0: `7 0 7 0 7 0 7 0 7`\nR1: `7 0 7 0 7 0 7 0 0`\nR2: `7 0 7 0 7 0 7 7 7`\nR3: `7 0 7 0 7 0 0 0 0`\nR4: `7 0 7 0 7 7 7 7 7`\nR5: `7 0 7 0 0 0 0 0 0`\nR6: `7 0 7 7 7 7 7 7 7`\nR7: `7 0 0 0 0 0 0 0 0`\nR8: `7 7 7 7 7 7 7 7 7`\n\n*Rotated Output (New Rows 0-8 correspond to Old Rows 8-0 reversed):*\n\n-   **New Row 0** (Reverse of Old R8): `7 7 7 7 7 7 7 7 7` $\\rightarrow$ `3 3 3 3 3 3 3 3 3`\n-   **New Row 1** (Reverse of Old R7): `0 0 0 0 0 0 0 0 7` $\\rightarrow$ `0 0 0 0 0 0 0 0 3`\n-   **New Row 2** (Reverse of Old R6): `7 7 7 7 7 7 7 0 7` $\\rightarrow$ `3 3 3 3 3 3 3 0 3`\n-   **New Row 3** (Reverse of Old R5): `0 0 0 0 0 0 7 0 7` $\\rightarrow$ `0 0 0 0 0 0 3 0 3`\n-   **New Row 4** (Reverse of Old R4): `7 7 7 7 7 0 7 0 7` $\\rightarrow$ `3 3 3 3 3 0 3 0 3`\n-   **New Row 5** (Reverse of Old R3): `0 0 0 0 7 0 7 0 7` $\\rightarrow$ `0 0 0 0 3 0 3 0 3`\n-   **New Row 6** (Reverse of Old R2): `7 7 7 0 7 0 7 0 7` $\\rightarrow$ `3 3 3 0 3 0 3 0 3`\n-   **New Row 7** (Reverse of Old R1): `0 0 7 0 7 0 7 0 7` $\\rightarrow$ `0 0 3 0 3 0 3 0 3`\n-   **New Row 8** (Reverse of Old R0): `7 0 7 0 7 0 7 0 7` $\\rightarrow$ `3 0 3 0 3 0 3 0 3`\n\n**Final Output:**\n[[3, 3, 3, 3, 3, 3, 3, 3, 3], [0, 0, 0, 0, 0, 0, 0, 0, 3], [3, 3, 3, 3, 3, 3, 3, 0, 3], [0, 0, 0, 0, 0, 0, 3, 0, 3], [3, 3, 3, 3, 3, 0, 3, 0, 3], [0, 0, 0, 0, 3, 0, 3, 0, 3], [3, 3, 3, 0, 3, 0, 3, 0, 3], [0, 0, 3, 0, 3, 0, 3, 0, 3], [3, 0, 3, 0, 3, 0, 3, 0, 3]]",
+        "finish_reason": "STOP"
+      },
+      "correct": false
+    }
+  }
+]

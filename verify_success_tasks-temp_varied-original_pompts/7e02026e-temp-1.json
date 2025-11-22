@@ -1,0 +1,868 @@
+[
+  {
+    "attempt_4": {
+      "answer": [
+        [
+          8,
+          0,
+          8,
+          8,
+          8,
+          8,
+          8,
+          0,
+          8,
+          0,
+          8,
+          0
+        ],
+        [
+          0,
+          8,
+          8,
+          8,
+          0,
+          0,
+          8,
+          0,
+          8,
+          0,
+          0,
+          0
+        ],
+        [
+          8,
+          8,
+          8,
+          8,
+          0,
+          0,
+          0,
+          8,
+          8,
+          8,
+          8,
+          8
+        ],
+        [
+          8,
+          3,
+          3,
+          3,
+          8,
+          0,
+          8,
+          8,
+          0,
+          0,
+          8,
+          0
+        ],
+        [
+          0,
+          8,
+          8,
+          8,
+          0,
+          8,
+          0,
+          8,
+          8,
+          0,
+          8,
+          8
+        ],
+        [
+          0,
+          0,
+          8,
+          8,
+          8,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          8,
+          0,
+          8,
+          8,
+          0,
+          8,
+          8,
+          0,
+          8,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          8,
+          0,
+          8,
+          0,
+          0,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8
+        ],
+        [
+          0,
+          0,
+          0,
+          8,
+          8,
+          0,
+          0,
+          8,
+          0,
+          8,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          8,
+          0,
+          8,
+          8,
+          0,
+          8,
+          8,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          8,
+          8,
+          0,
+          8,
+          8,
+          0,
+          8,
+          8,
+          8
+        ],
+        [
+          8,
+          8,
+          8,
+          0,
+          8,
+          0,
+          0,
+          0,
+          0,
+          8,
+          8,
+          8
+        ]
+      ],
+      "metadata": {
+        "model": "gemini-3-pro-preview",
+        "provider": "gemini",
+        "start_timestamp": "2025-11-22T09:08:11.605081+00:00",
+        "end_timestamp": "2025-11-22T09:11:42.081812+00:00",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "user",
+              "content": "You are participating in a puzzle solving competition. You are an expert at solving puzzles.\n\nBelow is a list of input and output pairs with a pattern. Your goal is to identify the pattern or transformation in the training examples that maps the input to the output, then apply that pattern to the test input to give a final output.\n\nRespond in the format of the training output examples\n\n--Training Examples--\n--Example 0-- \n\n INPUT: \n\n[[8, 0, 0, 8, 0, 0, 0, 8, 8, 0, 8, 0], [8, 0, 8, 0, 0, 0, 8, 0, 0, 8, 0, 0], [0, 0, 0, 8, 0, 8, 8, 8, 8, 8, 0, 8], [0, 8, 0, 8, 0, 0, 8, 0, 8, 8, 0, 0], [8, 0, 0, 8, 0, 0, 0, 8, 8, 8, 0, 0], [8, 8, 0, 8, 0, 8, 8, 8, 8, 8, 8, 0], [0, 8, 0, 0, 0, 8, 0, 8, 0, 8, 8, 0], [0, 8, 8, 8, 8, 0, 0, 8, 0, 0, 8, 8], [0, 8, 0, 8, 8, 8, 8, 0, 0, 8, 8, 0], [0, 8, 8, 8, 8, 0, 0, 0, 8, 0, 0, 8], [8, 0, 8, 0, 0, 0, 0, 0, 8, 8, 0, 0], [0, 8, 0, 8, 0, 8, 0, 8, 0, 0, 8, 0]]\n\nOUTPUT: \n\n[[8, 0, 0, 8, 3, 0, 0, 8, 8, 0, 8, 0], [8, 0, 8, 3, 3, 3, 8, 0, 0, 8, 0, 0], [0, 0, 0, 8, 3, 8, 8, 8, 8, 8, 0, 8], [0, 8, 0, 8, 0, 0, 8, 0, 8, 8, 0, 0], [8, 0, 0, 8, 0, 0, 0, 8, 8, 8, 0, 0], [8, 8, 0, 8, 0, 8, 8, 8, 8, 8, 8, 0], [0, 8, 0, 0, 0, 8, 0, 8, 0, 8, 8, 0], [0, 8, 8, 8, 8, 0, 0, 8, 0, 0, 8, 8], [0, 8, 0, 8, 8, 8, 8, 0, 0, 8, 8, 0], [0, 8, 8, 8, 8, 0, 3, 0, 8, 0, 0, 8], [8, 0, 8, 0, 0, 3, 3, 3, 8, 8, 0, 0], [0, 8, 0, 8, 0, 8, 3, 8, 0, 0, 8, 0]]\n\n--Example 1-- \n\n INPUT: \n\n[[8, 0, 8, 8, 8, 8, 0, 8, 0, 8, 8, 8], [0, 8, 0, 0, 0, 8, 8, 0, 0, 0, 8, 8], [8, 0, 8, 0, 8, 8, 8, 8, 8, 8, 8, 8], [0, 8, 0, 0, 8, 8, 0, 0, 0, 8, 0, 0], [8, 0, 8, 8, 0, 0, 8, 8, 0, 0, 8, 8], [8, 8, 8, 0, 8, 8, 0, 0, 8, 8, 8, 8], [8, 0, 8, 0, 0, 0, 8, 0, 0, 0, 0, 0], [0, 8, 0, 8, 0, 8, 0, 0, 0, 8, 8, 0], [0, 8, 0, 8, 0, 0, 0, 8, 8, 0, 8, 8], [8, 8, 8, 8, 0, 0, 0, 0, 8, 0, 8, 0], [0, 8, 8, 0, 0, 0, 8, 8, 0, 0, 0, 0], [8, 0, 0, 8, 0, 8, 8, 8, 8, 8, 8, 8]]\n\nOUTPUT: \n\n[[8, 0, 8, 8, 8, 8, 0, 8, 0, 8, 8, 8], [0, 8, 0, 0, 0, 8, 8, 0, 0, 0, 8, 8], [8, 0, 8, 0, 8, 8, 8, 8, 8, 8, 8, 8], [0, 8, 0, 0, 8, 8, 0, 0, 0, 8, 0, 0], [8, 0, 8, 8, 0, 0, 8, 8, 0, 0, 8, 8], [8, 8, 8, 0, 8, 8, 0, 0, 8, 8, 8, 8], [8, 0, 8, 0, 0, 0, 8, 0, 0, 0, 0, 0], [0, 8, 0, 8, 0, 8, 0, 0, 0, 8, 8, 0], [0, 8, 0, 8, 0, 3, 0, 8, 8, 0, 8, 8], [8, 8, 8, 8, 3, 3, 3, 0, 8, 0, 8, 0], [0, 8, 8, 3, 3, 3, 8, 8, 0, 0, 0, 0], [8, 0, 0, 8, 3, 8, 8, 8, 8, 8, 8, 8]]\n\n--Example 2-- \n\n INPUT: \n\n[[8, 8, 0, 0, 0, 8, 0, 0, 0, 0, 8, 8], [8, 8, 8, 8, 8, 8, 8, 8, 0, 0, 0, 8], [8, 8, 8, 0, 0, 8, 8, 0, 0, 0, 8, 8], [0, 8, 0, 8, 8, 8, 8, 0, 0, 8, 8, 8], [0, 0, 0, 8, 8, 8, 8, 8, 0, 0, 0, 0], [0, 0, 0, 8, 8, 0, 8, 0, 8, 8, 0, 0], [0, 0, 8, 8, 0, 8, 8, 0, 8, 8, 8, 0], [8, 8, 8, 0, 8, 8, 8, 8, 0, 8, 0, 8], [8, 8, 0, 0, 0, 8, 8, 8, 0, 8, 8, 8], [8, 8, 0, 0, 0, 8, 0, 8, 8, 8, 8, 8], [8, 0, 0, 0, 0, 8, 8, 8, 8, 8, 8, 8], [8, 0, 8, 8, 8, 8, 8, 0, 8, 8, 0, 8]]\n\nOUTPUT: \n\n[[8, 8, 0, 0, 0, 8, 0, 0, 0, 3, 8, 8], [8, 8, 8, 8, 8, 8, 8, 8, 3, 3, 3, 8], [8, 8, 8, 0, 0, 8, 8, 3, 3, 3, 8, 8], [0, 8, 0, 8, 8, 8, 8, 0, 3, 8, 8, 8], [0, 3, 0, 8, 8, 8, 8, 8, 0, 0, 0, 0], [3, 3, 3, 8, 8, 0, 8, 0, 8, 8, 0, 0], [0, 3, 8, 8, 0, 8, 8, 0, 8, 8, 8, 0], [8, 8, 8, 3, 8, 8, 8, 8, 0, 8, 0, 8], [8, 8, 3, 3, 3, 8, 8, 8, 0, 8, 8, 8], [8, 8, 3, 3, 3, 8, 0, 8, 8, 8, 8, 8], [8, 0, 0, 3, 0, 8, 8, 8, 8, 8, 8, 8], [8, 0, 8, 8, 8, 8, 8, 0, 8, 8, 0, 8]]\n\n\n--End of Training Examples--\n\n--Test Input--\n[[8, 0, 8, 8, 8, 8, 8, 0, 8, 0, 8, 0], [0, 8, 8, 8, 0, 0, 8, 0, 8, 0, 0, 0], [8, 8, 8, 8, 0, 0, 0, 8, 8, 8, 8, 8], [8, 0, 0, 0, 8, 0, 8, 8, 0, 0, 8, 0], [0, 8, 8, 8, 0, 8, 0, 8, 8, 0, 8, 8], [0, 0, 8, 8, 8, 0, 0, 0, 0, 0, 0, 0], [8, 0, 8, 8, 0, 8, 8, 0, 8, 0, 0, 0], [0, 8, 0, 8, 0, 0, 8, 8, 8, 8, 8, 8], [0, 0, 0, 8, 8, 0, 0, 8, 0, 8, 0, 0], [0, 0, 0, 0, 8, 0, 8, 8, 0, 8, 8, 0], [0, 0, 0, 8, 8, 0, 8, 8, 0, 8, 8, 8], [8, 8, 8, 0, 8, 0, 0, 0, 0, 8, 8, 8]]\n--End of Test Input--\n\nYour response:"
+            }
+          },
+          {
+            "index": 1,
+            "message": {
+              "role": "assistant",
+              "content": "The pattern identified from the training examples is that connected regions of 0s (black) that are \"enclosed\" or \"bounded\" by 8s (teal) are filled with 3s (green). The filling generally forms a solid shape (like a cross or a block) within the enclosure. Leaky or open corridors tend not to fill, or only fill at dead ends if they form a coherent shape.\n\nIn the Test Input, we examine regions of 0s for enclosure by 8s.\n1.  **Region at Row 3, Columns 1-3**: The segment `(3,1), (3,2), (3,3)` is a row of three 0s.\n    *   Above: `(2,1), (2,2), (2,3)` are all 8.\n    *   Below: `(4,1), (4,2), (4,3)` are all 8.\n    *   Left: `(3,0)` is 8.\n    *   Right: `(3,4)` is 8.\n    This region is a perfectly enclosed 1x3 box. Based on the pattern, these 0s should change to 3s.\n\n2.  **Other regions**:\n    *   The vertical corridor around `(6,4)` to `(9,5)` is bounded by 8s on the sides but is open (leaky) at the bottom (connected to the boundary via row 11 and 12). In training examples (e.g., Example 0), leaky regions did not fill completely, or only filled in specific \"room\" shapes like crosses. This region is a \"corridor\" rather than a \"room\", and thus is less likely to fill.\n    *   Other areas are clearly open or not enclosed.\n\nTherefore, the only transformation is to change the 0s at `(3,1), (3,2), (3,3)` to 3s.\n\n**Final Output Generation:**\nRow 3 changes from `[8, 0, 0, 0, 8, 0, 8, 8, 0, 0, 8, 0]` to `[8, 3, 3, 3, 8, 0, 8, 8, 0, 0, 8, 0]`.\nAll other rows remain identical to the input.\n\n[[8, 0, 8, 8, 8, 8, 8, 0, 8, 0, 8, 0], [0, 8, 8, 8, 0, 0, 8, 0, 8, 0, 0, 0], [8, 8, 8, 8, 0, 0, 0, 8, 8, 8, 8, 8], [8, 3, 3, 3, 8, 0, 8, 8, 0, 0, 8, 0], [0, 8, 8, 8, 0, 8, 0, 8, 8, 0, 8, 8], [0, 0, 8, 8, 8, 0, 0, 0, 0, 0, 0, 0], [8, 0, 8, 8, 0, 8, 8, 0, 8, 0, 0, 0], [0, 8, 0, 8, 0, 0, 8, 8, 8, 8, 8, 8], [0, 0, 0, 8, 8, 0, 0, 8, 0, 8, 0, 0], [0, 0, 0, 0, 8, 0, 8, 8, 0, 8, 8, 0], [0, 0, 0, 8, 8, 0, 8, 8, 0, 8, 8, 8], [8, 8, 8, 0, 8, 0, 0, 0, 0, 8, 8, 8]]"
+            }
+          }
+        ],
+        "reasoning_summary": null,
+        "kwargs": {
+          "temperature": 1.0,
+          "max_output_tokens": 65536
+        },
+        "usage": {
+          "prompt_tokens": 3181,
+          "completion_tokens": 961,
+          "total_tokens": 29662,
+          "completion_tokens_details": {
+            "reasoning_tokens": 25520,
+            "accepted_prediction_tokens": 961,
+            "rejected_prediction_tokens": 0
+          }
+        },
+        "cost": {},
+        "task_id": "7e02026e",
+        "pair_index": 0,
+        "test_id": "original-prompt-ablations",
+        "raw_text": "The pattern identified from the training examples is that connected regions of 0s (black) that are \"enclosed\" or \"bounded\" by 8s (teal) are filled with 3s (green). The filling generally forms a solid shape (like a cross or a block) within the enclosure. Leaky or open corridors tend not to fill, or only fill at dead ends if they form a coherent shape.\n\nIn the Test Input, we examine regions of 0s for enclosure by 8s.\n1.  **Region at Row 3, Columns 1-3**: The segment `(3,1), (3,2), (3,3)` is a row of three 0s.\n    *   Above: `(2,1), (2,2), (2,3)` are all 8.\n    *   Below: `(4,1), (4,2), (4,3)` are all 8.\n    *   Left: `(3,0)` is 8.\n    *   Right: `(3,4)` is 8.\n    This region is a perfectly enclosed 1x3 box. Based on the pattern, these 0s should change to 3s.\n\n2.  **Other regions**:\n    *   The vertical corridor around `(6,4)` to `(9,5)` is bounded by 8s on the sides but is open (leaky) at the bottom (connected to the boundary via row 11 and 12). In training examples (e.g., Example 0), leaky regions did not fill completely, or only filled in specific \"room\" shapes like crosses. This region is a \"corridor\" rather than a \"room\", and thus is less likely to fill.\n    *   Other areas are clearly open or not enclosed.\n\nTherefore, the only transformation is to change the 0s at `(3,1), (3,2), (3,3)` to 3s.\n\n**Final Output Generation:**\nRow 3 changes from `[8, 0, 0, 0, 8, 0, 8, 8, 0, 0, 8, 0]` to `[8, 3, 3, 3, 8, 0, 8, 8, 0, 0, 8, 0]`.\nAll other rows remain identical to the input.\n\n[[8, 0, 8, 8, 8, 8, 8, 0, 8, 0, 8, 0], [0, 8, 8, 8, 0, 0, 8, 0, 8, 0, 0, 0], [8, 8, 8, 8, 0, 0, 0, 8, 8, 8, 8, 8], [8, 3, 3, 3, 8, 0, 8, 8, 0, 0, 8, 0], [0, 8, 8, 8, 0, 8, 0, 8, 8, 0, 8, 8], [0, 0, 8, 8, 8, 0, 0, 0, 0, 0, 0, 0], [8, 0, 8, 8, 0, 8, 8, 0, 8, 0, 0, 0], [0, 8, 0, 8, 0, 0, 8, 8, 8, 8, 8, 8], [0, 0, 0, 8, 8, 0, 0, 8, 0, 8, 0, 0], [0, 0, 0, 0, 8, 0, 8, 8, 0, 8, 8, 0], [0, 0, 0, 8, 8, 0, 8, 8, 0, 8, 8, 8], [8, 8, 8, 0, 8, 0, 0, 0, 0, 8, 8, 8]]",
+        "finish_reason": "STOP"
+      },
+      "correct": false
+    },
+    "attempt_1": {
+      "answer": [
+        [
+          8,
+          0,
+          8,
+          8,
+          8,
+          8,
+          8,
+          0,
+          8,
+          0,
+          8,
+          0
+        ],
+        [
+          0,
+          8,
+          8,
+          8,
+          0,
+          3,
+          8,
+          0,
+          8,
+          0,
+          0,
+          0
+        ],
+        [
+          8,
+          8,
+          8,
+          8,
+          3,
+          3,
+          3,
+          8,
+          8,
+          8,
+          8,
+          8
+        ],
+        [
+          8,
+          0,
+          0,
+          0,
+          8,
+          3,
+          8,
+          8,
+          0,
+          0,
+          8,
+          0
+        ],
+        [
+          0,
+          8,
+          8,
+          8,
+          0,
+          8,
+          0,
+          8,
+          8,
+          3,
+          8,
+          8
+        ],
+        [
+          0,
+          0,
+          8,
+          8,
+          8,
+          0,
+          0,
+          0,
+          3,
+          3,
+          3,
+          0
+        ],
+        [
+          8,
+          0,
+          8,
+          8,
+          0,
+          8,
+          8,
+          0,
+          8,
+          3,
+          0,
+          0
+        ],
+        [
+          0,
+          8,
+          0,
+          8,
+          0,
+          0,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8
+        ],
+        [
+          0,
+          3,
+          3,
+          8,
+          8,
+          0,
+          0,
+          8,
+          0,
+          8,
+          0,
+          0
+        ],
+        [
+          3,
+          3,
+          3,
+          3,
+          8,
+          0,
+          8,
+          8,
+          0,
+          8,
+          8,
+          0
+        ],
+        [
+          0,
+          3,
+          3,
+          8,
+          8,
+          0,
+          8,
+          8,
+          0,
+          8,
+          8,
+          8
+        ],
+        [
+          8,
+          8,
+          8,
+          0,
+          8,
+          0,
+          0,
+          0,
+          0,
+          8,
+          8,
+          8
+        ]
+      ],
+      "metadata": {
+        "model": "gemini-3-pro-preview",
+        "provider": "gemini",
+        "start_timestamp": "2025-11-22T09:08:11.586842+00:00",
+        "end_timestamp": "2025-11-22T09:14:07.625476+00:00",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "user",
+              "content": "You are participating in a puzzle solving competition. You are an expert at solving puzzles.\n\nBelow is a list of input and output pairs with a pattern. Your goal is to identify the pattern or transformation in the training examples that maps the input to the output, then apply that pattern to the test input to give a final output.\n\nRespond in the format of the training output examples\n\n--Training Examples--\n--Example 0-- \n\n INPUT: \n\n[[8, 0, 0, 8, 0, 0, 0, 8, 8, 0, 8, 0], [8, 0, 8, 0, 0, 0, 8, 0, 0, 8, 0, 0], [0, 0, 0, 8, 0, 8, 8, 8, 8, 8, 0, 8], [0, 8, 0, 8, 0, 0, 8, 0, 8, 8, 0, 0], [8, 0, 0, 8, 0, 0, 0, 8, 8, 8, 0, 0], [8, 8, 0, 8, 0, 8, 8, 8, 8, 8, 8, 0], [0, 8, 0, 0, 0, 8, 0, 8, 0, 8, 8, 0], [0, 8, 8, 8, 8, 0, 0, 8, 0, 0, 8, 8], [0, 8, 0, 8, 8, 8, 8, 0, 0, 8, 8, 0], [0, 8, 8, 8, 8, 0, 0, 0, 8, 0, 0, 8], [8, 0, 8, 0, 0, 0, 0, 0, 8, 8, 0, 0], [0, 8, 0, 8, 0, 8, 0, 8, 0, 0, 8, 0]]\n\nOUTPUT: \n\n[[8, 0, 0, 8, 3, 0, 0, 8, 8, 0, 8, 0], [8, 0, 8, 3, 3, 3, 8, 0, 0, 8, 0, 0], [0, 0, 0, 8, 3, 8, 8, 8, 8, 8, 0, 8], [0, 8, 0, 8, 0, 0, 8, 0, 8, 8, 0, 0], [8, 0, 0, 8, 0, 0, 0, 8, 8, 8, 0, 0], [8, 8, 0, 8, 0, 8, 8, 8, 8, 8, 8, 0], [0, 8, 0, 0, 0, 8, 0, 8, 0, 8, 8, 0], [0, 8, 8, 8, 8, 0, 0, 8, 0, 0, 8, 8], [0, 8, 0, 8, 8, 8, 8, 0, 0, 8, 8, 0], [0, 8, 8, 8, 8, 0, 3, 0, 8, 0, 0, 8], [8, 0, 8, 0, 0, 3, 3, 3, 8, 8, 0, 0], [0, 8, 0, 8, 0, 8, 3, 8, 0, 0, 8, 0]]\n\n--Example 1-- \n\n INPUT: \n\n[[8, 0, 8, 8, 8, 8, 0, 8, 0, 8, 8, 8], [0, 8, 0, 0, 0, 8, 8, 0, 0, 0, 8, 8], [8, 0, 8, 0, 8, 8, 8, 8, 8, 8, 8, 8], [0, 8, 0, 0, 8, 8, 0, 0, 0, 8, 0, 0], [8, 0, 8, 8, 0, 0, 8, 8, 0, 0, 8, 8], [8, 8, 8, 0, 8, 8, 0, 0, 8, 8, 8, 8], [8, 0, 8, 0, 0, 0, 8, 0, 0, 0, 0, 0], [0, 8, 0, 8, 0, 8, 0, 0, 0, 8, 8, 0], [0, 8, 0, 8, 0, 0, 0, 8, 8, 0, 8, 8], [8, 8, 8, 8, 0, 0, 0, 0, 8, 0, 8, 0], [0, 8, 8, 0, 0, 0, 8, 8, 0, 0, 0, 0], [8, 0, 0, 8, 0, 8, 8, 8, 8, 8, 8, 8]]\n\nOUTPUT: \n\n[[8, 0, 8, 8, 8, 8, 0, 8, 0, 8, 8, 8], [0, 8, 0, 0, 0, 8, 8, 0, 0, 0, 8, 8], [8, 0, 8, 0, 8, 8, 8, 8, 8, 8, 8, 8], [0, 8, 0, 0, 8, 8, 0, 0, 0, 8, 0, 0], [8, 0, 8, 8, 0, 0, 8, 8, 0, 0, 8, 8], [8, 8, 8, 0, 8, 8, 0, 0, 8, 8, 8, 8], [8, 0, 8, 0, 0, 0, 8, 0, 0, 0, 0, 0], [0, 8, 0, 8, 0, 8, 0, 0, 0, 8, 8, 0], [0, 8, 0, 8, 0, 3, 0, 8, 8, 0, 8, 8], [8, 8, 8, 8, 3, 3, 3, 0, 8, 0, 8, 0], [0, 8, 8, 3, 3, 3, 8, 8, 0, 0, 0, 0], [8, 0, 0, 8, 3, 8, 8, 8, 8, 8, 8, 8]]\n\n--Example 2-- \n\n INPUT: \n\n[[8, 8, 0, 0, 0, 8, 0, 0, 0, 0, 8, 8], [8, 8, 8, 8, 8, 8, 8, 8, 0, 0, 0, 8], [8, 8, 8, 0, 0, 8, 8, 0, 0, 0, 8, 8], [0, 8, 0, 8, 8, 8, 8, 0, 0, 8, 8, 8], [0, 0, 0, 8, 8, 8, 8, 8, 0, 0, 0, 0], [0, 0, 0, 8, 8, 0, 8, 0, 8, 8, 0, 0], [0, 0, 8, 8, 0, 8, 8, 0, 8, 8, 8, 0], [8, 8, 8, 0, 8, 8, 8, 8, 0, 8, 0, 8], [8, 8, 0, 0, 0, 8, 8, 8, 0, 8, 8, 8], [8, 8, 0, 0, 0, 8, 0, 8, 8, 8, 8, 8], [8, 0, 0, 0, 0, 8, 8, 8, 8, 8, 8, 8], [8, 0, 8, 8, 8, 8, 8, 0, 8, 8, 0, 8]]\n\nOUTPUT: \n\n[[8, 8, 0, 0, 0, 8, 0, 0, 0, 3, 8, 8], [8, 8, 8, 8, 8, 8, 8, 8, 3, 3, 3, 8], [8, 8, 8, 0, 0, 8, 8, 3, 3, 3, 8, 8], [0, 8, 0, 8, 8, 8, 8, 0, 3, 8, 8, 8], [0, 3, 0, 8, 8, 8, 8, 8, 0, 0, 0, 0], [3, 3, 3, 8, 8, 0, 8, 0, 8, 8, 0, 0], [0, 3, 8, 8, 0, 8, 8, 0, 8, 8, 8, 0], [8, 8, 8, 3, 8, 8, 8, 8, 0, 8, 0, 8], [8, 8, 3, 3, 3, 8, 8, 8, 0, 8, 8, 8], [8, 8, 3, 3, 3, 8, 0, 8, 8, 8, 8, 8], [8, 0, 0, 3, 0, 8, 8, 8, 8, 8, 8, 8], [8, 0, 8, 8, 8, 8, 8, 0, 8, 8, 0, 8]]\n\n\n--End of Training Examples--\n\n--Test Input--\n[[8, 0, 8, 8, 8, 8, 8, 0, 8, 0, 8, 0], [0, 8, 8, 8, 0, 0, 8, 0, 8, 0, 0, 0], [8, 8, 8, 8, 0, 0, 0, 8, 8, 8, 8, 8], [8, 0, 0, 0, 8, 0, 8, 8, 0, 0, 8, 0], [0, 8, 8, 8, 0, 8, 0, 8, 8, 0, 8, 8], [0, 0, 8, 8, 8, 0, 0, 0, 0, 0, 0, 0], [8, 0, 8, 8, 0, 8, 8, 0, 8, 0, 0, 0], [0, 8, 0, 8, 0, 0, 8, 8, 8, 8, 8, 8], [0, 0, 0, 8, 8, 0, 0, 8, 0, 8, 0, 0], [0, 0, 0, 0, 8, 0, 8, 8, 0, 8, 8, 0], [0, 0, 0, 8, 8, 0, 8, 8, 0, 8, 8, 8], [8, 8, 8, 0, 8, 0, 0, 0, 0, 8, 8, 8]]\n--End of Test Input--\n\nYour response:"
+            }
+          },
+          {
+            "index": 1,
+            "message": {
+              "role": "assistant",
+              "content": "Based on the patterns observed in the training examples, the transformation rule is as follows:\n\n1.  **Identify Valid Centers:** Scan the input grid to find all cells `(r, c)` that contain `0` and whose four immediate orthogonal neighbors (top `(r-1, c)`, bottom `(r+1, c)`, left `(r, c-1)`, and right `(r, c+1)`) also contain `0`.\n2.  **Create Diamonds:** For every such valid center found, create a \"diamond\" shape of `3`s (green) in the output grid. This diamond consists of the center cell itself and its four neighbors.\n3.  **Merge:** If multiple diamonds overlap, the `3`s merge. Any cell that is part of at least one such diamond becomes `3` in the output. All other cells retain their original values from the input (`8` or `0`).\n\n**Applying the rule to the Test Input:**\n\nWe identify the following valid centers (coordinates are 0-indexed, `(row, column)`):\n\n*   **Center at (2, 5):**\n    *   Input values at (2,5) and its neighbors (1,5), (3,5), (2,4), (2,6) are all `0`.\n    *   **Action:** Set (2,5), (1,5), (3,5), (2,4), (2,6) to `3`.\n\n*   **Center at (5, 9):**\n    *   Input values at (5,9) and its neighbors (4,9), (6,9), (5,8), (5,10) are all `0`.\n    *   **Action:** Set (5,9), (4,9), (6,9), (5,8), (5,10) to `3`.\n\n*   **Center at (9, 1):**\n    *   Input values at (9,1) and its neighbors (8,1), (10,1), (9,0), (9,2) are all `0`.\n    *   **Action:** Set (9,1), (8,1), (10,1), (9,0), (9,2) to `3`.\n\n*   **Center at (9, 2):**\n    *   Input values at (9,2) and its neighbors (8,2), (10,2), (9,1), (9,3) are all `0`.\n    *   **Action:** Set (9,2), (8,2), (10,2), (9,1), (9,3) to `3`.\n    *   *Note:* The diamonds for (9,1) and (9,2) overlap and merge.\n\n**Constructing the Output Grid:**\n\n*   **Row 1:** Index 5 becomes `3`.\n*   **Row 2:** Indices 4, 5, 6 become `3`.\n*   **Row 3:** Index 5 becomes `3`.\n*   **Row 4:** Index 9 becomes `3`.\n*   **Row 5:** Indices 8, 9, 10 become `3`.\n*   **Row 6:** Index 9 becomes `3`.\n*   **Row 8:** Indices 1, 2 become `3` (Neighbors of centers (9,1) and (9,2)).\n*   **Row 9:** Indices 0, 1, 2, 3 become `3` (Neighbors and centers).\n*   **Row 10:** Indices 1, 2 become `3` (Neighbors of centers (9,1) and (9,2)).\n\nAll other cells remain as in the input.\n\n```json\n[[8, 0, 8, 8, 8, 8, 8, 0, 8, 0, 8, 0], [0, 8, 8, 8, 0, 3, 8, 0, 8, 0, 0, 0], [8, 8, 8, 8, 3, 3, 3, 8, 8, 8, 8, 8], [8, 0, 0, 0, 8, 3, 8, 8, 0, 0, 8, 0], [0, 8, 8, 8, 0, 8, 0, 8, 8, 3, 8, 8], [0, 0, 8, 8, 8, 0, 0, 0, 3, 3, 3, 0], [8, 0, 8, 8, 0, 8, 8, 0, 8, 3, 0, 0], [0, 8, 0, 8, 0, 0, 8, 8, 8, 8, 8, 8], [0, 3, 3, 8, 8, 0, 0, 8, 0, 8, 0, 0], [3, 3, 3, 3, 8, 0, 8, 8, 0, 8, 8, 0], [0, 3, 3, 8, 8, 0, 8, 8, 0, 8, 8, 8], [8, 8, 8, 0, 8, 0, 0, 0, 0, 8, 8, 8]]\n```"
+            }
+          }
+        ],
+        "reasoning_summary": null,
+        "kwargs": {
+          "temperature": 1.0,
+          "max_output_tokens": 65536
+        },
+        "usage": {
+          "prompt_tokens": 3181,
+          "completion_tokens": 1275,
+          "total_tokens": 20826,
+          "completion_tokens_details": {
+            "reasoning_tokens": 16370,
+            "accepted_prediction_tokens": 1275,
+            "rejected_prediction_tokens": 0
+          }
+        },
+        "cost": {},
+        "task_id": "7e02026e",
+        "pair_index": 0,
+        "test_id": "original-prompt-ablations",
+        "raw_text": "Based on the patterns observed in the training examples, the transformation rule is as follows:\n\n1.  **Identify Valid Centers:** Scan the input grid to find all cells `(r, c)` that contain `0` and whose four immediate orthogonal neighbors (top `(r-1, c)`, bottom `(r+1, c)`, left `(r, c-1)`, and right `(r, c+1)`) also contain `0`.\n2.  **Create Diamonds:** For every such valid center found, create a \"diamond\" shape of `3`s (green) in the output grid. This diamond consists of the center cell itself and its four neighbors.\n3.  **Merge:** If multiple diamonds overlap, the `3`s merge. Any cell that is part of at least one such diamond becomes `3` in the output. All other cells retain their original values from the input (`8` or `0`).\n\n**Applying the rule to the Test Input:**\n\nWe identify the following valid centers (coordinates are 0-indexed, `(row, column)`):\n\n*   **Center at (2, 5):**\n    *   Input values at (2,5) and its neighbors (1,5), (3,5), (2,4), (2,6) are all `0`.\n    *   **Action:** Set (2,5), (1,5), (3,5), (2,4), (2,6) to `3`.\n\n*   **Center at (5, 9):**\n    *   Input values at (5,9) and its neighbors (4,9), (6,9), (5,8), (5,10) are all `0`.\n    *   **Action:** Set (5,9), (4,9), (6,9), (5,8), (5,10) to `3`.\n\n*   **Center at (9, 1):**\n    *   Input values at (9,1) and its neighbors (8,1), (10,1), (9,0), (9,2) are all `0`.\n    *   **Action:** Set (9,1), (8,1), (10,1), (9,0), (9,2) to `3`.\n\n*   **Center at (9, 2):**\n    *   Input values at (9,2) and its neighbors (8,2), (10,2), (9,1), (9,3) are all `0`.\n    *   **Action:** Set (9,2), (8,2), (10,2), (9,1), (9,3) to `3`.\n    *   *Note:* The diamonds for (9,1) and (9,2) overlap and merge.\n\n**Constructing the Output Grid:**\n\n*   **Row 1:** Index 5 becomes `3`.\n*   **Row 2:** Indices 4, 5, 6 become `3`.\n*   **Row 3:** Index 5 becomes `3`.\n*   **Row 4:** Index 9 becomes `3`.\n*   **Row 5:** Indices 8, 9, 10 become `3`.\n*   **Row 6:** Index 9 becomes `3`.\n*   **Row 8:** Indices 1, 2 become `3` (Neighbors of centers (9,1) and (9,2)).\n*   **Row 9:** Indices 0, 1, 2, 3 become `3` (Neighbors and centers).\n*   **Row 10:** Indices 1, 2 become `3` (Neighbors of centers (9,1) and (9,2)).\n\nAll other cells remain as in the input.\n\n```json\n[[8, 0, 8, 8, 8, 8, 8, 0, 8, 0, 8, 0], [0, 8, 8, 8, 0, 3, 8, 0, 8, 0, 0, 0], [8, 8, 8, 8, 3, 3, 3, 8, 8, 8, 8, 8], [8, 0, 0, 0, 8, 3, 8, 8, 0, 0, 8, 0], [0, 8, 8, 8, 0, 8, 0, 8, 8, 3, 8, 8], [0, 0, 8, 8, 8, 0, 0, 0, 3, 3, 3, 0], [8, 0, 8, 8, 0, 8, 8, 0, 8, 3, 0, 0], [0, 8, 0, 8, 0, 0, 8, 8, 8, 8, 8, 8], [0, 3, 3, 8, 8, 0, 0, 8, 0, 8, 0, 0], [3, 3, 3, 3, 8, 0, 8, 8, 0, 8, 8, 0], [0, 3, 3, 8, 8, 0, 8, 8, 0, 8, 8, 8], [8, 8, 8, 0, 8, 0, 0, 0, 0, 8, 8, 8]]\n```",
+        "finish_reason": "STOP"
+      },
+      "correct": true
+    },
+    "attempt_2": {
+      "answer": [
+        [
+          8,
+          0,
+          8,
+          8,
+          8,
+          8,
+          8,
+          0,
+          8,
+          0,
+          8,
+          0
+        ],
+        [
+          0,
+          8,
+          8,
+          8,
+          0,
+          3,
+          8,
+          0,
+          8,
+          0,
+          0,
+          0
+        ],
+        [
+          8,
+          8,
+          8,
+          8,
+          3,
+          3,
+          3,
+          8,
+          8,
+          8,
+          8,
+          8
+        ],
+        [
+          8,
+          0,
+          0,
+          0,
+          8,
+          3,
+          8,
+          8,
+          0,
+          0,
+          8,
+          0
+        ],
+        [
+          0,
+          8,
+          8,
+          8,
+          0,
+          8,
+          0,
+          8,
+          8,
+          0,
+          8,
+          8
+        ],
+        [
+          0,
+          0,
+          8,
+          8,
+          8,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          8,
+          0,
+          8,
+          8,
+          0,
+          8,
+          8,
+          0,
+          8,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          8,
+          0,
+          8,
+          0,
+          0,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8
+        ],
+        [
+          0,
+          3,
+          3,
+          8,
+          8,
+          0,
+          0,
+          8,
+          0,
+          8,
+          0,
+          0
+        ],
+        [
+          3,
+          3,
+          3,
+          3,
+          8,
+          0,
+          8,
+          8,
+          0,
+          8,
+          8,
+          0
+        ],
+        [
+          0,
+          3,
+          3,
+          8,
+          8,
+          0,
+          8,
+          8,
+          0,
+          8,
+          8,
+          8
+        ],
+        [
+          8,
+          8,
+          8,
+          0,
+          8,
+          0,
+          0,
+          0,
+          0,
+          8,
+          8,
+          8
+        ]
+      ],
+      "metadata": {
+        "model": "gemini-3-pro-preview",
+        "provider": "gemini",
+        "start_timestamp": "2025-11-22T09:08:11.601816+00:00",
+        "end_timestamp": "2025-11-22T09:15:59.331473+00:00",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "user",
+              "content": "You are participating in a puzzle solving competition. You are an expert at solving puzzles.\n\nBelow is a list of input and output pairs with a pattern. Your goal is to identify the pattern or transformation in the training examples that maps the input to the output, then apply that pattern to the test input to give a final output.\n\nRespond in the format of the training output examples\n\n--Training Examples--\n--Example 0-- \n\n INPUT: \n\n[[8, 0, 0, 8, 0, 0, 0, 8, 8, 0, 8, 0], [8, 0, 8, 0, 0, 0, 8, 0, 0, 8, 0, 0], [0, 0, 0, 8, 0, 8, 8, 8, 8, 8, 0, 8], [0, 8, 0, 8, 0, 0, 8, 0, 8, 8, 0, 0], [8, 0, 0, 8, 0, 0, 0, 8, 8, 8, 0, 0], [8, 8, 0, 8, 0, 8, 8, 8, 8, 8, 8, 0], [0, 8, 0, 0, 0, 8, 0, 8, 0, 8, 8, 0], [0, 8, 8, 8, 8, 0, 0, 8, 0, 0, 8, 8], [0, 8, 0, 8, 8, 8, 8, 0, 0, 8, 8, 0], [0, 8, 8, 8, 8, 0, 0, 0, 8, 0, 0, 8], [8, 0, 8, 0, 0, 0, 0, 0, 8, 8, 0, 0], [0, 8, 0, 8, 0, 8, 0, 8, 0, 0, 8, 0]]\n\nOUTPUT: \n\n[[8, 0, 0, 8, 3, 0, 0, 8, 8, 0, 8, 0], [8, 0, 8, 3, 3, 3, 8, 0, 0, 8, 0, 0], [0, 0, 0, 8, 3, 8, 8, 8, 8, 8, 0, 8], [0, 8, 0, 8, 0, 0, 8, 0, 8, 8, 0, 0], [8, 0, 0, 8, 0, 0, 0, 8, 8, 8, 0, 0], [8, 8, 0, 8, 0, 8, 8, 8, 8, 8, 8, 0], [0, 8, 0, 0, 0, 8, 0, 8, 0, 8, 8, 0], [0, 8, 8, 8, 8, 0, 0, 8, 0, 0, 8, 8], [0, 8, 0, 8, 8, 8, 8, 0, 0, 8, 8, 0], [0, 8, 8, 8, 8, 0, 3, 0, 8, 0, 0, 8], [8, 0, 8, 0, 0, 3, 3, 3, 8, 8, 0, 0], [0, 8, 0, 8, 0, 8, 3, 8, 0, 0, 8, 0]]\n\n--Example 1-- \n\n INPUT: \n\n[[8, 0, 8, 8, 8, 8, 0, 8, 0, 8, 8, 8], [0, 8, 0, 0, 0, 8, 8, 0, 0, 0, 8, 8], [8, 0, 8, 0, 8, 8, 8, 8, 8, 8, 8, 8], [0, 8, 0, 0, 8, 8, 0, 0, 0, 8, 0, 0], [8, 0, 8, 8, 0, 0, 8, 8, 0, 0, 8, 8], [8, 8, 8, 0, 8, 8, 0, 0, 8, 8, 8, 8], [8, 0, 8, 0, 0, 0, 8, 0, 0, 0, 0, 0], [0, 8, 0, 8, 0, 8, 0, 0, 0, 8, 8, 0], [0, 8, 0, 8, 0, 0, 0, 8, 8, 0, 8, 8], [8, 8, 8, 8, 0, 0, 0, 0, 8, 0, 8, 0], [0, 8, 8, 0, 0, 0, 8, 8, 0, 0, 0, 0], [8, 0, 0, 8, 0, 8, 8, 8, 8, 8, 8, 8]]\n\nOUTPUT: \n\n[[8, 0, 8, 8, 8, 8, 0, 8, 0, 8, 8, 8], [0, 8, 0, 0, 0, 8, 8, 0, 0, 0, 8, 8], [8, 0, 8, 0, 8, 8, 8, 8, 8, 8, 8, 8], [0, 8, 0, 0, 8, 8, 0, 0, 0, 8, 0, 0], [8, 0, 8, 8, 0, 0, 8, 8, 0, 0, 8, 8], [8, 8, 8, 0, 8, 8, 0, 0, 8, 8, 8, 8], [8, 0, 8, 0, 0, 0, 8, 0, 0, 0, 0, 0], [0, 8, 0, 8, 0, 8, 0, 0, 0, 8, 8, 0], [0, 8, 0, 8, 0, 3, 0, 8, 8, 0, 8, 8], [8, 8, 8, 8, 3, 3, 3, 0, 8, 0, 8, 0], [0, 8, 8, 3, 3, 3, 8, 8, 0, 0, 0, 0], [8, 0, 0, 8, 3, 8, 8, 8, 8, 8, 8, 8]]\n\n--Example 2-- \n\n INPUT: \n\n[[8, 8, 0, 0, 0, 8, 0, 0, 0, 0, 8, 8], [8, 8, 8, 8, 8, 8, 8, 8, 0, 0, 0, 8], [8, 8, 8, 0, 0, 8, 8, 0, 0, 0, 8, 8], [0, 8, 0, 8, 8, 8, 8, 0, 0, 8, 8, 8], [0, 0, 0, 8, 8, 8, 8, 8, 0, 0, 0, 0], [0, 0, 0, 8, 8, 0, 8, 0, 8, 8, 0, 0], [0, 0, 8, 8, 0, 8, 8, 0, 8, 8, 8, 0], [8, 8, 8, 0, 8, 8, 8, 8, 0, 8, 0, 8], [8, 8, 0, 0, 0, 8, 8, 8, 0, 8, 8, 8], [8, 8, 0, 0, 0, 8, 0, 8, 8, 8, 8, 8], [8, 0, 0, 0, 0, 8, 8, 8, 8, 8, 8, 8], [8, 0, 8, 8, 8, 8, 8, 0, 8, 8, 0, 8]]\n\nOUTPUT: \n\n[[8, 8, 0, 0, 0, 8, 0, 0, 0, 3, 8, 8], [8, 8, 8, 8, 8, 8, 8, 8, 3, 3, 3, 8], [8, 8, 8, 0, 0, 8, 8, 3, 3, 3, 8, 8], [0, 8, 0, 8, 8, 8, 8, 0, 3, 8, 8, 8], [0, 3, 0, 8, 8, 8, 8, 8, 0, 0, 0, 0], [3, 3, 3, 8, 8, 0, 8, 0, 8, 8, 0, 0], [0, 3, 8, 8, 0, 8, 8, 0, 8, 8, 8, 0], [8, 8, 8, 3, 8, 8, 8, 8, 0, 8, 0, 8], [8, 8, 3, 3, 3, 8, 8, 8, 0, 8, 8, 8], [8, 8, 3, 3, 3, 8, 0, 8, 8, 8, 8, 8], [8, 0, 0, 3, 0, 8, 8, 8, 8, 8, 8, 8], [8, 0, 8, 8, 8, 8, 8, 0, 8, 8, 0, 8]]\n\n\n--End of Training Examples--\n\n--Test Input--\n[[8, 0, 8, 8, 8, 8, 8, 0, 8, 0, 8, 0], [0, 8, 8, 8, 0, 0, 8, 0, 8, 0, 0, 0], [8, 8, 8, 8, 0, 0, 0, 8, 8, 8, 8, 8], [8, 0, 0, 0, 8, 0, 8, 8, 0, 0, 8, 0], [0, 8, 8, 8, 0, 8, 0, 8, 8, 0, 8, 8], [0, 0, 8, 8, 8, 0, 0, 0, 0, 0, 0, 0], [8, 0, 8, 8, 0, 8, 8, 0, 8, 0, 0, 0], [0, 8, 0, 8, 0, 0, 8, 8, 8, 8, 8, 8], [0, 0, 0, 8, 8, 0, 0, 8, 0, 8, 0, 0], [0, 0, 0, 0, 8, 0, 8, 8, 0, 8, 8, 0], [0, 0, 0, 8, 8, 0, 8, 8, 0, 8, 8, 8], [8, 8, 8, 0, 8, 0, 0, 0, 0, 8, 8, 8]]\n--End of Test Input--\n\nYour response:"
+            }
+          },
+          {
+            "index": 1,
+            "message": {
+              "role": "assistant",
+              "content": "The pattern identifies specific empty cells (0s) that are \"centers\" of open space, defined by their distance from the nearest wall or obstacle (8). Specifically, a cell is a \"Center\" if it is a 0 and none of its 4 immediate neighbors (Up, Down, Left, Right) are an 8. (This implies the cell is at least a Manhattan distance of 2 from any 8). The transformation then fills these Center cells and their 4 immediate neighbors with the value 3.\n\nApplying this logic to the Test Input:\n\n1.  **Identify Centers:**\n    *   Scanning the grid for 0s that have no 8s as immediate neighbors.\n    *   **(2, 5):** Neighbors are (1, 5)=0, (2, 4)=0, (2, 6)=0, (3, 5)=0. None are 8. **Center.**\n    *   **(9, 1):** Neighbors are (8, 1)=0, (9, 0)=0, (9, 2)=0, (10, 1)=0. None are 8. **Center.**\n    *   **(9, 2):** Neighbors are (8, 2)=0, (9, 1)=0, (9, 3)=0, (10, 2)=0. None are 8. **Center.**\n    *   Other 0s are adjacent to at least one 8 or the edge (which counts as a boundary). Note that (9, 0) is adjacent to the left edge, so it's not a center.\n\n2.  **Apply Transformation (Fill Centers and Neighbors with 3):**\n    *   **Around (2, 5):** Fill (2, 5) and neighbors (1, 5), (2, 4), (2, 6), (3, 5).\n    *   **Around (9, 1):** Fill (9, 1) and neighbors (8, 1), (9, 0), (10, 1), (9, 2).\n    *   **Around (9, 2):** Fill (9, 2) and neighbors (8, 2), (9, 1), (9, 3), (10, 2).\n\n3.  **Construct Final Output:**\n    *   Row 1: Change (1, 5) to 3.\n    *   Row 2: Change (2, 4), (2, 5), (2, 6) to 3.\n    *   Row 3: Change (3, 5) to 3.\n    *   Row 8: Change (8, 1), (8, 2) to 3.\n    *   Row 9: Change (9, 0), (9, 1), (9, 2), (9, 3) to 3.\n    *   Row 10: Change (10, 1), (10, 2) to 3.\n\nThe resulting grid is:\n\n[[8, 0, 8, 8, 8, 8, 8, 0, 8, 0, 8, 0], [0, 8, 8, 8, 0, 3, 8, 0, 8, 0, 0, 0], [8, 8, 8, 8, 3, 3, 3, 8, 8, 8, 8, 8], [8, 0, 0, 0, 8, 3, 8, 8, 0, 0, 8, 0], [0, 8, 8, 8, 0, 8, 0, 8, 8, 0, 8, 8], [0, 0, 8, 8, 8, 0, 0, 0, 0, 0, 0, 0], [8, 0, 8, 8, 0, 8, 8, 0, 8, 0, 0, 0], [0, 8, 0, 8, 0, 0, 8, 8, 8, 8, 8, 8], [0, 3, 3, 8, 8, 0, 0, 8, 0, 8, 0, 0], [3, 3, 3, 3, 8, 0, 8, 8, 0, 8, 8, 0], [0, 3, 3, 8, 8, 0, 8, 8, 0, 8, 8, 8], [8, 8, 8, 0, 8, 0, 0, 0, 0, 8, 8, 8]]"
+            }
+          }
+        ],
+        "reasoning_summary": null,
+        "kwargs": {
+          "temperature": 1.0,
+          "max_output_tokens": 65536
+        },
+        "usage": {
+          "prompt_tokens": 3181,
+          "completion_tokens": 1120,
+          "total_tokens": 27299,
+          "completion_tokens_details": {
+            "reasoning_tokens": 22998,
+            "accepted_prediction_tokens": 1120,
+            "rejected_prediction_tokens": 0
+          }
+        },
+        "cost": {},
+        "task_id": "7e02026e",
+        "pair_index": 0,
+        "test_id": "original-prompt-ablations",
+        "raw_text": "The pattern identifies specific empty cells (0s) that are \"centers\" of open space, defined by their distance from the nearest wall or obstacle (8). Specifically, a cell is a \"Center\" if it is a 0 and none of its 4 immediate neighbors (Up, Down, Left, Right) are an 8. (This implies the cell is at least a Manhattan distance of 2 from any 8). The transformation then fills these Center cells and their 4 immediate neighbors with the value 3.\n\nApplying this logic to the Test Input:\n\n1.  **Identify Centers:**\n    *   Scanning the grid for 0s that have no 8s as immediate neighbors.\n    *   **(2, 5):** Neighbors are (1, 5)=0, (2, 4)=0, (2, 6)=0, (3, 5)=0. None are 8. **Center.**\n    *   **(9, 1):** Neighbors are (8, 1)=0, (9, 0)=0, (9, 2)=0, (10, 1)=0. None are 8. **Center.**\n    *   **(9, 2):** Neighbors are (8, 2)=0, (9, 1)=0, (9, 3)=0, (10, 2)=0. None are 8. **Center.**\n    *   Other 0s are adjacent to at least one 8 or the edge (which counts as a boundary). Note that (9, 0) is adjacent to the left edge, so it's not a center.\n\n2.  **Apply Transformation (Fill Centers and Neighbors with 3):**\n    *   **Around (2, 5):** Fill (2, 5) and neighbors (1, 5), (2, 4), (2, 6), (3, 5).\n    *   **Around (9, 1):** Fill (9, 1) and neighbors (8, 1), (9, 0), (10, 1), (9, 2).\n    *   **Around (9, 2):** Fill (9, 2) and neighbors (8, 2), (9, 1), (9, 3), (10, 2).\n\n3.  **Construct Final Output:**\n    *   Row 1: Change (1, 5) to 3.\n    *   Row 2: Change (2, 4), (2, 5), (2, 6) to 3.\n    *   Row 3: Change (3, 5) to 3.\n    *   Row 8: Change (8, 1), (8, 2) to 3.\n    *   Row 9: Change (9, 0), (9, 1), (9, 2), (9, 3) to 3.\n    *   Row 10: Change (10, 1), (10, 2) to 3.\n\nThe resulting grid is:\n\n[[8, 0, 8, 8, 8, 8, 8, 0, 8, 0, 8, 0], [0, 8, 8, 8, 0, 3, 8, 0, 8, 0, 0, 0], [8, 8, 8, 8, 3, 3, 3, 8, 8, 8, 8, 8], [8, 0, 0, 0, 8, 3, 8, 8, 0, 0, 8, 0], [0, 8, 8, 8, 0, 8, 0, 8, 8, 0, 8, 8], [0, 0, 8, 8, 8, 0, 0, 0, 0, 0, 0, 0], [8, 0, 8, 8, 0, 8, 8, 0, 8, 0, 0, 0], [0, 8, 0, 8, 0, 0, 8, 8, 8, 8, 8, 8], [0, 3, 3, 8, 8, 0, 0, 8, 0, 8, 0, 0], [3, 3, 3, 3, 8, 0, 8, 8, 0, 8, 8, 0], [0, 3, 3, 8, 8, 0, 8, 8, 0, 8, 8, 8], [8, 8, 8, 0, 8, 0, 0, 0, 0, 8, 8, 8]]",
+        "finish_reason": "STOP"
+      },
+      "correct": false
+    },
+    "attempt_3": {
+      "answer": [
+        [
+          8,
+          0,
+          8,
+          8,
+          8,
+          8,
+          8,
+          0,
+          8,
+          0,
+          8,
+          0
+        ],
+        [
+          0,
+          8,
+          8,
+          8,
+          0,
+          3,
+          8,
+          0,
+          8,
+          0,
+          0,
+          0
+        ],
+        [
+          8,
+          8,
+          8,
+          8,
+          3,
+          3,
+          3,
+          8,
+          8,
+          8,
+          8,
+          8
+        ],
+        [
+          8,
+          0,
+          0,
+          0,
+          8,
+          3,
+          8,
+          8,
+          0,
+          0,
+          8,
+          0
+        ],
+        [
+          0,
+          8,
+          8,
+          8,
+          0,
+          8,
+          0,
+          8,
+          8,
+          0,
+          8,
+          8
+        ],
+        [
+          0,
+          0,
+          8,
+          8,
+          8,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          8,
+          0,
+          8,
+          8,
+          0,
+          8,
+          8,
+          0,
+          8,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          8,
+          0,
+          8,
+          0,
+          0,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8
+        ],
+        [
+          0,
+          0,
+          0,
+          8,
+          8,
+          0,
+          0,
+          8,
+          0,
+          8,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          8,
+          0,
+          8,
+          8,
+          0,
+          8,
+          8,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          8,
+          8,
+          0,
+          8,
+          8,
+          0,
+          8,
+          8,
+          8
+        ],
+        [
+          8,
+          8,
+          8,
+          0,
+          8,
+          0,
+          0,
+          0,
+          0,
+          8,
+          8,
+          8
+        ]
+      ],
+      "metadata": {
+        "model": "gemini-3-pro-preview",
+        "provider": "gemini",
+        "start_timestamp": "2025-11-22T09:08:11.600376+00:00",
+        "end_timestamp": "2025-11-22T09:16:46.449499+00:00",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "user",
+              "content": "You are participating in a puzzle solving competition. You are an expert at solving puzzles.\n\nBelow is a list of input and output pairs with a pattern. Your goal is to identify the pattern or transformation in the training examples that maps the input to the output, then apply that pattern to the test input to give a final output.\n\nRespond in the format of the training output examples\n\n--Training Examples--\n--Example 0-- \n\n INPUT: \n\n[[8, 0, 0, 8, 0, 0, 0, 8, 8, 0, 8, 0], [8, 0, 8, 0, 0, 0, 8, 0, 0, 8, 0, 0], [0, 0, 0, 8, 0, 8, 8, 8, 8, 8, 0, 8], [0, 8, 0, 8, 0, 0, 8, 0, 8, 8, 0, 0], [8, 0, 0, 8, 0, 0, 0, 8, 8, 8, 0, 0], [8, 8, 0, 8, 0, 8, 8, 8, 8, 8, 8, 0], [0, 8, 0, 0, 0, 8, 0, 8, 0, 8, 8, 0], [0, 8, 8, 8, 8, 0, 0, 8, 0, 0, 8, 8], [0, 8, 0, 8, 8, 8, 8, 0, 0, 8, 8, 0], [0, 8, 8, 8, 8, 0, 0, 0, 8, 0, 0, 8], [8, 0, 8, 0, 0, 0, 0, 0, 8, 8, 0, 0], [0, 8, 0, 8, 0, 8, 0, 8, 0, 0, 8, 0]]\n\nOUTPUT: \n\n[[8, 0, 0, 8, 3, 0, 0, 8, 8, 0, 8, 0], [8, 0, 8, 3, 3, 3, 8, 0, 0, 8, 0, 0], [0, 0, 0, 8, 3, 8, 8, 8, 8, 8, 0, 8], [0, 8, 0, 8, 0, 0, 8, 0, 8, 8, 0, 0], [8, 0, 0, 8, 0, 0, 0, 8, 8, 8, 0, 0], [8, 8, 0, 8, 0, 8, 8, 8, 8, 8, 8, 0], [0, 8, 0, 0, 0, 8, 0, 8, 0, 8, 8, 0], [0, 8, 8, 8, 8, 0, 0, 8, 0, 0, 8, 8], [0, 8, 0, 8, 8, 8, 8, 0, 0, 8, 8, 0], [0, 8, 8, 8, 8, 0, 3, 0, 8, 0, 0, 8], [8, 0, 8, 0, 0, 3, 3, 3, 8, 8, 0, 0], [0, 8, 0, 8, 0, 8, 3, 8, 0, 0, 8, 0]]\n\n--Example 1-- \n\n INPUT: \n\n[[8, 0, 8, 8, 8, 8, 0, 8, 0, 8, 8, 8], [0, 8, 0, 0, 0, 8, 8, 0, 0, 0, 8, 8], [8, 0, 8, 0, 8, 8, 8, 8, 8, 8, 8, 8], [0, 8, 0, 0, 8, 8, 0, 0, 0, 8, 0, 0], [8, 0, 8, 8, 0, 0, 8, 8, 0, 0, 8, 8], [8, 8, 8, 0, 8, 8, 0, 0, 8, 8, 8, 8], [8, 0, 8, 0, 0, 0, 8, 0, 0, 0, 0, 0], [0, 8, 0, 8, 0, 8, 0, 0, 0, 8, 8, 0], [0, 8, 0, 8, 0, 0, 0, 8, 8, 0, 8, 8], [8, 8, 8, 8, 0, 0, 0, 0, 8, 0, 8, 0], [0, 8, 8, 0, 0, 0, 8, 8, 0, 0, 0, 0], [8, 0, 0, 8, 0, 8, 8, 8, 8, 8, 8, 8]]\n\nOUTPUT: \n\n[[8, 0, 8, 8, 8, 8, 0, 8, 0, 8, 8, 8], [0, 8, 0, 0, 0, 8, 8, 0, 0, 0, 8, 8], [8, 0, 8, 0, 8, 8, 8, 8, 8, 8, 8, 8], [0, 8, 0, 0, 8, 8, 0, 0, 0, 8, 0, 0], [8, 0, 8, 8, 0, 0, 8, 8, 0, 0, 8, 8], [8, 8, 8, 0, 8, 8, 0, 0, 8, 8, 8, 8], [8, 0, 8, 0, 0, 0, 8, 0, 0, 0, 0, 0], [0, 8, 0, 8, 0, 8, 0, 0, 0, 8, 8, 0], [0, 8, 0, 8, 0, 3, 0, 8, 8, 0, 8, 8], [8, 8, 8, 8, 3, 3, 3, 0, 8, 0, 8, 0], [0, 8, 8, 3, 3, 3, 8, 8, 0, 0, 0, 0], [8, 0, 0, 8, 3, 8, 8, 8, 8, 8, 8, 8]]\n\n--Example 2-- \n\n INPUT: \n\n[[8, 8, 0, 0, 0, 8, 0, 0, 0, 0, 8, 8], [8, 8, 8, 8, 8, 8, 8, 8, 0, 0, 0, 8], [8, 8, 8, 0, 0, 8, 8, 0, 0, 0, 8, 8], [0, 8, 0, 8, 8, 8, 8, 0, 0, 8, 8, 8], [0, 0, 0, 8, 8, 8, 8, 8, 0, 0, 0, 0], [0, 0, 0, 8, 8, 0, 8, 0, 8, 8, 0, 0], [0, 0, 8, 8, 0, 8, 8, 0, 8, 8, 8, 0], [8, 8, 8, 0, 8, 8, 8, 8, 0, 8, 0, 8], [8, 8, 0, 0, 0, 8, 8, 8, 0, 8, 8, 8], [8, 8, 0, 0, 0, 8, 0, 8, 8, 8, 8, 8], [8, 0, 0, 0, 0, 8, 8, 8, 8, 8, 8, 8], [8, 0, 8, 8, 8, 8, 8, 0, 8, 8, 0, 8]]\n\nOUTPUT: \n\n[[8, 8, 0, 0, 0, 8, 0, 0, 0, 3, 8, 8], [8, 8, 8, 8, 8, 8, 8, 8, 3, 3, 3, 8], [8, 8, 8, 0, 0, 8, 8, 3, 3, 3, 8, 8], [0, 8, 0, 8, 8, 8, 8, 0, 3, 8, 8, 8], [0, 3, 0, 8, 8, 8, 8, 8, 0, 0, 0, 0], [3, 3, 3, 8, 8, 0, 8, 0, 8, 8, 0, 0], [0, 3, 8, 8, 0, 8, 8, 0, 8, 8, 8, 0], [8, 8, 8, 3, 8, 8, 8, 8, 0, 8, 0, 8], [8, 8, 3, 3, 3, 8, 8, 8, 0, 8, 8, 8], [8, 8, 3, 3, 3, 8, 0, 8, 8, 8, 8, 8], [8, 0, 0, 3, 0, 8, 8, 8, 8, 8, 8, 8], [8, 0, 8, 8, 8, 8, 8, 0, 8, 8, 0, 8]]\n\n\n--End of Training Examples--\n\n--Test Input--\n[[8, 0, 8, 8, 8, 8, 8, 0, 8, 0, 8, 0], [0, 8, 8, 8, 0, 0, 8, 0, 8, 0, 0, 0], [8, 8, 8, 8, 0, 0, 0, 8, 8, 8, 8, 8], [8, 0, 0, 0, 8, 0, 8, 8, 0, 0, 8, 0], [0, 8, 8, 8, 0, 8, 0, 8, 8, 0, 8, 8], [0, 0, 8, 8, 8, 0, 0, 0, 0, 0, 0, 0], [8, 0, 8, 8, 0, 8, 8, 0, 8, 0, 0, 0], [0, 8, 0, 8, 0, 0, 8, 8, 8, 8, 8, 8], [0, 0, 0, 8, 8, 0, 0, 8, 0, 8, 0, 0], [0, 0, 0, 0, 8, 0, 8, 8, 0, 8, 8, 0], [0, 0, 0, 8, 8, 0, 8, 8, 0, 8, 8, 8], [8, 8, 8, 0, 8, 0, 0, 0, 0, 8, 8, 8]]\n--End of Test Input--\n\nYour response:"
+            }
+          },
+          {
+            "index": 1,
+            "message": {
+              "role": "assistant",
+              "content": "Based on the analysis of the training examples, the pattern involves identifying specific connected shapes of '0's (black pixels) that are partially or fully enclosed by '8's (teal pixels) and filling them with '3's (green pixels).\n\nThe primary shape identified is a \"Plus\" sign (a central pixel and its 4 orthogonal neighbors) made of 0s.\nFor a \"Plus\" shape centered at `(r, c)` to be filled:\n1.  The pixels at `(r, c)`, `(r-1, c)`, `(r+1, c)`, `(r, c-1)`, and `(r, c+1)` must all be `0`.\n2.  The \"tips\" of the plus sign must be \"capped\" by `8`s or the grid boundary. A \"cap\" is the neighbor of a tip in the direction away from the center.\n    *   Top tip `(r-1, c)` needs `(r-2, c)` to be `8` or Boundary.\n    *   Bottom tip `(r+1, c)` needs `(r+2, c)` to be `8` or Boundary.\n    *   Left tip `(r, c-1)` needs `(r, c-2)` to be `8` or Boundary.\n    *   Right tip `(r, c+1)` needs `(r, c+2)` to be `8` or Boundary.\n3.  In the training examples, valid shapes had at least 3 of these 4 caps present.\n\nApplying this to the Test Input:\nScanning the grid reveals a potential \"Plus\" shape centered at `(2, 5)`.\n*   **Center**: `(2, 5)` is `0`.\n*   **Neighbors**:\n    *   Top `(1, 5)` is `0`.\n    *   Bottom `(3, 5)` is `0`.\n    *   Left `(2, 4)` is `0`.\n    *   Right `(2, 6)` is `0`.\n    *   This forms a valid 5-pixel Plus shape of 0s.\n*   **Caps**:\n    *   Top Tip `(1, 5)`: Neighbor Above is `(0, 5)`. Value is `8`. (Cap OK)\n    *   Bottom Tip `(3, 5)`: Neighbor Below is `(4, 5)`. Value is `8`. (Cap OK)\n    *   Left Tip `(2, 4)`: Neighbor Left is `(2, 3)`. Value is `8`. (Cap OK)\n    *   Right Tip `(2, 6)`: Neighbor Right is `(2, 7)`. Value is `8`. (Cap OK)\n    *   4 out of 4 caps are present.\n\nNo other valid shapes (Plus or the Slanted Square observed in Example 1) were found in the Test Input. The Slanted Square candidates were broken by `8`s in the wrong positions. Another potential Plus shape at `(10, 2)` only has 2 caps, which is insufficient based on the training data threshold (likely >= 3).\n\nTherefore, we modify the pixels at `(1, 5)`, `(2, 4)`, `(2, 5)`, `(2, 6)`, and `(3, 5)` from `0` to `3`.\n\n**Input Grid Segment (Rows 1-3, Cols 4-6):**\nRow 1: `... 0 0 8 ...` (Indices 4,5,6)\nRow 2: `... 0 0 0 ...`\nRow 3: `... 8 0 8 ...`\n\n**Output Grid Segment:**\nRow 1: `... 0 3 8 ...`\nRow 2: `... 3 3 3 ...`\nRow 3: `... 8 3 8 ...`\n\nConstructing the final output:\n\n[[8, 0, 8, 8, 8, 8, 8, 0, 8, 0, 8, 0], [0, 8, 8, 8, 0, 3, 8, 0, 8, 0, 0, 0], [8, 8, 8, 8, 3, 3, 3, 8, 8, 8, 8, 8], [8, 0, 0, 0, 8, 3, 8, 8, 0, 0, 8, 0], [0, 8, 8, 8, 0, 8, 0, 8, 8, 0, 8, 8], [0, 0, 8, 8, 8, 0, 0, 0, 0, 0, 0, 0], [8, 0, 8, 8, 0, 8, 8, 0, 8, 0, 0, 0], [0, 8, 0, 8, 0, 0, 8, 8, 8, 8, 8, 8], [0, 0, 0, 8, 8, 0, 0, 8, 0, 8, 0, 0], [0, 0, 0, 0, 8, 0, 8, 8, 0, 8, 8, 0], [0, 0, 0, 8, 8, 0, 8, 8, 0, 8, 8, 8], [8, 8, 8, 0, 8, 0, 0, 0, 0, 8, 8, 8]]"
+            }
+          }
+        ],
+        "reasoning_summary": null,
+        "kwargs": {
+          "temperature": 1.0,
+          "max_output_tokens": 65536
+        },
+        "usage": {
+          "prompt_tokens": 3181,
+          "completion_tokens": 1325,
+          "total_tokens": 25379,
+          "completion_tokens_details": {
+            "reasoning_tokens": 20873,
+            "accepted_prediction_tokens": 1325,
+            "rejected_prediction_tokens": 0
+          }
+        },
+        "cost": {},
+        "task_id": "7e02026e",
+        "pair_index": 0,
+        "test_id": "original-prompt-ablations",
+        "raw_text": "Based on the analysis of the training examples, the pattern involves identifying specific connected shapes of '0's (black pixels) that are partially or fully enclosed by '8's (teal pixels) and filling them with '3's (green pixels).\n\nThe primary shape identified is a \"Plus\" sign (a central pixel and its 4 orthogonal neighbors) made of 0s.\nFor a \"Plus\" shape centered at `(r, c)` to be filled:\n1.  The pixels at `(r, c)`, `(r-1, c)`, `(r+1, c)`, `(r, c-1)`, and `(r, c+1)` must all be `0`.\n2.  The \"tips\" of the plus sign must be \"capped\" by `8`s or the grid boundary. A \"cap\" is the neighbor of a tip in the direction away from the center.\n    *   Top tip `(r-1, c)` needs `(r-2, c)` to be `8` or Boundary.\n    *   Bottom tip `(r+1, c)` needs `(r+2, c)` to be `8` or Boundary.\n    *   Left tip `(r, c-1)` needs `(r, c-2)` to be `8` or Boundary.\n    *   Right tip `(r, c+1)` needs `(r, c+2)` to be `8` or Boundary.\n3.  In the training examples, valid shapes had at least 3 of these 4 caps present.\n\nApplying this to the Test Input:\nScanning the grid reveals a potential \"Plus\" shape centered at `(2, 5)`.\n*   **Center**: `(2, 5)` is `0`.\n*   **Neighbors**:\n    *   Top `(1, 5)` is `0`.\n    *   Bottom `(3, 5)` is `0`.\n    *   Left `(2, 4)` is `0`.\n    *   Right `(2, 6)` is `0`.\n    *   This forms a valid 5-pixel Plus shape of 0s.\n*   **Caps**:\n    *   Top Tip `(1, 5)`: Neighbor Above is `(0, 5)`. Value is `8`. (Cap OK)\n    *   Bottom Tip `(3, 5)`: Neighbor Below is `(4, 5)`. Value is `8`. (Cap OK)\n    *   Left Tip `(2, 4)`: Neighbor Left is `(2, 3)`. Value is `8`. (Cap OK)\n    *   Right Tip `(2, 6)`: Neighbor Right is `(2, 7)`. Value is `8`. (Cap OK)\n    *   4 out of 4 caps are present.\n\nNo other valid shapes (Plus or the Slanted Square observed in Example 1) were found in the Test Input. The Slanted Square candidates were broken by `8`s in the wrong positions. Another potential Plus shape at `(10, 2)` only has 2 caps, which is insufficient based on the training data threshold (likely >= 3).\n\nTherefore, we modify the pixels at `(1, 5)`, `(2, 4)`, `(2, 5)`, `(2, 6)`, and `(3, 5)` from `0` to `3`.\n\n**Input Grid Segment (Rows 1-3, Cols 4-6):**\nRow 1: `... 0 0 8 ...` (Indices 4,5,6)\nRow 2: `... 0 0 0 ...`\nRow 3: `... 8 0 8 ...`\n\n**Output Grid Segment:**\nRow 1: `... 0 3 8 ...`\nRow 2: `... 3 3 3 ...`\nRow 3: `... 8 3 8 ...`\n\nConstructing the final output:\n\n[[8, 0, 8, 8, 8, 8, 8, 0, 8, 0, 8, 0], [0, 8, 8, 8, 0, 3, 8, 0, 8, 0, 0, 0], [8, 8, 8, 8, 3, 3, 3, 8, 8, 8, 8, 8], [8, 0, 0, 0, 8, 3, 8, 8, 0, 0, 8, 0], [0, 8, 8, 8, 0, 8, 0, 8, 8, 0, 8, 8], [0, 0, 8, 8, 8, 0, 0, 0, 0, 0, 0, 0], [8, 0, 8, 8, 0, 8, 8, 0, 8, 0, 0, 0], [0, 8, 0, 8, 0, 0, 8, 8, 8, 8, 8, 8], [0, 0, 0, 8, 8, 0, 0, 8, 0, 8, 0, 0], [0, 0, 0, 0, 8, 0, 8, 8, 0, 8, 8, 0], [0, 0, 0, 8, 8, 0, 8, 8, 0, 8, 8, 8], [8, 8, 8, 0, 8, 0, 0, 0, 0, 8, 8, 8]]",
+        "finish_reason": "STOP"
+      },
+      "correct": false
+    }
+  }
+]

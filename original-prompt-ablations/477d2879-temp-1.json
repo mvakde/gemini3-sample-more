@@ -1,0 +1,976 @@
+[
+  {
+    "attempt_1": {
+      "answer": [
+        [
+          5,
+          5,
+          5,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3
+        ],
+        [
+          5,
+          5,
+          5,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3
+        ],
+        [
+          5,
+          5,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3
+        ],
+        [
+          3,
+          3,
+          3,
+          7,
+          7,
+          7,
+          3,
+          3,
+          8,
+          8,
+          3,
+          3,
+          3
+        ],
+        [
+          7,
+          7,
+          7,
+          7,
+          7,
+          7,
+          7,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8
+        ],
+        [
+          7,
+          7,
+          7,
+          7,
+          7,
+          7,
+          7,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8
+        ],
+        [
+          7,
+          7,
+          7,
+          7,
+          7,
+          7,
+          7,
+          8,
+          8,
+          8,
+          8,
+          8,
+          6
+        ],
+        [
+          7,
+          7,
+          7,
+          7,
+          7,
+          7,
+          7,
+          8,
+          8,
+          8,
+          8,
+          6,
+          6
+        ],
+        [
+          7,
+          7,
+          7,
+          7,
+          7,
+          7,
+          7,
+          8,
+          6,
+          6,
+          6,
+          6,
+          6
+        ],
+        [
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          6
+        ],
+        [
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          6,
+          6
+        ],
+        [
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          6,
+          6,
+          6
+        ],
+        [
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          6,
+          6,
+          6
+        ]
+      ],
+      "metadata": {
+        "model": "gemini-3-pro-preview",
+        "provider": "gemini",
+        "start_timestamp": "2025-11-22T12:22:57.339991+00:00",
+        "end_timestamp": "2025-11-22T12:27:17.305996+00:00",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "user",
+              "content": "You are participating in a puzzle solving competition. You are an expert at solving puzzles.\n\nBelow is a list of input and output pairs with a pattern. Your goal is to identify the pattern or transformation in the training examples that maps the input to the output, then apply that pattern to the test input to give a final output.\n\nRespond in the format of the training output examples\n\n--Training Examples--\n--Example 0-- \n\n INPUT: \n\n[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 0, 0], [0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0], [0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0], [0, 0, 1, 1, 1, 0, 0, 1, 1, 0, 0, 0, 0], [0, 0, 2, 0, 0, 0, 8, 0, 1, 0, 0, 0, 0], [0, 0, 1, 0, 1, 1, 1, 0, 1, 0, 0, 0, 0], [0, 0, 1, 0, 1, 0, 1, 0, 1, 0, 0, 0, 0], [0, 0, 1, 0, 1, 0, 1, 0, 1, 1, 0, 0, 0], [0, 1, 1, 0, 1, 0, 1, 0, 0, 1, 0, 0, 0], [0, 1, 0, 0, 1, 0, 1, 0, 1, 1, 0, 0, 0], [0, 1, 1, 1, 1, 0, 1, 1, 1, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]\n\nOUTPUT: \n\n[[3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3], [3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3], [3, 3, 3, 3, 2, 2, 2, 2, 3, 3, 3, 3, 3], [3, 3, 3, 3, 2, 8, 8, 2, 3, 3, 3, 3, 3], [3, 3, 2, 2, 2, 8, 8, 2, 2, 3, 3, 3, 3], [3, 3, 2, 8, 8, 8, 8, 8, 2, 3, 3, 3, 3], [3, 3, 2, 8, 2, 2, 2, 8, 2, 3, 3, 3, 3], [3, 3, 2, 8, 2, 3, 2, 8, 2, 3, 3, 3, 3], [3, 3, 2, 8, 2, 3, 2, 8, 2, 2, 3, 3, 3], [3, 2, 2, 8, 2, 3, 2, 8, 8, 2, 3, 3, 3], [3, 2, 8, 8, 2, 3, 2, 8, 2, 2, 3, 3, 3], [3, 2, 2, 2, 2, 3, 2, 2, 2, 3, 3, 3, 3], [3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]]\n\n--Example 1-- \n\n INPUT: \n\n[[0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0], [0, 2, 0, 3, 1, 1, 0, 0, 1, 8, 1, 0, 0], [0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0], [1, 1, 1, 1, 0, 0, 0, 0, 1, 0, 1, 1, 0], [0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0], [0, 0, 1, 0, 0, 0, 0, 1, 1, 0, 1, 1, 0], [0, 0, 1, 1, 1, 1, 0, 1, 0, 0, 1, 0, 0], [0, 0, 0, 0, 0, 1, 0, 1, 0, 6, 1, 1, 0], [0, 7, 0, 1, 1, 1, 0, 1, 0, 0, 0, 1, 0], [0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1, 1, 0], [0, 0, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0, 0], [0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 1, 0, 0, 4, 0, 0, 0, 0, 0, 0, 0]]\n\nOUTPUT: \n\n[[2, 2, 2, 2, 2, 3, 4, 4, 4, 4, 4, 4, 4], [2, 2, 2, 3, 3, 3, 4, 4, 8, 8, 8, 4, 4], [2, 2, 2, 3, 4, 4, 4, 4, 8, 6, 8, 4, 4], [3, 3, 3, 3, 4, 4, 4, 4, 8, 6, 8, 8, 4], [7, 7, 3, 4, 4, 4, 4, 4, 8, 6, 6, 8, 4], [7, 7, 3, 4, 4, 4, 4, 8, 8, 6, 8, 8, 4], [7, 7, 3, 3, 3, 3, 4, 8, 6, 6, 8, 4, 4], [7, 7, 7, 7, 7, 3, 4, 8, 6, 6, 8, 8, 4], [7, 7, 7, 3, 3, 3, 4, 8, 6, 6, 6, 8, 4], [7, 7, 7, 3, 4, 4, 4, 8, 6, 6, 8, 8, 4], [7, 7, 3, 3, 4, 4, 4, 8, 8, 8, 8, 4, 4], [7, 7, 3, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4], [7, 7, 3, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4]]\n\n--Example 2-- \n\n INPUT: \n\n[[0, 0, 9, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0], [1, 1, 0, 0, 1, 0, 0, 1, 1, 1, 1, 1, 0], [0, 1, 6, 1, 1, 0, 0, 1, 0, 0, 0, 1, 0], [0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 1, 0], [0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 1, 0, 0], [0, 8, 0, 0, 0, 3, 0, 0, 0, 0, 1, 1, 0], [0, 0, 0, 0, 0, 1, 0, 0, 8, 0, 0, 1, 0], [0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 1, 0], [1, 1, 1, 0, 0, 0, 1, 0, 1, 1, 1, 1, 0], [0, 0, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0], [0, 0, 1, 2, 1, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0], [7, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0]]\n\nOUTPUT: \n\n[[9, 9, 9, 9, 6, 8, 8, 8, 8, 8, 8, 8, 8], [6, 6, 9, 9, 6, 8, 8, 3, 3, 3, 3, 3, 8], [8, 6, 6, 6, 6, 8, 8, 3, 8, 8, 8, 3, 8], [8, 8, 8, 8, 8, 8, 8, 3, 8, 8, 3, 3, 8], [8, 8, 8, 8, 8, 3, 3, 3, 8, 8, 3, 8, 8], [8, 8, 8, 8, 8, 3, 8, 8, 8, 8, 3, 3, 8], [8, 8, 8, 8, 8, 3, 8, 8, 8, 8, 8, 3, 8], [8, 8, 8, 8, 8, 3, 3, 8, 8, 8, 8, 3, 8], [2, 2, 2, 8, 8, 8, 3, 8, 3, 3, 3, 3, 8], [7, 7, 2, 8, 8, 8, 3, 3, 3, 8, 8, 8, 8], [7, 7, 2, 2, 2, 8, 8, 8, 8, 8, 8, 8, 8], [7, 7, 7, 7, 2, 2, 8, 8, 8, 8, 8, 8, 8], [7, 7, 7, 7, 7, 2, 8, 8, 8, 8, 8, 8, 8]]\n\n\n--End of Training Examples--\n\n--Test Input--\n[[0, 5, 0, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 1, 0, 0, 1, 1, 1, 1, 1, 0, 0], [0, 0, 1, 1, 0, 0, 1, 0, 0, 0, 1, 0, 0], [1, 1, 1, 0, 0, 0, 1, 1, 0, 0, 1, 1, 0], [0, 0, 7, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0], [0, 0, 0, 0, 0, 0, 0, 1, 0, 8, 0, 1, 0], [0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0], [0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 6, 0], [0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0], [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], [0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0], [0, 0, 0, 4, 0, 0, 0, 1, 1, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0]]\n--End of Test Input--\n\nYour response:"
+            }
+          },
+          {
+            "index": 1,
+            "message": {
+              "role": "assistant",
+              "content": "The pattern identified in the training examples is a \"Voronoi-style\" flood fill where the grid is partitioned into regions. Each region is defined by a \"seed\" pixel (a non-zero, non-one integer). The region consists of all reachable `0` pixels (empty space) that are closer to that seed than any other, using path distance (Manhattan distance respecting walls). The `1` pixels (walls) are then colored to match the region they bound or are part of. If a wall separates two regions, it tends to take the color of the one it is geometrically closer to or connected to.\n\nBased on the analysis of the Test Input:\n1.  **Seeds:**\n    *   `5` at (0, 1)\n    *   `3` at (0, 3)\n    *   `7` at (4, 2)\n    *   `8` at (5, 9)\n    *   `6` at (7, 11)\n    *   `4` at (11, 3)\n\n2.  **Regions:**\n    *   **Region 5 (Top-Left):** Confined to the top-left corner (rows 0-2, cols 0-2) by walls.\n    *   **Region 3 (Top & Top-Right):** Fills the top row and the area to the right of Region 5, extending down to the wall at Row 3 and covering the top-right empty space.\n    *   **Region 7 (Middle-Left):** Occupies the area below Region 5/3 (below row 3 walls) and to the left of the vertical central walls (cols 0-6 roughly).\n    *   **Region 8 (Middle-Right):** Occupies the area to the right of Region 7 and above Region 6.\n    *   **Region 6 (Middle-Right & Bottom-Right):** Occupies the area around (7,11). It also flows down column 12 into the bottom section.\n    *   **Region 4 (Bottom):** Occupies the large area below the solid wall at Row 9. However, Region 6 flows in from the bottom-right corner (col 12), so the bottom-right corner (cols 11-12, rows 10-12) becomes 6.\n\n3.  **Applying the Fill:**\n\n    *   **Row 0-2:** Region 5 fills (0,0)-(2,2). Region 3 fills the rest ((0,3)-(0,12), etc.).\n    *   **Row 3:** Wall separates top (3) and bottom (7). The wall itself takes the color 3 (upper) or 7 (lower). Given training examples, it often matches the \"room\" color.\n    *   **Row 4-8 (Left):** Filled with 7.\n    *   **Row 4-8 (Right):** Filled with 8 (upper part, around row 5) and 6 (lower part, around row 7).\n    *   **Row 9:** A solid wall of 1s (except col 12). This wall separates Region 7/8/6 from Region 4. The wall colors will transition.\n    *   **Row 10-12:** Mostly 4. The rightmost columns (11, 12) are closer to seed 6 (via the gap at (9,12)) than seed 4 (at (11,3)), so they become 6.\n\n**Predicted Output Grid:**\n\n[[5, 5, 5, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3], [5, 5, 5, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3], [5, 5, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3], [3, 3, 3, 7, 7, 7, 3, 3, 8, 8, 3, 3, 3], [7, 7, 7, 7, 7, 7, 7, 8, 8, 8, 8, 8, 8], [7, 7, 7, 7, 7, 7, 7, 8, 8, 8, 8, 8, 8], [7, 7, 7, 7, 7, 7, 7, 8, 8, 8, 8, 8, 6], [7, 7, 7, 7, 7, 7, 7, 8, 8, 8, 8, 6, 6], [7, 7, 7, 7, 7, 7, 7, 8, 6, 6, 6, 6, 6], [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 6], [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 6, 6], [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 6, 6, 6], [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 6, 6, 6]]"
+            }
+          }
+        ],
+        "reasoning_summary": null,
+        "kwargs": {
+          "temperature": 1.0,
+          "max_output_tokens": 65536
+        },
+        "usage": {
+          "prompt_tokens": 3706,
+          "completion_tokens": 1300,
+          "total_tokens": 29954,
+          "completion_tokens_details": {
+            "reasoning_tokens": 24948,
+            "accepted_prediction_tokens": 1300,
+            "rejected_prediction_tokens": 0
+          }
+        },
+        "cost": {},
+        "task_id": "477d2879",
+        "pair_index": 0,
+        "test_id": "original-prompt-ablations",
+        "raw_text": "The pattern identified in the training examples is a \"Voronoi-style\" flood fill where the grid is partitioned into regions. Each region is defined by a \"seed\" pixel (a non-zero, non-one integer). The region consists of all reachable `0` pixels (empty space) that are closer to that seed than any other, using path distance (Manhattan distance respecting walls). The `1` pixels (walls) are then colored to match the region they bound or are part of. If a wall separates two regions, it tends to take the color of the one it is geometrically closer to or connected to.\n\nBased on the analysis of the Test Input:\n1.  **Seeds:**\n    *   `5` at (0, 1)\n    *   `3` at (0, 3)\n    *   `7` at (4, 2)\n    *   `8` at (5, 9)\n    *   `6` at (7, 11)\n    *   `4` at (11, 3)\n\n2.  **Regions:**\n    *   **Region 5 (Top-Left):** Confined to the top-left corner (rows 0-2, cols 0-2) by walls.\n    *   **Region 3 (Top & Top-Right):** Fills the top row and the area to the right of Region 5, extending down to the wall at Row 3 and covering the top-right empty space.\n    *   **Region 7 (Middle-Left):** Occupies the area below Region 5/3 (below row 3 walls) and to the left of the vertical central walls (cols 0-6 roughly).\n    *   **Region 8 (Middle-Right):** Occupies the area to the right of Region 7 and above Region 6.\n    *   **Region 6 (Middle-Right & Bottom-Right):** Occupies the area around (7,11). It also flows down column 12 into the bottom section.\n    *   **Region 4 (Bottom):** Occupies the large area below the solid wall at Row 9. However, Region 6 flows in from the bottom-right corner (col 12), so the bottom-right corner (cols 11-12, rows 10-12) becomes 6.\n\n3.  **Applying the Fill:**\n\n    *   **Row 0-2:** Region 5 fills (0,0)-(2,2). Region 3 fills the rest ((0,3)-(0,12), etc.).\n    *   **Row 3:** Wall separates top (3) and bottom (7). The wall itself takes the color 3 (upper) or 7 (lower). Given training examples, it often matches the \"room\" color.\n    *   **Row 4-8 (Left):** Filled with 7.\n    *   **Row 4-8 (Right):** Filled with 8 (upper part, around row 5) and 6 (lower part, around row 7).\n    *   **Row 9:** A solid wall of 1s (except col 12). This wall separates Region 7/8/6 from Region 4. The wall colors will transition.\n    *   **Row 10-12:** Mostly 4. The rightmost columns (11, 12) are closer to seed 6 (via the gap at (9,12)) than seed 4 (at (11,3)), so they become 6.\n\n**Predicted Output Grid:**\n\n[[5, 5, 5, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3], [5, 5, 5, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3], [5, 5, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3], [3, 3, 3, 7, 7, 7, 3, 3, 8, 8, 3, 3, 3], [7, 7, 7, 7, 7, 7, 7, 8, 8, 8, 8, 8, 8], [7, 7, 7, 7, 7, 7, 7, 8, 8, 8, 8, 8, 8], [7, 7, 7, 7, 7, 7, 7, 8, 8, 8, 8, 8, 6], [7, 7, 7, 7, 7, 7, 7, 8, 8, 8, 8, 6, 6], [7, 7, 7, 7, 7, 7, 7, 8, 6, 6, 6, 6, 6], [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 6], [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 6, 6], [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 6, 6, 6], [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 6, 6, 6]]",
+        "finish_reason": "STOP"
+      },
+      "correct": false
+    },
+    "attempt_4": {
+      "answer": [
+        [
+          5,
+          5,
+          5,
+          3,
+          5,
+          5,
+          5,
+          5,
+          5,
+          5,
+          5,
+          5,
+          5
+        ],
+        [
+          5,
+          5,
+          5,
+          3,
+          5,
+          5,
+          6,
+          6,
+          6,
+          6,
+          6,
+          5,
+          5
+        ],
+        [
+          5,
+          5,
+          7,
+          3,
+          5,
+          5,
+          6,
+          8,
+          8,
+          8,
+          6,
+          5,
+          5
+        ],
+        [
+          7,
+          7,
+          7,
+          5,
+          5,
+          5,
+          6,
+          6,
+          8,
+          8,
+          6,
+          6,
+          5
+        ],
+        [
+          5,
+          5,
+          7,
+          5,
+          5,
+          5,
+          5,
+          6,
+          8,
+          8,
+          8,
+          6,
+          5
+        ],
+        [
+          5,
+          5,
+          5,
+          5,
+          5,
+          5,
+          5,
+          6,
+          8,
+          8,
+          8,
+          6,
+          5
+        ],
+        [
+          5,
+          5,
+          5,
+          5,
+          5,
+          5,
+          5,
+          6,
+          8,
+          8,
+          8,
+          6,
+          5
+        ],
+        [
+          5,
+          5,
+          5,
+          5,
+          5,
+          6,
+          6,
+          6,
+          8,
+          8,
+          8,
+          6,
+          5
+        ],
+        [
+          5,
+          5,
+          5,
+          5,
+          5,
+          6,
+          5,
+          5,
+          5,
+          5,
+          5,
+          6,
+          5
+        ],
+        [
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          5
+        ],
+        [
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4
+        ],
+        [
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4
+        ],
+        [
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4
+        ]
+      ],
+      "metadata": {
+        "model": "gemini-3-pro-preview",
+        "provider": "gemini",
+        "start_timestamp": "2025-11-22T12:22:57.351487+00:00",
+        "end_timestamp": "2025-11-22T12:27:31.052488+00:00",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "user",
+              "content": "You are participating in a puzzle solving competition. You are an expert at solving puzzles.\n\nBelow is a list of input and output pairs with a pattern. Your goal is to identify the pattern or transformation in the training examples that maps the input to the output, then apply that pattern to the test input to give a final output.\n\nRespond in the format of the training output examples\n\n--Training Examples--\n--Example 0-- \n\n INPUT: \n\n[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 0, 0], [0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0], [0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0], [0, 0, 1, 1, 1, 0, 0, 1, 1, 0, 0, 0, 0], [0, 0, 2, 0, 0, 0, 8, 0, 1, 0, 0, 0, 0], [0, 0, 1, 0, 1, 1, 1, 0, 1, 0, 0, 0, 0], [0, 0, 1, 0, 1, 0, 1, 0, 1, 0, 0, 0, 0], [0, 0, 1, 0, 1, 0, 1, 0, 1, 1, 0, 0, 0], [0, 1, 1, 0, 1, 0, 1, 0, 0, 1, 0, 0, 0], [0, 1, 0, 0, 1, 0, 1, 0, 1, 1, 0, 0, 0], [0, 1, 1, 1, 1, 0, 1, 1, 1, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]\n\nOUTPUT: \n\n[[3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3], [3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3], [3, 3, 3, 3, 2, 2, 2, 2, 3, 3, 3, 3, 3], [3, 3, 3, 3, 2, 8, 8, 2, 3, 3, 3, 3, 3], [3, 3, 2, 2, 2, 8, 8, 2, 2, 3, 3, 3, 3], [3, 3, 2, 8, 8, 8, 8, 8, 2, 3, 3, 3, 3], [3, 3, 2, 8, 2, 2, 2, 8, 2, 3, 3, 3, 3], [3, 3, 2, 8, 2, 3, 2, 8, 2, 3, 3, 3, 3], [3, 3, 2, 8, 2, 3, 2, 8, 2, 2, 3, 3, 3], [3, 2, 2, 8, 2, 3, 2, 8, 8, 2, 3, 3, 3], [3, 2, 8, 8, 2, 3, 2, 8, 2, 2, 3, 3, 3], [3, 2, 2, 2, 2, 3, 2, 2, 2, 3, 3, 3, 3], [3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]]\n\n--Example 1-- \n\n INPUT: \n\n[[0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0], [0, 2, 0, 3, 1, 1, 0, 0, 1, 8, 1, 0, 0], [0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0], [1, 1, 1, 1, 0, 0, 0, 0, 1, 0, 1, 1, 0], [0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0], [0, 0, 1, 0, 0, 0, 0, 1, 1, 0, 1, 1, 0], [0, 0, 1, 1, 1, 1, 0, 1, 0, 0, 1, 0, 0], [0, 0, 0, 0, 0, 1, 0, 1, 0, 6, 1, 1, 0], [0, 7, 0, 1, 1, 1, 0, 1, 0, 0, 0, 1, 0], [0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1, 1, 0], [0, 0, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0, 0], [0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 1, 0, 0, 4, 0, 0, 0, 0, 0, 0, 0]]\n\nOUTPUT: \n\n[[2, 2, 2, 2, 2, 3, 4, 4, 4, 4, 4, 4, 4], [2, 2, 2, 3, 3, 3, 4, 4, 8, 8, 8, 4, 4], [2, 2, 2, 3, 4, 4, 4, 4, 8, 6, 8, 4, 4], [3, 3, 3, 3, 4, 4, 4, 4, 8, 6, 8, 8, 4], [7, 7, 3, 4, 4, 4, 4, 4, 8, 6, 6, 8, 4], [7, 7, 3, 4, 4, 4, 4, 8, 8, 6, 8, 8, 4], [7, 7, 3, 3, 3, 3, 4, 8, 6, 6, 8, 4, 4], [7, 7, 7, 7, 7, 3, 4, 8, 6, 6, 8, 8, 4], [7, 7, 7, 3, 3, 3, 4, 8, 6, 6, 6, 8, 4], [7, 7, 7, 3, 4, 4, 4, 8, 6, 6, 8, 8, 4], [7, 7, 3, 3, 4, 4, 4, 8, 8, 8, 8, 4, 4], [7, 7, 3, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4], [7, 7, 3, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4]]\n\n--Example 2-- \n\n INPUT: \n\n[[0, 0, 9, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0], [1, 1, 0, 0, 1, 0, 0, 1, 1, 1, 1, 1, 0], [0, 1, 6, 1, 1, 0, 0, 1, 0, 0, 0, 1, 0], [0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 1, 0], [0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 1, 0, 0], [0, 8, 0, 0, 0, 3, 0, 0, 0, 0, 1, 1, 0], [0, 0, 0, 0, 0, 1, 0, 0, 8, 0, 0, 1, 0], [0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 1, 0], [1, 1, 1, 0, 0, 0, 1, 0, 1, 1, 1, 1, 0], [0, 0, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0], [0, 0, 1, 2, 1, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0], [7, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0]]\n\nOUTPUT: \n\n[[9, 9, 9, 9, 6, 8, 8, 8, 8, 8, 8, 8, 8], [6, 6, 9, 9, 6, 8, 8, 3, 3, 3, 3, 3, 8], [8, 6, 6, 6, 6, 8, 8, 3, 8, 8, 8, 3, 8], [8, 8, 8, 8, 8, 8, 8, 3, 8, 8, 3, 3, 8], [8, 8, 8, 8, 8, 3, 3, 3, 8, 8, 3, 8, 8], [8, 8, 8, 8, 8, 3, 8, 8, 8, 8, 3, 3, 8], [8, 8, 8, 8, 8, 3, 8, 8, 8, 8, 8, 3, 8], [8, 8, 8, 8, 8, 3, 3, 8, 8, 8, 8, 3, 8], [2, 2, 2, 8, 8, 8, 3, 8, 3, 3, 3, 3, 8], [7, 7, 2, 8, 8, 8, 3, 3, 3, 8, 8, 8, 8], [7, 7, 2, 2, 2, 8, 8, 8, 8, 8, 8, 8, 8], [7, 7, 7, 7, 2, 2, 8, 8, 8, 8, 8, 8, 8], [7, 7, 7, 7, 7, 2, 8, 8, 8, 8, 8, 8, 8]]\n\n\n--End of Training Examples--\n\n--Test Input--\n[[0, 5, 0, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 1, 0, 0, 1, 1, 1, 1, 1, 0, 0], [0, 0, 1, 1, 0, 0, 1, 0, 0, 0, 1, 0, 0], [1, 1, 1, 0, 0, 0, 1, 1, 0, 0, 1, 1, 0], [0, 0, 7, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0], [0, 0, 0, 0, 0, 0, 0, 1, 0, 8, 0, 1, 0], [0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0], [0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 6, 0], [0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0], [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], [0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0], [0, 0, 0, 4, 0, 0, 0, 1, 1, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0]]\n--End of Test Input--\n\nYour response:"
+            }
+          },
+          {
+            "index": 1,
+            "message": {
+              "role": "assistant",
+              "content": "To solve this puzzle, we identify the components of the grid and how they interact based on the patterns seen in the training examples.\n\n**Rules Derived:**\n1.  **Classification of Pixels:**\n    *   **0s:** Empty space to be filled.\n    *   **1s:** Conductive Walls. They form boundaries but also need to be colored.\n    *   **>1:** Seeds. They provide the color.\n2.  **Classification of Seeds:**\n    *   **Wall Seeds:** Seeds that are adjacent (4-connected) to a Wall (1). These seeds transfer their color to the connected component of 1s.\n    *   **Free Seeds:** Seeds that are NOT adjacent to any Wall. These seeds fill the empty space (0s).\n3.  **Coloring the Walls:**\n    *   Identify connected components of 1s.\n    *   Propagate color from the **Wall Seeds** into the 1-components.\n    *   If a 1-component is touched by multiple Wall Seeds, the color is determined by the geodesic distance within the 1-component (Voronoi partition).\n    *   Once colored, these pixels act as boundaries for the flood fill of 0s.\n4.  **Coloring the 0s (Flood Fill):**\n    *   Identify connected components of 0s, respecting the (now colored) Walls as barriers.\n    *   For each component of 0s:\n        *   If it touches **Free Seeds**, it is filled by them. If multiple Free Seeds touch the same component, they partition it based on distance. Wall Seeds touching this component are ignored (the Free Seeds dominate).\n        *   If it touches **ONLY Wall Seeds** (i.e., it is an enclosed pocket cut off from Free Seeds), it is filled by the Wall Seeds based on distance.\n\n**Application to Test Input:**\n\n1.  **Seeds:**\n    *   **5** at (0,1): Free Seed.\n    *   **3** at (0,3): Wall Seed (touches 1 at (1,3)).\n    *   **7** at (4,2): Wall Seed (touches 1 at (3,2)).\n    *   **8** at (5,9): Free Seed (inside the right pocket, not touching 1s directly).\n    *   **6** at (7,11): Wall Seed (touches 1 at (6,11) and (8,11)).\n    *   **4** at (11,3): Free Seed.\n\n2.  **Walls (1s):**\n    *   **Left Component:** (1,3), (2,3), (2,2), (3,0)-(3,2). Touched by 3 and 7.\n        *   (1,3) and (2,3) become **3**.\n        *   (2,2), (3,2), (3,1), (3,0) become **7**.\n    *   **Right/Bottom Component:** (1,6)-(1,10), Row 9 line, etc. This forms a large cage on the right and a line at the bottom. Touched only by 6.\n        *   All these 1s become **6**.\n\n3.  **Regions of 0s:**\n    *   **Enclosed Pocket:** The region around Seed 8 (5,9) is surrounded by the Right/Bottom Wall Component (now colored 6). It does not touch Seeds 5 or 4.\n        *   Filled by Seed **8**.\n    *   **Main Region:** The rest of the grid (top-left, outside, bottom).\n        *   Touches Free Seed **5** (top/left).\n        *   Touches Free Seed **4** (bottom).\n        *   Note: There is a gap at (9,12) allowing connection between top and bottom.\n        *   Partitioning:\n            *   Top/Left area is closer to 5 -> filled with **5**.\n            *   Bottom area is closer to 4 -> filled with **4**.\n            *   The \"outside\" right strip (column 12) allows 4 to wrap around slightly, but 5 covers most of the top.\n\n**Constructing the Output Grid:**\n\n*   **Walls:**\n    *   (1,3), (2,3) -> **3**\n    *   (2,2), (3,2), (3,1), (3,0) -> **7**\n    *   All other original 1s (Right structure + Row 9) -> **6**\n*   **Regions:**\n    *   The pocket enclosed by the 6-walls (rows 1-8, cols 6-10 approx) -> **8**.\n    *   The bottom area (rows 10-12, and spilling up the right edge) -> **4**.\n    *   The rest (top left, middle gap) -> **5**.\n\n```json\n[[5, 5, 5, 3, 5, 5, 5, 5, 5, 5, 5, 5, 5], [5, 5, 5, 3, 5, 5, 6, 6, 6, 6, 6, 5, 5], [5, 5, 7, 3, 5, 5, 6, 8, 8, 8, 6, 5, 5], [7, 7, 7, 5, 5, 5, 6, 6, 8, 8, 6, 6, 5], [5, 5, 7, 5, 5, 5, 5, 6, 8, 8, 8, 6, 5], [5, 5, 5, 5, 5, 5, 5, 6, 8, 8, 8, 6, 5], [5, 5, 5, 5, 5, 5, 5, 6, 8, 8, 8, 6, 5], [5, 5, 5, 5, 5, 6, 6, 6, 8, 8, 8, 6, 5], [5, 5, 5, 5, 5, 6, 5, 5, 5, 5, 5, 6, 5], [6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 5], [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4], [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4], [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4]]\n```"
+            }
+          }
+        ],
+        "reasoning_summary": null,
+        "kwargs": {
+          "temperature": 1.0,
+          "max_output_tokens": 65536
+        },
+        "usage": {
+          "prompt_tokens": 3706,
+          "completion_tokens": 1614,
+          "total_tokens": 32406,
+          "completion_tokens_details": {
+            "reasoning_tokens": 27086,
+            "accepted_prediction_tokens": 1614,
+            "rejected_prediction_tokens": 0
+          }
+        },
+        "cost": {},
+        "task_id": "477d2879",
+        "pair_index": 0,
+        "test_id": "original-prompt-ablations",
+        "raw_text": "To solve this puzzle, we identify the components of the grid and how they interact based on the patterns seen in the training examples.\n\n**Rules Derived:**\n1.  **Classification of Pixels:**\n    *   **0s:** Empty space to be filled.\n    *   **1s:** Conductive Walls. They form boundaries but also need to be colored.\n    *   **>1:** Seeds. They provide the color.\n2.  **Classification of Seeds:**\n    *   **Wall Seeds:** Seeds that are adjacent (4-connected) to a Wall (1). These seeds transfer their color to the connected component of 1s.\n    *   **Free Seeds:** Seeds that are NOT adjacent to any Wall. These seeds fill the empty space (0s).\n3.  **Coloring the Walls:**\n    *   Identify connected components of 1s.\n    *   Propagate color from the **Wall Seeds** into the 1-components.\n    *   If a 1-component is touched by multiple Wall Seeds, the color is determined by the geodesic distance within the 1-component (Voronoi partition).\n    *   Once colored, these pixels act as boundaries for the flood fill of 0s.\n4.  **Coloring the 0s (Flood Fill):**\n    *   Identify connected components of 0s, respecting the (now colored) Walls as barriers.\n    *   For each component of 0s:\n        *   If it touches **Free Seeds**, it is filled by them. If multiple Free Seeds touch the same component, they partition it based on distance. Wall Seeds touching this component are ignored (the Free Seeds dominate).\n        *   If it touches **ONLY Wall Seeds** (i.e., it is an enclosed pocket cut off from Free Seeds), it is filled by the Wall Seeds based on distance.\n\n**Application to Test Input:**\n\n1.  **Seeds:**\n    *   **5** at (0,1): Free Seed.\n    *   **3** at (0,3): Wall Seed (touches 1 at (1,3)).\n    *   **7** at (4,2): Wall Seed (touches 1 at (3,2)).\n    *   **8** at (5,9): Free Seed (inside the right pocket, not touching 1s directly).\n    *   **6** at (7,11): Wall Seed (touches 1 at (6,11) and (8,11)).\n    *   **4** at (11,3): Free Seed.\n\n2.  **Walls (1s):**\n    *   **Left Component:** (1,3), (2,3), (2,2), (3,0)-(3,2). Touched by 3 and 7.\n        *   (1,3) and (2,3) become **3**.\n        *   (2,2), (3,2), (3,1), (3,0) become **7**.\n    *   **Right/Bottom Component:** (1,6)-(1,10), Row 9 line, etc. This forms a large cage on the right and a line at the bottom. Touched only by 6.\n        *   All these 1s become **6**.\n\n3.  **Regions of 0s:**\n    *   **Enclosed Pocket:** The region around Seed 8 (5,9) is surrounded by the Right/Bottom Wall Component (now colored 6). It does not touch Seeds 5 or 4.\n        *   Filled by Seed **8**.\n    *   **Main Region:** The rest of the grid (top-left, outside, bottom).\n        *   Touches Free Seed **5** (top/left).\n        *   Touches Free Seed **4** (bottom).\n        *   Note: There is a gap at (9,12) allowing connection between top and bottom.\n        *   Partitioning:\n            *   Top/Left area is closer to 5 -> filled with **5**.\n            *   Bottom area is closer to 4 -> filled with **4**.\n            *   The \"outside\" right strip (column 12) allows 4 to wrap around slightly, but 5 covers most of the top.\n\n**Constructing the Output Grid:**\n\n*   **Walls:**\n    *   (1,3), (2,3) -> **3**\n    *   (2,2), (3,2), (3,1), (3,0) -> **7**\n    *   All other original 1s (Right structure + Row 9) -> **6**\n*   **Regions:**\n    *   The pocket enclosed by the 6-walls (rows 1-8, cols 6-10 approx) -> **8**.\n    *   The bottom area (rows 10-12, and spilling up the right edge) -> **4**.\n    *   The rest (top left, middle gap) -> **5**.\n\n```json\n[[5, 5, 5, 3, 5, 5, 5, 5, 5, 5, 5, 5, 5], [5, 5, 5, 3, 5, 5, 6, 6, 6, 6, 6, 5, 5], [5, 5, 7, 3, 5, 5, 6, 8, 8, 8, 6, 5, 5], [7, 7, 7, 5, 5, 5, 6, 6, 8, 8, 6, 6, 5], [5, 5, 7, 5, 5, 5, 5, 6, 8, 8, 8, 6, 5], [5, 5, 5, 5, 5, 5, 5, 6, 8, 8, 8, 6, 5], [5, 5, 5, 5, 5, 5, 5, 6, 8, 8, 8, 6, 5], [5, 5, 5, 5, 5, 6, 6, 6, 8, 8, 8, 6, 5], [5, 5, 5, 5, 5, 6, 5, 5, 5, 5, 5, 6, 5], [6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 5], [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4], [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4], [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4]]\n```",
+        "finish_reason": "STOP"
+      },
+      "correct": false
+    },
+    "attempt_3": {
+      "answer": [
+        [
+          5,
+          5,
+          5,
+          3,
+          3,
+          3,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4
+        ],
+        [
+          5,
+          5,
+          5,
+          3,
+          3,
+          3,
+          6,
+          6,
+          6,
+          6,
+          6,
+          4,
+          4
+        ],
+        [
+          7,
+          7,
+          7,
+          3,
+          3,
+          4,
+          6,
+          8,
+          8,
+          8,
+          6,
+          4,
+          4
+        ],
+        [
+          7,
+          7,
+          7,
+          7,
+          7,
+          4,
+          6,
+          6,
+          8,
+          8,
+          6,
+          6,
+          4
+        ],
+        [
+          7,
+          7,
+          7,
+          7,
+          7,
+          4,
+          4,
+          6,
+          8,
+          8,
+          8,
+          6,
+          4
+        ],
+        [
+          7,
+          7,
+          7,
+          7,
+          7,
+          4,
+          4,
+          6,
+          8,
+          8,
+          8,
+          6,
+          4
+        ],
+        [
+          7,
+          7,
+          7,
+          7,
+          7,
+          4,
+          4,
+          6,
+          8,
+          8,
+          8,
+          6,
+          4
+        ],
+        [
+          7,
+          7,
+          7,
+          7,
+          7,
+          6,
+          6,
+          6,
+          8,
+          8,
+          8,
+          6,
+          4
+        ],
+        [
+          7,
+          7,
+          7,
+          7,
+          7,
+          6,
+          8,
+          8,
+          8,
+          8,
+          8,
+          6,
+          4
+        ],
+        [
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          4
+        ],
+        [
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4
+        ],
+        [
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4
+        ],
+        [
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4
+        ]
+      ],
+      "metadata": {
+        "model": "gemini-3-pro-preview",
+        "provider": "gemini",
+        "start_timestamp": "2025-11-22T12:22:57.348998+00:00",
+        "end_timestamp": "2025-11-22T12:27:44.523777+00:00",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "user",
+              "content": "You are participating in a puzzle solving competition. You are an expert at solving puzzles.\n\nBelow is a list of input and output pairs with a pattern. Your goal is to identify the pattern or transformation in the training examples that maps the input to the output, then apply that pattern to the test input to give a final output.\n\nRespond in the format of the training output examples\n\n--Training Examples--\n--Example 0-- \n\n INPUT: \n\n[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 0, 0], [0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0], [0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0], [0, 0, 1, 1, 1, 0, 0, 1, 1, 0, 0, 0, 0], [0, 0, 2, 0, 0, 0, 8, 0, 1, 0, 0, 0, 0], [0, 0, 1, 0, 1, 1, 1, 0, 1, 0, 0, 0, 0], [0, 0, 1, 0, 1, 0, 1, 0, 1, 0, 0, 0, 0], [0, 0, 1, 0, 1, 0, 1, 0, 1, 1, 0, 0, 0], [0, 1, 1, 0, 1, 0, 1, 0, 0, 1, 0, 0, 0], [0, 1, 0, 0, 1, 0, 1, 0, 1, 1, 0, 0, 0], [0, 1, 1, 1, 1, 0, 1, 1, 1, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]\n\nOUTPUT: \n\n[[3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3], [3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3], [3, 3, 3, 3, 2, 2, 2, 2, 3, 3, 3, 3, 3], [3, 3, 3, 3, 2, 8, 8, 2, 3, 3, 3, 3, 3], [3, 3, 2, 2, 2, 8, 8, 2, 2, 3, 3, 3, 3], [3, 3, 2, 8, 8, 8, 8, 8, 2, 3, 3, 3, 3], [3, 3, 2, 8, 2, 2, 2, 8, 2, 3, 3, 3, 3], [3, 3, 2, 8, 2, 3, 2, 8, 2, 3, 3, 3, 3], [3, 3, 2, 8, 2, 3, 2, 8, 2, 2, 3, 3, 3], [3, 2, 2, 8, 2, 3, 2, 8, 8, 2, 3, 3, 3], [3, 2, 8, 8, 2, 3, 2, 8, 2, 2, 3, 3, 3], [3, 2, 2, 2, 2, 3, 2, 2, 2, 3, 3, 3, 3], [3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]]\n\n--Example 1-- \n\n INPUT: \n\n[[0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0], [0, 2, 0, 3, 1, 1, 0, 0, 1, 8, 1, 0, 0], [0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0], [1, 1, 1, 1, 0, 0, 0, 0, 1, 0, 1, 1, 0], [0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0], [0, 0, 1, 0, 0, 0, 0, 1, 1, 0, 1, 1, 0], [0, 0, 1, 1, 1, 1, 0, 1, 0, 0, 1, 0, 0], [0, 0, 0, 0, 0, 1, 0, 1, 0, 6, 1, 1, 0], [0, 7, 0, 1, 1, 1, 0, 1, 0, 0, 0, 1, 0], [0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1, 1, 0], [0, 0, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0, 0], [0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 1, 0, 0, 4, 0, 0, 0, 0, 0, 0, 0]]\n\nOUTPUT: \n\n[[2, 2, 2, 2, 2, 3, 4, 4, 4, 4, 4, 4, 4], [2, 2, 2, 3, 3, 3, 4, 4, 8, 8, 8, 4, 4], [2, 2, 2, 3, 4, 4, 4, 4, 8, 6, 8, 4, 4], [3, 3, 3, 3, 4, 4, 4, 4, 8, 6, 8, 8, 4], [7, 7, 3, 4, 4, 4, 4, 4, 8, 6, 6, 8, 4], [7, 7, 3, 4, 4, 4, 4, 8, 8, 6, 8, 8, 4], [7, 7, 3, 3, 3, 3, 4, 8, 6, 6, 8, 4, 4], [7, 7, 7, 7, 7, 3, 4, 8, 6, 6, 8, 8, 4], [7, 7, 7, 3, 3, 3, 4, 8, 6, 6, 6, 8, 4], [7, 7, 7, 3, 4, 4, 4, 8, 6, 6, 8, 8, 4], [7, 7, 3, 3, 4, 4, 4, 8, 8, 8, 8, 4, 4], [7, 7, 3, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4], [7, 7, 3, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4]]\n\n--Example 2-- \n\n INPUT: \n\n[[0, 0, 9, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0], [1, 1, 0, 0, 1, 0, 0, 1, 1, 1, 1, 1, 0], [0, 1, 6, 1, 1, 0, 0, 1, 0, 0, 0, 1, 0], [0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 1, 0], [0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 1, 0, 0], [0, 8, 0, 0, 0, 3, 0, 0, 0, 0, 1, 1, 0], [0, 0, 0, 0, 0, 1, 0, 0, 8, 0, 0, 1, 0], [0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 1, 0], [1, 1, 1, 0, 0, 0, 1, 0, 1, 1, 1, 1, 0], [0, 0, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0], [0, 0, 1, 2, 1, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0], [7, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0]]\n\nOUTPUT: \n\n[[9, 9, 9, 9, 6, 8, 8, 8, 8, 8, 8, 8, 8], [6, 6, 9, 9, 6, 8, 8, 3, 3, 3, 3, 3, 8], [8, 6, 6, 6, 6, 8, 8, 3, 8, 8, 8, 3, 8], [8, 8, 8, 8, 8, 8, 8, 3, 8, 8, 3, 3, 8], [8, 8, 8, 8, 8, 3, 3, 3, 8, 8, 3, 8, 8], [8, 8, 8, 8, 8, 3, 8, 8, 8, 8, 3, 3, 8], [8, 8, 8, 8, 8, 3, 8, 8, 8, 8, 8, 3, 8], [8, 8, 8, 8, 8, 3, 3, 8, 8, 8, 8, 3, 8], [2, 2, 2, 8, 8, 8, 3, 8, 3, 3, 3, 3, 8], [7, 7, 2, 8, 8, 8, 3, 3, 3, 8, 8, 8, 8], [7, 7, 2, 2, 2, 8, 8, 8, 8, 8, 8, 8, 8], [7, 7, 7, 7, 2, 2, 8, 8, 8, 8, 8, 8, 8], [7, 7, 7, 7, 7, 2, 8, 8, 8, 8, 8, 8, 8]]\n\n\n--End of Training Examples--\n\n--Test Input--\n[[0, 5, 0, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 1, 0, 0, 1, 1, 1, 1, 1, 0, 0], [0, 0, 1, 1, 0, 0, 1, 0, 0, 0, 1, 0, 0], [1, 1, 1, 0, 0, 0, 1, 1, 0, 0, 1, 1, 0], [0, 0, 7, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0], [0, 0, 0, 0, 0, 0, 0, 1, 0, 8, 0, 1, 0], [0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0], [0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 6, 0], [0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0], [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], [0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0], [0, 0, 0, 4, 0, 0, 0, 1, 1, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0]]\n--End of Test Input--\n\nYour response:"
+            }
+          },
+          {
+            "index": 1,
+            "message": {
+              "role": "assistant",
+              "content": "To solve this puzzle, we apply the following rules derived from the training examples:\n1.  **Identify Wall Components:** The grid contains walls (marked with `1`) and seeds (other numbers). The walls form connected structures.\n    *   In the Test Input, there are two disjoint wall structures:\n        *   **Cluster A (Top Left):** An 'L' shape involving `(1,3)-(2,3)` and `(3,0)-(3,2)`.\n        *   **Cluster B (Main):** A large structure covering most of the right and bottom, involving row 9, the loop around `(5,9)`, and the right side walls.\n2.  **Color Walls:** Walls take the color of the \"Attached Seeds\". A seed is attached if it is adjacent to the wall.\n    *   **Cluster A:**\n        *   Seed `3` is at `(0,3)`, adjacent to wall at `(1,3)`.\n        *   Seed `7` is at `(4,2)`, adjacent to wall at `(3,2)`.\n        *   The wall splits based on proximity. The vertical segment `(1,3)-(2,3)` becomes **3**. The corner segment `(3,0)-(3,2)` becomes **7**.\n    *   **Cluster B:**\n        *   Seed `6` is at `(7,11)`, adjacent to wall at `(6,11)`.\n        *   No other seeds are directly adjacent to this large cluster.\n        *   The entire Cluster B becomes **6**.\n3.  **Fill Regions:** The empty spaces (`0`s) are filled by the nearest \"Region Seed\" using a distance-based fill (like a Voronoi diagram). The seeds are `5, 3, 7, 8, 4` and the now-colored walls (which act as sources for their immediate neighbors).\n    *   **Region 5:** Fills the top-left corner `(0,0)-(1,2)`.\n    *   **Region 3:** Fills the top edge near `(0,3)` and the gap between walls A and B.\n    *   **Region 7:** Fills the middle-left area `(rows 4-8, cols 0-5)` and the space above it adjacent to the 7-colored walls (row 2).\n    *   **Region 8:** Fills the interior of the loop formed by Wall B `(rows 2-8, cols 8-10)`.\n    *   **Region 4:** Fills the bottom area `(rows 10-12)`, the right edge `(col 12)`, and the top-right corner `(row 0, right side)`.\n    *   **Region 6:** Since `6` is a wall seed, it dominates the wall pixels but does not expand significantly into the open background (similar to Example 0 where wall seed 2 didn't fill the outside 3 region). However, it fills small pockets or immediate neighbors if no other seed is closer.\n\n**Constructing the Output Grid:**\n\n*   **Row 0:** `5, 5, 5, 3, 3, 3, 3, 4, 4, 4, 4, 4, 4` (Transition 5->3->4).\n*   **Row 1:** `5, 5, 5, 3, 3, 3, 6, 8, 8, 8, 6, 4, 4` (Walls at 6-10 become 6/8? Inside is 8. Wall B is 6. Top wall is 6. Inside loop starts lower? No, (1,6)-(1,10) is wall. So it is 6).\n*   **Row 2:** `7, 7, 7, 3, 3, 3, 6, 8, 8, 8, 6, 4, 4` (Walls at 2,3 become 7/3. Wall at 6,10 is 6. Inside is 8).\n*   **Row 3:** `7, 7, 7, 7, 7, 7, 6, 6, 8, 8, 6, 6, 4` (Walls 0-2 are 7. Walls 6,7,10,11 are 6. Inside 8,9 is 8).\n*   **Row 4:** `7, 7, 7, 7, 7, 7, 7, 6, 8, 8, 8, 6, 4` (Seed 7 fills left. Wall 7,11 is 6. Inside 8).\n*   **Row 5:** `7, 7, 7, 7, 7, 7, 7, 6, 8, 8, 8, 6, 4` (7 fills left. Wall 7,11 is 6. Seed 8 at 9).\n*   **Row 6:** `7, 7, 7, 7, 7, 7, 7, 6, 8, 8, 8, 6, 4` (Similar to 5).\n*   **Row 7:** `7, 7, 7, 7, 7, 6, 6, 6, 8, 8, 8, 6, 4` (Walls at 5,6,7 are 6. Seed 6 at 11 is 6).\n*   **Row 8:** `7, 7, 7, 7, 7, 6, 8, 8, 8, 8, 8, 6, 4` (Wall at 5 is 6. Inside 6-10 fills with 8).\n*   **Row 9:** `6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 4` (Wall B bar is 6).\n*   **Row 10:** `4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4` (Filled by 4).\n*   **Row 11:** `4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4` (Seed 4).\n*   **Row 12:** `4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4`.\n\n*Correction on R1/R2/R3 Walls:*\nTop left walls: (1,3) is 3. (3,0)-(3,2) is 7.\n(2,3) is 3. (2,2) is 7.\n(3,0)..(3,2) is 7.\n(3,3)..(3,5) are 0 -> filled by 7 (closest).\n\n*Correction on Region 8:*\nThe loop is closed. Top is Row 1 walls `(1,6)-(1,10)`. Sides are cols 6/7 and 10/11. Bottom is Row 9.\nSo (2,7)-(8,10) area is 8.\nWalls are 6.\n\nFinal check on Row 0: 5s, then 3s, then 4s?\n(0,6) is near wall (1,6)=6. Dist=2.\n(0,3) is 3. Dist=3.\n(0,12) is 4.\nThe top edge is likely 3 transitioning to 4 or 6. Given 4 dominates the outside, and 6 is a wall color, 4 fills the top right.\n\n[[5, 5, 5, 3, 3, 3, 4, 4, 4, 4, 4, 4, 4], [5, 5, 5, 3, 3, 3, 6, 6, 6, 6, 6, 4, 4], [7, 7, 7, 3, 3, 4, 6, 8, 8, 8, 6, 4, 4], [7, 7, 7, 7, 7, 4, 6, 6, 8, 8, 6, 6, 4], [7, 7, 7, 7, 7, 4, 4, 6, 8, 8, 8, 6, 4], [7, 7, 7, 7, 7, 4, 4, 6, 8, 8, 8, 6, 4], [7, 7, 7, 7, 7, 4, 4, 6, 8, 8, 8, 6, 4], [7, 7, 7, 7, 7, 6, 6, 6, 8, 8, 8, 6, 4], [7, 7, 7, 7, 7, 6, 8, 8, 8, 8, 8, 6, 4], [6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 4], [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4], [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4], [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4]]"
+            }
+          }
+        ],
+        "reasoning_summary": null,
+        "kwargs": {
+          "temperature": 1.0,
+          "max_output_tokens": 65536
+        },
+        "usage": {
+          "prompt_tokens": 3706,
+          "completion_tokens": 2328,
+          "total_tokens": 33390,
+          "completion_tokens_details": {
+            "reasoning_tokens": 27356,
+            "accepted_prediction_tokens": 2328,
+            "rejected_prediction_tokens": 0
+          }
+        },
+        "cost": {},
+        "task_id": "477d2879",
+        "pair_index": 0,
+        "test_id": "original-prompt-ablations",
+        "raw_text": "To solve this puzzle, we apply the following rules derived from the training examples:\n1.  **Identify Wall Components:** The grid contains walls (marked with `1`) and seeds (other numbers). The walls form connected structures.\n    *   In the Test Input, there are two disjoint wall structures:\n        *   **Cluster A (Top Left):** An 'L' shape involving `(1,3)-(2,3)` and `(3,0)-(3,2)`.\n        *   **Cluster B (Main):** A large structure covering most of the right and bottom, involving row 9, the loop around `(5,9)`, and the right side walls.\n2.  **Color Walls:** Walls take the color of the \"Attached Seeds\". A seed is attached if it is adjacent to the wall.\n    *   **Cluster A:**\n        *   Seed `3` is at `(0,3)`, adjacent to wall at `(1,3)`.\n        *   Seed `7` is at `(4,2)`, adjacent to wall at `(3,2)`.\n        *   The wall splits based on proximity. The vertical segment `(1,3)-(2,3)` becomes **3**. The corner segment `(3,0)-(3,2)` becomes **7**.\n    *   **Cluster B:**\n        *   Seed `6` is at `(7,11)`, adjacent to wall at `(6,11)`.\n        *   No other seeds are directly adjacent to this large cluster.\n        *   The entire Cluster B becomes **6**.\n3.  **Fill Regions:** The empty spaces (`0`s) are filled by the nearest \"Region Seed\" using a distance-based fill (like a Voronoi diagram). The seeds are `5, 3, 7, 8, 4` and the now-colored walls (which act as sources for their immediate neighbors).\n    *   **Region 5:** Fills the top-left corner `(0,0)-(1,2)`.\n    *   **Region 3:** Fills the top edge near `(0,3)` and the gap between walls A and B.\n    *   **Region 7:** Fills the middle-left area `(rows 4-8, cols 0-5)` and the space above it adjacent to the 7-colored walls (row 2).\n    *   **Region 8:** Fills the interior of the loop formed by Wall B `(rows 2-8, cols 8-10)`.\n    *   **Region 4:** Fills the bottom area `(rows 10-12)`, the right edge `(col 12)`, and the top-right corner `(row 0, right side)`.\n    *   **Region 6:** Since `6` is a wall seed, it dominates the wall pixels but does not expand significantly into the open background (similar to Example 0 where wall seed 2 didn't fill the outside 3 region). However, it fills small pockets or immediate neighbors if no other seed is closer.\n\n**Constructing the Output Grid:**\n\n*   **Row 0:** `5, 5, 5, 3, 3, 3, 3, 4, 4, 4, 4, 4, 4` (Transition 5->3->4).\n*   **Row 1:** `5, 5, 5, 3, 3, 3, 6, 8, 8, 8, 6, 4, 4` (Walls at 6-10 become 6/8? Inside is 8. Wall B is 6. Top wall is 6. Inside loop starts lower? No, (1,6)-(1,10) is wall. So it is 6).\n*   **Row 2:** `7, 7, 7, 3, 3, 3, 6, 8, 8, 8, 6, 4, 4` (Walls at 2,3 become 7/3. Wall at 6,10 is 6. Inside is 8).\n*   **Row 3:** `7, 7, 7, 7, 7, 7, 6, 6, 8, 8, 6, 6, 4` (Walls 0-2 are 7. Walls 6,7,10,11 are 6. Inside 8,9 is 8).\n*   **Row 4:** `7, 7, 7, 7, 7, 7, 7, 6, 8, 8, 8, 6, 4` (Seed 7 fills left. Wall 7,11 is 6. Inside 8).\n*   **Row 5:** `7, 7, 7, 7, 7, 7, 7, 6, 8, 8, 8, 6, 4` (7 fills left. Wall 7,11 is 6. Seed 8 at 9).\n*   **Row 6:** `7, 7, 7, 7, 7, 7, 7, 6, 8, 8, 8, 6, 4` (Similar to 5).\n*   **Row 7:** `7, 7, 7, 7, 7, 6, 6, 6, 8, 8, 8, 6, 4` (Walls at 5,6,7 are 6. Seed 6 at 11 is 6).\n*   **Row 8:** `7, 7, 7, 7, 7, 6, 8, 8, 8, 8, 8, 6, 4` (Wall at 5 is 6. Inside 6-10 fills with 8).\n*   **Row 9:** `6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 4` (Wall B bar is 6).\n*   **Row 10:** `4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4` (Filled by 4).\n*   **Row 11:** `4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4` (Seed 4).\n*   **Row 12:** `4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4`.\n\n*Correction on R1/R2/R3 Walls:*\nTop left walls: (1,3) is 3. (3,0)-(3,2) is 7.\n(2,3) is 3. (2,2) is 7.\n(3,0)..(3,2) is 7.\n(3,3)..(3,5) are 0 -> filled by 7 (closest).\n\n*Correction on Region 8:*\nThe loop is closed. Top is Row 1 walls `(1,6)-(1,10)`. Sides are cols 6/7 and 10/11. Bottom is Row 9.\nSo (2,7)-(8,10) area is 8.\nWalls are 6.\n\nFinal check on Row 0: 5s, then 3s, then 4s?\n(0,6) is near wall (1,6)=6. Dist=2.\n(0,3) is 3. Dist=3.\n(0,12) is 4.\nThe top edge is likely 3 transitioning to 4 or 6. Given 4 dominates the outside, and 6 is a wall color, 4 fills the top right.\n\n[[5, 5, 5, 3, 3, 3, 4, 4, 4, 4, 4, 4, 4], [5, 5, 5, 3, 3, 3, 6, 6, 6, 6, 6, 4, 4], [7, 7, 7, 3, 3, 4, 6, 8, 8, 8, 6, 4, 4], [7, 7, 7, 7, 7, 4, 6, 6, 8, 8, 6, 6, 4], [7, 7, 7, 7, 7, 4, 4, 6, 8, 8, 8, 6, 4], [7, 7, 7, 7, 7, 4, 4, 6, 8, 8, 8, 6, 4], [7, 7, 7, 7, 7, 4, 4, 6, 8, 8, 8, 6, 4], [7, 7, 7, 7, 7, 6, 6, 6, 8, 8, 8, 6, 4], [7, 7, 7, 7, 7, 6, 8, 8, 8, 8, 8, 6, 4], [6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 4], [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4], [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4], [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4]]",
+        "finish_reason": "STOP"
+      },
+      "correct": false
+    },
+    "attempt_2": {
+      "answer": [
+        [
+          5,
+          5,
+          5,
+          5,
+          7,
+          7,
+          7,
+          7,
+          7,
+          7,
+          6,
+          6,
+          6
+        ],
+        [
+          5,
+          5,
+          5,
+          3,
+          7,
+          7,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6
+        ],
+        [
+          5,
+          5,
+          3,
+          3,
+          7,
+          7,
+          6,
+          8,
+          8,
+          8,
+          6,
+          6,
+          6
+        ],
+        [
+          3,
+          3,
+          3,
+          7,
+          7,
+          7,
+          6,
+          6,
+          8,
+          8,
+          6,
+          6,
+          6
+        ],
+        [
+          7,
+          7,
+          7,
+          7,
+          7,
+          7,
+          7,
+          6,
+          8,
+          8,
+          8,
+          6,
+          6
+        ],
+        [
+          7,
+          7,
+          7,
+          7,
+          7,
+          7,
+          7,
+          6,
+          8,
+          8,
+          8,
+          6,
+          6
+        ],
+        [
+          7,
+          7,
+          7,
+          7,
+          7,
+          7,
+          7,
+          6,
+          8,
+          8,
+          8,
+          6,
+          6
+        ],
+        [
+          7,
+          7,
+          7,
+          7,
+          7,
+          6,
+          6,
+          6,
+          8,
+          8,
+          8,
+          6,
+          6
+        ],
+        [
+          7,
+          7,
+          7,
+          7,
+          7,
+          6,
+          8,
+          8,
+          8,
+          8,
+          8,
+          6,
+          6
+        ],
+        [
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6
+        ],
+        [
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4
+        ],
+        [
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4
+        ],
+        [
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4
+        ]
+      ],
+      "metadata": {
+        "model": "gemini-3-pro-preview",
+        "provider": "gemini",
+        "start_timestamp": "2025-11-22T12:22:57.341934+00:00",
+        "end_timestamp": "2025-11-22T12:27:59.717988+00:00",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "user",
+              "content": "You are participating in a puzzle solving competition. You are an expert at solving puzzles.\n\nBelow is a list of input and output pairs with a pattern. Your goal is to identify the pattern or transformation in the training examples that maps the input to the output, then apply that pattern to the test input to give a final output.\n\nRespond in the format of the training output examples\n\n--Training Examples--\n--Example 0-- \n\n INPUT: \n\n[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 0, 0], [0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0], [0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0], [0, 0, 1, 1, 1, 0, 0, 1, 1, 0, 0, 0, 0], [0, 0, 2, 0, 0, 0, 8, 0, 1, 0, 0, 0, 0], [0, 0, 1, 0, 1, 1, 1, 0, 1, 0, 0, 0, 0], [0, 0, 1, 0, 1, 0, 1, 0, 1, 0, 0, 0, 0], [0, 0, 1, 0, 1, 0, 1, 0, 1, 1, 0, 0, 0], [0, 1, 1, 0, 1, 0, 1, 0, 0, 1, 0, 0, 0], [0, 1, 0, 0, 1, 0, 1, 0, 1, 1, 0, 0, 0], [0, 1, 1, 1, 1, 0, 1, 1, 1, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]\n\nOUTPUT: \n\n[[3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3], [3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3], [3, 3, 3, 3, 2, 2, 2, 2, 3, 3, 3, 3, 3], [3, 3, 3, 3, 2, 8, 8, 2, 3, 3, 3, 3, 3], [3, 3, 2, 2, 2, 8, 8, 2, 2, 3, 3, 3, 3], [3, 3, 2, 8, 8, 8, 8, 8, 2, 3, 3, 3, 3], [3, 3, 2, 8, 2, 2, 2, 8, 2, 3, 3, 3, 3], [3, 3, 2, 8, 2, 3, 2, 8, 2, 3, 3, 3, 3], [3, 3, 2, 8, 2, 3, 2, 8, 2, 2, 3, 3, 3], [3, 2, 2, 8, 2, 3, 2, 8, 8, 2, 3, 3, 3], [3, 2, 8, 8, 2, 3, 2, 8, 2, 2, 3, 3, 3], [3, 2, 2, 2, 2, 3, 2, 2, 2, 3, 3, 3, 3], [3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]]\n\n--Example 1-- \n\n INPUT: \n\n[[0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0], [0, 2, 0, 3, 1, 1, 0, 0, 1, 8, 1, 0, 0], [0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0], [1, 1, 1, 1, 0, 0, 0, 0, 1, 0, 1, 1, 0], [0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0], [0, 0, 1, 0, 0, 0, 0, 1, 1, 0, 1, 1, 0], [0, 0, 1, 1, 1, 1, 0, 1, 0, 0, 1, 0, 0], [0, 0, 0, 0, 0, 1, 0, 1, 0, 6, 1, 1, 0], [0, 7, 0, 1, 1, 1, 0, 1, 0, 0, 0, 1, 0], [0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1, 1, 0], [0, 0, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0, 0], [0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 1, 0, 0, 4, 0, 0, 0, 0, 0, 0, 0]]\n\nOUTPUT: \n\n[[2, 2, 2, 2, 2, 3, 4, 4, 4, 4, 4, 4, 4], [2, 2, 2, 3, 3, 3, 4, 4, 8, 8, 8, 4, 4], [2, 2, 2, 3, 4, 4, 4, 4, 8, 6, 8, 4, 4], [3, 3, 3, 3, 4, 4, 4, 4, 8, 6, 8, 8, 4], [7, 7, 3, 4, 4, 4, 4, 4, 8, 6, 6, 8, 4], [7, 7, 3, 4, 4, 4, 4, 8, 8, 6, 8, 8, 4], [7, 7, 3, 3, 3, 3, 4, 8, 6, 6, 8, 4, 4], [7, 7, 7, 7, 7, 3, 4, 8, 6, 6, 8, 8, 4], [7, 7, 7, 3, 3, 3, 4, 8, 6, 6, 6, 8, 4], [7, 7, 7, 3, 4, 4, 4, 8, 6, 6, 8, 8, 4], [7, 7, 3, 3, 4, 4, 4, 8, 8, 8, 8, 4, 4], [7, 7, 3, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4], [7, 7, 3, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4]]\n\n--Example 2-- \n\n INPUT: \n\n[[0, 0, 9, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0], [1, 1, 0, 0, 1, 0, 0, 1, 1, 1, 1, 1, 0], [0, 1, 6, 1, 1, 0, 0, 1, 0, 0, 0, 1, 0], [0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 1, 0], [0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 1, 0, 0], [0, 8, 0, 0, 0, 3, 0, 0, 0, 0, 1, 1, 0], [0, 0, 0, 0, 0, 1, 0, 0, 8, 0, 0, 1, 0], [0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 1, 0], [1, 1, 1, 0, 0, 0, 1, 0, 1, 1, 1, 1, 0], [0, 0, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0], [0, 0, 1, 2, 1, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0], [7, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0]]\n\nOUTPUT: \n\n[[9, 9, 9, 9, 6, 8, 8, 8, 8, 8, 8, 8, 8], [6, 6, 9, 9, 6, 8, 8, 3, 3, 3, 3, 3, 8], [8, 6, 6, 6, 6, 8, 8, 3, 8, 8, 8, 3, 8], [8, 8, 8, 8, 8, 8, 8, 3, 8, 8, 3, 3, 8], [8, 8, 8, 8, 8, 3, 3, 3, 8, 8, 3, 8, 8], [8, 8, 8, 8, 8, 3, 8, 8, 8, 8, 3, 3, 8], [8, 8, 8, 8, 8, 3, 8, 8, 8, 8, 8, 3, 8], [8, 8, 8, 8, 8, 3, 3, 8, 8, 8, 8, 3, 8], [2, 2, 2, 8, 8, 8, 3, 8, 3, 3, 3, 3, 8], [7, 7, 2, 8, 8, 8, 3, 3, 3, 8, 8, 8, 8], [7, 7, 2, 2, 2, 8, 8, 8, 8, 8, 8, 8, 8], [7, 7, 7, 7, 2, 2, 8, 8, 8, 8, 8, 8, 8], [7, 7, 7, 7, 7, 2, 8, 8, 8, 8, 8, 8, 8]]\n\n\n--End of Training Examples--\n\n--Test Input--\n[[0, 5, 0, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 1, 0, 0, 1, 1, 1, 1, 1, 0, 0], [0, 0, 1, 1, 0, 0, 1, 0, 0, 0, 1, 0, 0], [1, 1, 1, 0, 0, 0, 1, 1, 0, 0, 1, 1, 0], [0, 0, 7, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0], [0, 0, 0, 0, 0, 0, 0, 1, 0, 8, 0, 1, 0], [0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0], [0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 6, 0], [0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0], [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], [0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0], [0, 0, 0, 4, 0, 0, 0, 1, 1, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0]]\n--End of Test Input--\n\nYour response:"
+            }
+          },
+          {
+            "index": 1,
+            "message": {
+              "role": "assistant",
+              "content": "Based on the analysis of the training examples, the following rules are derived:\n\n1.  **Grid Components**: The grid consists of **Walls** (pixels with value 1) and **Regions** (pixels with value 0).\n2.  **Seeds**: Non-zero, non-one pixels are seeds.\n    *   **Region Seeds**: Seeds that are surrounded by 0s or are floating in a region. They propagate their color to the connected component of 0s (flood fill).\n    *   **Wall Seeds**: Seeds that are part of the wall structure (replace a 1 or are connected to 1s with limited 0-connectivity). They propagate their color to the connected component of 1s.\n3.  **Fill Logic**:\n    *   **Regions (0s)** are filled by the nearest Region Seed (using geodesic distance within the 0-space).\n    *   **Walls (1s)** are filled by the connected Wall Seed. If a wall network connects to multiple seeds, it seems the \"stronger\" or more structurally integrated seed wins, or they partition the wall. In the test case, there are distinct isolated wall networks.\n    *   **Seeds themselves**: In the output, the original seed position takes the color of the region or wall it belongs to. If a Region Seed is at `(r, c)`, output `(r, c)` is that seed's color. If a Wall Seed is at `(r, c)`, output `(r, c)` is that seed's color. However, sometimes a seed might be overwritten if it acts as a \"source\" for a different type (e.g., a Wall Seed at a location that should be part of a Region). But typically, seeds define the color.\n\n**Applying to Test Input:**\n\n*   **Seed Classification**:\n    *   **5 at (0, 1)**: Region Seed. Fills Top-Left region.\n    *   **3 at (0, 3)**: Wall Seed (Adjacent to wall `(1, 3)`). Fills the isolated top-left wall cluster.\n    *   **7 at (4, 2)**: Region Seed. Fills the large Center/Left region.\n    *   **8 at (5, 9)**: Region Seed. Fills the \"Box\" interior.\n    *   **6 at (7, 11)**: Wall/Region Seed Hybrid (likely dominates the wall network). Fills the huge wall network (Bottom Box + Top Right Walls) with 6. Also fills the Right Strip region.\n    *   **4 at (11, 3)**: Region Seed. Fills the Bottom region.\n\n*   **Wall Networks**:\n    *   **Cluster 3**: `(1, 3)`, `(2, 2)-(2, 3)`, `(3, 0)-(3, 2)`. These become **3**.\n    *   **Cluster 6**: `(1, 6)-(1, 10)`, `(2, 6)-(2, 10)`, `(3, 6)-(3, 7), (3, 10)-(3, 11)`, `(4, 7), (4, 11)`, `(5, 7), (5, 11)`, `(6, 7), (6, 11)`, `(7, 5)-(7, 7)`, `(8, 5), (8, 11)`, `(9, 0)-(9, 11)`. All these become **6**.\n\n*   **Region Filling**:\n    *   **Region 5**: `(0, 0)-(0, 2)`, `(1, 0)-(1, 2)`, `(2, 0)-(2, 1)`. Note: `(0, 3)` is the Seed 3 location. Since 3 is a Wall Seed, the *region* pixel at `(0, 3)` (conceptually) is filled by the nearest Region Seed, which is 5.\n    *   **Region 7**: `(0, 4)-(0, 9)`, `(1, 4)-(1, 5)`, `(2, 4)-(2, 5)`, `(3, 3)-(3, 5)`, `(4, 0)-(4, 6), (4, 8)-(4, 10)`, `(5, 0)-(5, 6)`, `(6, 0)-(6, 6)`, `(7, 0)-(7, 4)`, `(8, 0)-(8, 4)`.\n        *   Note: `(0, 4)` connects to 7 via `(4, 5)...(0, 5)`.\n    *   **Region 8**: Inside the box. `(4, 8)-(4, 10)`, `(5, 8)-(5, 10)`, `(6, 8)-(6, 10)`, `(7, 8)-(7, 10)`, `(8, 6)-(8, 10)`.\n        *   Wait, `(4, 8)` is 0. `(5, 8)` is 0. `(5, 9)` is 8. Correct.\n    *   **Region 6**: Right side. `(0, 10)-(0, 12)`, `(1, 11)-(1, 12)`, `(2, 11)-(2, 12)`, `(3, 12)`, `(4, 12)`, `(5, 12)`, `(6, 12)`, `(7, 12)`, `(8, 12)`, `(9, 12)`.\n    *   **Region 4**: Bottom. `(10, 0)-(10, 12)`, `(11, 0)-(11, 12)`, `(12, 0)-(12, 12)`.\n\n**Output Generation:**\n\n[[5, 5, 5, 5, 7, 7, 7, 7, 7, 7, 6, 6, 6],\n [5, 5, 5, 3, 7, 7, 6, 6, 6, 6, 6, 6, 6],\n [5, 5, 3, 3, 7, 7, 6, 7, 7, 7, 6, 6, 6],\n [3, 3, 3, 7, 7, 7, 6, 6, 8, 8, 6, 6, 6],\n [7, 7, 7, 7, 7, 7, 7, 6, 8, 8, 8, 6, 6],\n [7, 7, 7, 7, 7, 7, 7, 6, 8, 8, 8, 6, 6],\n [7, 7, 7, 7, 7, 7, 7, 6, 8, 8, 8, 6, 6],\n [7, 7, 7, 7, 7, 6, 6, 6, 8, 8, 8, 6, 6],\n [7, 7, 7, 7, 7, 6, 8, 8, 8, 8, 8, 6, 6],\n [6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6],\n [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4],\n [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4],\n [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4]]\n\n*Refinement on `(0, 3)`*: It becomes 5.\n*Refinement on `(0, 10)`*: `(0, 10)` is 0. `(1, 10)` is 6 (Wall). `(0, 11)` is 6 (Region). `(0, 9)` is 7.\nDistance from 6 `(7, 11)` to `(0, 10)` vs 7 `(4, 2)` to `(0, 10)`.\nRegion 6 is closer. `(0, 10)` -> 6.\n\n*Refinement on Row 9*: `(9, 12)` is 0. Input Row 9: `...1, 0`. `(9, 11)` is 1. `(9, 12)` is 0.\n`(9, 12)` is adjacent to Region 6 (above) and Region 4 (below).\nRegion 6 `(7, 11)` is closer than Region 4 `(11, 3)`.\nSo `(9, 12)` -> 6.\n\nLet's check `(2, 7)-(2, 9)`. Input `0, 0, 0`.\nBounded by walls `(1, 6)-(1, 10)` and `(2, 6), (2, 10)`.\nAlso `(3, 6), (3, 7), (3, 10)`.\nThe 0s at `(2, 7)-(2, 9)` and `(3, 8)-(3, 9)` seem to be part of Region 7? Or Region 8?\nRegion 8 is below row 4. Walls block it.\nRegion 7 is to the left. Wall `(3, 6)-(3, 7)` blocks it.\nAre these 0s isolated?\n`[2, 7], [2, 8], [2, 9]`.\n`[3, 8], [3, 9]`.\n`[4, 8], [4, 9], [4, 10]`. `(4, 8)` connects to Region 8.\nIs there a wall between Row 3 and Row 4?\nRow 3: `0, 1, 1, 0...` -> `(3, 6)=1, (3, 7)=1, (3, 8)=0, (3, 9)=0, (3, 10)=1`.\nRow 4: `...1, 0, 0...` -> `(4, 7)=1, (4, 8)=0...`\nSo `(3, 8)` connects to `(4, 8)`.\nThus, this pocket `(2, 7)-(3, 9)` connects to Region 8.\nSo `(2, 7), (2, 8), (2, 9)` become 8.\nAnd `(3, 8), (3, 9)` become 8.\nMy previous map had 7 there. Correction: **8**.\n\nFinal check on Row 2: `5, 5, 3, 3, 7, 7, 6, 8, 8, 8, 6, 6, 6`.\nRow 3: `3, 3, 3, 7, 7, 7, 6, 6, 8, 8, 6, 6, 6`.\n\nCorrected Output:\n\n[[5, 5, 5, 5, 7, 7, 7, 7, 7, 7, 6, 6, 6], [5, 5, 5, 3, 7, 7, 6, 6, 6, 6, 6, 6, 6], [5, 5, 3, 3, 7, 7, 6, 8, 8, 8, 6, 6, 6], [3, 3, 3, 7, 7, 7, 6, 6, 8, 8, 6, 6, 6], [7, 7, 7, 7, 7, 7, 7, 6, 8, 8, 8, 6, 6], [7, 7, 7, 7, 7, 7, 7, 6, 8, 8, 8, 6, 6], [7, 7, 7, 7, 7, 7, 7, 6, 8, 8, 8, 6, 6], [7, 7, 7, 7, 7, 6, 6, 6, 8, 8, 8, 6, 6], [7, 7, 7, 7, 7, 6, 8, 8, 8, 8, 8, 6, 6], [6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6], [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4], [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4], [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4]]"
+            }
+          }
+        ],
+        "reasoning_summary": null,
+        "kwargs": {
+          "temperature": 1.0,
+          "max_output_tokens": 65536
+        },
+        "usage": {
+          "prompt_tokens": 3706,
+          "completion_tokens": 3188,
+          "total_tokens": 36651,
+          "completion_tokens_details": {
+            "reasoning_tokens": 29757,
+            "accepted_prediction_tokens": 3188,
+            "rejected_prediction_tokens": 0
+          }
+        },
+        "cost": {},
+        "task_id": "477d2879",
+        "pair_index": 0,
+        "test_id": "original-prompt-ablations",
+        "raw_text": "Based on the analysis of the training examples, the following rules are derived:\n\n1.  **Grid Components**: The grid consists of **Walls** (pixels with value 1) and **Regions** (pixels with value 0).\n2.  **Seeds**: Non-zero, non-one pixels are seeds.\n    *   **Region Seeds**: Seeds that are surrounded by 0s or are floating in a region. They propagate their color to the connected component of 0s (flood fill).\n    *   **Wall Seeds**: Seeds that are part of the wall structure (replace a 1 or are connected to 1s with limited 0-connectivity). They propagate their color to the connected component of 1s.\n3.  **Fill Logic**:\n    *   **Regions (0s)** are filled by the nearest Region Seed (using geodesic distance within the 0-space).\n    *   **Walls (1s)** are filled by the connected Wall Seed. If a wall network connects to multiple seeds, it seems the \"stronger\" or more structurally integrated seed wins, or they partition the wall. In the test case, there are distinct isolated wall networks.\n    *   **Seeds themselves**: In the output, the original seed position takes the color of the region or wall it belongs to. If a Region Seed is at `(r, c)`, output `(r, c)` is that seed's color. If a Wall Seed is at `(r, c)`, output `(r, c)` is that seed's color. However, sometimes a seed might be overwritten if it acts as a \"source\" for a different type (e.g., a Wall Seed at a location that should be part of a Region). But typically, seeds define the color.\n\n**Applying to Test Input:**\n\n*   **Seed Classification**:\n    *   **5 at (0, 1)**: Region Seed. Fills Top-Left region.\n    *   **3 at (0, 3)**: Wall Seed (Adjacent to wall `(1, 3)`). Fills the isolated top-left wall cluster.\n    *   **7 at (4, 2)**: Region Seed. Fills the large Center/Left region.\n    *   **8 at (5, 9)**: Region Seed. Fills the \"Box\" interior.\n    *   **6 at (7, 11)**: Wall/Region Seed Hybrid (likely dominates the wall network). Fills the huge wall network (Bottom Box + Top Right Walls) with 6. Also fills the Right Strip region.\n    *   **4 at (11, 3)**: Region Seed. Fills the Bottom region.\n\n*   **Wall Networks**:\n    *   **Cluster 3**: `(1, 3)`, `(2, 2)-(2, 3)`, `(3, 0)-(3, 2)`. These become **3**.\n    *   **Cluster 6**: `(1, 6)-(1, 10)`, `(2, 6)-(2, 10)`, `(3, 6)-(3, 7), (3, 10)-(3, 11)`, `(4, 7), (4, 11)`, `(5, 7), (5, 11)`, `(6, 7), (6, 11)`, `(7, 5)-(7, 7)`, `(8, 5), (8, 11)`, `(9, 0)-(9, 11)`. All these become **6**.\n\n*   **Region Filling**:\n    *   **Region 5**: `(0, 0)-(0, 2)`, `(1, 0)-(1, 2)`, `(2, 0)-(2, 1)`. Note: `(0, 3)` is the Seed 3 location. Since 3 is a Wall Seed, the *region* pixel at `(0, 3)` (conceptually) is filled by the nearest Region Seed, which is 5.\n    *   **Region 7**: `(0, 4)-(0, 9)`, `(1, 4)-(1, 5)`, `(2, 4)-(2, 5)`, `(3, 3)-(3, 5)`, `(4, 0)-(4, 6), (4, 8)-(4, 10)`, `(5, 0)-(5, 6)`, `(6, 0)-(6, 6)`, `(7, 0)-(7, 4)`, `(8, 0)-(8, 4)`.\n        *   Note: `(0, 4)` connects to 7 via `(4, 5)...(0, 5)`.\n    *   **Region 8**: Inside the box. `(4, 8)-(4, 10)`, `(5, 8)-(5, 10)`, `(6, 8)-(6, 10)`, `(7, 8)-(7, 10)`, `(8, 6)-(8, 10)`.\n        *   Wait, `(4, 8)` is 0. `(5, 8)` is 0. `(5, 9)` is 8. Correct.\n    *   **Region 6**: Right side. `(0, 10)-(0, 12)`, `(1, 11)-(1, 12)`, `(2, 11)-(2, 12)`, `(3, 12)`, `(4, 12)`, `(5, 12)`, `(6, 12)`, `(7, 12)`, `(8, 12)`, `(9, 12)`.\n    *   **Region 4**: Bottom. `(10, 0)-(10, 12)`, `(11, 0)-(11, 12)`, `(12, 0)-(12, 12)`.\n\n**Output Generation:**\n\n[[5, 5, 5, 5, 7, 7, 7, 7, 7, 7, 6, 6, 6],\n [5, 5, 5, 3, 7, 7, 6, 6, 6, 6, 6, 6, 6],\n [5, 5, 3, 3, 7, 7, 6, 7, 7, 7, 6, 6, 6],\n [3, 3, 3, 7, 7, 7, 6, 6, 8, 8, 6, 6, 6],\n [7, 7, 7, 7, 7, 7, 7, 6, 8, 8, 8, 6, 6],\n [7, 7, 7, 7, 7, 7, 7, 6, 8, 8, 8, 6, 6],\n [7, 7, 7, 7, 7, 7, 7, 6, 8, 8, 8, 6, 6],\n [7, 7, 7, 7, 7, 6, 6, 6, 8, 8, 8, 6, 6],\n [7, 7, 7, 7, 7, 6, 8, 8, 8, 8, 8, 6, 6],\n [6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6],\n [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4],\n [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4],\n [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4]]\n\n*Refinement on `(0, 3)`*: It becomes 5.\n*Refinement on `(0, 10)`*: `(0, 10)` is 0. `(1, 10)` is 6 (Wall). `(0, 11)` is 6 (Region). `(0, 9)` is 7.\nDistance from 6 `(7, 11)` to `(0, 10)` vs 7 `(4, 2)` to `(0, 10)`.\nRegion 6 is closer. `(0, 10)` -> 6.\n\n*Refinement on Row 9*: `(9, 12)` is 0. Input Row 9: `...1, 0`. `(9, 11)` is 1. `(9, 12)` is 0.\n`(9, 12)` is adjacent to Region 6 (above) and Region 4 (below).\nRegion 6 `(7, 11)` is closer than Region 4 `(11, 3)`.\nSo `(9, 12)` -> 6.\n\nLet's check `(2, 7)-(2, 9)`. Input `0, 0, 0`.\nBounded by walls `(1, 6)-(1, 10)` and `(2, 6), (2, 10)`.\nAlso `(3, 6), (3, 7), (3, 10)`.\nThe 0s at `(2, 7)-(2, 9)` and `(3, 8)-(3, 9)` seem to be part of Region 7? Or Region 8?\nRegion 8 is below row 4. Walls block it.\nRegion 7 is to the left. Wall `(3, 6)-(3, 7)` blocks it.\nAre these 0s isolated?\n`[2, 7], [2, 8], [2, 9]`.\n`[3, 8], [3, 9]`.\n`[4, 8], [4, 9], [4, 10]`. `(4, 8)` connects to Region 8.\nIs there a wall between Row 3 and Row 4?\nRow 3: `0, 1, 1, 0...` -> `(3, 6)=1, (3, 7)=1, (3, 8)=0, (3, 9)=0, (3, 10)=1`.\nRow 4: `...1, 0, 0...` -> `(4, 7)=1, (4, 8)=0...`\nSo `(3, 8)` connects to `(4, 8)`.\nThus, this pocket `(2, 7)-(3, 9)` connects to Region 8.\nSo `(2, 7), (2, 8), (2, 9)` become 8.\nAnd `(3, 8), (3, 9)` become 8.\nMy previous map had 7 there. Correction: **8**.\n\nFinal check on Row 2: `5, 5, 3, 3, 7, 7, 6, 8, 8, 8, 6, 6, 6`.\nRow 3: `3, 3, 3, 7, 7, 7, 6, 6, 8, 8, 6, 6, 6`.\n\nCorrected Output:\n\n[[5, 5, 5, 5, 7, 7, 7, 7, 7, 7, 6, 6, 6], [5, 5, 5, 3, 7, 7, 6, 6, 6, 6, 6, 6, 6], [5, 5, 3, 3, 7, 7, 6, 8, 8, 8, 6, 6, 6], [3, 3, 3, 7, 7, 7, 6, 6, 8, 8, 6, 6, 6], [7, 7, 7, 7, 7, 7, 7, 6, 8, 8, 8, 6, 6], [7, 7, 7, 7, 7, 7, 7, 6, 8, 8, 8, 6, 6], [7, 7, 7, 7, 7, 7, 7, 6, 8, 8, 8, 6, 6], [7, 7, 7, 7, 7, 6, 6, 6, 8, 8, 8, 6, 6], [7, 7, 7, 7, 7, 6, 8, 8, 8, 8, 8, 6, 6], [6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6], [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4], [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4], [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4]]",
+        "finish_reason": "STOP"
+      },
+      "correct": false
+    }
+  }
+]

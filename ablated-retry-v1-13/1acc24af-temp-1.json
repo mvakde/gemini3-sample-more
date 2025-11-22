@@ -1,0 +1,868 @@
+[
+  {
+    "attempt_2": {
+      "answer": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          1,
+          1,
+          0,
+          0,
+          0,
+          1,
+          1,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          1,
+          1,
+          0,
+          0,
+          1,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          0,
+          0,
+          1,
+          1,
+          1,
+          1,
+          0,
+          1,
+          1,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          5,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          5,
+          0,
+          0,
+          5,
+          5,
+          0,
+          0,
+          0,
+          0,
+          2,
+          0
+        ],
+        [
+          0,
+          5,
+          5,
+          0,
+          5,
+          0,
+          0,
+          5,
+          5,
+          0,
+          2,
+          0
+        ],
+        [
+          0,
+          0,
+          5,
+          0,
+          5,
+          0,
+          0,
+          5,
+          5,
+          0,
+          2,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "metadata": {
+        "model": "gemini-3-pro-preview",
+        "provider": "gemini",
+        "start_timestamp": "2025-11-22T10:27:52.104904+00:00",
+        "end_timestamp": "2025-11-22T10:31:03.913196+00:00",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "user",
+              "content": "You are participating in a puzzle solving competition. You are an expert at solving puzzles.\n\nBelow is a list of input and output pairs with a pattern. Your goal is to identify the pattern or transformation in the training examples that maps the input to the output, then apply that pattern to the test input to give a final output.\n\nRespond in the format of the training output examples\n\n--Training Examples--\n--Example 0-- \n\n INPUT: \n\n[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0], [0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0], [1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 5, 0, 0, 0, 0, 0, 0, 0], [0, 5, 5, 0, 5, 0, 0, 0, 0, 0, 0, 0], [0, 5, 5, 0, 5, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]\n\nOUTPUT: \n\n[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0], [0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0], [1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 5, 0, 0, 0, 0, 0, 0, 0], [0, 2, 2, 0, 5, 0, 0, 0, 0, 0, 0, 0], [0, 2, 2, 0, 5, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]\n\n--Example 1-- \n\n INPUT: \n\n[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0], [0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0], [1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 5, 0, 0, 0], [0, 5, 5, 5, 0, 5, 5, 0, 5, 5, 0, 0], [0, 5, 5, 0, 0, 5, 5, 0, 0, 5, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]\n\nOUTPUT: \n\n[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0], [0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0], [1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 5, 0, 0, 0], [0, 2, 2, 2, 0, 2, 2, 0, 5, 5, 0, 0], [0, 2, 2, 0, 0, 2, 2, 0, 0, 5, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]\n\n--Example 2-- \n\n INPUT: \n\n[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 1, 1, 1, 1, 0, 0, 1, 1, 1, 0], [0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 1, 0], [1, 1, 1, 0, 0, 1, 1, 1, 1, 0, 1, 1], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 5, 0, 0, 0], [0, 0, 0, 5, 0, 0, 5, 5, 5, 0, 5, 0], [5, 5, 0, 5, 5, 0, 5, 5, 5, 0, 5, 0], [5, 5, 0, 0, 5, 0, 0, 0, 5, 0, 5, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]\n\nOUTPUT: \n\n[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 1, 1, 1, 1, 0, 0, 1, 1, 1, 0], [0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 1, 0], [1, 1, 1, 0, 0, 1, 1, 1, 1, 0, 1, 1], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0], [0, 0, 0, 5, 0, 0, 2, 2, 2, 0, 2, 0], [2, 2, 0, 5, 5, 0, 2, 2, 2, 0, 2, 0], [2, 2, 0, 0, 5, 0, 0, 0, 2, 0, 2, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]\n\n--Example 3-- \n\n INPUT: \n\n[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 1, 1, 1, 0, 0, 1, 1, 1, 0, 0], [0, 0, 1, 0, 1, 1, 1, 1, 0, 1, 1, 0], [1, 1, 1, 0, 0, 1, 1, 0, 0, 0, 1, 1], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 5, 0, 0, 5, 0, 0, 5], [0, 5, 0, 0, 5, 5, 5, 0, 5, 0, 0, 5], [5, 5, 5, 0, 0, 5, 0, 0, 5, 0, 5, 5], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]\n\nOUTPUT: \n\n[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 1, 1, 1, 0, 0, 1, 1, 1, 0, 0], [0, 0, 1, 0, 1, 1, 1, 1, 0, 1, 1, 0], [1, 1, 1, 0, 0, 1, 1, 0, 0, 0, 1, 1], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 2, 0, 0, 5, 0, 0, 5], [0, 2, 0, 0, 2, 2, 2, 0, 5, 0, 0, 5], [2, 2, 2, 0, 0, 2, 0, 0, 5, 0, 5, 5], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]\n\n\n--End of Training Examples--\n\n--Test Input--\n[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0], [0, 1, 0, 1, 1, 0, 0, 1, 0, 1, 0, 0], [1, 1, 0, 0, 1, 1, 1, 1, 0, 1, 1, 1], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 5, 0, 0, 0, 0, 0, 0], [0, 5, 0, 0, 5, 5, 0, 0, 0, 0, 5, 0], [0, 5, 5, 0, 5, 0, 0, 5, 5, 0, 5, 0], [0, 0, 5, 0, 5, 0, 0, 5, 5, 0, 5, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]\n--End of Test Input--\n\nYour response:"
+            }
+          },
+          {
+            "index": 1,
+            "message": {
+              "role": "assistant",
+              "content": "The pattern identifies \"Key\" shapes among the connected components of 5s that fit into \"Lock\" cavities formed by the 1s.\n\n**1. Identify Locks:**\nAnalyze the structure of 1s (blue pixels). A \"Lock\" or \"Cavity\" is defined as a vertical column (or contiguous columns) of empty space (0s) that is covered by a \"roof\" of 1s in the row immediately above.\n- **Width of Lock:** The number of contiguous empty columns.\n- In the Test Input:\n    - Row 2 has 1s at indices `[1, 2, 3]` and `[7, 8, 9]`.\n    - Row 3 has 1s at indices `[1, 3, 4]` and `[7, 9]`.\n    - At `col 2`, Row 2 is `1`, Row 3 is `0`. This creates a cavity of **Width 1**.\n    - At `col 8`, Row 2 is `1`, Row 3 is `0`. This creates a cavity of **Width 1**.\n    - There are no other roofed cavities (the gap between the two 1-structures is open to the sky).\n    - Thus, the target Lock Width is **1**.\n\n**2. Identify Keys:**\nAnalyze each connected component of 5s (gray pixels). A component becomes a Key (turns to red/2) if there exists a rotation (0, 90, 180, 270 degrees) where:\n- The **width of the top row** of the shape equals the **Lock Width**.\n- The top row is **horizontally centered** relative to the shape's bounding box width.\n\n**3. Evaluate Test Shapes:**\n- **Shape A (Left, cols 1-2):** A \"Z\" shape. \n    - Original: Top row `X.` (width 1) in a bounding box of width 2. Not centered.\n    - Rotations do not produce a centered top row of Width 1.\n    - Result: **Not a Key.**\n- **Shape B (Middle, cols 4-5):** A twisted shape.\n    - Original: Top row `.X` (width 1) in a bounding box of width 2. Not centered.\n    - Rotations do not produce a centered top row of Width 1.\n    - Result: **Not a Key.**\n- **Shape C (Right-Middle, cols 7-8):** A 2x2 Square.\n    - Top row width is 2. It is centered.\n    - However, Top Width (2) does not match Lock Width (1).\n    - Result: **Not a Key.**\n- **Shape D (Right, col 10):** A 3x1 Vertical Line.\n    - Top row width is 1. The bounding box width is 1. It is centered.\n    - Top Width (1) matches Lock Width (1).\n    - Result: **Is a Key.** (Change 5s to 2s).\n\n**Final Transformation:**\nReplace the 5s in Shape D (col 10) with 2s. All other 5s remain unchanged.\n\n```json\n[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0], [0, 1, 0, 1, 1, 0, 0, 1, 0, 1, 0, 0], [1, 1, 0, 0, 1, 1, 1, 1, 0, 1, 1, 1], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 5, 0, 0, 0, 0, 0, 0], [0, 5, 0, 0, 5, 5, 0, 0, 0, 0, 2, 0], [0, 5, 5, 0, 5, 0, 0, 5, 5, 0, 2, 0], [0, 0, 5, 0, 5, 0, 0, 5, 5, 0, 2, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]\n```"
+            }
+          }
+        ],
+        "reasoning_summary": null,
+        "kwargs": {
+          "temperature": 1.0,
+          "max_output_tokens": 65536
+        },
+        "usage": {
+          "prompt_tokens": 4062,
+          "completion_tokens": 1153,
+          "total_tokens": 27484,
+          "completion_tokens_details": {
+            "reasoning_tokens": 22269,
+            "accepted_prediction_tokens": 1153,
+            "rejected_prediction_tokens": 0
+          }
+        },
+        "cost": {},
+        "task_id": "1acc24af",
+        "pair_index": 0,
+        "test_id": "original-prompt-ablations",
+        "raw_text": "The pattern identifies \"Key\" shapes among the connected components of 5s that fit into \"Lock\" cavities formed by the 1s.\n\n**1. Identify Locks:**\nAnalyze the structure of 1s (blue pixels). A \"Lock\" or \"Cavity\" is defined as a vertical column (or contiguous columns) of empty space (0s) that is covered by a \"roof\" of 1s in the row immediately above.\n- **Width of Lock:** The number of contiguous empty columns.\n- In the Test Input:\n    - Row 2 has 1s at indices `[1, 2, 3]` and `[7, 8, 9]`.\n    - Row 3 has 1s at indices `[1, 3, 4]` and `[7, 9]`.\n    - At `col 2`, Row 2 is `1`, Row 3 is `0`. This creates a cavity of **Width 1**.\n    - At `col 8`, Row 2 is `1`, Row 3 is `0`. This creates a cavity of **Width 1**.\n    - There are no other roofed cavities (the gap between the two 1-structures is open to the sky).\n    - Thus, the target Lock Width is **1**.\n\n**2. Identify Keys:**\nAnalyze each connected component of 5s (gray pixels). A component becomes a Key (turns to red/2) if there exists a rotation (0, 90, 180, 270 degrees) where:\n- The **width of the top row** of the shape equals the **Lock Width**.\n- The top row is **horizontally centered** relative to the shape's bounding box width.\n\n**3. Evaluate Test Shapes:**\n- **Shape A (Left, cols 1-2):** A \"Z\" shape. \n    - Original: Top row `X.` (width 1) in a bounding box of width 2. Not centered.\n    - Rotations do not produce a centered top row of Width 1.\n    - Result: **Not a Key.**\n- **Shape B (Middle, cols 4-5):** A twisted shape.\n    - Original: Top row `.X` (width 1) in a bounding box of width 2. Not centered.\n    - Rotations do not produce a centered top row of Width 1.\n    - Result: **Not a Key.**\n- **Shape C (Right-Middle, cols 7-8):** A 2x2 Square.\n    - Top row width is 2. It is centered.\n    - However, Top Width (2) does not match Lock Width (1).\n    - Result: **Not a Key.**\n- **Shape D (Right, col 10):** A 3x1 Vertical Line.\n    - Top row width is 1. The bounding box width is 1. It is centered.\n    - Top Width (1) matches Lock Width (1).\n    - Result: **Is a Key.** (Change 5s to 2s).\n\n**Final Transformation:**\nReplace the 5s in Shape D (col 10) with 2s. All other 5s remain unchanged.\n\n```json\n[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0], [0, 1, 0, 1, 1, 0, 0, 1, 0, 1, 0, 0], [1, 1, 0, 0, 1, 1, 1, 1, 0, 1, 1, 1], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 5, 0, 0, 0, 0, 0, 0], [0, 5, 0, 0, 5, 5, 0, 0, 0, 0, 2, 0], [0, 5, 5, 0, 5, 0, 0, 5, 5, 0, 2, 0], [0, 0, 5, 0, 5, 0, 0, 5, 5, 0, 2, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]\n```",
+        "finish_reason": "STOP"
+      },
+      "correct": false
+    },
+    "attempt_4": {
+      "answer": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          1,
+          1,
+          0,
+          0,
+          0,
+          1,
+          1,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          1,
+          1,
+          0,
+          0,
+          1,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          0,
+          0,
+          1,
+          1,
+          1,
+          1,
+          0,
+          1,
+          1,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          5,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          2,
+          0,
+          0,
+          2,
+          2,
+          0,
+          0,
+          0,
+          0,
+          5,
+          0
+        ],
+        [
+          0,
+          2,
+          2,
+          0,
+          2,
+          0,
+          0,
+          2,
+          2,
+          0,
+          5,
+          0
+        ],
+        [
+          0,
+          0,
+          2,
+          0,
+          2,
+          0,
+          0,
+          2,
+          2,
+          0,
+          5,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "metadata": {
+        "model": "gemini-3-pro-preview",
+        "provider": "gemini",
+        "start_timestamp": "2025-11-22T10:27:52.110546+00:00",
+        "end_timestamp": "2025-11-22T10:31:10.509081+00:00",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "user",
+              "content": "You are participating in a puzzle solving competition. You are an expert at solving puzzles.\n\nBelow is a list of input and output pairs with a pattern. Your goal is to identify the pattern or transformation in the training examples that maps the input to the output, then apply that pattern to the test input to give a final output.\n\nRespond in the format of the training output examples\n\n--Training Examples--\n--Example 0-- \n\n INPUT: \n\n[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0], [0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0], [1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 5, 0, 0, 0, 0, 0, 0, 0], [0, 5, 5, 0, 5, 0, 0, 0, 0, 0, 0, 0], [0, 5, 5, 0, 5, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]\n\nOUTPUT: \n\n[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0], [0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0], [1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 5, 0, 0, 0, 0, 0, 0, 0], [0, 2, 2, 0, 5, 0, 0, 0, 0, 0, 0, 0], [0, 2, 2, 0, 5, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]\n\n--Example 1-- \n\n INPUT: \n\n[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0], [0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0], [1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 5, 0, 0, 0], [0, 5, 5, 5, 0, 5, 5, 0, 5, 5, 0, 0], [0, 5, 5, 0, 0, 5, 5, 0, 0, 5, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]\n\nOUTPUT: \n\n[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0], [0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0], [1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 5, 0, 0, 0], [0, 2, 2, 2, 0, 2, 2, 0, 5, 5, 0, 0], [0, 2, 2, 0, 0, 2, 2, 0, 0, 5, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]\n\n--Example 2-- \n\n INPUT: \n\n[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 1, 1, 1, 1, 0, 0, 1, 1, 1, 0], [0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 1, 0], [1, 1, 1, 0, 0, 1, 1, 1, 1, 0, 1, 1], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 5, 0, 0, 0], [0, 0, 0, 5, 0, 0, 5, 5, 5, 0, 5, 0], [5, 5, 0, 5, 5, 0, 5, 5, 5, 0, 5, 0], [5, 5, 0, 0, 5, 0, 0, 0, 5, 0, 5, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]\n\nOUTPUT: \n\n[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 1, 1, 1, 1, 0, 0, 1, 1, 1, 0], [0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 1, 0], [1, 1, 1, 0, 0, 1, 1, 1, 1, 0, 1, 1], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0], [0, 0, 0, 5, 0, 0, 2, 2, 2, 0, 2, 0], [2, 2, 0, 5, 5, 0, 2, 2, 2, 0, 2, 0], [2, 2, 0, 0, 5, 0, 0, 0, 2, 0, 2, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]\n\n--Example 3-- \n\n INPUT: \n\n[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 1, 1, 1, 0, 0, 1, 1, 1, 0, 0], [0, 0, 1, 0, 1, 1, 1, 1, 0, 1, 1, 0], [1, 1, 1, 0, 0, 1, 1, 0, 0, 0, 1, 1], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 5, 0, 0, 5, 0, 0, 5], [0, 5, 0, 0, 5, 5, 5, 0, 5, 0, 0, 5], [5, 5, 5, 0, 0, 5, 0, 0, 5, 0, 5, 5], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]\n\nOUTPUT: \n\n[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 1, 1, 1, 0, 0, 1, 1, 1, 0, 0], [0, 0, 1, 0, 1, 1, 1, 1, 0, 1, 1, 0], [1, 1, 1, 0, 0, 1, 1, 0, 0, 0, 1, 1], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 2, 0, 0, 5, 0, 0, 5], [0, 2, 0, 0, 2, 2, 2, 0, 5, 0, 0, 5], [2, 2, 2, 0, 0, 2, 0, 0, 5, 0, 5, 5], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]\n\n\n--End of Training Examples--\n\n--Test Input--\n[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0], [0, 1, 0, 1, 1, 0, 0, 1, 0, 1, 0, 0], [1, 1, 0, 0, 1, 1, 1, 1, 0, 1, 1, 1], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 5, 0, 0, 0, 0, 0, 0], [0, 5, 0, 0, 5, 5, 0, 0, 0, 0, 5, 0], [0, 5, 5, 0, 5, 0, 0, 5, 5, 0, 5, 0], [0, 0, 5, 0, 5, 0, 0, 5, 5, 0, 5, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]\n--End of Test Input--\n\nYour response:"
+            }
+          },
+          {
+            "index": 1,
+            "message": {
+              "role": "assistant",
+              "content": "Based on the analysis of the training examples, the transformation pattern is as follows:\n\n1.  **Identify Grey Objects:** Locate the distinct connected shapes formed by the grey pixels (value 5) in the lower part of the grid (typically rows 8-10).\n2.  **Check for 2x2 Blocks:** For each object, check if it forms or contains a 2x2 solid block of 5s. If it does, all 5s in this object change to red (value 2).\n3.  **Check Vertical Clearance (Blue Mask):** If the object does not contain a 2x2 block, check the \"Blue Region\" (typically rows 1-4 or 4-6) for vertical clearance.\n    *   Identify the \"Constraint Row\" in the blue region. This is the row immediately above the bottom-most \"floor\" row of the blue structure.\n        *   In the Test Input, the floor is Row 4, so the Constraint Row is **Row 3**.\n    *   Project the columns occupied by the grey object upwards to the Constraint Row.\n    *   If **any** of the projected columns in the Constraint Row contain a blue pixel (value 1), the object is considered \"blocked\" and changes to red (value 2).\n    *   If **all** of the projected columns in the Constraint Row are empty (value 0), the object has \"clearance\" and remains grey (value 5).\n\n**Applying to Test Input:**\n\n*   **Blue Constraint Row (Row 3):** `[0, 1, 0, 1, 1, 0, 0, 1, 0, 1, 0, 0]`\n    *   1s at indices: 1, 3, 4, 7, 9.\n    *   0s at indices: 0, 2, 5, 6, 8, 10, 11.\n\n*   **Grey Objects:**\n    1.  **Object 1 (Cols 1-2):** \"Snake\" shape. No 2x2 block.\n        *   Occupies columns 1 and 2.\n        *   Row 3 at Col 1 is `1`. Blocked.\n        *   Result: Change to **2**.\n    2.  **Object 2 (Cols 4-5):** \"P\" shape. No 2x2 block.\n        *   Occupies columns 4 and 5.\n        *   Row 3 at Col 4 is `1`. Blocked.\n        *   Result: Change to **2**.\n    3.  **Object 3 (Cols 7-8):** Square shape.\n        *   Forms a 2x2 block (Rows 9-10, Cols 7-8).\n        *   Result: Change to **2**.\n    4.  **Object 4 (Col 10):** Vertical line. No 2x2 block.\n        *   Occupies column 10.\n        *   Row 3 at Col 10 is `0`. Clear.\n        *   Result: Remains **5**.\n\n**Final Output Construction:**\nThe grid remains the same, except the 5s corresponding to Objects 1, 2, and 3 are changed to 2s. Object 4 stays as 5s.\n\nOUTPUT: \n\n[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0], [0, 1, 0, 1, 1, 0, 0, 1, 0, 1, 0, 0], [1, 1, 0, 0, 1, 1, 1, 1, 0, 1, 1, 1], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 5, 0, 0, 0, 0, 0, 0], [0, 2, 0, 0, 2, 2, 0, 0, 0, 0, 5, 0], [0, 2, 2, 0, 2, 0, 0, 2, 2, 0, 5, 0], [0, 0, 2, 0, 2, 0, 0, 2, 2, 0, 5, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]"
+            }
+          }
+        ],
+        "reasoning_summary": null,
+        "kwargs": {
+          "temperature": 1.0,
+          "max_output_tokens": 65536
+        },
+        "usage": {
+          "prompt_tokens": 4062,
+          "completion_tokens": 1182,
+          "total_tokens": 29399,
+          "completion_tokens_details": {
+            "reasoning_tokens": 24155,
+            "accepted_prediction_tokens": 1182,
+            "rejected_prediction_tokens": 0
+          }
+        },
+        "cost": {},
+        "task_id": "1acc24af",
+        "pair_index": 0,
+        "test_id": "original-prompt-ablations",
+        "raw_text": "Based on the analysis of the training examples, the transformation pattern is as follows:\n\n1.  **Identify Grey Objects:** Locate the distinct connected shapes formed by the grey pixels (value 5) in the lower part of the grid (typically rows 8-10).\n2.  **Check for 2x2 Blocks:** For each object, check if it forms or contains a 2x2 solid block of 5s. If it does, all 5s in this object change to red (value 2).\n3.  **Check Vertical Clearance (Blue Mask):** If the object does not contain a 2x2 block, check the \"Blue Region\" (typically rows 1-4 or 4-6) for vertical clearance.\n    *   Identify the \"Constraint Row\" in the blue region. This is the row immediately above the bottom-most \"floor\" row of the blue structure.\n        *   In the Test Input, the floor is Row 4, so the Constraint Row is **Row 3**.\n    *   Project the columns occupied by the grey object upwards to the Constraint Row.\n    *   If **any** of the projected columns in the Constraint Row contain a blue pixel (value 1), the object is considered \"blocked\" and changes to red (value 2).\n    *   If **all** of the projected columns in the Constraint Row are empty (value 0), the object has \"clearance\" and remains grey (value 5).\n\n**Applying to Test Input:**\n\n*   **Blue Constraint Row (Row 3):** `[0, 1, 0, 1, 1, 0, 0, 1, 0, 1, 0, 0]`\n    *   1s at indices: 1, 3, 4, 7, 9.\n    *   0s at indices: 0, 2, 5, 6, 8, 10, 11.\n\n*   **Grey Objects:**\n    1.  **Object 1 (Cols 1-2):** \"Snake\" shape. No 2x2 block.\n        *   Occupies columns 1 and 2.\n        *   Row 3 at Col 1 is `1`. Blocked.\n        *   Result: Change to **2**.\n    2.  **Object 2 (Cols 4-5):** \"P\" shape. No 2x2 block.\n        *   Occupies columns 4 and 5.\n        *   Row 3 at Col 4 is `1`. Blocked.\n        *   Result: Change to **2**.\n    3.  **Object 3 (Cols 7-8):** Square shape.\n        *   Forms a 2x2 block (Rows 9-10, Cols 7-8).\n        *   Result: Change to **2**.\n    4.  **Object 4 (Col 10):** Vertical line. No 2x2 block.\n        *   Occupies column 10.\n        *   Row 3 at Col 10 is `0`. Clear.\n        *   Result: Remains **5**.\n\n**Final Output Construction:**\nThe grid remains the same, except the 5s corresponding to Objects 1, 2, and 3 are changed to 2s. Object 4 stays as 5s.\n\nOUTPUT: \n\n[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0], [0, 1, 0, 1, 1, 0, 0, 1, 0, 1, 0, 0], [1, 1, 0, 0, 1, 1, 1, 1, 0, 1, 1, 1], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 5, 0, 0, 0, 0, 0, 0], [0, 2, 0, 0, 2, 2, 0, 0, 0, 0, 5, 0], [0, 2, 2, 0, 2, 0, 0, 2, 2, 0, 5, 0], [0, 0, 2, 0, 2, 0, 0, 2, 2, 0, 5, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]",
+        "finish_reason": "STOP"
+      },
+      "correct": false
+    },
+    "attempt_3": {
+      "answer": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          1,
+          1,
+          0,
+          0,
+          0,
+          1,
+          1,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          1,
+          1,
+          0,
+          0,
+          1,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          0,
+          0,
+          1,
+          1,
+          1,
+          1,
+          0,
+          1,
+          1,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          2,
+          0,
+          0,
+          5,
+          5,
+          0,
+          0,
+          0,
+          0,
+          2,
+          0
+        ],
+        [
+          0,
+          2,
+          2,
+          0,
+          5,
+          0,
+          0,
+          5,
+          5,
+          0,
+          2,
+          0
+        ],
+        [
+          0,
+          0,
+          2,
+          0,
+          5,
+          0,
+          0,
+          5,
+          5,
+          0,
+          2,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "metadata": {
+        "model": "gemini-3-pro-preview",
+        "provider": "gemini",
+        "start_timestamp": "2025-11-22T10:27:52.112186+00:00",
+        "end_timestamp": "2025-11-22T10:31:25.341376+00:00",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "user",
+              "content": "You are participating in a puzzle solving competition. You are an expert at solving puzzles.\n\nBelow is a list of input and output pairs with a pattern. Your goal is to identify the pattern or transformation in the training examples that maps the input to the output, then apply that pattern to the test input to give a final output.\n\nRespond in the format of the training output examples\n\n--Training Examples--\n--Example 0-- \n\n INPUT: \n\n[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0], [0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0], [1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 5, 0, 0, 0, 0, 0, 0, 0], [0, 5, 5, 0, 5, 0, 0, 0, 0, 0, 0, 0], [0, 5, 5, 0, 5, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]\n\nOUTPUT: \n\n[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0], [0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0], [1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 5, 0, 0, 0, 0, 0, 0, 0], [0, 2, 2, 0, 5, 0, 0, 0, 0, 0, 0, 0], [0, 2, 2, 0, 5, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]\n\n--Example 1-- \n\n INPUT: \n\n[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0], [0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0], [1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 5, 0, 0, 0], [0, 5, 5, 5, 0, 5, 5, 0, 5, 5, 0, 0], [0, 5, 5, 0, 0, 5, 5, 0, 0, 5, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]\n\nOUTPUT: \n\n[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0], [0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0], [1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 5, 0, 0, 0], [0, 2, 2, 2, 0, 2, 2, 0, 5, 5, 0, 0], [0, 2, 2, 0, 0, 2, 2, 0, 0, 5, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]\n\n--Example 2-- \n\n INPUT: \n\n[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 1, 1, 1, 1, 0, 0, 1, 1, 1, 0], [0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 1, 0], [1, 1, 1, 0, 0, 1, 1, 1, 1, 0, 1, 1], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 5, 0, 0, 0], [0, 0, 0, 5, 0, 0, 5, 5, 5, 0, 5, 0], [5, 5, 0, 5, 5, 0, 5, 5, 5, 0, 5, 0], [5, 5, 0, 0, 5, 0, 0, 0, 5, 0, 5, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]\n\nOUTPUT: \n\n[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 1, 1, 1, 1, 0, 0, 1, 1, 1, 0], [0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 1, 0], [1, 1, 1, 0, 0, 1, 1, 1, 1, 0, 1, 1], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0], [0, 0, 0, 5, 0, 0, 2, 2, 2, 0, 2, 0], [2, 2, 0, 5, 5, 0, 2, 2, 2, 0, 2, 0], [2, 2, 0, 0, 5, 0, 0, 0, 2, 0, 2, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]\n\n--Example 3-- \n\n INPUT: \n\n[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 1, 1, 1, 0, 0, 1, 1, 1, 0, 0], [0, 0, 1, 0, 1, 1, 1, 1, 0, 1, 1, 0], [1, 1, 1, 0, 0, 1, 1, 0, 0, 0, 1, 1], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 5, 0, 0, 5, 0, 0, 5], [0, 5, 0, 0, 5, 5, 5, 0, 5, 0, 0, 5], [5, 5, 5, 0, 0, 5, 0, 0, 5, 0, 5, 5], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]\n\nOUTPUT: \n\n[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 1, 1, 1, 0, 0, 1, 1, 1, 0, 0], [0, 0, 1, 0, 1, 1, 1, 1, 0, 1, 1, 0], [1, 1, 1, 0, 0, 1, 1, 0, 0, 0, 1, 1], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 2, 0, 0, 5, 0, 0, 5], [0, 2, 0, 0, 2, 2, 2, 0, 5, 0, 0, 5], [2, 2, 2, 0, 0, 2, 0, 0, 5, 0, 5, 5], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]\n\n\n--End of Training Examples--\n\n--Test Input--\n[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0], [0, 1, 0, 1, 1, 0, 0, 1, 0, 1, 0, 0], [1, 1, 0, 0, 1, 1, 1, 1, 0, 1, 1, 1], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 5, 0, 0, 0, 0, 0, 0], [0, 5, 0, 0, 5, 5, 0, 0, 0, 0, 5, 0], [0, 5, 5, 0, 5, 0, 0, 5, 5, 0, 5, 0], [0, 0, 5, 0, 5, 0, 0, 5, 5, 0, 5, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]\n--End of Test Input--\n\nYour response:"
+            }
+          },
+          {
+            "index": 1,
+            "message": {
+              "role": "assistant",
+              "content": "Based on the analysis of the training examples, the pattern is as follows:\n\n1.  **Identify \"Sockets\" or \"Cavities\" in the blue structure (rows 0-6)**:\n    *   A socket is defined by the vertical profile of the empty space (0s) enclosed or bounded by the blue pixels (1s).\n    *   Specifically, we look at the width of the gap at each row, going from top to bottom.\n    *   In Example 3, a \"1 over 3\" socket (width 1 at top, width 3 below) matched shapes with a \"1 over 3\" profile (T-shape and Cross-shape).\n    *   In Example 0, a \"2 over 2\" socket matched a 2x2 shape.\n\n2.  **Identify Grey Shapes (rows 7-11)**:\n    *   Parse the connected components of grey (5) pixels.\n\n3.  **Match Shapes to Sockets**:\n    *   A grey shape turns Red (2) if its top-down width profile matches one of the identified sockets.\n    *   Translation is allowed (the shape doesn't need to be directly under the socket).\n    *   Partial fitting where the shape extends downwards out of the socket is allowed.\n    *   If a shape does not match any socket profile, it remains Grey (5).\n\n**Applying to Test Input:**\n\n*   **Blue Structure Analysis:**\n    *   **Left Socket (cols 1-3):**\n        *   Row 2: `1 1 1` (Solid).\n        *   Row 3: `1 0 1` (Gap at col 2, Width 1).\n        *   Row 4: `1 0 0 1` (Gap at cols 2-3, Width 2).\n        *   *Profile:* Width 1, then Width 2.\n    *   **Right Socket (cols 7-9):**\n        *   Row 2: `1 1 1` (Solid).\n        *   Row 3: `1 0 1` (Gap at col 8, Width 1).\n        *   Row 4: `1 0 1` (Gap at col 8, Width 1).\n        *   *Profile:* Width 1, then Width 1.\n\n*   **Grey Shapes Analysis:**\n    *   **Component 1 (Left - Staircase):**\n        *   Top (Row 8): 1 pixel (at col 1). Width 1.\n        *   Middle (Row 9): 2 pixels (at cols 1, 2). Width 2.\n        *   *Profile:* 1, 2.\n        *   **Result:** Matches Left Socket (1, 2). **Turns Red.**\n    *   **Component 2 (Middle-Left - Gamma):**\n        *   Top (Row 8): 2 pixels (at cols 4, 5). Width 2.\n        *   *Profile:* Starts with 2.\n        *   **Result:** No socket starts with width 2. **Remains Grey.**\n    *   **Component 3 (Middle-Right - 2x2 Square):**\n        *   Top (Row 9): 2 pixels (at cols 7, 8). Width 2.\n        *   *Profile:* Starts with 2.\n        *   **Result:** No socket starts with width 2. **Remains Grey.**\n    *   **Component 4 (Right - Line):**\n        *   Top (Row 8): 1 pixel (at col 10). Width 1.\n        *   Middle (Row 9): 1 pixel (at col 10). Width 1.\n        *   *Profile:* 1, 1.\n        *   **Result:** Matches Right Socket (1, 1). **Turns Red.**\n\n**Constructing Output:**\n*   Blue structure remains unchanged.\n*   Component 1 pixels change 5 -> 2.\n*   Component 4 pixels change 5 -> 2.\n*   Other components remain 5.\n\nOUTPUT: \n\n[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0], [0, 1, 0, 1, 1, 0, 0, 1, 0, 1, 0, 0], [1, 1, 0, 0, 1, 1, 1, 1, 0, 1, 1, 1], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 2, 0, 0, 5, 5, 0, 0, 0, 0, 2, 0], [0, 2, 2, 0, 5, 0, 0, 5, 5, 0, 2, 0], [0, 0, 2, 0, 5, 0, 0, 5, 5, 0, 2, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]"
+            }
+          }
+        ],
+        "reasoning_summary": null,
+        "kwargs": {
+          "temperature": 1.0,
+          "max_output_tokens": 65536
+        },
+        "usage": {
+          "prompt_tokens": 4062,
+          "completion_tokens": 1359,
+          "total_tokens": 31096,
+          "completion_tokens_details": {
+            "reasoning_tokens": 25675,
+            "accepted_prediction_tokens": 1359,
+            "rejected_prediction_tokens": 0
+          }
+        },
+        "cost": {},
+        "task_id": "1acc24af",
+        "pair_index": 0,
+        "test_id": "original-prompt-ablations",
+        "raw_text": "Based on the analysis of the training examples, the pattern is as follows:\n\n1.  **Identify \"Sockets\" or \"Cavities\" in the blue structure (rows 0-6)**:\n    *   A socket is defined by the vertical profile of the empty space (0s) enclosed or bounded by the blue pixels (1s).\n    *   Specifically, we look at the width of the gap at each row, going from top to bottom.\n    *   In Example 3, a \"1 over 3\" socket (width 1 at top, width 3 below) matched shapes with a \"1 over 3\" profile (T-shape and Cross-shape).\n    *   In Example 0, a \"2 over 2\" socket matched a 2x2 shape.\n\n2.  **Identify Grey Shapes (rows 7-11)**:\n    *   Parse the connected components of grey (5) pixels.\n\n3.  **Match Shapes to Sockets**:\n    *   A grey shape turns Red (2) if its top-down width profile matches one of the identified sockets.\n    *   Translation is allowed (the shape doesn't need to be directly under the socket).\n    *   Partial fitting where the shape extends downwards out of the socket is allowed.\n    *   If a shape does not match any socket profile, it remains Grey (5).\n\n**Applying to Test Input:**\n\n*   **Blue Structure Analysis:**\n    *   **Left Socket (cols 1-3):**\n        *   Row 2: `1 1 1` (Solid).\n        *   Row 3: `1 0 1` (Gap at col 2, Width 1).\n        *   Row 4: `1 0 0 1` (Gap at cols 2-3, Width 2).\n        *   *Profile:* Width 1, then Width 2.\n    *   **Right Socket (cols 7-9):**\n        *   Row 2: `1 1 1` (Solid).\n        *   Row 3: `1 0 1` (Gap at col 8, Width 1).\n        *   Row 4: `1 0 1` (Gap at col 8, Width 1).\n        *   *Profile:* Width 1, then Width 1.\n\n*   **Grey Shapes Analysis:**\n    *   **Component 1 (Left - Staircase):**\n        *   Top (Row 8): 1 pixel (at col 1). Width 1.\n        *   Middle (Row 9): 2 pixels (at cols 1, 2). Width 2.\n        *   *Profile:* 1, 2.\n        *   **Result:** Matches Left Socket (1, 2). **Turns Red.**\n    *   **Component 2 (Middle-Left - Gamma):**\n        *   Top (Row 8): 2 pixels (at cols 4, 5). Width 2.\n        *   *Profile:* Starts with 2.\n        *   **Result:** No socket starts with width 2. **Remains Grey.**\n    *   **Component 3 (Middle-Right - 2x2 Square):**\n        *   Top (Row 9): 2 pixels (at cols 7, 8). Width 2.\n        *   *Profile:* Starts with 2.\n        *   **Result:** No socket starts with width 2. **Remains Grey.**\n    *   **Component 4 (Right - Line):**\n        *   Top (Row 8): 1 pixel (at col 10). Width 1.\n        *   Middle (Row 9): 1 pixel (at col 10). Width 1.\n        *   *Profile:* 1, 1.\n        *   **Result:** Matches Right Socket (1, 1). **Turns Red.**\n\n**Constructing Output:**\n*   Blue structure remains unchanged.\n*   Component 1 pixels change 5 -> 2.\n*   Component 4 pixels change 5 -> 2.\n*   Other components remain 5.\n\nOUTPUT: \n\n[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0], [0, 1, 0, 1, 1, 0, 0, 1, 0, 1, 0, 0], [1, 1, 0, 0, 1, 1, 1, 1, 0, 1, 1, 1], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 2, 0, 0, 5, 5, 0, 0, 0, 0, 2, 0], [0, 2, 2, 0, 5, 0, 0, 5, 5, 0, 2, 0], [0, 0, 2, 0, 5, 0, 0, 5, 5, 0, 2, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]",
+        "finish_reason": "STOP"
+      },
+      "correct": false
+    },
+    "attempt_1": {
+      "answer": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          1,
+          1,
+          0,
+          0,
+          0,
+          1,
+          1,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          1,
+          1,
+          0,
+          0,
+          1,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          0,
+          0,
+          1,
+          1,
+          1,
+          1,
+          0,
+          1,
+          1,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          2,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          5,
+          0,
+          0,
+          2,
+          2,
+          0,
+          0,
+          0,
+          0,
+          5,
+          0
+        ],
+        [
+          0,
+          5,
+          5,
+          0,
+          2,
+          0,
+          0,
+          2,
+          2,
+          0,
+          5,
+          0
+        ],
+        [
+          0,
+          0,
+          5,
+          0,
+          2,
+          0,
+          0,
+          2,
+          2,
+          0,
+          5,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "metadata": {
+        "model": "gemini-3-pro-preview",
+        "provider": "gemini",
+        "start_timestamp": "2025-11-22T10:27:52.106223+00:00",
+        "end_timestamp": "2025-11-22T10:31:38.492888+00:00",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "user",
+              "content": "You are participating in a puzzle solving competition. You are an expert at solving puzzles.\n\nBelow is a list of input and output pairs with a pattern. Your goal is to identify the pattern or transformation in the training examples that maps the input to the output, then apply that pattern to the test input to give a final output.\n\nRespond in the format of the training output examples\n\n--Training Examples--\n--Example 0-- \n\n INPUT: \n\n[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0], [0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0], [1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 5, 0, 0, 0, 0, 0, 0, 0], [0, 5, 5, 0, 5, 0, 0, 0, 0, 0, 0, 0], [0, 5, 5, 0, 5, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]\n\nOUTPUT: \n\n[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0], [0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0], [1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 5, 0, 0, 0, 0, 0, 0, 0], [0, 2, 2, 0, 5, 0, 0, 0, 0, 0, 0, 0], [0, 2, 2, 0, 5, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]\n\n--Example 1-- \n\n INPUT: \n\n[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0], [0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0], [1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 5, 0, 0, 0], [0, 5, 5, 5, 0, 5, 5, 0, 5, 5, 0, 0], [0, 5, 5, 0, 0, 5, 5, 0, 0, 5, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]\n\nOUTPUT: \n\n[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0], [0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0], [1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 5, 0, 0, 0], [0, 2, 2, 2, 0, 2, 2, 0, 5, 5, 0, 0], [0, 2, 2, 0, 0, 2, 2, 0, 0, 5, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]\n\n--Example 2-- \n\n INPUT: \n\n[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 1, 1, 1, 1, 0, 0, 1, 1, 1, 0], [0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 1, 0], [1, 1, 1, 0, 0, 1, 1, 1, 1, 0, 1, 1], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 5, 0, 0, 0], [0, 0, 0, 5, 0, 0, 5, 5, 5, 0, 5, 0], [5, 5, 0, 5, 5, 0, 5, 5, 5, 0, 5, 0], [5, 5, 0, 0, 5, 0, 0, 0, 5, 0, 5, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]\n\nOUTPUT: \n\n[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 1, 1, 1, 1, 0, 0, 1, 1, 1, 0], [0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 1, 0], [1, 1, 1, 0, 0, 1, 1, 1, 1, 0, 1, 1], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0], [0, 0, 0, 5, 0, 0, 2, 2, 2, 0, 2, 0], [2, 2, 0, 5, 5, 0, 2, 2, 2, 0, 2, 0], [2, 2, 0, 0, 5, 0, 0, 0, 2, 0, 2, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]\n\n--Example 3-- \n\n INPUT: \n\n[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 1, 1, 1, 0, 0, 1, 1, 1, 0, 0], [0, 0, 1, 0, 1, 1, 1, 1, 0, 1, 1, 0], [1, 1, 1, 0, 0, 1, 1, 0, 0, 0, 1, 1], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 5, 0, 0, 5, 0, 0, 5], [0, 5, 0, 0, 5, 5, 5, 0, 5, 0, 0, 5], [5, 5, 5, 0, 0, 5, 0, 0, 5, 0, 5, 5], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]\n\nOUTPUT: \n\n[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 1, 1, 1, 0, 0, 1, 1, 1, 0, 0], [0, 0, 1, 0, 1, 1, 1, 1, 0, 1, 1, 0], [1, 1, 1, 0, 0, 1, 1, 0, 0, 0, 1, 1], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 2, 0, 0, 5, 0, 0, 5], [0, 2, 0, 0, 2, 2, 2, 0, 5, 0, 0, 5], [2, 2, 2, 0, 0, 2, 0, 0, 5, 0, 5, 5], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]\n\n\n--End of Training Examples--\n\n--Test Input--\n[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0], [0, 1, 0, 1, 1, 0, 0, 1, 0, 1, 0, 0], [1, 1, 0, 0, 1, 1, 1, 1, 0, 1, 1, 1], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 5, 0, 0, 0, 0, 0, 0], [0, 5, 0, 0, 5, 5, 0, 0, 0, 0, 5, 0], [0, 5, 5, 0, 5, 0, 0, 5, 5, 0, 5, 0], [0, 0, 5, 0, 5, 0, 0, 5, 5, 0, 5, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]\n--End of Test Input--\n\nYour response:"
+            }
+          },
+          {
+            "index": 1,
+            "message": {
+              "role": "assistant",
+              "content": "The transformation follows these rules based on the interaction between the \"Blue\" shapes (represented by 1s, typically in the top half) and the \"Grey\" shapes (represented by 5s, typically in the bottom half):\n\n1.  **Identify Grey Objects**: Group the connected 5s into distinct objects.\n2.  **Shape Matching**: For each grey object, check if an identical shape (same geometric configuration of pixels) exists within the Blue pixels (1s). The match must be exact in shape and orientation, but can be translated to any position.\n3.  **Apply Transformation**:\n    *   **If a matching shape is found in the Blue pixels**:\n        *   If the matching blue shape is located **directly above** the grey object (i.e., in the same columns), the grey object turns **Red (2)**.\n        *   If the matching blue shape is located **elsewhere** (shifted horizontally), the grey object remains **Grey (5)**.\n    *   **If NO matching shape is found** (e.g., the shape doesn't exist in blue, or the grey object is taller than the blue structure), the grey object turns **Red (2)**.\n\n**Application to Test Input:**\n\n*   **Object 1 (Cols 1-2):**\n    *   Pixels: (8,1), (9,1), (9,2), (10,2).\n    *   Shape: A \"step\" shape (height 3).\n    *   This shape was observed in Training Example 2 (Object 2), where it remained Grey. This implies the shape exists in the Blue pattern (likely formed by diagonal connections or a specific configuration). Since it's not directly above (Blue at cols 1-2 is not this shape), it remains **Grey (5)**.\n\n*   **Object 2 (Cols 4-5):**\n    *   Pixels: (7,5), (8,4), (8,5), (9,4), (10,4).\n    *   Height: 4 rows (7, 8, 9, 10).\n    *   The Blue structure in the Test Input only spans rows 2, 3, and 4 (Height 3).\n    *   Since the grey object is taller than any possible blue shape, it cannot match.\n    *   Result: Turns **Red (2)**.\n\n*   **Object 3 (Cols 7-8):**\n    *   Pixels: (9,7), (9,8), (10,7), (10,8).\n    *   Shape: 2x2 Square.\n    *   There is no 2x2 solid block of 1s in the Test Input Blue pixels (checked cols 1, 4, 7, 10).\n    *   Result: Turns **Red (2)**.\n\n*   **Object 4 (Col 10):**\n    *   Pixels: (8,10), (9,10), (10,10).\n    *   Shape: Vertical line of height 3.\n    *   This shape exists in the Blue pixels at Column 1 (Rows 2,3,4) and Column 7 (Rows 2,3,4).\n    *   The shape at Column 10 of Blue is not a vertical line of 3 (Row 2 and 3 are 0). Thus, the match is not directly above.\n    *   Result: Remains **Grey (5)**.\n\n**Final Output Generation:**\n\n[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0], [0, 1, 0, 1, 1, 0, 0, 1, 0, 1, 0, 0], [1, 1, 0, 0, 1, 1, 1, 1, 0, 1, 1, 1], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0], [0, 5, 0, 0, 2, 2, 0, 0, 0, 0, 5, 0], [0, 5, 5, 0, 2, 0, 0, 2, 2, 0, 5, 0], [0, 0, 5, 0, 2, 0, 0, 2, 2, 0, 5, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]"
+            }
+          }
+        ],
+        "reasoning_summary": null,
+        "kwargs": {
+          "temperature": 1.0,
+          "max_output_tokens": 65536
+        },
+        "usage": {
+          "prompt_tokens": 4062,
+          "completion_tokens": 1211,
+          "total_tokens": 32521,
+          "completion_tokens_details": {
+            "reasoning_tokens": 27248,
+            "accepted_prediction_tokens": 1211,
+            "rejected_prediction_tokens": 0
+          }
+        },
+        "cost": {},
+        "task_id": "1acc24af",
+        "pair_index": 0,
+        "test_id": "original-prompt-ablations",
+        "raw_text": "The transformation follows these rules based on the interaction between the \"Blue\" shapes (represented by 1s, typically in the top half) and the \"Grey\" shapes (represented by 5s, typically in the bottom half):\n\n1.  **Identify Grey Objects**: Group the connected 5s into distinct objects.\n2.  **Shape Matching**: For each grey object, check if an identical shape (same geometric configuration of pixels) exists within the Blue pixels (1s). The match must be exact in shape and orientation, but can be translated to any position.\n3.  **Apply Transformation**:\n    *   **If a matching shape is found in the Blue pixels**:\n        *   If the matching blue shape is located **directly above** the grey object (i.e., in the same columns), the grey object turns **Red (2)**.\n        *   If the matching blue shape is located **elsewhere** (shifted horizontally), the grey object remains **Grey (5)**.\n    *   **If NO matching shape is found** (e.g., the shape doesn't exist in blue, or the grey object is taller than the blue structure), the grey object turns **Red (2)**.\n\n**Application to Test Input:**\n\n*   **Object 1 (Cols 1-2):**\n    *   Pixels: (8,1), (9,1), (9,2), (10,2).\n    *   Shape: A \"step\" shape (height 3).\n    *   This shape was observed in Training Example 2 (Object 2), where it remained Grey. This implies the shape exists in the Blue pattern (likely formed by diagonal connections or a specific configuration). Since it's not directly above (Blue at cols 1-2 is not this shape), it remains **Grey (5)**.\n\n*   **Object 2 (Cols 4-5):**\n    *   Pixels: (7,5), (8,4), (8,5), (9,4), (10,4).\n    *   Height: 4 rows (7, 8, 9, 10).\n    *   The Blue structure in the Test Input only spans rows 2, 3, and 4 (Height 3).\n    *   Since the grey object is taller than any possible blue shape, it cannot match.\n    *   Result: Turns **Red (2)**.\n\n*   **Object 3 (Cols 7-8):**\n    *   Pixels: (9,7), (9,8), (10,7), (10,8).\n    *   Shape: 2x2 Square.\n    *   There is no 2x2 solid block of 1s in the Test Input Blue pixels (checked cols 1, 4, 7, 10).\n    *   Result: Turns **Red (2)**.\n\n*   **Object 4 (Col 10):**\n    *   Pixels: (8,10), (9,10), (10,10).\n    *   Shape: Vertical line of height 3.\n    *   This shape exists in the Blue pixels at Column 1 (Rows 2,3,4) and Column 7 (Rows 2,3,4).\n    *   The shape at Column 10 of Blue is not a vertical line of 3 (Row 2 and 3 are 0). Thus, the match is not directly above.\n    *   Result: Remains **Grey (5)**.\n\n**Final Output Generation:**\n\n[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0], [0, 1, 0, 1, 1, 0, 0, 1, 0, 1, 0, 0], [1, 1, 0, 0, 1, 1, 1, 1, 0, 1, 1, 1], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0], [0, 5, 0, 0, 2, 2, 0, 0, 0, 0, 5, 0], [0, 5, 5, 0, 2, 0, 0, 2, 2, 0, 5, 0], [0, 0, 5, 0, 2, 0, 0, 2, 2, 0, 5, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]",
+        "finish_reason": "STOP"
+      },
+      "correct": false
+    }
+  }
+]

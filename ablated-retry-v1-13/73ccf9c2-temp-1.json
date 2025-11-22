@@ -1,0 +1,333 @@
+[
+  {
+    "attempt_2": {
+      "answer": [
+        [
+          0,
+          0,
+          8,
+          0,
+          8
+        ],
+        [
+          8,
+          8,
+          8,
+          8,
+          8
+        ],
+        [
+          0,
+          0,
+          8,
+          0,
+          8
+        ],
+        [
+          0,
+          8,
+          8,
+          8,
+          0
+        ],
+        [
+          8,
+          0,
+          8,
+          0,
+          8
+        ],
+        [
+          8,
+          8,
+          8,
+          8,
+          8
+        ],
+        [
+          0,
+          8,
+          8,
+          8,
+          0
+        ]
+      ],
+      "metadata": {
+        "model": "gemini-3-pro-preview",
+        "provider": "gemini",
+        "start_timestamp": "2025-11-22T10:38:33.824661+00:00",
+        "end_timestamp": "2025-11-22T10:40:32.299629+00:00",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "user",
+              "content": "You are participating in a puzzle solving competition. You are an expert at solving puzzles.\n\nBelow is a list of input and output pairs with a pattern. Your goal is to identify the pattern or transformation in the training examples that maps the input to the output, then apply that pattern to the test input to give a final output.\n\nRespond in the format of the training output examples\n\n--Training Examples--\n--Example 0-- \n\n INPUT: \n\n[[0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 1, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]\n\nOUTPUT: \n\n[[0, 0, 1, 1], [0, 1, 1, 1], [1, 1, 1, 0], [0, 1, 0, 0]]\n\n--Example 1-- \n\n INPUT: \n\n[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 2, 2, 0, 2, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 2, 2, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [2, 2, 2, 2, 0, 2, 2, 2, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 2, 2, 2, 2, 2, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 2, 2, 2, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 2, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 2, 0, 2, 2, 2, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 2, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 2, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0], [0, 0, 2, 2, 2, 2, 2, 0, 0, 0, 0, 0, 0, 2, 2, 2, 0, 0, 0, 0, 0], [0, 0, 0, 2, 0, 2, 0, 0, 0, 0, 0, 0, 2, 0, 2, 0, 2, 0, 0, 0, 0], [0, 0, 2, 2, 2, 2, 2, 0, 0, 0, 0, 0, 0, 2, 2, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]\n\nOUTPUT: \n\n[[0, 0, 0, 2, 0], [0, 2, 2, 2, 0], [2, 0, 2, 0, 2], [0, 2, 2, 0, 0]]\n\n--Example 2-- \n\n INPUT: \n\n[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 0, 0, 0, 0, 0, 0], [0, 0, 3, 0, 0, 0, 3, 0, 0, 0, 0, 3, 0, 3, 0, 3, 0, 0, 0, 0], [0, 0, 3, 3, 3, 3, 3, 0, 0, 0, 0, 3, 3, 3, 3, 3, 0, 0, 0, 0], [0, 0, 0, 3, 0, 3, 0, 0, 0, 0, 0, 3, 0, 3, 0, 3, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 0, 3, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 0, 0, 3, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 3, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 3, 3, 3, 3, 3], [0, 0, 0, 0, 3, 0, 0, 0, 0, 0, 3, 0, 0, 0, 0, 3, 0, 0, 3, 0], [0, 0, 0, 0, 0, 3, 0, 3, 0, 3, 0, 0, 0, 0, 0, 0, 3, 3, 0, 0], [0, 0, 0, 0, 0, 0, 3, 3, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 3, 3, 3, 3, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]\n\nOUTPUT: \n\n[[3, 0, 0, 0, 0, 0, 3], [0, 3, 0, 3, 0, 3, 0], [0, 0, 3, 3, 3, 0, 0], [0, 3, 3, 3, 3, 3, 0], [0, 0, 0, 0, 3, 0, 0]]\n\n\n--End of Training Examples--\n\n--Test Input--\n[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 8, 8, 8, 8, 0, 0, 0, 0, 0, 8, 0, 0, 8, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 8, 8, 0, 0, 0, 0, 0, 0, 0, 8, 8, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 8, 0, 0, 8, 0, 0, 0, 0, 0, 8, 8, 8, 8, 0, 0, 0, 0, 0, 0], [0, 0, 8, 8, 8, 8, 8, 8, 0, 0, 0, 0, 8, 0, 0, 8, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 8, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 8, 0, 0, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 8, 0, 8, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 8, 8, 8, 8, 8, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 8, 0, 8, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 8, 8, 8, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 8, 0, 8, 0, 8, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 8, 8, 8, 8, 8, 0, 0, 0, 0], [0, 0, 0, 0, 0, 8, 8, 0, 0, 0, 0, 0, 0, 0, 8, 8, 8, 0, 0, 0, 0, 0], [0, 0, 0, 0, 8, 0, 0, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 8, 8, 8, 8, 8, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 8, 0, 8, 8, 0, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]\n--End of Test Input--\n\nYour response:"
+            }
+          },
+          {
+            "index": 1,
+            "message": {
+              "role": "assistant",
+              "content": "Based on the analysis of the training examples, the pattern is to identify all connected components (shapes) in the grid and find the one that is **asymmetric** with respect to the vertical axis. In all training examples, there are multiple shapes that are vertically symmetric, and exactly one shape that is not. The output is the cropping of that unique asymmetric shape.\n\n**Step-by-step derivation for the Test Input:**\n\n1.  **Identify Connected Components:**\n    The input grid contains shapes made of the number `8`. Let's inspect them:\n    \n    *   **Top Left (Rows 1-6, Cols 2-7):**\n        *   Row 1: `0 0 0 8 8 8 8 0` (Cols 3-6)\n        *   Row 2: `0 0 0 0 8 8 0 0` (Cols 4-5)\n        *   Row 3: `0 0 0 8 0 0 8 0` (Cols 3, 6)\n        *   ...\n        *   This shape is symmetric around the vertical axis between columns 4 and 5.\n\n    *   **Top Right (Rows 1-4, Cols 12-15):**\n        *   Row 1: `8 0 0 8` (Cols 12, 15)\n        *   Row 2: `0 8 8 0` (Cols 13, 14)\n        *   Row 3: `8 8 8 8` (Cols 12-15)\n        *   ...\n        *   This shape is symmetric around the vertical axis at column 13.5.\n\n    *   **Bottom Left (Rows 14-17, Cols 3-8):**\n        *   Row 14: `0 0 8 8 0 0` (Cols 5, 6)\n        *   Row 15: `0 8 0 0 8 0` (Cols 4, 7)\n        *   Row 16: `8 8 8 8 8 8` (Cols 3-8)\n        *   ...\n        *   This shape is symmetric around the vertical axis at column 5.5.\n\n    *   **Bottom Right (Rows 8-14, Cols 13-17):**\n        *   Row 8: `0 0 8 0 8` (Indices relative to start col 13: `2` and `4`. In grid: Cols 15, 17)\n        *   Row 9: `8 8 8 8 8` (Cols 13-17)\n        *   Row 10: `0 0 8 0 8` (Cols 15, 17)\n        *   Row 11: `0 8 8 8 0` (Cols 14-16)\n        *   Row 12: `8 0 8 0 8` (Cols 13, 15, 17)\n        *   ...\n        *   Let's check for symmetry. The widest part is columns 13-17 (width 5), so the axis of symmetry would be column 15.\n        *   Row 9 (`8 8 8 8 8`), Row 11 (`0 8 8 8 0`), Row 13 (`8 8 8 8 8`) are symmetric around 15.\n        *   However, Row 8 has `8`s at 15 and 17. It has a `0` at 13. This is **asymmetric** (right side has pixel, left side does not).\n        *   Similarly, Row 10 has `8`s at 15 and 17, but `0` at 13. Asymmetric.\n        *   Therefore, this is the target shape.\n\n2.  **Extract the Target Shape:**\n    We crop the bounding box of the Bottom Right shape.\n    *   **Rows:** 8 to 14 (inclusive)\n    *   **Cols:** 13 to 17 (inclusive)\n\n    *   Input Row 8 (cols 13-17): `0 0 8 0 8`\n    *   Input Row 9 (cols 13-17): `8 8 8 8 8`\n    *   Input Row 10 (cols 13-17): `0 0 8 0 8`\n    *   Input Row 11 (cols 13-17): `0 8 8 8 0`\n    *   Input Row 12 (cols 13-17): `8 0 8 0 8`\n    *   Input Row 13 (cols 13-17): `8 8 8 8 8`\n    *   Input Row 14 (cols 13-17): `0 8 8 8 0`\n\n3.  **Construct Output:**\n    Combine the extracted rows into the final list of lists.\n\nOUTPUT: \n\n[[0, 0, 8, 0, 8], [8, 8, 8, 8, 8], [0, 0, 8, 0, 8], [0, 8, 8, 8, 0], [8, 0, 8, 0, 8], [8, 8, 8, 8, 8], [0, 8, 8, 8, 0]]"
+            }
+          }
+        ],
+        "reasoning_summary": null,
+        "kwargs": {
+          "temperature": 1.0,
+          "max_output_tokens": 65536
+        },
+        "usage": {
+          "prompt_tokens": 5932,
+          "completion_tokens": 1303,
+          "total_tokens": 21394,
+          "completion_tokens_details": {
+            "reasoning_tokens": 14159,
+            "accepted_prediction_tokens": 1303,
+            "rejected_prediction_tokens": 0
+          }
+        },
+        "cost": {},
+        "task_id": "73ccf9c2",
+        "pair_index": 0,
+        "test_id": "original-prompt-ablations",
+        "raw_text": "Based on the analysis of the training examples, the pattern is to identify all connected components (shapes) in the grid and find the one that is **asymmetric** with respect to the vertical axis. In all training examples, there are multiple shapes that are vertically symmetric, and exactly one shape that is not. The output is the cropping of that unique asymmetric shape.\n\n**Step-by-step derivation for the Test Input:**\n\n1.  **Identify Connected Components:**\n    The input grid contains shapes made of the number `8`. Let's inspect them:\n    \n    *   **Top Left (Rows 1-6, Cols 2-7):**\n        *   Row 1: `0 0 0 8 8 8 8 0` (Cols 3-6)\n        *   Row 2: `0 0 0 0 8 8 0 0` (Cols 4-5)\n        *   Row 3: `0 0 0 8 0 0 8 0` (Cols 3, 6)\n        *   ...\n        *   This shape is symmetric around the vertical axis between columns 4 and 5.\n\n    *   **Top Right (Rows 1-4, Cols 12-15):**\n        *   Row 1: `8 0 0 8` (Cols 12, 15)\n        *   Row 2: `0 8 8 0` (Cols 13, 14)\n        *   Row 3: `8 8 8 8` (Cols 12-15)\n        *   ...\n        *   This shape is symmetric around the vertical axis at column 13.5.\n\n    *   **Bottom Left (Rows 14-17, Cols 3-8):**\n        *   Row 14: `0 0 8 8 0 0` (Cols 5, 6)\n        *   Row 15: `0 8 0 0 8 0` (Cols 4, 7)\n        *   Row 16: `8 8 8 8 8 8` (Cols 3-8)\n        *   ...\n        *   This shape is symmetric around the vertical axis at column 5.5.\n\n    *   **Bottom Right (Rows 8-14, Cols 13-17):**\n        *   Row 8: `0 0 8 0 8` (Indices relative to start col 13: `2` and `4`. In grid: Cols 15, 17)\n        *   Row 9: `8 8 8 8 8` (Cols 13-17)\n        *   Row 10: `0 0 8 0 8` (Cols 15, 17)\n        *   Row 11: `0 8 8 8 0` (Cols 14-16)\n        *   Row 12: `8 0 8 0 8` (Cols 13, 15, 17)\n        *   ...\n        *   Let's check for symmetry. The widest part is columns 13-17 (width 5), so the axis of symmetry would be column 15.\n        *   Row 9 (`8 8 8 8 8`), Row 11 (`0 8 8 8 0`), Row 13 (`8 8 8 8 8`) are symmetric around 15.\n        *   However, Row 8 has `8`s at 15 and 17. It has a `0` at 13. This is **asymmetric** (right side has pixel, left side does not).\n        *   Similarly, Row 10 has `8`s at 15 and 17, but `0` at 13. Asymmetric.\n        *   Therefore, this is the target shape.\n\n2.  **Extract the Target Shape:**\n    We crop the bounding box of the Bottom Right shape.\n    *   **Rows:** 8 to 14 (inclusive)\n    *   **Cols:** 13 to 17 (inclusive)\n\n    *   Input Row 8 (cols 13-17): `0 0 8 0 8`\n    *   Input Row 9 (cols 13-17): `8 8 8 8 8`\n    *   Input Row 10 (cols 13-17): `0 0 8 0 8`\n    *   Input Row 11 (cols 13-17): `0 8 8 8 0`\n    *   Input Row 12 (cols 13-17): `8 0 8 0 8`\n    *   Input Row 13 (cols 13-17): `8 8 8 8 8`\n    *   Input Row 14 (cols 13-17): `0 8 8 8 0`\n\n3.  **Construct Output:**\n    Combine the extracted rows into the final list of lists.\n\nOUTPUT: \n\n[[0, 0, 8, 0, 8], [8, 8, 8, 8, 8], [0, 0, 8, 0, 8], [0, 8, 8, 8, 0], [8, 0, 8, 0, 8], [8, 8, 8, 8, 8], [0, 8, 8, 8, 0]]",
+        "finish_reason": "STOP"
+      },
+      "correct": true
+    },
+    "attempt_3": {
+      "answer": [
+        [
+          0,
+          0,
+          8,
+          8,
+          0,
+          0
+        ],
+        [
+          0,
+          8,
+          0,
+          0,
+          8,
+          0
+        ],
+        [
+          8,
+          8,
+          8,
+          8,
+          8,
+          8
+        ],
+        [
+          8,
+          0,
+          8,
+          8,
+          0,
+          8
+        ]
+      ],
+      "metadata": {
+        "model": "gemini-3-pro-preview",
+        "provider": "gemini",
+        "start_timestamp": "2025-11-22T10:38:33.826727+00:00",
+        "end_timestamp": "2025-11-22T10:40:35.024243+00:00",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "user",
+              "content": "You are participating in a puzzle solving competition. You are an expert at solving puzzles.\n\nBelow is a list of input and output pairs with a pattern. Your goal is to identify the pattern or transformation in the training examples that maps the input to the output, then apply that pattern to the test input to give a final output.\n\nRespond in the format of the training output examples\n\n--Training Examples--\n--Example 0-- \n\n INPUT: \n\n[[0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 1, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]\n\nOUTPUT: \n\n[[0, 0, 1, 1], [0, 1, 1, 1], [1, 1, 1, 0], [0, 1, 0, 0]]\n\n--Example 1-- \n\n INPUT: \n\n[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 2, 2, 0, 2, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 2, 2, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [2, 2, 2, 2, 0, 2, 2, 2, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 2, 2, 2, 2, 2, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 2, 2, 2, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 2, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 2, 0, 2, 2, 2, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 2, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 2, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0], [0, 0, 2, 2, 2, 2, 2, 0, 0, 0, 0, 0, 0, 2, 2, 2, 0, 0, 0, 0, 0], [0, 0, 0, 2, 0, 2, 0, 0, 0, 0, 0, 0, 2, 0, 2, 0, 2, 0, 0, 0, 0], [0, 0, 2, 2, 2, 2, 2, 0, 0, 0, 0, 0, 0, 2, 2, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]\n\nOUTPUT: \n\n[[0, 0, 0, 2, 0], [0, 2, 2, 2, 0], [2, 0, 2, 0, 2], [0, 2, 2, 0, 0]]\n\n--Example 2-- \n\n INPUT: \n\n[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 0, 0, 0, 0, 0, 0], [0, 0, 3, 0, 0, 0, 3, 0, 0, 0, 0, 3, 0, 3, 0, 3, 0, 0, 0, 0], [0, 0, 3, 3, 3, 3, 3, 0, 0, 0, 0, 3, 3, 3, 3, 3, 0, 0, 0, 0], [0, 0, 0, 3, 0, 3, 0, 0, 0, 0, 0, 3, 0, 3, 0, 3, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 0, 3, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 0, 0, 3, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 3, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 3, 3, 3, 3, 3], [0, 0, 0, 0, 3, 0, 0, 0, 0, 0, 3, 0, 0, 0, 0, 3, 0, 0, 3, 0], [0, 0, 0, 0, 0, 3, 0, 3, 0, 3, 0, 0, 0, 0, 0, 0, 3, 3, 0, 0], [0, 0, 0, 0, 0, 0, 3, 3, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 3, 3, 3, 3, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]\n\nOUTPUT: \n\n[[3, 0, 0, 0, 0, 0, 3], [0, 3, 0, 3, 0, 3, 0], [0, 0, 3, 3, 3, 0, 0], [0, 3, 3, 3, 3, 3, 0], [0, 0, 0, 0, 3, 0, 0]]\n\n\n--End of Training Examples--\n\n--Test Input--\n[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 8, 8, 8, 8, 0, 0, 0, 0, 0, 8, 0, 0, 8, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 8, 8, 0, 0, 0, 0, 0, 0, 0, 8, 8, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 8, 0, 0, 8, 0, 0, 0, 0, 0, 8, 8, 8, 8, 0, 0, 0, 0, 0, 0], [0, 0, 8, 8, 8, 8, 8, 8, 0, 0, 0, 0, 8, 0, 0, 8, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 8, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 8, 0, 0, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 8, 0, 8, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 8, 8, 8, 8, 8, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 8, 0, 8, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 8, 8, 8, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 8, 0, 8, 0, 8, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 8, 8, 8, 8, 8, 0, 0, 0, 0], [0, 0, 0, 0, 0, 8, 8, 0, 0, 0, 0, 0, 0, 0, 8, 8, 8, 0, 0, 0, 0, 0], [0, 0, 0, 0, 8, 0, 0, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 8, 8, 8, 8, 8, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 8, 0, 8, 8, 0, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]\n--End of Test Input--\n\nYour response:"
+            }
+          },
+          {
+            "index": 1,
+            "message": {
+              "role": "assistant",
+              "content": "Based on the analysis of the training examples, the pattern is to identify the connected component (shape) in the grid that is the \"bottom-most\". Specifically, this is defined as the shape whose bounding box starts at the highest row index (i.e., the shape that starts furthest down the grid).\n\n**Verification:**\n- **Example 0:** The target shape is the bottom-left one, which starts at row 15. Other shapes start at rows 0, 5, and 11.\n- **Example 1:** The target shape is the bottom-right one, which starts at row 14. The bottom-left shape starts at row 13.\n- **Example 2:** The target shape is the bottom-left one, which starts at row 12. The bottom-right shape starts at row 9.\n\n**Applying to Test Input:**\n1.  We identify the connected components in the test grid (color 8).\n2.  **Component A (Top-Left):** Rows 1-6. Starts at Row 1.\n3.  **Component B (Top-Right):** Rows 1-4. Starts at Row 1.\n4.  **Component C (Right side):** Rows 8-14. Starts at Row 8.\n5.  **Component D (Left side):** Rows 14-17. Starts at Row 14.\n\nComponent D has the highest start row index (14). We extract this shape.\n\n**Extraction of Component D:**\n-   **Rows:** 14 to 17.\n-   **Columns:** Spans from index 3 to index 8. (Width = 6).\n\n**Pixel Mapping (relative to bounding box origin at row 14, col 3):**\n-   **Row 14 (Input):** `... 8 8 ...` at indices 5, 6.\n    -   Relative: `(5-3)=2`, `(6-3)=3`.\n    -   Output Row 0: `[0, 0, 8, 8, 0, 0]`\n-   **Row 15 (Input):** `... 8 . . 8 ...` at indices 4, 7.\n    -   Relative: `(4-3)=1`, `(7-3)=4`.\n    -   Output Row 1: `[0, 8, 0, 0, 8, 0]`\n-   **Row 16 (Input):** `... 8 8 8 8 8 8 ...` at indices 3-8.\n    -   Relative: `0` to `5`.\n    -   Output Row 2: `[8, 8, 8, 8, 8, 8]`\n-   **Row 17 (Input):** `... 8 . 8 8 . 8 ...` at indices 3, 5, 6, 8.\n    -   Relative: `0`, `2`, `3`, `5`.\n    -   Output Row 3: `[8, 0, 8, 8, 0, 8]`\n\n[[0, 0, 8, 8, 0, 0], [0, 8, 0, 0, 8, 0], [8, 8, 8, 8, 8, 8], [8, 0, 8, 8, 0, 8]]"
+            }
+          }
+        ],
+        "reasoning_summary": null,
+        "kwargs": {
+          "temperature": 1.0,
+          "max_output_tokens": 65536
+        },
+        "usage": {
+          "prompt_tokens": 5932,
+          "completion_tokens": 783,
+          "total_tokens": 21797,
+          "completion_tokens_details": {
+            "reasoning_tokens": 15082,
+            "accepted_prediction_tokens": 783,
+            "rejected_prediction_tokens": 0
+          }
+        },
+        "cost": {},
+        "task_id": "73ccf9c2",
+        "pair_index": 0,
+        "test_id": "original-prompt-ablations",
+        "raw_text": "Based on the analysis of the training examples, the pattern is to identify the connected component (shape) in the grid that is the \"bottom-most\". Specifically, this is defined as the shape whose bounding box starts at the highest row index (i.e., the shape that starts furthest down the grid).\n\n**Verification:**\n- **Example 0:** The target shape is the bottom-left one, which starts at row 15. Other shapes start at rows 0, 5, and 11.\n- **Example 1:** The target shape is the bottom-right one, which starts at row 14. The bottom-left shape starts at row 13.\n- **Example 2:** The target shape is the bottom-left one, which starts at row 12. The bottom-right shape starts at row 9.\n\n**Applying to Test Input:**\n1.  We identify the connected components in the test grid (color 8).\n2.  **Component A (Top-Left):** Rows 1-6. Starts at Row 1.\n3.  **Component B (Top-Right):** Rows 1-4. Starts at Row 1.\n4.  **Component C (Right side):** Rows 8-14. Starts at Row 8.\n5.  **Component D (Left side):** Rows 14-17. Starts at Row 14.\n\nComponent D has the highest start row index (14). We extract this shape.\n\n**Extraction of Component D:**\n-   **Rows:** 14 to 17.\n-   **Columns:** Spans from index 3 to index 8. (Width = 6).\n\n**Pixel Mapping (relative to bounding box origin at row 14, col 3):**\n-   **Row 14 (Input):** `... 8 8 ...` at indices 5, 6.\n    -   Relative: `(5-3)=2`, `(6-3)=3`.\n    -   Output Row 0: `[0, 0, 8, 8, 0, 0]`\n-   **Row 15 (Input):** `... 8 . . 8 ...` at indices 4, 7.\n    -   Relative: `(4-3)=1`, `(7-3)=4`.\n    -   Output Row 1: `[0, 8, 0, 0, 8, 0]`\n-   **Row 16 (Input):** `... 8 8 8 8 8 8 ...` at indices 3-8.\n    -   Relative: `0` to `5`.\n    -   Output Row 2: `[8, 8, 8, 8, 8, 8]`\n-   **Row 17 (Input):** `... 8 . 8 8 . 8 ...` at indices 3, 5, 6, 8.\n    -   Relative: `0`, `2`, `3`, `5`.\n    -   Output Row 3: `[8, 0, 8, 8, 0, 8]`\n\n[[0, 0, 8, 8, 0, 0], [0, 8, 0, 0, 8, 0], [8, 8, 8, 8, 8, 8], [8, 0, 8, 8, 0, 8]]",
+        "finish_reason": "STOP"
+      },
+      "correct": false
+    },
+    "attempt_4": {
+      "answer": [
+        [
+          0,
+          0,
+          8,
+          8,
+          0,
+          0
+        ],
+        [
+          0,
+          8,
+          0,
+          0,
+          8,
+          0
+        ],
+        [
+          8,
+          8,
+          8,
+          8,
+          8,
+          8
+        ],
+        [
+          8,
+          0,
+          8,
+          8,
+          0,
+          8
+        ]
+      ],
+      "metadata": {
+        "model": "gemini-3-pro-preview",
+        "provider": "gemini",
+        "start_timestamp": "2025-11-22T10:38:33.840578+00:00",
+        "end_timestamp": "2025-11-22T10:40:44.140519+00:00",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "user",
+              "content": "You are participating in a puzzle solving competition. You are an expert at solving puzzles.\n\nBelow is a list of input and output pairs with a pattern. Your goal is to identify the pattern or transformation in the training examples that maps the input to the output, then apply that pattern to the test input to give a final output.\n\nRespond in the format of the training output examples\n\n--Training Examples--\n--Example 0-- \n\n INPUT: \n\n[[0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 1, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]\n\nOUTPUT: \n\n[[0, 0, 1, 1], [0, 1, 1, 1], [1, 1, 1, 0], [0, 1, 0, 0]]\n\n--Example 1-- \n\n INPUT: \n\n[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 2, 2, 0, 2, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 2, 2, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [2, 2, 2, 2, 0, 2, 2, 2, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 2, 2, 2, 2, 2, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 2, 2, 2, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 2, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 2, 0, 2, 2, 2, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 2, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 2, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0], [0, 0, 2, 2, 2, 2, 2, 0, 0, 0, 0, 0, 0, 2, 2, 2, 0, 0, 0, 0, 0], [0, 0, 0, 2, 0, 2, 0, 0, 0, 0, 0, 0, 2, 0, 2, 0, 2, 0, 0, 0, 0], [0, 0, 2, 2, 2, 2, 2, 0, 0, 0, 0, 0, 0, 2, 2, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]\n\nOUTPUT: \n\n[[0, 0, 0, 2, 0], [0, 2, 2, 2, 0], [2, 0, 2, 0, 2], [0, 2, 2, 0, 0]]\n\n--Example 2-- \n\n INPUT: \n\n[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 0, 0, 0, 0, 0, 0], [0, 0, 3, 0, 0, 0, 3, 0, 0, 0, 0, 3, 0, 3, 0, 3, 0, 0, 0, 0], [0, 0, 3, 3, 3, 3, 3, 0, 0, 0, 0, 3, 3, 3, 3, 3, 0, 0, 0, 0], [0, 0, 0, 3, 0, 3, 0, 0, 0, 0, 0, 3, 0, 3, 0, 3, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 0, 3, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 0, 0, 3, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 3, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 3, 3, 3, 3, 3], [0, 0, 0, 0, 3, 0, 0, 0, 0, 0, 3, 0, 0, 0, 0, 3, 0, 0, 3, 0], [0, 0, 0, 0, 0, 3, 0, 3, 0, 3, 0, 0, 0, 0, 0, 0, 3, 3, 0, 0], [0, 0, 0, 0, 0, 0, 3, 3, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 3, 3, 3, 3, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]\n\nOUTPUT: \n\n[[3, 0, 0, 0, 0, 0, 3], [0, 3, 0, 3, 0, 3, 0], [0, 0, 3, 3, 3, 0, 0], [0, 3, 3, 3, 3, 3, 0], [0, 0, 0, 0, 3, 0, 0]]\n\n\n--End of Training Examples--\n\n--Test Input--\n[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 8, 8, 8, 8, 0, 0, 0, 0, 0, 8, 0, 0, 8, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 8, 8, 0, 0, 0, 0, 0, 0, 0, 8, 8, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 8, 0, 0, 8, 0, 0, 0, 0, 0, 8, 8, 8, 8, 0, 0, 0, 0, 0, 0], [0, 0, 8, 8, 8, 8, 8, 8, 0, 0, 0, 0, 8, 0, 0, 8, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 8, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 8, 0, 0, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 8, 0, 8, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 8, 8, 8, 8, 8, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 8, 0, 8, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 8, 8, 8, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 8, 0, 8, 0, 8, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 8, 8, 8, 8, 8, 0, 0, 0, 0], [0, 0, 0, 0, 0, 8, 8, 0, 0, 0, 0, 0, 0, 0, 8, 8, 8, 0, 0, 0, 0, 0], [0, 0, 0, 0, 8, 0, 0, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 8, 8, 8, 8, 8, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 8, 0, 8, 8, 0, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]\n--End of Test Input--\n\nYour response:"
+            }
+          },
+          {
+            "index": 1,
+            "message": {
+              "role": "assistant",
+              "content": "Based on the analysis of the training examples, the pattern is to identify the connected component (shape) in the input grid that originates in the **bottom-most** position (i.e., has the largest starting row index). The output is then the bounding box of this shape, cropped from the grid.\n\nHere is the step-by-step application to the Test Input:\n1.  **Identify Connected Components:**\n    *   There is a large noisy shape at the top (Rows 1-4).\n    *   There is a structured shape on the right side (Shape A) spanning Rows 8-14.\n    *   There is a structured shape on the bottom-left side (Shape B) spanning Rows 14-17.\n\n2.  **Determine the Target Shape:**\n    *   Shape A starts at Row 8.\n    *   Shape B starts at Row 14.\n    *   Comparing the starting rows, Shape B (Row 14) is lower than Shape A (Row 8) and the top noise (Row 1).\n    *   Therefore, Shape B is the target.\n\n3.  **Extract Shape B:**\n    *   **Rows:** 14 to 17.\n    *   **Columns:** The non-zero elements in these rows for this component are at indices 3 to 8.\n    *   **Row 14:** Indices 5, 6 are `8`. In the window [3, 9), this is `[0, 0, 8, 8, 0, 0]`.\n    *   **Row 15:** Indices 4, 7 are `8`. In the window [3, 9), this is `[0, 8, 0, 0, 8, 0]`.\n    *   **Row 16:** Indices 3 through 8 are `8`. In the window [3, 9), this is `[8, 8, 8, 8, 8, 8]`.\n    *   **Row 17:** Indices 3, 5, 6, 8 are `8`. In the window [3, 9), this is `[8, 0, 8, 8, 0, 8]`.\n\n4.  **Construct Final Output:**\n    Combine the extracted rows into the final grid.\n\n[[0, 0, 8, 8, 0, 0], [0, 8, 0, 0, 8, 0], [8, 8, 8, 8, 8, 8], [8, 0, 8, 8, 0, 8]]"
+            }
+          }
+        ],
+        "reasoning_summary": null,
+        "kwargs": {
+          "temperature": 1.0,
+          "max_output_tokens": 65536
+        },
+        "usage": {
+          "prompt_tokens": 5932,
+          "completion_tokens": 596,
+          "total_tokens": 22125,
+          "completion_tokens_details": {
+            "reasoning_tokens": 15597,
+            "accepted_prediction_tokens": 596,
+            "rejected_prediction_tokens": 0
+          }
+        },
+        "cost": {},
+        "task_id": "73ccf9c2",
+        "pair_index": 0,
+        "test_id": "original-prompt-ablations",
+        "raw_text": "Based on the analysis of the training examples, the pattern is to identify the connected component (shape) in the input grid that originates in the **bottom-most** position (i.e., has the largest starting row index). The output is then the bounding box of this shape, cropped from the grid.\n\nHere is the step-by-step application to the Test Input:\n1.  **Identify Connected Components:**\n    *   There is a large noisy shape at the top (Rows 1-4).\n    *   There is a structured shape on the right side (Shape A) spanning Rows 8-14.\n    *   There is a structured shape on the bottom-left side (Shape B) spanning Rows 14-17.\n\n2.  **Determine the Target Shape:**\n    *   Shape A starts at Row 8.\n    *   Shape B starts at Row 14.\n    *   Comparing the starting rows, Shape B (Row 14) is lower than Shape A (Row 8) and the top noise (Row 1).\n    *   Therefore, Shape B is the target.\n\n3.  **Extract Shape B:**\n    *   **Rows:** 14 to 17.\n    *   **Columns:** The non-zero elements in these rows for this component are at indices 3 to 8.\n    *   **Row 14:** Indices 5, 6 are `8`. In the window [3, 9), this is `[0, 0, 8, 8, 0, 0]`.\n    *   **Row 15:** Indices 4, 7 are `8`. In the window [3, 9), this is `[0, 8, 0, 0, 8, 0]`.\n    *   **Row 16:** Indices 3 through 8 are `8`. In the window [3, 9), this is `[8, 8, 8, 8, 8, 8]`.\n    *   **Row 17:** Indices 3, 5, 6, 8 are `8`. In the window [3, 9), this is `[8, 0, 8, 8, 0, 8]`.\n\n4.  **Construct Final Output:**\n    Combine the extracted rows into the final grid.\n\n[[0, 0, 8, 8, 0, 0], [0, 8, 0, 0, 8, 0], [8, 8, 8, 8, 8, 8], [8, 0, 8, 8, 0, 8]]",
+        "finish_reason": "STOP"
+      },
+      "correct": false
+    },
+    "attempt_1": {
+      "answer": [
+        [
+          8,
+          0,
+          0,
+          8
+        ],
+        [
+          0,
+          8,
+          8,
+          0
+        ],
+        [
+          8,
+          8,
+          8,
+          8
+        ],
+        [
+          8,
+          0,
+          0,
+          8
+        ]
+      ],
+      "metadata": {
+        "model": "gemini-3-pro-preview",
+        "provider": "gemini",
+        "start_timestamp": "2025-11-22T10:38:33.827345+00:00",
+        "end_timestamp": "2025-11-22T10:41:13.087559+00:00",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "user",
+              "content": "You are participating in a puzzle solving competition. You are an expert at solving puzzles.\n\nBelow is a list of input and output pairs with a pattern. Your goal is to identify the pattern or transformation in the training examples that maps the input to the output, then apply that pattern to the test input to give a final output.\n\nRespond in the format of the training output examples\n\n--Training Examples--\n--Example 0-- \n\n INPUT: \n\n[[0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 1, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]\n\nOUTPUT: \n\n[[0, 0, 1, 1], [0, 1, 1, 1], [1, 1, 1, 0], [0, 1, 0, 0]]\n\n--Example 1-- \n\n INPUT: \n\n[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 2, 2, 0, 2, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 2, 2, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [2, 2, 2, 2, 0, 2, 2, 2, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 2, 2, 2, 2, 2, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 2, 2, 2, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 2, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 2, 0, 2, 2, 2, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 2, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 2, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0], [0, 0, 2, 2, 2, 2, 2, 0, 0, 0, 0, 0, 0, 2, 2, 2, 0, 0, 0, 0, 0], [0, 0, 0, 2, 0, 2, 0, 0, 0, 0, 0, 0, 2, 0, 2, 0, 2, 0, 0, 0, 0], [0, 0, 2, 2, 2, 2, 2, 0, 0, 0, 0, 0, 0, 2, 2, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]\n\nOUTPUT: \n\n[[0, 0, 0, 2, 0], [0, 2, 2, 2, 0], [2, 0, 2, 0, 2], [0, 2, 2, 0, 0]]\n\n--Example 2-- \n\n INPUT: \n\n[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 0, 0, 0, 0, 0, 0], [0, 0, 3, 0, 0, 0, 3, 0, 0, 0, 0, 3, 0, 3, 0, 3, 0, 0, 0, 0], [0, 0, 3, 3, 3, 3, 3, 0, 0, 0, 0, 3, 3, 3, 3, 3, 0, 0, 0, 0], [0, 0, 0, 3, 0, 3, 0, 0, 0, 0, 0, 3, 0, 3, 0, 3, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 0, 3, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 0, 0, 3, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 3, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 3, 3, 3, 3, 3], [0, 0, 0, 0, 3, 0, 0, 0, 0, 0, 3, 0, 0, 0, 0, 3, 0, 0, 3, 0], [0, 0, 0, 0, 0, 3, 0, 3, 0, 3, 0, 0, 0, 0, 0, 0, 3, 3, 0, 0], [0, 0, 0, 0, 0, 0, 3, 3, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 3, 3, 3, 3, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]\n\nOUTPUT: \n\n[[3, 0, 0, 0, 0, 0, 3], [0, 3, 0, 3, 0, 3, 0], [0, 0, 3, 3, 3, 0, 0], [0, 3, 3, 3, 3, 3, 0], [0, 0, 0, 0, 3, 0, 0]]\n\n\n--End of Training Examples--\n\n--Test Input--\n[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 8, 8, 8, 8, 0, 0, 0, 0, 0, 8, 0, 0, 8, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 8, 8, 0, 0, 0, 0, 0, 0, 0, 8, 8, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 8, 0, 0, 8, 0, 0, 0, 0, 0, 8, 8, 8, 8, 0, 0, 0, 0, 0, 0], [0, 0, 8, 8, 8, 8, 8, 8, 0, 0, 0, 0, 8, 0, 0, 8, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 8, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 8, 0, 0, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 8, 0, 8, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 8, 8, 8, 8, 8, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 8, 0, 8, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 8, 8, 8, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 8, 0, 8, 0, 8, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 8, 8, 8, 8, 8, 0, 0, 0, 0], [0, 0, 0, 0, 0, 8, 8, 0, 0, 0, 0, 0, 0, 0, 8, 8, 8, 0, 0, 0, 0, 0], [0, 0, 0, 0, 8, 0, 0, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 8, 8, 8, 8, 8, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 8, 0, 8, 8, 0, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]\n--End of Test Input--\n\nYour response:"
+            }
+          },
+          {
+            "index": 1,
+            "message": {
+              "role": "assistant",
+              "content": "The goal of this puzzle is to identify a specific shape (connected component) from the input grid and output it as a minimal bounding box grid.\n\n**Pattern Analysis:**\n1.  **Identify Shapes:** The input grid contains multiple distinct shapes (blobs) formed by non-zero integers (colors).\n2.  **Filtering Criteria:** In all training examples, the selected shape satisfies a specific condition related to its area (number of non-zero pixels) and dimensions.\n    *   **Example 0:** The shapes have areas 14, 15, 10, and 9. The selected shape (Area 9) is the **smallest** one. It has a height of 4.\n    *   **Example 1:** The shapes have areas 20, 15, 16, and 9. The selected shape (Area 9) is the **smallest** one. It has a height of 4.\n    *   **Example 2:** The shapes have areas 14, 9, 16, and 14. The shape with Area 9 has a height of 3. The selected shape (Area 14) has a height of 5. This implies a constraint: **Height $\\ge$ 4**. Among the shapes satisfying this height constraint (Areas 14, 16, 14), the ones with Area 14 are the smallest. The tie-breaker between the two Area 14 shapes appears to be the one positioned lower in the grid.\n\n**Rule:** Identify all 8-way connected components. Filter out any component with a height less than 4. Select the component with the **minimum area**.\n\n**Application to Test Input:**\nWe extract the 8-way connected components (blobs) from the test grid (color 8):\n1.  **Blob 1 (Top Left):** Area 18, Height 6.\n2.  **Blob 2 (Top Right):** Area 10, Height 4.\n    *   Located at Rows 1-4, Columns 12-15.\n    *   Structure: `8 0 0 8`, `0 8 8 0`, `8 8 8 8`, `8 0 0 8`.\n3.  **Blob 3 (Bottom Right):** Area 23, Height 7.\n4.  **Blob 4 (Bottom Left):** Area 14, Height 4.\n\nAll blobs satisfy the `Height >= 4` constraint.\nComparing areas: 18, 10, 23, 14.\nThe minimum area is **10**.\nThis corresponds to **Blob 2**.\n\n**Extracted Shape (Blob 2):**\n*   Row 1 (Grid Row 1, Cols 12-15): `8 0 0 8`\n*   Row 2 (Grid Row 2, Cols 12-15): `0 8 8 0`\n*   Row 3 (Grid Row 3, Cols 12-15): `8 8 8 8`\n*   Row 4 (Grid Row 4, Cols 12-15): `8 0 0 8`\n\nThe output is the cropped grid of this shape.\n\n[[8, 0, 0, 8], [0, 8, 8, 0], [8, 8, 8, 8], [8, 0, 0, 8]]"
+            }
+          }
+        ],
+        "reasoning_summary": null,
+        "kwargs": {
+          "temperature": 1.0,
+          "max_output_tokens": 65536
+        },
+        "usage": {
+          "prompt_tokens": 5932,
+          "completion_tokens": 779,
+          "total_tokens": 25755,
+          "completion_tokens_details": {
+            "reasoning_tokens": 19044,
+            "accepted_prediction_tokens": 779,
+            "rejected_prediction_tokens": 0
+          }
+        },
+        "cost": {},
+        "task_id": "73ccf9c2",
+        "pair_index": 0,
+        "test_id": "original-prompt-ablations",
+        "raw_text": "The goal of this puzzle is to identify a specific shape (connected component) from the input grid and output it as a minimal bounding box grid.\n\n**Pattern Analysis:**\n1.  **Identify Shapes:** The input grid contains multiple distinct shapes (blobs) formed by non-zero integers (colors).\n2.  **Filtering Criteria:** In all training examples, the selected shape satisfies a specific condition related to its area (number of non-zero pixels) and dimensions.\n    *   **Example 0:** The shapes have areas 14, 15, 10, and 9. The selected shape (Area 9) is the **smallest** one. It has a height of 4.\n    *   **Example 1:** The shapes have areas 20, 15, 16, and 9. The selected shape (Area 9) is the **smallest** one. It has a height of 4.\n    *   **Example 2:** The shapes have areas 14, 9, 16, and 14. The shape with Area 9 has a height of 3. The selected shape (Area 14) has a height of 5. This implies a constraint: **Height $\\ge$ 4**. Among the shapes satisfying this height constraint (Areas 14, 16, 14), the ones with Area 14 are the smallest. The tie-breaker between the two Area 14 shapes appears to be the one positioned lower in the grid.\n\n**Rule:** Identify all 8-way connected components. Filter out any component with a height less than 4. Select the component with the **minimum area**.\n\n**Application to Test Input:**\nWe extract the 8-way connected components (blobs) from the test grid (color 8):\n1.  **Blob 1 (Top Left):** Area 18, Height 6.\n2.  **Blob 2 (Top Right):** Area 10, Height 4.\n    *   Located at Rows 1-4, Columns 12-15.\n    *   Structure: `8 0 0 8`, `0 8 8 0`, `8 8 8 8`, `8 0 0 8`.\n3.  **Blob 3 (Bottom Right):** Area 23, Height 7.\n4.  **Blob 4 (Bottom Left):** Area 14, Height 4.\n\nAll blobs satisfy the `Height >= 4` constraint.\nComparing areas: 18, 10, 23, 14.\nThe minimum area is **10**.\nThis corresponds to **Blob 2**.\n\n**Extracted Shape (Blob 2):**\n*   Row 1 (Grid Row 1, Cols 12-15): `8 0 0 8`\n*   Row 2 (Grid Row 2, Cols 12-15): `0 8 8 0`\n*   Row 3 (Grid Row 3, Cols 12-15): `8 8 8 8`\n*   Row 4 (Grid Row 4, Cols 12-15): `8 0 0 8`\n\nThe output is the cropped grid of this shape.\n\n[[8, 0, 0, 8], [0, 8, 8, 0], [8, 8, 8, 8], [8, 0, 0, 8]]",
+        "finish_reason": "STOP"
+      },
+      "correct": false
+    }
+  }
+]

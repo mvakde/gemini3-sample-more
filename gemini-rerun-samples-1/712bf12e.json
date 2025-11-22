@@ -1,0 +1,247 @@
+[
+  {
+    "attempt_3": {
+      "answer": [
+        [
+          0,
+          0,
+          0,
+          5,
+          2,
+          5,
+          0,
+          0,
+          0,
+          0,
+          0,
+          5,
+          5
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          2,
+          5,
+          0,
+          5,
+          0,
+          5,
+          5,
+          5,
+          2
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          2,
+          0,
+          5,
+          0,
+          0,
+          2,
+          0,
+          0,
+          0
+        ],
+        [
+          5,
+          0,
+          5,
+          0,
+          2,
+          0,
+          5,
+          5,
+          0,
+          2,
+          0,
+          0,
+          5
+        ],
+        [
+          0,
+          0,
+          5,
+          5,
+          2,
+          5,
+          0,
+          0,
+          0,
+          2,
+          0,
+          0,
+          5
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          2,
+          0,
+          0,
+          0,
+          5,
+          2,
+          5,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          5,
+          5,
+          2,
+          5,
+          0,
+          5,
+          0,
+          2,
+          0,
+          0,
+          0
+        ],
+        [
+          5,
+          0,
+          0,
+          0,
+          2,
+          5,
+          5,
+          0,
+          5,
+          2,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          5,
+          0,
+          0,
+          2,
+          0,
+          0,
+          0,
+          2,
+          5,
+          5,
+          0,
+          0
+        ],
+        [
+          0,
+          5,
+          0,
+          5,
+          2,
+          0,
+          0,
+          5,
+          2,
+          5,
+          2,
+          5,
+          0
+        ],
+        [
+          0,
+          5,
+          0,
+          2,
+          0,
+          0,
+          0,
+          2,
+          0,
+          5,
+          5,
+          2,
+          0
+        ],
+        [
+          5,
+          0,
+          5,
+          2,
+          5,
+          0,
+          5,
+          2,
+          0,
+          0,
+          0,
+          2,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          2,
+          0,
+          0,
+          0,
+          2,
+          0,
+          2,
+          5,
+          5,
+          0
+        ]
+      ],
+      "metadata": {
+        "model": "gemini-3-pro-preview",
+        "provider": "gemini",
+        "start_timestamp": "2025-11-21T07:05:05.308179+00:00",
+        "end_timestamp": "2025-11-21T07:10:48.485399+00:00",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "user",
+              "content": "You are participating in a puzzle solving competition. You are an expert at solving puzzles.\n\nBelow is a list of input and output pairs with a pattern. There is a pattern or transformation in the training examples that maps the input to the output. Now the test input differs slightly from the train input. Ideally a generalised transformation should have been applied to the test input to generate the test output. But the puzzle solver got confused and made a mistake. Figure out the mistake and generate the correct test output by correcting the mistake and applying the generalised transformation.\n\nRespond in the format of the output grids\n\n--Training Examples--\n--Example 0-- \n\nINPUT: \n\n[\n [0, 5, 0, 0, 0, 0, 0, 0, 0, 5, 0, 0, 0],\n [0, 5, 0, 0, 0, 5, 5, 0, 0, 0, 0, 0, 0],\n [5, 0, 0, 0, 0, 0, 0, 5, 0, 0, 0, 5, 0],\n [0, 0, 0, 0, 0, 5, 0, 0, 0, 0, 0, 0, 0],\n [0, 0, 0, 0, 5, 0, 0, 0, 0, 0, 0, 0, 5],\n [0, 0, 0, 0, 5, 0, 0, 0, 0, 0, 0, 0, 0],\n [5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 5],\n [0, 0, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],\n [0, 0, 5, 0, 0, 5, 0, 0, 5, 0, 0, 0, 0],\n [0, 5, 0, 0, 5, 0, 0, 5, 0, 0, 0, 0, 0],\n [0, 0, 0, 0, 0, 0, 5, 5, 0, 0, 5, 0, 0],\n [0, 0, 2, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0]\n]\n\nOUTPUT: \n\n[\n [0, 5, 0, 2, 0, 0, 0, 0, 0, 5, 2, 0, 0],\n [0, 5, 0, 2, 0, 5, 5, 0, 0, 2, 2, 0, 0],\n [5, 0, 0, 2, 0, 0, 2, 5, 0, 2, 0, 5, 0],\n [0, 0, 0, 2, 0, 5, 2, 0, 0, 2, 0, 0, 0],\n [0, 0, 0, 2, 5, 0, 2, 0, 0, 2, 0, 0, 5],\n [0, 0, 0, 2, 5, 0, 2, 0, 0, 2, 0, 0, 0],\n [5, 0, 0, 2, 0, 0, 2, 0, 0, 2, 0, 5, 5],\n [0, 0, 5, 2, 0, 0, 2, 0, 0, 2, 0, 0, 0],\n [0, 0, 5, 2, 0, 5, 2, 0, 5, 2, 0, 0, 0],\n [0, 5, 2, 2, 5, 2, 2, 5, 0, 2, 0, 0, 0],\n [0, 0, 2, 0, 0, 2, 5, 5, 0, 2, 5, 0, 0],\n [0, 0, 2, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0]\n]\n\n--Example 1-- \n\nINPUT: \n\n[\n [0, 0, 0, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0, 0],\n [0, 0, 0, 0, 0, 0, 0, 0, 5, 0, 0, 0, 5, 0],\n [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 0, 0],\n [0, 0, 5, 5, 0, 0, 0, 5, 5, 0, 0, 0, 0, 0],\n [0, 0, 5, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],\n [0, 0, 0, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0, 0],\n [0, 5, 5, 0, 0, 0, 0, 0, 0, 5, 0, 0, 0, 0],\n [5, 0, 5, 0, 0, 5, 0, 0, 0, 0, 0, 0, 0, 5],\n [5, 0, 0, 0, 5, 0, 5, 0, 0, 0, 0, 0, 0, 0],\n [5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 0, 0, 0],\n [0, 0, 5, 0, 0, 0, 5, 0, 0, 0, 5, 5, 0, 0],\n [0, 0, 0, 0, 0, 0, 0, 5, 0, 5, 5, 0, 0, 0],\n [5, 0, 2, 0, 0, 2, 0, 5, 5, 0, 2, 0, 0, 0]\n]\n\nOUTPUT: \n\n[\n [0, 0, 0, 0, 2, 0, 5, 0, 0, 0, 5, 0, 0, 2],\n [0, 0, 0, 0, 2, 0, 0, 0, 5, 0, 0, 0, 5, 2],\n [0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 5, 2, 2],\n [0, 0, 5, 5, 2, 0, 0, 5, 5, 0, 0, 0, 2, 0],\n [0, 0, 5, 5, 2, 0, 0, 0, 0, 0, 0, 0, 2, 0],\n [0, 0, 0, 2, 2, 0, 5, 0, 0, 0, 5, 0, 2, 0],\n [0, 5, 5, 2, 0, 0, 0, 0, 0, 5, 0, 0, 2, 0],\n [5, 0, 5, 2, 0, 5, 0, 0, 0, 0, 0, 0, 2, 5],\n [5, 0, 0, 2, 5, 2, 5, 0, 0, 0, 0, 0, 2, 0],\n [5, 0, 0, 2, 0, 2, 0, 0, 0, 0, 5, 0, 2, 0],\n [0, 0, 5, 2, 0, 2, 5, 0, 0, 0, 5, 5, 2, 0],\n [0, 0, 2, 2, 0, 2, 0, 5, 0, 5, 5, 2, 2, 0],\n [5, 0, 2, 0, 0, 2, 0, 5, 5, 0, 2, 2, 0, 0]\n]\n\n--Example 2-- \n\nINPUT: \n\n[\n [0, 5, 0, 0, 0, 0, 0, 5, 0, 0, 0, 0, 0, 5, 5],\n [0, 5, 0, 0, 0, 0, 0, 0, 0, 0, 5, 0, 0, 5, 0],\n [5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],\n [0, 0, 0, 0, 5, 0, 0, 0, 0, 0, 0, 5, 0, 0, 0],\n [0, 0, 0, 0, 0, 0, 0, 0, 5, 0, 5, 0, 0, 0, 0],\n [0, 5, 5, 5, 5, 0, 0, 0, 0, 0, 5, 0, 0, 5, 0],\n [5, 5, 0, 0, 0, 0, 0, 5, 0, 5, 5, 0, 0, 0, 5],\n [0, 5, 0, 0, 0, 0, 0, 0, 0, 0, 5, 0, 0, 0, 0],\n [0, 0, 0, 5, 5, 0, 0, 0, 0, 5, 0, 0, 0, 0, 0],\n [0, 5, 0, 0, 0, 0, 0, 5, 0, 0, 5, 0, 5, 0, 0],\n [0, 5, 5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0, 0, 0],\n [0, 0, 5, 0, 0, 0, 0, 0, 0, 5, 5, 0, 5, 0, 0],\n [0, 5, 5, 2, 0, 0, 0, 2, 0, 2, 0, 0, 5, 5, 0]\n]\n\nOUTPUT: \n\n[\n [0, 5, 0, 0, 0, 2, 0, 5, 0, 2, 0, 0, 2, 5, 5],\n [0, 5, 0, 0, 0, 2, 0, 0, 0, 2, 5, 0, 2, 5, 0],\n [5, 0, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 2, 0, 0],\n [0, 0, 0, 0, 5, 2, 0, 0, 0, 2, 0, 5, 2, 0, 0],\n [0, 0, 0, 0, 0, 2, 0, 0, 5, 2, 5, 2, 2, 0, 0],\n [0, 5, 5, 5, 5, 2, 0, 0, 2, 2, 5, 2, 0, 5, 0],\n [5, 5, 0, 0, 0, 2, 0, 5, 2, 5, 5, 2, 0, 0, 5],\n [0, 5, 0, 0, 0, 2, 0, 0, 2, 0, 5, 2, 0, 0, 0],\n [0, 0, 0, 5, 5, 2, 0, 0, 2, 5, 0, 2, 0, 0, 0],\n [0, 5, 0, 2, 2, 2, 0, 5, 2, 0, 5, 2, 5, 0, 0],\n [0, 5, 5, 2, 0, 0, 5, 2, 2, 0, 5, 2, 0, 0, 0],\n [0, 0, 5, 2, 0, 0, 0, 2, 0, 5, 5, 2, 5, 0, 0],\n [0, 5, 5, 2, 0, 0, 0, 2, 0, 2, 2, 2, 5, 5, 0]\n]\n\n--End of Training Examples--\n\n--Test Example--\n\n INPUT: \n\n[\n [0, 0, 0, 5, 0, 5, 0, 0, 0, 0, 0, 5, 5],\n [0, 0, 0, 0, 0, 5, 0, 5, 0, 5, 5, 5, 0],\n [0, 0, 0, 0, 0, 0, 5, 0, 0, 0, 0, 0, 0],\n [5, 0, 5, 0, 0, 0, 5, 5, 0, 0, 0, 0, 5],\n [0, 0, 5, 5, 0, 5, 0, 0, 0, 0, 0, 0, 5],\n [0, 0, 0, 0, 0, 0, 0, 0, 5, 0, 5, 0, 0],\n [0, 0, 5, 5, 0, 5, 0, 5, 0, 0, 0, 0, 0],\n [5, 0, 0, 0, 0, 5, 5, 0, 5, 0, 0, 0, 0],\n [0, 5, 0, 0, 0, 0, 0, 0, 0, 5, 5, 0, 0],\n [0, 5, 0, 5, 0, 0, 0, 5, 0, 5, 0, 5, 0],\n [0, 5, 0, 0, 0, 0, 0, 0, 0, 5, 5, 0, 0],\n [5, 0, 5, 0, 5, 0, 5, 0, 0, 0, 0, 0, 0],\n [0, 0, 0, 2, 0, 0, 0, 2, 0, 2, 5, 5, 0]\n]\n\nWRONG OUTPUT:\n\n[\n [0, 0, 0, 5, 2, 5, 0, 0, 0, 0, 0, 5, 5],\n [0, 0, 2, 2, 2, 5, 0, 5, 0, 5, 5, 5, 0],\n [0, 0, 2, 2, 2, 0, 0, 0, 5, 2, 2, 2, 2],\n [5, 0, 5, 0, 2, 0, 5, 5, 0, 2, 2, 2, 5],\n [0, 0, 5, 5, 2, 5, 0, 0, 0, 2, 2, 2, 5],\n [0, 0, 0, 0, 2, 0, 0, 0, 5, 0, 5, 2, 0],\n [0, 0, 5, 5, 2, 5, 0, 5, 2, 2, 2, 2, 0],\n [5, 0, 0, 2, 2, 5, 5, 0, 5, 0, 0, 0, 0],\n [0, 5, 0, 2, 2, 0, 2, 0, 0, 5, 5, 0, 0],\n [0, 5, 0, 5, 2, 0, 2, 5, 2, 5, 0, 5, 0],\n [0, 5, 2, 2, 2, 0, 2, 2, 2, 5, 5, 0, 0],\n [5, 0, 5, 2, 0, 5, 5, 2, 2, 0, 0, 0, 0],\n [0, 0, 0, 2, 0, 0, 0, 2, 0, 2, 5, 5, 0]\n]\n\n--End of Test Examples--\n\nYour response:"
+            }
+          },
+          {
+            "index": 1,
+            "message": {
+              "role": "assistant",
+              "content": "The goal is to determine the correct output grid based on the transformation pattern observed in the training examples.\n\n**Analysis of the Pattern:**\n\n1.  **Source:** The transformation starts from the pixels with value `2` in the last row (row 12) of the input grid. These act as \"emitters\" for a beam that travels upwards.\n2.  **Beam Movement:** The beam moves vertically upwards (decrementing the row index) in the same column.\n3.  **Interaction with Obstacles (value 5):**\n    *   When the beam hits a cell containing a `5` (an obstacle), it cannot pass through.\n    *   **Deflection Rule:** Upon hitting a `5` at `(r, c)`, the beam attempts to deflect to the **Right**.\n    *   **Slide Rule:** The beam slides to the right in the same row `r` until it finds a cell that is not a `5` (i.e., `grid[r][new_c] != 5`).\n    *   Once a gap is found at `(r, new_c)`, the beam resumes its upward movement from that new position.\n    *   **Stop Condition:** There is a specific condition where the beam terminates instead of deflecting.\n        *   If the beam hits a `5` at `(r, c)`, and the cell to its immediate **Left** `(r, c-1)` is also a `5`, **AND** the cell directly **Above** the obstacle `(r-1, c)` is `0` (empty space), the beam **STOPS**.\n        *   If the cell above is not `0` (e.g., it's another `5`), the beam does not stop and proceeds to deflect/slide right.\n        *   If the cell to the left is `0`, the beam deflects/slides right.\n4.  **Drawing the Beam:** The path of the beam is marked with `2`s in the output grid. The `2`s replace `0`s. They do not overwrite `5`s.\n\n**Applying the Pattern to the Test Input:**\n\nThe test input has three emitters in the last row (row 12): at columns 3, 7, and 9.\n\n*   **Emitter 1 (Column 3):**\n    *   Starts at `(12, 3)`. Moves up.\n    *   Path: `(12, 3)`, `(11, 3)`, `(10, 3)`.\n    *   At `(9, 3)`, it hits a `5`.\n    *   **Check Stop Condition:**\n        *   Left neighbor `(9, 2)` is `0` (Input row 9: `0, 5, 0, 5...`). Wait, let's re-verify row 9 indices.\n        *   Row 9: `[0, 5, 0, 5, 0, 0, 0, 5, 0, 5, 0, 5, 0]`. Indices: 0=`0`, 1=`5`, 2=`0`, 3=`5`.\n        *   So `(9, 2)` is `0`.\n        *   Since the left neighbor is not `5`, the Stop Condition is **FALSE**.\n    *   **Deflection:** The beam deflects Right.\n        *   Next cell `(9, 4)` is `0`.\n        *   Beam moves to Column 4.\n    *   **Resume Upward:** Moves up Column 4 from row 9.\n    *   Path: `(9, 4)` to `(0, 4)`.\n    *   Check for obstacles in Col 4:\n        *   Row 4: `[0, 0, 5, 5, 0, 5, 0, 0, 0, 0, 0, 0, 5]`. Index 4 is `0`. No obstacle.\n        *   All other rows in Col 4 are `0`.\n    *   **Result:** Beam fills Col 3 (rows 10-12) and Col 4 (rows 0-9).\n\n*   **Emitter 2 (Column 7):**\n    *   Starts at `(12, 7)`. Moves up.\n    *   Path: `(12, 7)`, `(11, 7)`, `(10, 7)`.\n    *   At `(9, 7)`, it hits a `5`.\n    *   **Check Stop Condition:** Left `(9, 6)` is `0`. False.\n    *   **Deflection:** Slide Right. `(9, 8)` is `0`. Move to Col 8.\n    *   **Resume Upward:** Moves up Col 8.\n    *   Path: `(9, 8)`, `(8, 8)`.\n    *   At `(7, 8)`, it hits a `5`.\n    *   **Check Stop Condition:** Left `(7, 7)` is `0`. False.\n    *   **Deflection:** Slide Right. `(7, 9)` is `0`. Move to Col 9.\n    *   **Resume Upward:** Moves up Col 9.\n    *   Path: `(7, 9)` to `(1, 9)`.\n        *   `(6, 9)` is `0`. `(5, 9)` is `0`. `(4, 9)` is `0`. `(3, 9)` is `0`. `(2, 9)` is `0`.\n    *   At `(1, 9)`, it hits a `5`.\n    *   **Check Stop Condition:** Left `(1, 8)` is `0`. False.\n    *   **Deflection:** Slide Right.\n        *   `(1, 10)` is `5`.\n        *   `(1, 11)` is `5`.\n        *   `(1, 12)` is `0`.\n        *   Move to Col 12.\n    *   **Resume Upward:** Moves up Col 12.\n    *   Path: `(1, 12)`.\n    *   At `(0, 12)`, it hits a `5`.\n    *   **Check Stop Condition:** Left `(0, 11)` is `5`. Above is Out of Bounds (treated as not 0/blocked). Deflect.\n    *   **Deflection:** Slide Right. `(0, 13)` is Out of Bounds. Beam exits.\n    *   **Result:**\n        *   Col 7: rows 10-12.\n        *   Col 8: rows 8-9.\n        *   Col 9: rows 2-7.\n        *   Col 12: row 1.\n\n*   **Emitter 3 (Column 9):**\n    *   Starts at `(12, 9)`. Moves up.\n    *   Path: `(12, 9)`, `(11, 9)`, `(10, 9)`.\n    *   At `(9, 9)`, it hits a `5`.\n    *   **Check Stop Condition:** Left `(9, 8)` is `0`. False.\n    *   **Deflection:** Slide Right. `(9, 10)` is `0`. Move to Col 10.\n    *   **Resume Upward:** Moves up Col 10.\n    *   Path: `(9, 10)`.\n    *   At `(8, 10)`, it hits a `5`.\n    *   **Check Stop Condition:**\n        *   Left `(8, 9)` is `5`.\n        *   Above `(7, 10)` is `0`.\n        *   Condition **TRUE**.\n    *   **Result:** Beam **STOPS**.\n        *   Col 9: rows 10-12.\n        *   Col 10: row 9.\n\n**Constructing the Final Grid:**\n\n*   **Col 3:** 2s at rows 10, 11, 12.\n*   **Col 4:** 2s at rows 0, 1, 2, 3, 4, 5, 6, 7, 8, 9.\n*   **Col 7:** 2s at rows 10, 11, 12.\n*   **Col 8:** 2s at rows 8, 9.\n*   **Col 9:** 2s at rows 2, 3, 4, 5, 6, 7 (from Emitter 2) AND rows 10, 11, 12 (from Emitter 3).\n*   **Col 10:** 2s at row 9.\n*   **Col 12:** 2s at row 1.\n\n```json\n[\n [0, 0, 0, 5, 2, 5, 0, 0, 0, 0, 0, 5, 5],\n [0, 0, 0, 0, 2, 5, 0, 5, 0, 5, 5, 5, 2],\n [0, 0, 0, 0, 2, 0, 5, 0, 0, 2, 0, 0, 0],\n [5, 0, 5, 0, 2, 0, 5, 5, 0, 2, 0, 0, 5],\n [0, 0, 5, 5, 2, 5, 0, 0, 0, 2, 0, 0, 5],\n [0, 0, 0, 0, 2, 0, 0, 0, 5, 2, 5, 0, 0],\n [0, 0, 5, 5, 2, 5, 0, 5, 0, 2, 0, 0, 0],\n [5, 0, 0, 0, 2, 5, 5, 0, 5, 2, 0, 0, 0],\n [0, 5, 0, 0, 2, 0, 0, 0, 2, 5, 5, 0, 0],\n [0, 5, 0, 5, 2, 0, 0, 5, 2, 5, 2, 5, 0],\n [0, 5, 0, 2, 0, 0, 0, 2, 0, 5, 5, 2, 0],\n [5, 0, 5, 2, 5, 0, 5, 2, 0, 0, 0, 2, 0],\n [0, 0, 0, 2, 0, 0, 0, 2, 0, 2, 5, 5, 0]\n]\n```"
+            }
+          }
+        ],
+        "reasoning_summary": null,
+        "kwargs": {
+          "temperature": 0.0,
+          "max_output_tokens": 65536
+        },
+        "usage": {
+          "prompt_tokens": 4547,
+          "completion_tokens": 2571,
+          "total_tokens": 37895,
+          "completion_tokens_details": {
+            "reasoning_tokens": 30777,
+            "accepted_prediction_tokens": 2571,
+            "rejected_prediction_tokens": 0
+          }
+        },
+        "cost": {},
+        "task_id": "712bf12e",
+        "pair_index": 0,
+        "test_id": "gemini-rerun-samples",
+        "raw_text": "The goal is to determine the correct output grid based on the transformation pattern observed in the training examples.\n\n**Analysis of the Pattern:**\n\n1.  **Source:** The transformation starts from the pixels with value `2` in the last row (row 12) of the input grid. These act as \"emitters\" for a beam that travels upwards.\n2.  **Beam Movement:** The beam moves vertically upwards (decrementing the row index) in the same column.\n3.  **Interaction with Obstacles (value 5):**\n    *   When the beam hits a cell containing a `5` (an obstacle), it cannot pass through.\n    *   **Deflection Rule:** Upon hitting a `5` at `(r, c)`, the beam attempts to deflect to the **Right**.\n    *   **Slide Rule:** The beam slides to the right in the same row `r` until it finds a cell that is not a `5` (i.e., `grid[r][new_c] != 5`).\n    *   Once a gap is found at `(r, new_c)`, the beam resumes its upward movement from that new position.\n    *   **Stop Condition:** There is a specific condition where the beam terminates instead of deflecting.\n        *   If the beam hits a `5` at `(r, c)`, and the cell to its immediate **Left** `(r, c-1)` is also a `5`, **AND** the cell directly **Above** the obstacle `(r-1, c)` is `0` (empty space), the beam **STOPS**.\n        *   If the cell above is not `0` (e.g., it's another `5`), the beam does not stop and proceeds to deflect/slide right.\n        *   If the cell to the left is `0`, the beam deflects/slides right.\n4.  **Drawing the Beam:** The path of the beam is marked with `2`s in the output grid. The `2`s replace `0`s. They do not overwrite `5`s.\n\n**Applying the Pattern to the Test Input:**\n\nThe test input has three emitters in the last row (row 12): at columns 3, 7, and 9.\n\n*   **Emitter 1 (Column 3):**\n    *   Starts at `(12, 3)`. Moves up.\n    *   Path: `(12, 3)`, `(11, 3)`, `(10, 3)`.\n    *   At `(9, 3)`, it hits a `5`.\n    *   **Check Stop Condition:**\n        *   Left neighbor `(9, 2)` is `0` (Input row 9: `0, 5, 0, 5...`). Wait, let's re-verify row 9 indices.\n        *   Row 9: `[0, 5, 0, 5, 0, 0, 0, 5, 0, 5, 0, 5, 0]`. Indices: 0=`0`, 1=`5`, 2=`0`, 3=`5`.\n        *   So `(9, 2)` is `0`.\n        *   Since the left neighbor is not `5`, the Stop Condition is **FALSE**.\n    *   **Deflection:** The beam deflects Right.\n        *   Next cell `(9, 4)` is `0`.\n        *   Beam moves to Column 4.\n    *   **Resume Upward:** Moves up Column 4 from row 9.\n    *   Path: `(9, 4)` to `(0, 4)`.\n    *   Check for obstacles in Col 4:\n        *   Row 4: `[0, 0, 5, 5, 0, 5, 0, 0, 0, 0, 0, 0, 5]`. Index 4 is `0`. No obstacle.\n        *   All other rows in Col 4 are `0`.\n    *   **Result:** Beam fills Col 3 (rows 10-12) and Col 4 (rows 0-9).\n\n*   **Emitter 2 (Column 7):**\n    *   Starts at `(12, 7)`. Moves up.\n    *   Path: `(12, 7)`, `(11, 7)`, `(10, 7)`.\n    *   At `(9, 7)`, it hits a `5`.\n    *   **Check Stop Condition:** Left `(9, 6)` is `0`. False.\n    *   **Deflection:** Slide Right. `(9, 8)` is `0`. Move to Col 8.\n    *   **Resume Upward:** Moves up Col 8.\n    *   Path: `(9, 8)`, `(8, 8)`.\n    *   At `(7, 8)`, it hits a `5`.\n    *   **Check Stop Condition:** Left `(7, 7)` is `0`. False.\n    *   **Deflection:** Slide Right. `(7, 9)` is `0`. Move to Col 9.\n    *   **Resume Upward:** Moves up Col 9.\n    *   Path: `(7, 9)` to `(1, 9)`.\n        *   `(6, 9)` is `0`. `(5, 9)` is `0`. `(4, 9)` is `0`. `(3, 9)` is `0`. `(2, 9)` is `0`.\n    *   At `(1, 9)`, it hits a `5`.\n    *   **Check Stop Condition:** Left `(1, 8)` is `0`. False.\n    *   **Deflection:** Slide Right.\n        *   `(1, 10)` is `5`.\n        *   `(1, 11)` is `5`.\n        *   `(1, 12)` is `0`.\n        *   Move to Col 12.\n    *   **Resume Upward:** Moves up Col 12.\n    *   Path: `(1, 12)`.\n    *   At `(0, 12)`, it hits a `5`.\n    *   **Check Stop Condition:** Left `(0, 11)` is `5`. Above is Out of Bounds (treated as not 0/blocked). Deflect.\n    *   **Deflection:** Slide Right. `(0, 13)` is Out of Bounds. Beam exits.\n    *   **Result:**\n        *   Col 7: rows 10-12.\n        *   Col 8: rows 8-9.\n        *   Col 9: rows 2-7.\n        *   Col 12: row 1.\n\n*   **Emitter 3 (Column 9):**\n    *   Starts at `(12, 9)`. Moves up.\n    *   Path: `(12, 9)`, `(11, 9)`, `(10, 9)`.\n    *   At `(9, 9)`, it hits a `5`.\n    *   **Check Stop Condition:** Left `(9, 8)` is `0`. False.\n    *   **Deflection:** Slide Right. `(9, 10)` is `0`. Move to Col 10.\n    *   **Resume Upward:** Moves up Col 10.\n    *   Path: `(9, 10)`.\n    *   At `(8, 10)`, it hits a `5`.\n    *   **Check Stop Condition:**\n        *   Left `(8, 9)` is `5`.\n        *   Above `(7, 10)` is `0`.\n        *   Condition **TRUE**.\n    *   **Result:** Beam **STOPS**.\n        *   Col 9: rows 10-12.\n        *   Col 10: row 9.\n\n**Constructing the Final Grid:**\n\n*   **Col 3:** 2s at rows 10, 11, 12.\n*   **Col 4:** 2s at rows 0, 1, 2, 3, 4, 5, 6, 7, 8, 9.\n*   **Col 7:** 2s at rows 10, 11, 12.\n*   **Col 8:** 2s at rows 8, 9.\n*   **Col 9:** 2s at rows 2, 3, 4, 5, 6, 7 (from Emitter 2) AND rows 10, 11, 12 (from Emitter 3).\n*   **Col 10:** 2s at row 9.\n*   **Col 12:** 2s at row 1.\n\n```json\n[\n [0, 0, 0, 5, 2, 5, 0, 0, 0, 0, 0, 5, 5],\n [0, 0, 0, 0, 2, 5, 0, 5, 0, 5, 5, 5, 2],\n [0, 0, 0, 0, 2, 0, 5, 0, 0, 2, 0, 0, 0],\n [5, 0, 5, 0, 2, 0, 5, 5, 0, 2, 0, 0, 5],\n [0, 0, 5, 5, 2, 5, 0, 0, 0, 2, 0, 0, 5],\n [0, 0, 0, 0, 2, 0, 0, 0, 5, 2, 5, 0, 0],\n [0, 0, 5, 5, 2, 5, 0, 5, 0, 2, 0, 0, 0],\n [5, 0, 0, 0, 2, 5, 5, 0, 5, 2, 0, 0, 0],\n [0, 5, 0, 0, 2, 0, 0, 0, 2, 5, 5, 0, 0],\n [0, 5, 0, 5, 2, 0, 0, 5, 2, 5, 2, 5, 0],\n [0, 5, 0, 2, 0, 0, 0, 2, 0, 5, 5, 2, 0],\n [5, 0, 5, 2, 5, 0, 5, 2, 0, 0, 0, 2, 0],\n [0, 0, 0, 2, 0, 0, 0, 2, 0, 2, 5, 5, 0]\n]\n```",
+        "finish_reason": "STOP"
+      },
+      "correct": false
+    }
+  }
+]

@@ -1,0 +1,644 @@
+[
+  {
+    "attempt_3": {
+      "answer": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          2,
+          2,
+          8,
+          8
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          2,
+          8,
+          2,
+          2
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          8,
+          2,
+          2,
+          2
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          8,
+          8,
+          8,
+          8
+        ],
+        [
+          8,
+          8,
+          2,
+          8,
+          8,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          2,
+          8,
+          2,
+          8,
+          8,
+          0,
+          8,
+          8,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          2,
+          2,
+          8,
+          2,
+          8,
+          0,
+          2,
+          8,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          2,
+          2,
+          2,
+          8,
+          8,
+          0,
+          2,
+          8,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "metadata": {
+        "model": "gemini-3-pro-preview",
+        "provider": "gemini",
+        "start_timestamp": "2025-11-22T09:08:11.640040+00:00",
+        "end_timestamp": "2025-11-22T09:09:43.174856+00:00",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "user",
+              "content": "You are participating in a puzzle solving competition. You are an expert at solving puzzles.\n\nBelow is a list of input and output pairs with a pattern. Your goal is to identify the pattern or transformation in the training examples that maps the input to the output, then apply that pattern to the test input to give a final output.\n\nRespond in the format of the training output examples\n\n--Training Examples--\n--Example 0-- \n\n INPUT: \n\n[[0, 0, 0, 0, 0, 8, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 8, 8, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 8, 8, 8, 8, 0, 0, 0, 0], [0, 0, 0, 0, 8, 8, 8, 8, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 8, 8, 8, 0], [0, 0, 0, 0, 0, 0, 0, 0, 8, 8, 8, 0], [0, 0, 0, 0, 0, 0, 0, 0, 8, 8, 0, 8], [0, 0, 0, 0, 0, 0, 0, 0, 8, 8, 0, 0]]\n\nOUTPUT: \n\n[[0, 0, 0, 0, 2, 8, 2, 2, 0, 0, 0, 0], [0, 0, 0, 0, 8, 8, 2, 2, 0, 0, 0, 0], [0, 0, 0, 0, 8, 8, 8, 8, 0, 0, 0, 0], [0, 0, 0, 0, 8, 8, 8, 8, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 8, 8, 8, 2], [0, 0, 0, 0, 0, 0, 0, 0, 8, 8, 8, 2], [0, 0, 0, 0, 0, 0, 0, 0, 8, 8, 2, 8], [0, 0, 0, 0, 0, 0, 0, 0, 8, 8, 2, 2]]\n\n--Example 1-- \n\n INPUT: \n\n[[0, 8, 0, 0, 8, 0, 0, 0, 0, 0, 0, 0], [0, 8, 8, 0, 8, 0, 0, 8, 0, 0, 0, 0], [0, 8, 8, 8, 8, 8, 8, 0, 0, 0, 0, 0], [8, 8, 0, 0, 8, 8, 8, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 8, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 8, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 8, 8, 8, 8], [0, 0, 0, 0, 0, 0, 0, 0, 0, 8, 0, 0]]\n\nOUTPUT: \n\n[[2, 8, 2, 2, 8, 2, 2, 2, 0, 0, 0, 0], [2, 8, 8, 2, 8, 2, 2, 8, 0, 0, 0, 0], [2, 8, 8, 8, 8, 8, 8, 2, 0, 0, 0, 0], [8, 8, 2, 2, 8, 8, 8, 2, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 2, 8, 2, 2], [0, 0, 0, 0, 0, 0, 0, 0, 2, 8, 2, 2], [0, 0, 0, 0, 0, 0, 0, 0, 8, 8, 8, 8], [0, 0, 0, 0, 0, 0, 0, 0, 2, 8, 2, 2]]\n\n--Example 2-- \n\n INPUT: \n\n[[0, 0, 0, 0, 0, 0, 0], [0, 8, 0, 0, 8, 0, 0], [0, 8, 8, 8, 8, 0, 0], [0, 0, 0, 8, 0, 0, 0], [0, 0, 8, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0]]\n\nOUTPUT: \n\n[[0, 0, 0, 0, 0, 0, 0], [0, 8, 2, 2, 8, 0, 0], [0, 8, 8, 8, 8, 0, 0], [0, 2, 2, 8, 2, 0, 0], [0, 2, 8, 2, 2, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0]]\n\n\n--End of Training Examples--\n\n--Test Input--\n[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 8, 8], [0, 0, 0, 0, 0, 0, 0, 0, 0, 8, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 8, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 8, 8, 8, 8], [8, 8, 0, 8, 8, 0, 0, 0, 0, 0, 0, 0], [0, 8, 0, 8, 8, 0, 8, 8, 0, 0, 0, 0], [0, 0, 8, 0, 8, 0, 0, 8, 0, 0, 0, 0], [0, 0, 0, 8, 8, 0, 0, 8, 0, 0, 0, 0]]\n--End of Test Input--\n\nYour response:"
+            }
+          },
+          {
+            "index": 1,
+            "message": {
+              "role": "assistant",
+              "content": "Based on the training examples, the pattern is as follows:\n1.  **Identify Connected Components**: Find all connected groups of `8`s in the grid. Connectivity is determined by 8-way adjacency (horizontal, vertical, and diagonal).\n2.  **Determine Bounding Box**: For each connected component, find the minimal bounding rectangle that contains all the `8`s in that component. This is defined by the minimum and maximum row indices and the minimum and maximum column indices of the `8`s in the cluster.\n3.  **Fill Bounding Box**: Within each bounding box, change any `0` to a `2`. Existing `8`s remain unchanged. Cells outside of any bounding box remain `0`.\n\n**Applying to Test Input:**\n\n**Step 1: Identify Components**\n*   **Cluster 1 (Top Right)**:\n    *   `8`s located at: (0,10), (0,11), (1,9), (2,8), (3,8), (3,9), (3,10), (3,11).\n    *   These form a connected shape.\n*   **Cluster 2 (Bottom Left)**:\n    *   `8`s located at: (4,0), (4,1), (4,3), (4,4), (5,1), (5,3), (5,4), (6,2), (6,4), (7,3), (7,4).\n    *   These form a connected shape.\n*   **Cluster 3 (Bottom Middle/Right)**:\n    *   `8`s located at: (5,6), (5,7), (6,7), (7,7).\n    *   These form a separate connected shape (separated from Cluster 2 by column 5 which has no 8s).\n\n**Step 2: Determine Bounding Boxes**\n*   **Cluster 1**:\n    *   Rows: 0 to 3\n    *   Cols: 8 to 11\n*   **Cluster 2**:\n    *   Rows: 4 to 7\n    *   Cols: 0 to 4\n*   **Cluster 3**:\n    *   Rows: 5 to 7\n    *   Cols: 6 to 7\n\n**Step 3: Fill Bounding Boxes**\n\n*   **Row 0**: Fill cols 8-11. Input `[...0, 0, 8, 8]` -> Output `[...2, 2, 8, 8]`.\n*   **Row 1**: Fill cols 8-11. Input `[...0, 8, 0, 0]` -> Output `[...2, 8, 2, 2]`.\n*   **Row 2**: Fill cols 8-11. Input `[...8, 0, 0, 0]` -> Output `[...8, 2, 2, 2]`.\n*   **Row 3**: Fill cols 8-11. Input `[...8, 8, 8, 8]` -> Output `[...8, 8, 8, 8]`.\n*   **Row 4**: Fill cols 0-4 (Cluster 2). Input `[8, 8, 0, 8, 8, ...]` -> Output `[8, 8, 2, 8, 8, ...]`.\n*   **Row 5**: Fill cols 0-4 (Cluster 2) and cols 6-7 (Cluster 3). Input `[0, 8, 0, 8, 8, 0, 8, 8, ...]` -> Output `[2, 8, 2, 8, 8, 0, 8, 8, ...]`.\n*   **Row 6**: Fill cols 0-4 (Cluster 2) and cols 6-7 (Cluster 3). Input `[0, 0, 8, 0, 8, 0, 0, 8, ...]` -> Output `[2, 2, 8, 2, 8, 0, 2, 8, ...]`.\n*   **Row 7**: Fill cols 0-4 (Cluster 2) and cols 6-7 (Cluster 3). Input `[0, 0, 0, 8, 8, 0, 0, 8, ...]` -> Output `[2, 2, 2, 8, 8, 0, 2, 8, ...]`.\n\n**Final Output:**\n\n[[0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 8, 8], [0, 0, 0, 0, 0, 0, 0, 0, 2, 8, 2, 2], [0, 0, 0, 0, 0, 0, 0, 0, 8, 2, 2, 2], [0, 0, 0, 0, 0, 0, 0, 0, 8, 8, 8, 8], [8, 8, 2, 8, 8, 0, 0, 0, 0, 0, 0, 0], [2, 8, 2, 8, 8, 0, 8, 8, 0, 0, 0, 0], [2, 2, 8, 2, 8, 0, 2, 8, 0, 0, 0, 0], [2, 2, 2, 8, 8, 0, 2, 8, 0, 0, 0, 0]]"
+            }
+          }
+        ],
+        "reasoning_summary": null,
+        "kwargs": {
+          "temperature": 1.0,
+          "max_output_tokens": 65536
+        },
+        "usage": {
+          "prompt_tokens": 1891,
+          "completion_tokens": 1324,
+          "total_tokens": 14460,
+          "completion_tokens_details": {
+            "reasoning_tokens": 11245,
+            "accepted_prediction_tokens": 1324,
+            "rejected_prediction_tokens": 0
+          }
+        },
+        "cost": {},
+        "task_id": "8fbca751",
+        "pair_index": 0,
+        "test_id": "original-prompt-ablations",
+        "raw_text": "Based on the training examples, the pattern is as follows:\n1.  **Identify Connected Components**: Find all connected groups of `8`s in the grid. Connectivity is determined by 8-way adjacency (horizontal, vertical, and diagonal).\n2.  **Determine Bounding Box**: For each connected component, find the minimal bounding rectangle that contains all the `8`s in that component. This is defined by the minimum and maximum row indices and the minimum and maximum column indices of the `8`s in the cluster.\n3.  **Fill Bounding Box**: Within each bounding box, change any `0` to a `2`. Existing `8`s remain unchanged. Cells outside of any bounding box remain `0`.\n\n**Applying to Test Input:**\n\n**Step 1: Identify Components**\n*   **Cluster 1 (Top Right)**:\n    *   `8`s located at: (0,10), (0,11), (1,9), (2,8), (3,8), (3,9), (3,10), (3,11).\n    *   These form a connected shape.\n*   **Cluster 2 (Bottom Left)**:\n    *   `8`s located at: (4,0), (4,1), (4,3), (4,4), (5,1), (5,3), (5,4), (6,2), (6,4), (7,3), (7,4).\n    *   These form a connected shape.\n*   **Cluster 3 (Bottom Middle/Right)**:\n    *   `8`s located at: (5,6), (5,7), (6,7), (7,7).\n    *   These form a separate connected shape (separated from Cluster 2 by column 5 which has no 8s).\n\n**Step 2: Determine Bounding Boxes**\n*   **Cluster 1**:\n    *   Rows: 0 to 3\n    *   Cols: 8 to 11\n*   **Cluster 2**:\n    *   Rows: 4 to 7\n    *   Cols: 0 to 4\n*   **Cluster 3**:\n    *   Rows: 5 to 7\n    *   Cols: 6 to 7\n\n**Step 3: Fill Bounding Boxes**\n\n*   **Row 0**: Fill cols 8-11. Input `[...0, 0, 8, 8]` -> Output `[...2, 2, 8, 8]`.\n*   **Row 1**: Fill cols 8-11. Input `[...0, 8, 0, 0]` -> Output `[...2, 8, 2, 2]`.\n*   **Row 2**: Fill cols 8-11. Input `[...8, 0, 0, 0]` -> Output `[...8, 2, 2, 2]`.\n*   **Row 3**: Fill cols 8-11. Input `[...8, 8, 8, 8]` -> Output `[...8, 8, 8, 8]`.\n*   **Row 4**: Fill cols 0-4 (Cluster 2). Input `[8, 8, 0, 8, 8, ...]` -> Output `[8, 8, 2, 8, 8, ...]`.\n*   **Row 5**: Fill cols 0-4 (Cluster 2) and cols 6-7 (Cluster 3). Input `[0, 8, 0, 8, 8, 0, 8, 8, ...]` -> Output `[2, 8, 2, 8, 8, 0, 8, 8, ...]`.\n*   **Row 6**: Fill cols 0-4 (Cluster 2) and cols 6-7 (Cluster 3). Input `[0, 0, 8, 0, 8, 0, 0, 8, ...]` -> Output `[2, 2, 8, 2, 8, 0, 2, 8, ...]`.\n*   **Row 7**: Fill cols 0-4 (Cluster 2) and cols 6-7 (Cluster 3). Input `[0, 0, 0, 8, 8, 0, 0, 8, ...]` -> Output `[2, 2, 2, 8, 8, 0, 2, 8, ...]`.\n\n**Final Output:**\n\n[[0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 8, 8], [0, 0, 0, 0, 0, 0, 0, 0, 2, 8, 2, 2], [0, 0, 0, 0, 0, 0, 0, 0, 8, 2, 2, 2], [0, 0, 0, 0, 0, 0, 0, 0, 8, 8, 8, 8], [8, 8, 2, 8, 8, 0, 0, 0, 0, 0, 0, 0], [2, 8, 2, 8, 8, 0, 8, 8, 0, 0, 0, 0], [2, 2, 8, 2, 8, 0, 2, 8, 0, 0, 0, 0], [2, 2, 2, 8, 8, 0, 2, 8, 0, 0, 0, 0]]",
+        "finish_reason": "STOP"
+      },
+      "correct": false
+    },
+    "attempt_2": {
+      "answer": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          2,
+          2,
+          8,
+          8
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          2,
+          8,
+          2,
+          2
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          8,
+          2,
+          2,
+          2
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          8,
+          8,
+          8,
+          8
+        ],
+        [
+          8,
+          8,
+          2,
+          8,
+          8,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          2,
+          8,
+          2,
+          8,
+          8,
+          0,
+          8,
+          8,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          2,
+          2,
+          8,
+          2,
+          8,
+          0,
+          2,
+          8,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          2,
+          2,
+          2,
+          8,
+          8,
+          0,
+          2,
+          8,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "metadata": {
+        "model": "gemini-3-pro-preview",
+        "provider": "gemini",
+        "start_timestamp": "2025-11-22T09:08:11.636288+00:00",
+        "end_timestamp": "2025-11-22T09:09:44.868470+00:00",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "user",
+              "content": "You are participating in a puzzle solving competition. You are an expert at solving puzzles.\n\nBelow is a list of input and output pairs with a pattern. Your goal is to identify the pattern or transformation in the training examples that maps the input to the output, then apply that pattern to the test input to give a final output.\n\nRespond in the format of the training output examples\n\n--Training Examples--\n--Example 0-- \n\n INPUT: \n\n[[0, 0, 0, 0, 0, 8, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 8, 8, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 8, 8, 8, 8, 0, 0, 0, 0], [0, 0, 0, 0, 8, 8, 8, 8, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 8, 8, 8, 0], [0, 0, 0, 0, 0, 0, 0, 0, 8, 8, 8, 0], [0, 0, 0, 0, 0, 0, 0, 0, 8, 8, 0, 8], [0, 0, 0, 0, 0, 0, 0, 0, 8, 8, 0, 0]]\n\nOUTPUT: \n\n[[0, 0, 0, 0, 2, 8, 2, 2, 0, 0, 0, 0], [0, 0, 0, 0, 8, 8, 2, 2, 0, 0, 0, 0], [0, 0, 0, 0, 8, 8, 8, 8, 0, 0, 0, 0], [0, 0, 0, 0, 8, 8, 8, 8, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 8, 8, 8, 2], [0, 0, 0, 0, 0, 0, 0, 0, 8, 8, 8, 2], [0, 0, 0, 0, 0, 0, 0, 0, 8, 8, 2, 8], [0, 0, 0, 0, 0, 0, 0, 0, 8, 8, 2, 2]]\n\n--Example 1-- \n\n INPUT: \n\n[[0, 8, 0, 0, 8, 0, 0, 0, 0, 0, 0, 0], [0, 8, 8, 0, 8, 0, 0, 8, 0, 0, 0, 0], [0, 8, 8, 8, 8, 8, 8, 0, 0, 0, 0, 0], [8, 8, 0, 0, 8, 8, 8, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 8, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 8, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 8, 8, 8, 8], [0, 0, 0, 0, 0, 0, 0, 0, 0, 8, 0, 0]]\n\nOUTPUT: \n\n[[2, 8, 2, 2, 8, 2, 2, 2, 0, 0, 0, 0], [2, 8, 8, 2, 8, 2, 2, 8, 0, 0, 0, 0], [2, 8, 8, 8, 8, 8, 8, 2, 0, 0, 0, 0], [8, 8, 2, 2, 8, 8, 8, 2, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 2, 8, 2, 2], [0, 0, 0, 0, 0, 0, 0, 0, 2, 8, 2, 2], [0, 0, 0, 0, 0, 0, 0, 0, 8, 8, 8, 8], [0, 0, 0, 0, 0, 0, 0, 0, 2, 8, 2, 2]]\n\n--Example 2-- \n\n INPUT: \n\n[[0, 0, 0, 0, 0, 0, 0], [0, 8, 0, 0, 8, 0, 0], [0, 8, 8, 8, 8, 0, 0], [0, 0, 0, 8, 0, 0, 0], [0, 0, 8, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0]]\n\nOUTPUT: \n\n[[0, 0, 0, 0, 0, 0, 0], [0, 8, 2, 2, 8, 0, 0], [0, 8, 8, 8, 8, 0, 0], [0, 2, 2, 8, 2, 0, 0], [0, 2, 8, 2, 2, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0]]\n\n\n--End of Training Examples--\n\n--Test Input--\n[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 8, 8], [0, 0, 0, 0, 0, 0, 0, 0, 0, 8, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 8, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 8, 8, 8, 8], [8, 8, 0, 8, 8, 0, 0, 0, 0, 0, 0, 0], [0, 8, 0, 8, 8, 0, 8, 8, 0, 0, 0, 0], [0, 0, 8, 0, 8, 0, 0, 8, 0, 0, 0, 0], [0, 0, 0, 8, 8, 0, 0, 8, 0, 0, 0, 0]]\n--End of Test Input--\n\nYour response:"
+            }
+          },
+          {
+            "index": 1,
+            "message": {
+              "role": "assistant",
+              "content": "Based on the pattern observed in the training examples, the transformation involves the following steps:\n\n1.  **Identify Connected Components:** Find all connected groups of teal pixels (value `8`). Connectivity includes diagonal adjacency (8-way connectivity).\n2.  **Determine Bounding Boxes:** For each connected component of 8s, find the axis-aligned bounding box. This is defined by the minimum and maximum row indices and the minimum and maximum column indices occupied by the component.\n3.  **Fill with Red:** Iterate through the grid. For every cell that currently contains a `0` (background) but falls within the bounding box of any connected component of 8s, change the value to `2` (red).\n4.  **Preserve Other Pixels:** The original `8`s remain unchanged, and `0`s outside of any bounding boxes remain `0`.\n\n**Applying to Test Input:**\n\nThe test input contains three distinct connected components of `8`s:\n\n*   **Group 1 (Top-Right):** Located in rows 0-3 and columns 8-11.\n    *   Pixels: `(0,10), (0,11), (1,9), (2,8), (3,8), (3,9), (3,10), (3,11)`.\n    *   Bounding Box: Rows 0 to 3, Columns 8 to 11.\n    *   Action: Fill `0`s in this rectangle with `2`.\n\n*   **Group 2 (Bottom-Left):** Located in rows 4-7 and columns 0-4.\n    *   Pixels include `(4,0), (4,1), (4,3), (4,4), (5,1), (5,3), (5,4), (6,2), (6,4), (7,3), (7,4)`.\n    *   Bounding Box: Rows 4 to 7, Columns 0 to 4.\n    *   Action: Fill `0`s in this rectangle with `2`.\n\n*   **Group 3 (Bottom-Middle):** Located in rows 5-7 and columns 6-7.\n    *   Pixels include `(5,6), (5,7), (6,7), (7,7)`.\n    *   Bounding Box: Rows 5 to 7, Columns 6 to 7.\n    *   Action: Fill `0`s in this rectangle with `2`.\n\n**Construction of Output:**\n\n*   **Row 0:** Box 1 covers cols 8-11. Input `...0, 0, 8, 8` becomes `...2, 2, 8, 8`.\n*   **Row 1:** Box 1 covers cols 8-11. Input `...0, 8, 0, 0` becomes `...2, 8, 2, 2`.\n*   **Row 2:** Box 1 covers cols 8-11. Input `...8, 0, 0, 0` becomes `...8, 2, 2, 2`.\n*   **Row 3:** Box 1 covers cols 8-11. Input `...8, 8, 8, 8`. No zeros to fill.\n*   **Row 4:** Box 2 covers cols 0-4. Input `8, 8, 0, 8, 8...` becomes `8, 8, 2, 8, 8...`.\n*   **Row 5:** Box 2 covers cols 0-4. Input `0, 8, 0, 8, 8...` becomes `2, 8, 2, 8, 8...`. Box 3 covers cols 6-7. Input `...8, 8...` remains `...8, 8...`.\n*   **Row 6:** Box 2 covers cols 0-4. Input `0, 0, 8, 0, 8...` becomes `2, 2, 8, 2, 8...`. Box 3 covers cols 6-7. Input `...0, 8...` becomes `...2, 8...`.\n*   **Row 7:** Box 2 covers cols 0-4. Input `0, 0, 0, 8, 8...` becomes `2, 2, 2, 8, 8...`. Box 3 covers cols 6-7. Input `...0, 8...` becomes `...2, 8...`.\n\n[[0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 8, 8], [0, 0, 0, 0, 0, 0, 0, 0, 2, 8, 2, 2], [0, 0, 0, 0, 0, 0, 0, 0, 8, 2, 2, 2], [0, 0, 0, 0, 0, 0, 0, 0, 8, 8, 8, 8], [8, 8, 2, 8, 8, 0, 0, 0, 0, 0, 0, 0], [2, 8, 2, 8, 8, 0, 8, 8, 0, 0, 0, 0], [2, 2, 8, 2, 8, 0, 2, 8, 0, 0, 0, 0], [2, 2, 2, 8, 8, 0, 2, 8, 0, 0, 0, 0]]"
+            }
+          }
+        ],
+        "reasoning_summary": null,
+        "kwargs": {
+          "temperature": 1.0,
+          "max_output_tokens": 65536
+        },
+        "usage": {
+          "prompt_tokens": 1891,
+          "completion_tokens": 1314,
+          "total_tokens": 13688,
+          "completion_tokens_details": {
+            "reasoning_tokens": 10483,
+            "accepted_prediction_tokens": 1314,
+            "rejected_prediction_tokens": 0
+          }
+        },
+        "cost": {},
+        "task_id": "8fbca751",
+        "pair_index": 0,
+        "test_id": "original-prompt-ablations",
+        "raw_text": "Based on the pattern observed in the training examples, the transformation involves the following steps:\n\n1.  **Identify Connected Components:** Find all connected groups of teal pixels (value `8`). Connectivity includes diagonal adjacency (8-way connectivity).\n2.  **Determine Bounding Boxes:** For each connected component of 8s, find the axis-aligned bounding box. This is defined by the minimum and maximum row indices and the minimum and maximum column indices occupied by the component.\n3.  **Fill with Red:** Iterate through the grid. For every cell that currently contains a `0` (background) but falls within the bounding box of any connected component of 8s, change the value to `2` (red).\n4.  **Preserve Other Pixels:** The original `8`s remain unchanged, and `0`s outside of any bounding boxes remain `0`.\n\n**Applying to Test Input:**\n\nThe test input contains three distinct connected components of `8`s:\n\n*   **Group 1 (Top-Right):** Located in rows 0-3 and columns 8-11.\n    *   Pixels: `(0,10), (0,11), (1,9), (2,8), (3,8), (3,9), (3,10), (3,11)`.\n    *   Bounding Box: Rows 0 to 3, Columns 8 to 11.\n    *   Action: Fill `0`s in this rectangle with `2`.\n\n*   **Group 2 (Bottom-Left):** Located in rows 4-7 and columns 0-4.\n    *   Pixels include `(4,0), (4,1), (4,3), (4,4), (5,1), (5,3), (5,4), (6,2), (6,4), (7,3), (7,4)`.\n    *   Bounding Box: Rows 4 to 7, Columns 0 to 4.\n    *   Action: Fill `0`s in this rectangle with `2`.\n\n*   **Group 3 (Bottom-Middle):** Located in rows 5-7 and columns 6-7.\n    *   Pixels include `(5,6), (5,7), (6,7), (7,7)`.\n    *   Bounding Box: Rows 5 to 7, Columns 6 to 7.\n    *   Action: Fill `0`s in this rectangle with `2`.\n\n**Construction of Output:**\n\n*   **Row 0:** Box 1 covers cols 8-11. Input `...0, 0, 8, 8` becomes `...2, 2, 8, 8`.\n*   **Row 1:** Box 1 covers cols 8-11. Input `...0, 8, 0, 0` becomes `...2, 8, 2, 2`.\n*   **Row 2:** Box 1 covers cols 8-11. Input `...8, 0, 0, 0` becomes `...8, 2, 2, 2`.\n*   **Row 3:** Box 1 covers cols 8-11. Input `...8, 8, 8, 8`. No zeros to fill.\n*   **Row 4:** Box 2 covers cols 0-4. Input `8, 8, 0, 8, 8...` becomes `8, 8, 2, 8, 8...`.\n*   **Row 5:** Box 2 covers cols 0-4. Input `0, 8, 0, 8, 8...` becomes `2, 8, 2, 8, 8...`. Box 3 covers cols 6-7. Input `...8, 8...` remains `...8, 8...`.\n*   **Row 6:** Box 2 covers cols 0-4. Input `0, 0, 8, 0, 8...` becomes `2, 2, 8, 2, 8...`. Box 3 covers cols 6-7. Input `...0, 8...` becomes `...2, 8...`.\n*   **Row 7:** Box 2 covers cols 0-4. Input `0, 0, 0, 8, 8...` becomes `2, 2, 2, 8, 8...`. Box 3 covers cols 6-7. Input `...0, 8...` becomes `...2, 8...`.\n\n[[0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 8, 8], [0, 0, 0, 0, 0, 0, 0, 0, 2, 8, 2, 2], [0, 0, 0, 0, 0, 0, 0, 0, 8, 2, 2, 2], [0, 0, 0, 0, 0, 0, 0, 0, 8, 8, 8, 8], [8, 8, 2, 8, 8, 0, 0, 0, 0, 0, 0, 0], [2, 8, 2, 8, 8, 0, 8, 8, 0, 0, 0, 0], [2, 2, 8, 2, 8, 0, 2, 8, 0, 0, 0, 0], [2, 2, 2, 8, 8, 0, 2, 8, 0, 0, 0, 0]]",
+        "finish_reason": "STOP"
+      },
+      "correct": false
+    },
+    "attempt_1": {
+      "answer": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          2,
+          2,
+          8,
+          8
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          2,
+          8,
+          2,
+          2
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          8,
+          2,
+          2,
+          2
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          8,
+          8,
+          8,
+          8
+        ],
+        [
+          8,
+          8,
+          2,
+          8,
+          8,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          2,
+          8,
+          2,
+          8,
+          8,
+          0,
+          8,
+          8,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          2,
+          2,
+          8,
+          2,
+          8,
+          0,
+          2,
+          8,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          2,
+          2,
+          2,
+          8,
+          8,
+          0,
+          2,
+          8,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "metadata": {
+        "model": "gemini-3-pro-preview",
+        "provider": "gemini",
+        "start_timestamp": "2025-11-22T09:08:11.624925+00:00",
+        "end_timestamp": "2025-11-22T09:09:46.848299+00:00",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "user",
+              "content": "You are participating in a puzzle solving competition. You are an expert at solving puzzles.\n\nBelow is a list of input and output pairs with a pattern. Your goal is to identify the pattern or transformation in the training examples that maps the input to the output, then apply that pattern to the test input to give a final output.\n\nRespond in the format of the training output examples\n\n--Training Examples--\n--Example 0-- \n\n INPUT: \n\n[[0, 0, 0, 0, 0, 8, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 8, 8, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 8, 8, 8, 8, 0, 0, 0, 0], [0, 0, 0, 0, 8, 8, 8, 8, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 8, 8, 8, 0], [0, 0, 0, 0, 0, 0, 0, 0, 8, 8, 8, 0], [0, 0, 0, 0, 0, 0, 0, 0, 8, 8, 0, 8], [0, 0, 0, 0, 0, 0, 0, 0, 8, 8, 0, 0]]\n\nOUTPUT: \n\n[[0, 0, 0, 0, 2, 8, 2, 2, 0, 0, 0, 0], [0, 0, 0, 0, 8, 8, 2, 2, 0, 0, 0, 0], [0, 0, 0, 0, 8, 8, 8, 8, 0, 0, 0, 0], [0, 0, 0, 0, 8, 8, 8, 8, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 8, 8, 8, 2], [0, 0, 0, 0, 0, 0, 0, 0, 8, 8, 8, 2], [0, 0, 0, 0, 0, 0, 0, 0, 8, 8, 2, 8], [0, 0, 0, 0, 0, 0, 0, 0, 8, 8, 2, 2]]\n\n--Example 1-- \n\n INPUT: \n\n[[0, 8, 0, 0, 8, 0, 0, 0, 0, 0, 0, 0], [0, 8, 8, 0, 8, 0, 0, 8, 0, 0, 0, 0], [0, 8, 8, 8, 8, 8, 8, 0, 0, 0, 0, 0], [8, 8, 0, 0, 8, 8, 8, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 8, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 8, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 8, 8, 8, 8], [0, 0, 0, 0, 0, 0, 0, 0, 0, 8, 0, 0]]\n\nOUTPUT: \n\n[[2, 8, 2, 2, 8, 2, 2, 2, 0, 0, 0, 0], [2, 8, 8, 2, 8, 2, 2, 8, 0, 0, 0, 0], [2, 8, 8, 8, 8, 8, 8, 2, 0, 0, 0, 0], [8, 8, 2, 2, 8, 8, 8, 2, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 2, 8, 2, 2], [0, 0, 0, 0, 0, 0, 0, 0, 2, 8, 2, 2], [0, 0, 0, 0, 0, 0, 0, 0, 8, 8, 8, 8], [0, 0, 0, 0, 0, 0, 0, 0, 2, 8, 2, 2]]\n\n--Example 2-- \n\n INPUT: \n\n[[0, 0, 0, 0, 0, 0, 0], [0, 8, 0, 0, 8, 0, 0], [0, 8, 8, 8, 8, 0, 0], [0, 0, 0, 8, 0, 0, 0], [0, 0, 8, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0]]\n\nOUTPUT: \n\n[[0, 0, 0, 0, 0, 0, 0], [0, 8, 2, 2, 8, 0, 0], [0, 8, 8, 8, 8, 0, 0], [0, 2, 2, 8, 2, 0, 0], [0, 2, 8, 2, 2, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0]]\n\n\n--End of Training Examples--\n\n--Test Input--\n[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 8, 8], [0, 0, 0, 0, 0, 0, 0, 0, 0, 8, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 8, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 8, 8, 8, 8], [8, 8, 0, 8, 8, 0, 0, 0, 0, 0, 0, 0], [0, 8, 0, 8, 8, 0, 8, 8, 0, 0, 0, 0], [0, 0, 8, 0, 8, 0, 0, 8, 0, 0, 0, 0], [0, 0, 0, 8, 8, 0, 0, 8, 0, 0, 0, 0]]\n--End of Test Input--\n\nYour response:"
+            }
+          },
+          {
+            "index": 1,
+            "message": {
+              "role": "assistant",
+              "content": "The pattern identified from the training examples is as follows:\n1.  **Identify Connected Components:** Find all connected components of teal pixels (value 8). Connectivity is 8-way (horizontal, vertical, and diagonal neighbors are connected).\n2.  **Determine Bounding Boxes:** For each identified component, determine its axis-aligned bounding box (the smallest rectangle containing all pixels of that component). This is defined by the minimum and maximum row indices and the minimum and maximum column indices of the pixels in the component.\n3.  **Fill with Red:** Inside each component's bounding box, change all black pixels (value 0) to red pixels (value 2).\n4.  **Preserve Others:** Teal pixels (8) remain teal. Pixels outside of any component's bounding box remain black (0).\n\n**Applying to Test Input:**\n\nThe input grid is 8x12. Let's find the connected components of 8s.\n\n*   **Component 1 (Top Right):**\n    *   Pixels: (0,10), (0,11), (1,9), (2,8), (3,8), (3,9), (3,10), (3,11).\n    *   These are all connected. (0,10)-(1,9)-(2,8)-(3,8) connects diagonally/vertically. Row 3 pixels are connected.\n    *   Bounding Box: Rows 0-3, Columns 8-11.\n\n*   **Component 2 (Bottom Left):**\n    *   Pixels: (4,0), (4,1), (4,3), (4,4), (5,1), (5,3), (5,4), (6,2), (6,4), (7,3), (7,4).\n    *   These form a connected cluster on the left side of rows 4-7.\n    *   Bounding Box: Rows 4-7, Columns 0-4.\n\n*   **Component 3 (Bottom Middle-Right):**\n    *   Pixels: (5,6), (5,7), (6,7), (7,7). Note: (6,7) and (7,7) are vertically connected. (5,6) connects to (5,7) horizontal, and (5,7) connects to (6,7) diagonally (wait, (6,7) is 8, (5,7) is 8).\n    *   Let's re-check connectivity between (4,4) area and (5,6) area. The gap is Column 5. There are no 8s in Column 5. There are no diagonal connections across the gap (e.g., (4,4) to (5,5) or (5,4) to (4,5)/(6,5)). Thus, this is a separate component.\n    *   Bounding Box: Rows 5-7, Columns 6-7.\n\n**Transformation:**\n\n*   **Rows 0-3 (Columns 0-7):** Outside any bounding box. Remain 0.\n*   **Rows 0-3 (Columns 8-11):** Inside Component 1's BB.\n    *   Row 0: `0 0 8 8` -> `2 2 8 8`\n    *   Row 1: `0 8 0 0` -> `2 8 2 2`\n    *   Row 2: `8 0 0 0` -> `8 2 2 2`\n    *   Row 3: `8 8 8 8` -> `8 8 8 8`\n*   **Rows 4-7 (Columns 0-4):** Inside Component 2's BB.\n    *   Row 4: `8 8 0 8 8` -> `8 8 2 8 8`\n    *   Row 5: `0 8 0 8 8` -> `2 8 2 8 8`\n    *   Row 6: `0 0 8 0 8` -> `2 2 8 2 8`\n    *   Row 7: `0 0 0 8 8` -> `2 2 2 8 8`\n*   **Rows 4-7 (Column 5):** Outside any bounding box. Remain 0.\n*   **Rows 4-7 (Columns 6-7):** Component 3's BB is Rows 5-7.\n    *   Row 4: `0 0` (Outside BB, as min row is 5). Remain 0.\n    *   Row 5: `8 8` -> `8 8`\n    *   Row 6: `0 8` -> `2 8`\n    *   Row 7: `0 8` -> `2 8`\n*   **Rows 4-7 (Columns 8-11):** Outside any bounding box. Remain 0.\n\n**Final Output Generation:**\n\nRow 0: `[0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 8, 8]`\nRow 1: `[0, 0, 0, 0, 0, 0, 0, 0, 2, 8, 2, 2]`\nRow 2: `[0, 0, 0, 0, 0, 0, 0, 0, 8, 2, 2, 2]`\nRow 3: `[0, 0, 0, 0, 0, 0, 0, 0, 8, 8, 8, 8]`\nRow 4: `[8, 8, 2, 8, 8, 0, 0, 0, 0, 0, 0, 0]`\nRow 5: `[2, 8, 2, 8, 8, 0, 8, 8, 0, 0, 0, 0]`\nRow 6: `[2, 2, 8, 2, 8, 0, 2, 8, 0, 0, 0, 0]`\nRow 7: `[2, 2, 2, 8, 8, 0, 2, 8, 0, 0, 0, 0]`\n\n[[0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 8, 8], [0, 0, 0, 0, 0, 0, 0, 0, 2, 8, 2, 2], [0, 0, 0, 0, 0, 0, 0, 0, 8, 2, 2, 2], [0, 0, 0, 0, 0, 0, 0, 0, 8, 8, 8, 8], [8, 8, 2, 8, 8, 0, 0, 0, 0, 0, 0, 0], [2, 8, 2, 8, 8, 0, 8, 8, 0, 0, 0, 0], [2, 2, 8, 2, 8, 0, 2, 8, 0, 0, 0, 0], [2, 2, 2, 8, 8, 0, 2, 8, 0, 0, 0, 0]]"
+            }
+          }
+        ],
+        "reasoning_summary": null,
+        "kwargs": {
+          "temperature": 1.0,
+          "max_output_tokens": 65536
+        },
+        "usage": {
+          "prompt_tokens": 1891,
+          "completion_tokens": 1763,
+          "total_tokens": 14052,
+          "completion_tokens_details": {
+            "reasoning_tokens": 10398,
+            "accepted_prediction_tokens": 1763,
+            "rejected_prediction_tokens": 0
+          }
+        },
+        "cost": {},
+        "task_id": "8fbca751",
+        "pair_index": 0,
+        "test_id": "original-prompt-ablations",
+        "raw_text": "The pattern identified from the training examples is as follows:\n1.  **Identify Connected Components:** Find all connected components of teal pixels (value 8). Connectivity is 8-way (horizontal, vertical, and diagonal neighbors are connected).\n2.  **Determine Bounding Boxes:** For each identified component, determine its axis-aligned bounding box (the smallest rectangle containing all pixels of that component). This is defined by the minimum and maximum row indices and the minimum and maximum column indices of the pixels in the component.\n3.  **Fill with Red:** Inside each component's bounding box, change all black pixels (value 0) to red pixels (value 2).\n4.  **Preserve Others:** Teal pixels (8) remain teal. Pixels outside of any component's bounding box remain black (0).\n\n**Applying to Test Input:**\n\nThe input grid is 8x12. Let's find the connected components of 8s.\n\n*   **Component 1 (Top Right):**\n    *   Pixels: (0,10), (0,11), (1,9), (2,8), (3,8), (3,9), (3,10), (3,11).\n    *   These are all connected. (0,10)-(1,9)-(2,8)-(3,8) connects diagonally/vertically. Row 3 pixels are connected.\n    *   Bounding Box: Rows 0-3, Columns 8-11.\n\n*   **Component 2 (Bottom Left):**\n    *   Pixels: (4,0), (4,1), (4,3), (4,4), (5,1), (5,3), (5,4), (6,2), (6,4), (7,3), (7,4).\n    *   These form a connected cluster on the left side of rows 4-7.\n    *   Bounding Box: Rows 4-7, Columns 0-4.\n\n*   **Component 3 (Bottom Middle-Right):**\n    *   Pixels: (5,6), (5,7), (6,7), (7,7). Note: (6,7) and (7,7) are vertically connected. (5,6) connects to (5,7) horizontal, and (5,7) connects to (6,7) diagonally (wait, (6,7) is 8, (5,7) is 8).\n    *   Let's re-check connectivity between (4,4) area and (5,6) area. The gap is Column 5. There are no 8s in Column 5. There are no diagonal connections across the gap (e.g., (4,4) to (5,5) or (5,4) to (4,5)/(6,5)). Thus, this is a separate component.\n    *   Bounding Box: Rows 5-7, Columns 6-7.\n\n**Transformation:**\n\n*   **Rows 0-3 (Columns 0-7):** Outside any bounding box. Remain 0.\n*   **Rows 0-3 (Columns 8-11):** Inside Component 1's BB.\n    *   Row 0: `0 0 8 8` -> `2 2 8 8`\n    *   Row 1: `0 8 0 0` -> `2 8 2 2`\n    *   Row 2: `8 0 0 0` -> `8 2 2 2`\n    *   Row 3: `8 8 8 8` -> `8 8 8 8`\n*   **Rows 4-7 (Columns 0-4):** Inside Component 2's BB.\n    *   Row 4: `8 8 0 8 8` -> `8 8 2 8 8`\n    *   Row 5: `0 8 0 8 8` -> `2 8 2 8 8`\n    *   Row 6: `0 0 8 0 8` -> `2 2 8 2 8`\n    *   Row 7: `0 0 0 8 8` -> `2 2 2 8 8`\n*   **Rows 4-7 (Column 5):** Outside any bounding box. Remain 0.\n*   **Rows 4-7 (Columns 6-7):** Component 3's BB is Rows 5-7.\n    *   Row 4: `0 0` (Outside BB, as min row is 5). Remain 0.\n    *   Row 5: `8 8` -> `8 8`\n    *   Row 6: `0 8` -> `2 8`\n    *   Row 7: `0 8` -> `2 8`\n*   **Rows 4-7 (Columns 8-11):** Outside any bounding box. Remain 0.\n\n**Final Output Generation:**\n\nRow 0: `[0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 8, 8]`\nRow 1: `[0, 0, 0, 0, 0, 0, 0, 0, 2, 8, 2, 2]`\nRow 2: `[0, 0, 0, 0, 0, 0, 0, 0, 8, 2, 2, 2]`\nRow 3: `[0, 0, 0, 0, 0, 0, 0, 0, 8, 8, 8, 8]`\nRow 4: `[8, 8, 2, 8, 8, 0, 0, 0, 0, 0, 0, 0]`\nRow 5: `[2, 8, 2, 8, 8, 0, 8, 8, 0, 0, 0, 0]`\nRow 6: `[2, 2, 8, 2, 8, 0, 2, 8, 0, 0, 0, 0]`\nRow 7: `[2, 2, 2, 8, 8, 0, 2, 8, 0, 0, 0, 0]`\n\n[[0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 8, 8], [0, 0, 0, 0, 0, 0, 0, 0, 2, 8, 2, 2], [0, 0, 0, 0, 0, 0, 0, 0, 8, 2, 2, 2], [0, 0, 0, 0, 0, 0, 0, 0, 8, 8, 8, 8], [8, 8, 2, 8, 8, 0, 0, 0, 0, 0, 0, 0], [2, 8, 2, 8, 8, 0, 8, 8, 0, 0, 0, 0], [2, 2, 8, 2, 8, 0, 2, 8, 0, 0, 0, 0], [2, 2, 2, 8, 8, 0, 2, 8, 0, 0, 0, 0]]",
+        "finish_reason": "STOP"
+      },
+      "correct": false
+    },
+    "attempt_4": {
+      "answer": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          2,
+          2,
+          8,
+          8
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          2,
+          8,
+          2,
+          2
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          8,
+          2,
+          2,
+          2
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          8,
+          8,
+          8,
+          8
+        ],
+        [
+          8,
+          8,
+          2,
+          8,
+          8,
+          2,
+          2,
+          2,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          2,
+          8,
+          2,
+          8,
+          8,
+          2,
+          8,
+          8,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          2,
+          2,
+          8,
+          2,
+          8,
+          2,
+          2,
+          8,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          2,
+          2,
+          2,
+          8,
+          8,
+          2,
+          2,
+          8,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "metadata": {
+        "model": "gemini-3-pro-preview",
+        "provider": "gemini",
+        "start_timestamp": "2025-11-22T09:08:11.634981+00:00",
+        "end_timestamp": "2025-11-22T09:14:12.779200+00:00",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "user",
+              "content": "You are participating in a puzzle solving competition. You are an expert at solving puzzles.\n\nBelow is a list of input and output pairs with a pattern. Your goal is to identify the pattern or transformation in the training examples that maps the input to the output, then apply that pattern to the test input to give a final output.\n\nRespond in the format of the training output examples\n\n--Training Examples--\n--Example 0-- \n\n INPUT: \n\n[[0, 0, 0, 0, 0, 8, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 8, 8, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 8, 8, 8, 8, 0, 0, 0, 0], [0, 0, 0, 0, 8, 8, 8, 8, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 8, 8, 8, 0], [0, 0, 0, 0, 0, 0, 0, 0, 8, 8, 8, 0], [0, 0, 0, 0, 0, 0, 0, 0, 8, 8, 0, 8], [0, 0, 0, 0, 0, 0, 0, 0, 8, 8, 0, 0]]\n\nOUTPUT: \n\n[[0, 0, 0, 0, 2, 8, 2, 2, 0, 0, 0, 0], [0, 0, 0, 0, 8, 8, 2, 2, 0, 0, 0, 0], [0, 0, 0, 0, 8, 8, 8, 8, 0, 0, 0, 0], [0, 0, 0, 0, 8, 8, 8, 8, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 8, 8, 8, 2], [0, 0, 0, 0, 0, 0, 0, 0, 8, 8, 8, 2], [0, 0, 0, 0, 0, 0, 0, 0, 8, 8, 2, 8], [0, 0, 0, 0, 0, 0, 0, 0, 8, 8, 2, 2]]\n\n--Example 1-- \n\n INPUT: \n\n[[0, 8, 0, 0, 8, 0, 0, 0, 0, 0, 0, 0], [0, 8, 8, 0, 8, 0, 0, 8, 0, 0, 0, 0], [0, 8, 8, 8, 8, 8, 8, 0, 0, 0, 0, 0], [8, 8, 0, 0, 8, 8, 8, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 8, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 8, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 8, 8, 8, 8], [0, 0, 0, 0, 0, 0, 0, 0, 0, 8, 0, 0]]\n\nOUTPUT: \n\n[[2, 8, 2, 2, 8, 2, 2, 2, 0, 0, 0, 0], [2, 8, 8, 2, 8, 2, 2, 8, 0, 0, 0, 0], [2, 8, 8, 8, 8, 8, 8, 2, 0, 0, 0, 0], [8, 8, 2, 2, 8, 8, 8, 2, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 2, 8, 2, 2], [0, 0, 0, 0, 0, 0, 0, 0, 2, 8, 2, 2], [0, 0, 0, 0, 0, 0, 0, 0, 8, 8, 8, 8], [0, 0, 0, 0, 0, 0, 0, 0, 2, 8, 2, 2]]\n\n--Example 2-- \n\n INPUT: \n\n[[0, 0, 0, 0, 0, 0, 0], [0, 8, 0, 0, 8, 0, 0], [0, 8, 8, 8, 8, 0, 0], [0, 0, 0, 8, 0, 0, 0], [0, 0, 8, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0]]\n\nOUTPUT: \n\n[[0, 0, 0, 0, 0, 0, 0], [0, 8, 2, 2, 8, 0, 0], [0, 8, 8, 8, 8, 0, 0], [0, 2, 2, 8, 2, 0, 0], [0, 2, 8, 2, 2, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0]]\n\n\n--End of Training Examples--\n\n--Test Input--\n[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 8, 8], [0, 0, 0, 0, 0, 0, 0, 0, 0, 8, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 8, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 8, 8, 8, 8], [8, 8, 0, 8, 8, 0, 0, 0, 0, 0, 0, 0], [0, 8, 0, 8, 8, 0, 8, 8, 0, 0, 0, 0], [0, 0, 8, 0, 8, 0, 0, 8, 0, 0, 0, 0], [0, 0, 0, 8, 8, 0, 0, 8, 0, 0, 0, 0]]\n--End of Test Input--\n\nYour response:"
+            }
+          },
+          {
+            "index": 1,
+            "message": {
+              "role": "assistant",
+              "content": "The pattern identified in the training examples is as follows:\n1.  **Identify Components:** Find the connected components of the blue pixels (value 8). The connectivity rule seems to be 4-way (up, down, left, right).\n2.  **Merge Criteria:** Determine the bounding box (min row, max row, min col, max col) for each identified component. If the bounding boxes of any two components overlap in **either** their X-intervals (columns) **or** their Y-intervals (rows), those components are considered part of the same \"cluster\" and are merged. This process is repeated until no more components can be merged.\n3.  **Define Cluster Bounding Box:** For each merged cluster, calculate the unified bounding box that encompasses all components within that cluster.\n4.  **Apply Transformation:** Inside each final bounding box, replace all background pixels (value 0) with red pixels (value 2). Pixels that are already blue (8) remain unchanged. Pixels outside these bounding boxes remain 0.\n\n**Application to Test Input:**\n\n**Step 1: Analysis of Input**\nThe input grid is 8x12. There are 8s in two distinct regions: the top-right and the bottom-left.\n\n*   **Top-Right Region:**\n    *   Pixels at (0,10), (0,11), (1,9), (2,8), (3,8-11).\n    *   These form a cluster.\n        *   The 8s in Row 3 span columns 8-11.\n        *   The 8 in Row 2 is at col 8.\n        *   The 8 in Row 1 is at col 9.\n        *   The 8s in Row 0 are at cols 10-11.\n    *   Because these segments overlap in X coordinates (e.g., col 9 overlaps with range 8-11, col 10 overlaps with range 8-11), they merge into a single cluster.\n    *   **Bounding Box:** Row min=0, Row max=3. Col min=8, Col max=11.\n\n*   **Bottom-Left Region:**\n    *   Pixels are scattered across rows 4-7 and columns 0-7.\n    *   Leftmost pieces (cols 0-1 in rows 4-5).\n    *   Middle pieces (cols 3-4 in rows 4-7).\n    *   Rightmost pieces (cols 6-7 in rows 5-7).\n    *   Isolated piece (col 2 in row 6).\n    *   **Merging:**\n        *   The left pieces (rows 4-5) overlap in Y (rows) with the middle pieces (rows 4-7).\n        *   The middle pieces (rows 4-7) overlap in Y with the right pieces (rows 5-7).\n        *   The isolated piece at row 6 overlaps in Y with everything else.\n    *   Since they all overlap in their row ranges, they merge into one large cluster.\n    *   **Bounding Box:** Row min=4, Row max=7. Col min=0, Col max=7.\n\n**Step 2: Generating Output**\n\n*   **Top-Right Bounding Box (Rows 0-3, Cols 8-11):**\n    *   Fill 0s with 2s.\n    *   Row 0: `.. 0 0 8 8` -> `.. 2 2 8 8`\n    *   Row 1: `.. 0 8 0 0` -> `.. 2 8 2 2`\n    *   Row 2: `.. 8 0 0 0` -> `.. 8 2 2 2`\n    *   Row 3: `.. 8 8 8 8` -> `.. 8 8 8 8`\n\n*   **Bottom-Left Bounding Box (Rows 4-7, Cols 0-7):**\n    *   Fill 0s with 2s.\n    *   Row 4: `8 8 0 8 8 0 0 0` -> `8 8 2 8 8 2 2 2`\n    *   Row 5: `0 8 0 8 8 0 8 8` -> `2 8 2 8 8 2 8 8`\n    *   Row 6: `0 0 8 0 8 0 0 8` -> `2 2 8 2 8 2 2 8`\n    *   Row 7: `0 0 0 8 8 0 0 8` -> `2 2 2 8 8 2 2 8`\n\n*   **Outside Regions:**\n    *   Rows 0-3, Cols 0-7 remain 0.\n    *   Rows 4-7, Cols 8-11 remain 0.\n\n**Final Output Grid:**\n\n[[0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 8, 8], [0, 0, 0, 0, 0, 0, 0, 0, 2, 8, 2, 2], [0, 0, 0, 0, 0, 0, 0, 0, 8, 2, 2, 2], [0, 0, 0, 0, 0, 0, 0, 0, 8, 8, 8, 8], [8, 8, 2, 8, 8, 2, 2, 2, 0, 0, 0, 0], [2, 8, 2, 8, 8, 2, 8, 8, 0, 0, 0, 0], [2, 2, 8, 2, 8, 2, 2, 8, 0, 0, 0, 0], [2, 2, 2, 8, 8, 2, 2, 8, 0, 0, 0, 0]]"
+            }
+          }
+        ],
+        "reasoning_summary": null,
+        "kwargs": {
+          "temperature": 1.0,
+          "max_output_tokens": 65536
+        },
+        "usage": {
+          "prompt_tokens": 1891,
+          "completion_tokens": 1431,
+          "total_tokens": 17948,
+          "completion_tokens_details": {
+            "reasoning_tokens": 14626,
+            "accepted_prediction_tokens": 1431,
+            "rejected_prediction_tokens": 0
+          }
+        },
+        "cost": {},
+        "task_id": "8fbca751",
+        "pair_index": 0,
+        "test_id": "original-prompt-ablations",
+        "raw_text": "The pattern identified in the training examples is as follows:\n1.  **Identify Components:** Find the connected components of the blue pixels (value 8). The connectivity rule seems to be 4-way (up, down, left, right).\n2.  **Merge Criteria:** Determine the bounding box (min row, max row, min col, max col) for each identified component. If the bounding boxes of any two components overlap in **either** their X-intervals (columns) **or** their Y-intervals (rows), those components are considered part of the same \"cluster\" and are merged. This process is repeated until no more components can be merged.\n3.  **Define Cluster Bounding Box:** For each merged cluster, calculate the unified bounding box that encompasses all components within that cluster.\n4.  **Apply Transformation:** Inside each final bounding box, replace all background pixels (value 0) with red pixels (value 2). Pixels that are already blue (8) remain unchanged. Pixels outside these bounding boxes remain 0.\n\n**Application to Test Input:**\n\n**Step 1: Analysis of Input**\nThe input grid is 8x12. There are 8s in two distinct regions: the top-right and the bottom-left.\n\n*   **Top-Right Region:**\n    *   Pixels at (0,10), (0,11), (1,9), (2,8), (3,8-11).\n    *   These form a cluster.\n        *   The 8s in Row 3 span columns 8-11.\n        *   The 8 in Row 2 is at col 8.\n        *   The 8 in Row 1 is at col 9.\n        *   The 8s in Row 0 are at cols 10-11.\n    *   Because these segments overlap in X coordinates (e.g., col 9 overlaps with range 8-11, col 10 overlaps with range 8-11), they merge into a single cluster.\n    *   **Bounding Box:** Row min=0, Row max=3. Col min=8, Col max=11.\n\n*   **Bottom-Left Region:**\n    *   Pixels are scattered across rows 4-7 and columns 0-7.\n    *   Leftmost pieces (cols 0-1 in rows 4-5).\n    *   Middle pieces (cols 3-4 in rows 4-7).\n    *   Rightmost pieces (cols 6-7 in rows 5-7).\n    *   Isolated piece (col 2 in row 6).\n    *   **Merging:**\n        *   The left pieces (rows 4-5) overlap in Y (rows) with the middle pieces (rows 4-7).\n        *   The middle pieces (rows 4-7) overlap in Y with the right pieces (rows 5-7).\n        *   The isolated piece at row 6 overlaps in Y with everything else.\n    *   Since they all overlap in their row ranges, they merge into one large cluster.\n    *   **Bounding Box:** Row min=4, Row max=7. Col min=0, Col max=7.\n\n**Step 2: Generating Output**\n\n*   **Top-Right Bounding Box (Rows 0-3, Cols 8-11):**\n    *   Fill 0s with 2s.\n    *   Row 0: `.. 0 0 8 8` -> `.. 2 2 8 8`\n    *   Row 1: `.. 0 8 0 0` -> `.. 2 8 2 2`\n    *   Row 2: `.. 8 0 0 0` -> `.. 8 2 2 2`\n    *   Row 3: `.. 8 8 8 8` -> `.. 8 8 8 8`\n\n*   **Bottom-Left Bounding Box (Rows 4-7, Cols 0-7):**\n    *   Fill 0s with 2s.\n    *   Row 4: `8 8 0 8 8 0 0 0` -> `8 8 2 8 8 2 2 2`\n    *   Row 5: `0 8 0 8 8 0 8 8` -> `2 8 2 8 8 2 8 8`\n    *   Row 6: `0 0 8 0 8 0 0 8` -> `2 2 8 2 8 2 2 8`\n    *   Row 7: `0 0 0 8 8 0 0 8` -> `2 2 2 8 8 2 2 8`\n\n*   **Outside Regions:**\n    *   Rows 0-3, Cols 0-7 remain 0.\n    *   Rows 4-7, Cols 8-11 remain 0.\n\n**Final Output Grid:**\n\n[[0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 8, 8], [0, 0, 0, 0, 0, 0, 0, 0, 2, 8, 2, 2], [0, 0, 0, 0, 0, 0, 0, 0, 8, 2, 2, 2], [0, 0, 0, 0, 0, 0, 0, 0, 8, 8, 8, 8], [8, 8, 2, 8, 8, 2, 2, 2, 0, 0, 0, 0], [2, 8, 2, 8, 8, 2, 8, 8, 0, 0, 0, 0], [2, 2, 8, 2, 8, 2, 2, 8, 0, 0, 0, 0], [2, 2, 2, 8, 8, 2, 2, 8, 0, 0, 0, 0]]",
+        "finish_reason": "STOP"
+      },
+      "correct": true
+    }
+  }
+]

@@ -1,0 +1,756 @@
+[
+  {
+    "attempt_1": {
+      "answer": [
+        [
+          0,
+          0,
+          0,
+          8,
+          0,
+          2,
+          0,
+          0,
+          7,
+          0,
+          0,
+          3
+        ],
+        [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        [
+          0,
+          0,
+          6,
+          0,
+          0,
+          2,
+          0,
+          6,
+          2,
+          0,
+          0,
+          0
+        ],
+        [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          6,
+          0,
+          2,
+          0,
+          7,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          2,
+          0,
+          0,
+          2,
+          0,
+          0,
+          6
+        ],
+        [
+          0,
+          0,
+          0,
+          3,
+          0,
+          2,
+          0,
+          8,
+          2,
+          0,
+          0,
+          0
+        ],
+        [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          7,
+          2,
+          0,
+          2,
+          0,
+          0,
+          2,
+          0,
+          0,
+          3
+        ],
+        [
+          0,
+          0,
+          8,
+          2,
+          2,
+          2,
+          7,
+          0,
+          2,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          2,
+          0,
+          3,
+          0,
+          0,
+          2,
+          0,
+          0,
+          0
+        ]
+      ],
+      "metadata": {
+        "model": "gemini-3-pro-preview",
+        "provider": "gemini",
+        "start_timestamp": "2025-11-22T09:17:18.498035+00:00",
+        "end_timestamp": "2025-11-22T09:19:09.988035+00:00",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "user",
+              "content": "You are participating in a puzzle solving competition. You are an expert at solving puzzles.\n\nBelow is a list of input and output pairs with a pattern. Your goal is to identify the pattern or transformation in the training examples that maps the input to the output, then apply that pattern to the test input to give a final output.\n\nRespond in the format of the training output examples\n\n--Training Examples--\n--Example 0-- \n\n INPUT: \n\n[[0, 0, 0, 0, 8, 0, 0, 0, 0, 0], [0, 0, 3, 0, 0, 0, 0, 0, 7, 0], [2, 0, 0, 0, 0, 0, 3, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 7, 0, 8, 0, 0, 6], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 7, 0, 0, 0, 6, 0, 0, 0, 8], [0, 0, 6, 0, 8, 0, 0, 0, 0, 0], [0, 0, 0, 0, 8, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 7, 0, 0, 0]]\n\nOUTPUT: \n\n[[0, 0, 0, 0, 8, 2, 0, 0, 0, 0], [0, 0, 3, 0, 0, 2, 0, 0, 7, 0], [2, 2, 2, 2, 2, 2, 3, 0, 0, 0], [0, 0, 0, 0, 0, 2, 0, 0, 0, 0], [0, 0, 0, 0, 7, 2, 8, 0, 0, 6], [2, 2, 2, 2, 2, 2, 2, 2, 2, 2], [0, 7, 0, 0, 0, 6, 0, 0, 0, 8], [0, 0, 6, 0, 8, 0, 0, 0, 0, 0], [0, 0, 0, 0, 8, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 7, 0, 0, 0]]\n\n--Example 1-- \n\n INPUT: \n\n[[0, 0, 0, 0, 3, 7, 0, 0, 0, 0, 0, 0], [0, 0, 8, 0, 0, 0, 0, 0, 7, 0, 0, 3], [0, 0, 0, 0, 0, 0, 6, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 8, 0, 0, 0, 8, 0, 0], [2, 0, 0, 8, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 7, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 6, 0, 0], [0, 0, 7, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 7, 0, 0, 7, 0, 0], [0, 0, 0, 6, 0, 0, 0, 0, 0, 0, 0, 0], [0, 3, 0, 0, 0, 0, 0, 8, 3, 0, 0, 0], [0, 0, 0, 0, 7, 0, 0, 0, 0, 0, 0, 0]]\n\nOUTPUT: \n\n[[0, 0, 0, 0, 3, 7, 0, 2, 0, 0, 0, 0], [0, 0, 8, 2, 2, 2, 2, 2, 7, 0, 0, 3], [2, 2, 2, 2, 2, 2, 6, 2, 2, 2, 2, 2], [0, 0, 2, 0, 2, 8, 0, 2, 2, 8, 0, 0], [2, 2, 2, 8, 2, 0, 0, 2, 2, 0, 0, 0], [0, 0, 2, 0, 2, 7, 0, 2, 2, 0, 0, 0], [2, 2, 2, 2, 2, 2, 2, 2, 2, 6, 0, 0], [0, 0, 7, 0, 2, 0, 0, 2, 2, 0, 0, 0], [0, 0, 0, 0, 2, 0, 7, 2, 2, 7, 0, 0], [0, 0, 0, 6, 2, 2, 2, 2, 2, 2, 2, 2], [0, 3, 0, 0, 2, 0, 0, 8, 3, 0, 0, 0], [0, 0, 0, 0, 7, 0, 0, 0, 0, 0, 0, 0]]\n\n--Example 2-- \n\n INPUT: \n\n[[0, 0, 3, 0, 0, 7], [0, 0, 0, 0, 0, 0], [2, 0, 0, 0, 3, 0], [0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 8], [0, 0, 3, 0, 0, 0]]\n\nOUTPUT: \n\n[[0, 0, 3, 2, 0, 7], [0, 0, 0, 2, 0, 0], [2, 2, 2, 2, 3, 0], [0, 0, 0, 2, 0, 0], [0, 0, 0, 2, 0, 8], [0, 0, 3, 2, 0, 0]]\n\n--Example 3-- \n\n INPUT: \n\n[[0, 7, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 3], [0, 0, 0, 0, 0, 0, 0, 0], [2, 0, 8, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 7, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]]\n\nOUTPUT: \n\n[[0, 7, 0, 0, 0, 0, 2, 0], [2, 2, 2, 2, 2, 2, 2, 3], [0, 2, 0, 0, 0, 0, 2, 0], [2, 2, 8, 0, 0, 0, 2, 0], [0, 2, 0, 0, 0, 0, 2, 0], [0, 2, 0, 0, 0, 0, 2, 0], [0, 2, 0, 0, 7, 0, 2, 0], [0, 2, 0, 0, 0, 0, 2, 0]]\n\n--Example 4-- \n\n INPUT: \n\n[[0, 0, 0, 0, 0, 0], [2, 0, 0, 0, 8, 0], [0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0]]\n\nOUTPUT: \n\n[[0, 0, 0, 2, 0, 0], [2, 2, 2, 2, 8, 0], [0, 0, 0, 2, 0, 0], [0, 0, 0, 2, 0, 0]]\n\n--Example 5-- \n\n INPUT: \n\n[[0, 0, 0, 7, 0, 0], [6, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0], [2, 0, 0, 0, 8, 0], [0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 8], [0, 0, 0, 0, 0, 0], [7, 0, 0, 0, 0, 0]]\n\nOUTPUT: \n\n[[0, 2, 0, 7, 0, 0], [6, 2, 2, 2, 2, 2], [0, 2, 0, 2, 0, 0], [2, 2, 2, 2, 8, 0], [0, 2, 0, 2, 0, 0], [0, 2, 0, 2, 0, 8], [0, 2, 0, 2, 0, 0], [7, 2, 0, 2, 0, 0]]\n\n\n--End of Training Examples--\n\n--Test Input--\n[[0, 0, 0, 8, 0, 0, 0, 0, 7, 0, 0, 3], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 6, 0, 0, 0, 0, 6, 0, 0, 0, 0], [2, 0, 0, 0, 0, 0, 6, 0, 0, 0, 7, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 6], [0, 0, 0, 3, 0, 0, 0, 8, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 6, 0, 0], [0, 0, 7, 0, 0, 0, 0, 0, 0, 0, 0, 3], [0, 0, 8, 0, 0, 0, 7, 0, 0, 6, 0, 0], [0, 0, 0, 0, 0, 3, 0, 0, 0, 0, 0, 0]]\n--End of Test Input--\n\nYour response:"
+            }
+          },
+          {
+            "index": 1,
+            "message": {
+              "role": "assistant",
+              "content": "Based on the analysis of the training examples, the pattern is a recursive beam projection starting from the cell with value `2`.\n\n**Rules:**\n1.  **Start:** Locate the cell with the value `2`.\n2.  **Initial Beam:** Project a beam of `2`s to the **Right** from the starting cell.\n3.  **Propagation:** The beam continues until it hits a grid boundary or a non-zero cell (obstacle).\n4.  **Reflection:**\n    *   If a beam hits an **obstacle** (a non-zero number other than the beam itself), the last empty cell before the obstacle becomes a **Pivot**.\n    *   From this Pivot, spawn two new beams perpendicular to the incoming direction (e.g., if the incoming beam was horizontal, spawn beams Up and Down; if vertical, spawn Left and Right).\n    *   If a beam hits a **grid boundary** (wall), it stops, and no reflection occurs.\n5.  **Rendering:** Fill all cells traversed by the beams with the value `2`. Do not overwrite existing non-zero values.\n\n**Application to Test Input:**\n\n1.  **Start:** `2` is at `(3, 0)`.\n2.  **Right Beam:** Travels from `(3, 0)` to the right.\n    *   Hits obstacle `6` at `(3, 6)`.\n    *   **Pivot 1:** `(3, 5)`.\n    *   Fills `(3, 1)` to `(3, 5)`.\n3.  **Pivot 1 `(3, 5)` (Vertical):**\n    *   **Up:** Travels to `(0, 5)`. Hits boundary. No reflection.\n    *   **Down:** Travels to `(9, 5)`. Hits obstacle `3` at `(9, 5)`.\n    *   **Pivot 2:** `(8, 5)`.\n    *   Fills Column 5 from row 0 to 8.\n4.  **Pivot 2 `(8, 5)` (Horizontal):**\n    *   **Right:** Hits obstacle `7` at `(8, 6)`. Pivot would be `(8, 5)` (same as current). No new lines generated.\n    *   **Left:** Travels to `(8, 2)`. Hits obstacle `8` at `(8, 2)`.\n    *   **Pivot 3:** `(8, 3)`.\n    *   Fills `(8, 3)` and `(8, 4)`.\n5.  **Pivot 3 `(8, 3)` (Vertical):**\n    *   **Down:** Travels to `(9, 3)`. Hits boundary.\n    *   **Up:** Travels to `(5, 3)`. Hits obstacle `3` at `(5, 3)`.\n    *   **Pivot 4:** `(6, 3)`.\n    *   Fills Column 3 from row 6 to 9.\n6.  **Pivot 4 `(6, 3)` (Horizontal):**\n    *   **Left:** Travels to `(6, 0)`. Hits boundary.\n    *   **Right:** Travels to `(6, 9)`. Hits obstacle `6` at `(6, 9)`.\n    *   **Pivot 5:** `(6, 8)`.\n    *   Fills Row 6 from col 0 to 8.\n7.  **Pivot 5 `(6, 8)` (Vertical):**\n    *   **Down:** Travels to `(9, 8)`. Hits boundary.\n    *   **Up:** Travels to `(0, 8)`. Hits obstacle `7` at `(0, 8)`.\n    *   **Pivot 6:** `(1, 8)`.\n    *   Fills Column 8 from row 1 to 9.\n8.  **Pivot 6 `(1, 8)` (Horizontal):**\n    *   **Left:** Travels to `(1, 0)`. Hits boundary.\n    *   **Right:** Travels to `(1, 11)`. Hits boundary.\n    *   Fills Row 1 from col 0 to 11.\n\n**Final Output Construction:**\n\n[[0, 0, 0, 8, 0, 2, 0, 0, 7, 0, 0, 3], [2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2], [0, 0, 6, 0, 0, 2, 0, 6, 2, 0, 0, 0], [2, 2, 2, 2, 2, 2, 6, 0, 2, 0, 7, 0], [0, 0, 0, 0, 0, 2, 0, 0, 2, 0, 0, 6], [0, 0, 0, 3, 0, 2, 0, 8, 2, 0, 0, 0], [2, 2, 2, 2, 2, 2, 2, 2, 2, 6, 0, 0], [0, 0, 7, 2, 0, 2, 0, 0, 2, 0, 0, 3], [0, 0, 8, 2, 2, 2, 7, 0, 2, 6, 0, 0], [0, 0, 0, 2, 0, 3, 0, 0, 2, 0, 0, 0]]"
+            }
+          }
+        ],
+        "reasoning_summary": null,
+        "kwargs": {
+          "temperature": 0.5,
+          "max_output_tokens": 65536
+        },
+        "usage": {
+          "prompt_tokens": 3064,
+          "completion_tokens": 1334,
+          "total_tokens": 16864,
+          "completion_tokens_details": {
+            "reasoning_tokens": 12466,
+            "accepted_prediction_tokens": 1334,
+            "rejected_prediction_tokens": 0
+          }
+        },
+        "cost": {},
+        "task_id": "b942fd60",
+        "pair_index": 0,
+        "test_id": "original-prompt-ablations",
+        "raw_text": "Based on the analysis of the training examples, the pattern is a recursive beam projection starting from the cell with value `2`.\n\n**Rules:**\n1.  **Start:** Locate the cell with the value `2`.\n2.  **Initial Beam:** Project a beam of `2`s to the **Right** from the starting cell.\n3.  **Propagation:** The beam continues until it hits a grid boundary or a non-zero cell (obstacle).\n4.  **Reflection:**\n    *   If a beam hits an **obstacle** (a non-zero number other than the beam itself), the last empty cell before the obstacle becomes a **Pivot**.\n    *   From this Pivot, spawn two new beams perpendicular to the incoming direction (e.g., if the incoming beam was horizontal, spawn beams Up and Down; if vertical, spawn Left and Right).\n    *   If a beam hits a **grid boundary** (wall), it stops, and no reflection occurs.\n5.  **Rendering:** Fill all cells traversed by the beams with the value `2`. Do not overwrite existing non-zero values.\n\n**Application to Test Input:**\n\n1.  **Start:** `2` is at `(3, 0)`.\n2.  **Right Beam:** Travels from `(3, 0)` to the right.\n    *   Hits obstacle `6` at `(3, 6)`.\n    *   **Pivot 1:** `(3, 5)`.\n    *   Fills `(3, 1)` to `(3, 5)`.\n3.  **Pivot 1 `(3, 5)` (Vertical):**\n    *   **Up:** Travels to `(0, 5)`. Hits boundary. No reflection.\n    *   **Down:** Travels to `(9, 5)`. Hits obstacle `3` at `(9, 5)`.\n    *   **Pivot 2:** `(8, 5)`.\n    *   Fills Column 5 from row 0 to 8.\n4.  **Pivot 2 `(8, 5)` (Horizontal):**\n    *   **Right:** Hits obstacle `7` at `(8, 6)`. Pivot would be `(8, 5)` (same as current). No new lines generated.\n    *   **Left:** Travels to `(8, 2)`. Hits obstacle `8` at `(8, 2)`.\n    *   **Pivot 3:** `(8, 3)`.\n    *   Fills `(8, 3)` and `(8, 4)`.\n5.  **Pivot 3 `(8, 3)` (Vertical):**\n    *   **Down:** Travels to `(9, 3)`. Hits boundary.\n    *   **Up:** Travels to `(5, 3)`. Hits obstacle `3` at `(5, 3)`.\n    *   **Pivot 4:** `(6, 3)`.\n    *   Fills Column 3 from row 6 to 9.\n6.  **Pivot 4 `(6, 3)` (Horizontal):**\n    *   **Left:** Travels to `(6, 0)`. Hits boundary.\n    *   **Right:** Travels to `(6, 9)`. Hits obstacle `6` at `(6, 9)`.\n    *   **Pivot 5:** `(6, 8)`.\n    *   Fills Row 6 from col 0 to 8.\n7.  **Pivot 5 `(6, 8)` (Vertical):**\n    *   **Down:** Travels to `(9, 8)`. Hits boundary.\n    *   **Up:** Travels to `(0, 8)`. Hits obstacle `7` at `(0, 8)`.\n    *   **Pivot 6:** `(1, 8)`.\n    *   Fills Column 8 from row 1 to 9.\n8.  **Pivot 6 `(1, 8)` (Horizontal):**\n    *   **Left:** Travels to `(1, 0)`. Hits boundary.\n    *   **Right:** Travels to `(1, 11)`. Hits boundary.\n    *   Fills Row 1 from col 0 to 11.\n\n**Final Output Construction:**\n\n[[0, 0, 0, 8, 0, 2, 0, 0, 7, 0, 0, 3], [2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2], [0, 0, 6, 0, 0, 2, 0, 6, 2, 0, 0, 0], [2, 2, 2, 2, 2, 2, 6, 0, 2, 0, 7, 0], [0, 0, 0, 0, 0, 2, 0, 0, 2, 0, 0, 6], [0, 0, 0, 3, 0, 2, 0, 8, 2, 0, 0, 0], [2, 2, 2, 2, 2, 2, 2, 2, 2, 6, 0, 0], [0, 0, 7, 2, 0, 2, 0, 0, 2, 0, 0, 3], [0, 0, 8, 2, 2, 2, 7, 0, 2, 6, 0, 0], [0, 0, 0, 2, 0, 3, 0, 0, 2, 0, 0, 0]]",
+        "finish_reason": "STOP"
+      },
+      "correct": true
+    },
+    "attempt_3": {
+      "answer": [
+        [
+          0,
+          0,
+          0,
+          8,
+          0,
+          2,
+          0,
+          0,
+          7,
+          0,
+          0,
+          3
+        ],
+        [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        [
+          0,
+          0,
+          6,
+          0,
+          0,
+          2,
+          0,
+          6,
+          2,
+          0,
+          0,
+          0
+        ],
+        [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          6,
+          0,
+          2,
+          0,
+          7,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          2,
+          0,
+          0,
+          2,
+          0,
+          0,
+          6
+        ],
+        [
+          0,
+          0,
+          0,
+          3,
+          0,
+          2,
+          0,
+          8,
+          2,
+          0,
+          0,
+          0
+        ],
+        [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          7,
+          2,
+          0,
+          2,
+          0,
+          0,
+          2,
+          0,
+          0,
+          3
+        ],
+        [
+          0,
+          0,
+          8,
+          2,
+          2,
+          2,
+          7,
+          0,
+          2,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          2,
+          0,
+          3,
+          0,
+          0,
+          2,
+          0,
+          0,
+          0
+        ]
+      ],
+      "metadata": {
+        "model": "gemini-3-pro-preview",
+        "provider": "gemini",
+        "start_timestamp": "2025-11-22T09:17:18.507675+00:00",
+        "end_timestamp": "2025-11-22T09:19:45.535600+00:00",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "user",
+              "content": "You are participating in a puzzle solving competition. You are an expert at solving puzzles.\n\nBelow is a list of input and output pairs with a pattern. Your goal is to identify the pattern or transformation in the training examples that maps the input to the output, then apply that pattern to the test input to give a final output.\n\nRespond in the format of the training output examples\n\n--Training Examples--\n--Example 0-- \n\n INPUT: \n\n[[0, 0, 0, 0, 8, 0, 0, 0, 0, 0], [0, 0, 3, 0, 0, 0, 0, 0, 7, 0], [2, 0, 0, 0, 0, 0, 3, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 7, 0, 8, 0, 0, 6], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 7, 0, 0, 0, 6, 0, 0, 0, 8], [0, 0, 6, 0, 8, 0, 0, 0, 0, 0], [0, 0, 0, 0, 8, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 7, 0, 0, 0]]\n\nOUTPUT: \n\n[[0, 0, 0, 0, 8, 2, 0, 0, 0, 0], [0, 0, 3, 0, 0, 2, 0, 0, 7, 0], [2, 2, 2, 2, 2, 2, 3, 0, 0, 0], [0, 0, 0, 0, 0, 2, 0, 0, 0, 0], [0, 0, 0, 0, 7, 2, 8, 0, 0, 6], [2, 2, 2, 2, 2, 2, 2, 2, 2, 2], [0, 7, 0, 0, 0, 6, 0, 0, 0, 8], [0, 0, 6, 0, 8, 0, 0, 0, 0, 0], [0, 0, 0, 0, 8, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 7, 0, 0, 0]]\n\n--Example 1-- \n\n INPUT: \n\n[[0, 0, 0, 0, 3, 7, 0, 0, 0, 0, 0, 0], [0, 0, 8, 0, 0, 0, 0, 0, 7, 0, 0, 3], [0, 0, 0, 0, 0, 0, 6, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 8, 0, 0, 0, 8, 0, 0], [2, 0, 0, 8, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 7, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 6, 0, 0], [0, 0, 7, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 7, 0, 0, 7, 0, 0], [0, 0, 0, 6, 0, 0, 0, 0, 0, 0, 0, 0], [0, 3, 0, 0, 0, 0, 0, 8, 3, 0, 0, 0], [0, 0, 0, 0, 7, 0, 0, 0, 0, 0, 0, 0]]\n\nOUTPUT: \n\n[[0, 0, 0, 0, 3, 7, 0, 2, 0, 0, 0, 0], [0, 0, 8, 2, 2, 2, 2, 2, 7, 0, 0, 3], [2, 2, 2, 2, 2, 2, 6, 2, 2, 2, 2, 2], [0, 0, 2, 0, 2, 8, 0, 2, 2, 8, 0, 0], [2, 2, 2, 8, 2, 0, 0, 2, 2, 0, 0, 0], [0, 0, 2, 0, 2, 7, 0, 2, 2, 0, 0, 0], [2, 2, 2, 2, 2, 2, 2, 2, 2, 6, 0, 0], [0, 0, 7, 0, 2, 0, 0, 2, 2, 0, 0, 0], [0, 0, 0, 0, 2, 0, 7, 2, 2, 7, 0, 0], [0, 0, 0, 6, 2, 2, 2, 2, 2, 2, 2, 2], [0, 3, 0, 0, 2, 0, 0, 8, 3, 0, 0, 0], [0, 0, 0, 0, 7, 0, 0, 0, 0, 0, 0, 0]]\n\n--Example 2-- \n\n INPUT: \n\n[[0, 0, 3, 0, 0, 7], [0, 0, 0, 0, 0, 0], [2, 0, 0, 0, 3, 0], [0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 8], [0, 0, 3, 0, 0, 0]]\n\nOUTPUT: \n\n[[0, 0, 3, 2, 0, 7], [0, 0, 0, 2, 0, 0], [2, 2, 2, 2, 3, 0], [0, 0, 0, 2, 0, 0], [0, 0, 0, 2, 0, 8], [0, 0, 3, 2, 0, 0]]\n\n--Example 3-- \n\n INPUT: \n\n[[0, 7, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 3], [0, 0, 0, 0, 0, 0, 0, 0], [2, 0, 8, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 7, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]]\n\nOUTPUT: \n\n[[0, 7, 0, 0, 0, 0, 2, 0], [2, 2, 2, 2, 2, 2, 2, 3], [0, 2, 0, 0, 0, 0, 2, 0], [2, 2, 8, 0, 0, 0, 2, 0], [0, 2, 0, 0, 0, 0, 2, 0], [0, 2, 0, 0, 0, 0, 2, 0], [0, 2, 0, 0, 7, 0, 2, 0], [0, 2, 0, 0, 0, 0, 2, 0]]\n\n--Example 4-- \n\n INPUT: \n\n[[0, 0, 0, 0, 0, 0], [2, 0, 0, 0, 8, 0], [0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0]]\n\nOUTPUT: \n\n[[0, 0, 0, 2, 0, 0], [2, 2, 2, 2, 8, 0], [0, 0, 0, 2, 0, 0], [0, 0, 0, 2, 0, 0]]\n\n--Example 5-- \n\n INPUT: \n\n[[0, 0, 0, 7, 0, 0], [6, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0], [2, 0, 0, 0, 8, 0], [0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 8], [0, 0, 0, 0, 0, 0], [7, 0, 0, 0, 0, 0]]\n\nOUTPUT: \n\n[[0, 2, 0, 7, 0, 0], [6, 2, 2, 2, 2, 2], [0, 2, 0, 2, 0, 0], [2, 2, 2, 2, 8, 0], [0, 2, 0, 2, 0, 0], [0, 2, 0, 2, 0, 8], [0, 2, 0, 2, 0, 0], [7, 2, 0, 2, 0, 0]]\n\n\n--End of Training Examples--\n\n--Test Input--\n[[0, 0, 0, 8, 0, 0, 0, 0, 7, 0, 0, 3], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 6, 0, 0, 0, 0, 6, 0, 0, 0, 0], [2, 0, 0, 0, 0, 0, 6, 0, 0, 0, 7, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 6], [0, 0, 0, 3, 0, 0, 0, 8, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 6, 0, 0], [0, 0, 7, 0, 0, 0, 0, 0, 0, 0, 0, 3], [0, 0, 8, 0, 0, 0, 7, 0, 0, 6, 0, 0], [0, 0, 0, 0, 0, 3, 0, 0, 0, 0, 0, 0]]\n--End of Test Input--\n\nYour response:"
+            }
+          },
+          {
+            "index": 1,
+            "message": {
+              "role": "assistant",
+              "content": "Based on the analysis of the training examples, the pattern is as follows:\n\n1.  **Identify the Source:** Find the starting cell containing the number `2`.\n2.  **Beam Propagation:** From the source, a \"beam\" of `2`s is emitted in the direction of movement (initially to the Right).\n3.  **Obstacle Interaction:**\n    *   If the beam encounters a non-zero number (an obstacle), it stops at the cell immediately preceding the obstacle.\n    *   At this stopping point, two new beams are generated perpendicular to the current beam's direction (e.g., if the beam was horizontal, generate Up and Down beams).\n4.  **Edge Interaction:**\n    *   If the beam reaches the boundary of the grid without hitting an obstacle, it stops at the edge.\n    *   **Crucially**, hitting the edge does *not* generate new perpendicular beams.\n5.  **Recursion:** The new beams generated at obstacles follow the same rules. This process continues until no new beams can be generated.\n6.  **Rendering:** The final grid is the original grid with the paths of all beams filled with `2`s. Original non-zero numbers are preserved (beams stop before overwriting them).\n\n**Application to Test Input:**\n\n*   **Source:** `2` at `(3, 0)`.\n*   **Beam 1 (Right):** Travels from `(3, 0)` to `(3, 5)`. Hits `6` at `(3, 6)`.\n    *   Generates Vertical Beams at `(3, 5)`.\n*   **Beam 2 (Up from 3,5):** Travels to `(0, 5)`. Hits Top Edge. Stops.\n*   **Beam 3 (Down from 3,5):** Travels to `(8, 5)`. Hits `3` at `(9, 5)`.\n    *   Generates Horizontal Beams at `(8, 5)`.\n*   **Beam 4 (Right from 8,5):** Travels to `(8, 5)`. Hits `7` at `(8, 6)`. Stops immediately. (No new effective beams as Up/Down are redundant/blocked).\n*   **Beam 5 (Left from 8,5):** Travels to `(8, 3)`. Hits `8` at `(8, 2)`.\n    *   Generates Vertical Beams at `(8, 3)`.\n*   **Beam 6 (Down from 8,3):** Travels to `(9, 3)`. Hits Bottom Edge. Stops.\n*   **Beam 7 (Up from 8,3):** Travels to `(6, 3)`. Hits `3` at `(5, 3)`.\n    *   Generates Horizontal Beams at `(6, 3)`.\n*   **Beam 8 (Left from 6,3):** Travels to `(6, 0)`. Hits Left Edge. Stops.\n*   **Beam 9 (Right from 6,3):** Travels to `(6, 8)`. Hits `6` at `(6, 9)`.\n    *   Generates Vertical Beams at `(6, 8)`.\n*   **Beam 10 (Down from 6,8):** Travels to `(9, 8)`. Hits Bottom Edge. Stops.\n*   **Beam 11 (Up from 6,8):** Travels to `(1, 8)`. Hits `7` at `(0, 8)`.\n    *   Generates Horizontal Beams at `(1, 8)`.\n*   **Beam 12 (Left from 1,8):** Travels to `(1, 0)`. Hits Left Edge. Stops.\n*   **Beam 13 (Right from 1,8):** Travels to `(1, 11)`. Hits Right Edge. Stops.\n\n**Final Output Grid:**\n\n[[0, 0, 0, 8, 0, 2, 0, 0, 7, 0, 0, 3], [2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2], [0, 0, 6, 0, 0, 2, 0, 6, 2, 0, 0, 0], [2, 2, 2, 2, 2, 2, 6, 0, 2, 0, 7, 0], [0, 0, 0, 0, 0, 2, 0, 0, 2, 0, 0, 6], [0, 0, 0, 3, 0, 2, 0, 8, 2, 0, 0, 0], [2, 2, 2, 2, 2, 2, 2, 2, 2, 6, 0, 0], [0, 0, 7, 2, 0, 2, 0, 0, 2, 0, 0, 3], [0, 0, 8, 2, 2, 2, 7, 0, 2, 6, 0, 0], [0, 0, 0, 2, 0, 3, 0, 0, 2, 0, 0, 0]]"
+            }
+          }
+        ],
+        "reasoning_summary": null,
+        "kwargs": {
+          "temperature": 0.5,
+          "max_output_tokens": 65536
+        },
+        "usage": {
+          "prompt_tokens": 3064,
+          "completion_tokens": 1258,
+          "total_tokens": 21408,
+          "completion_tokens_details": {
+            "reasoning_tokens": 17086,
+            "accepted_prediction_tokens": 1258,
+            "rejected_prediction_tokens": 0
+          }
+        },
+        "cost": {},
+        "task_id": "b942fd60",
+        "pair_index": 0,
+        "test_id": "original-prompt-ablations",
+        "raw_text": "Based on the analysis of the training examples, the pattern is as follows:\n\n1.  **Identify the Source:** Find the starting cell containing the number `2`.\n2.  **Beam Propagation:** From the source, a \"beam\" of `2`s is emitted in the direction of movement (initially to the Right).\n3.  **Obstacle Interaction:**\n    *   If the beam encounters a non-zero number (an obstacle), it stops at the cell immediately preceding the obstacle.\n    *   At this stopping point, two new beams are generated perpendicular to the current beam's direction (e.g., if the beam was horizontal, generate Up and Down beams).\n4.  **Edge Interaction:**\n    *   If the beam reaches the boundary of the grid without hitting an obstacle, it stops at the edge.\n    *   **Crucially**, hitting the edge does *not* generate new perpendicular beams.\n5.  **Recursion:** The new beams generated at obstacles follow the same rules. This process continues until no new beams can be generated.\n6.  **Rendering:** The final grid is the original grid with the paths of all beams filled with `2`s. Original non-zero numbers are preserved (beams stop before overwriting them).\n\n**Application to Test Input:**\n\n*   **Source:** `2` at `(3, 0)`.\n*   **Beam 1 (Right):** Travels from `(3, 0)` to `(3, 5)`. Hits `6` at `(3, 6)`.\n    *   Generates Vertical Beams at `(3, 5)`.\n*   **Beam 2 (Up from 3,5):** Travels to `(0, 5)`. Hits Top Edge. Stops.\n*   **Beam 3 (Down from 3,5):** Travels to `(8, 5)`. Hits `3` at `(9, 5)`.\n    *   Generates Horizontal Beams at `(8, 5)`.\n*   **Beam 4 (Right from 8,5):** Travels to `(8, 5)`. Hits `7` at `(8, 6)`. Stops immediately. (No new effective beams as Up/Down are redundant/blocked).\n*   **Beam 5 (Left from 8,5):** Travels to `(8, 3)`. Hits `8` at `(8, 2)`.\n    *   Generates Vertical Beams at `(8, 3)`.\n*   **Beam 6 (Down from 8,3):** Travels to `(9, 3)`. Hits Bottom Edge. Stops.\n*   **Beam 7 (Up from 8,3):** Travels to `(6, 3)`. Hits `3` at `(5, 3)`.\n    *   Generates Horizontal Beams at `(6, 3)`.\n*   **Beam 8 (Left from 6,3):** Travels to `(6, 0)`. Hits Left Edge. Stops.\n*   **Beam 9 (Right from 6,3):** Travels to `(6, 8)`. Hits `6` at `(6, 9)`.\n    *   Generates Vertical Beams at `(6, 8)`.\n*   **Beam 10 (Down from 6,8):** Travels to `(9, 8)`. Hits Bottom Edge. Stops.\n*   **Beam 11 (Up from 6,8):** Travels to `(1, 8)`. Hits `7` at `(0, 8)`.\n    *   Generates Horizontal Beams at `(1, 8)`.\n*   **Beam 12 (Left from 1,8):** Travels to `(1, 0)`. Hits Left Edge. Stops.\n*   **Beam 13 (Right from 1,8):** Travels to `(1, 11)`. Hits Right Edge. Stops.\n\n**Final Output Grid:**\n\n[[0, 0, 0, 8, 0, 2, 0, 0, 7, 0, 0, 3], [2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2], [0, 0, 6, 0, 0, 2, 0, 6, 2, 0, 0, 0], [2, 2, 2, 2, 2, 2, 6, 0, 2, 0, 7, 0], [0, 0, 0, 0, 0, 2, 0, 0, 2, 0, 0, 6], [0, 0, 0, 3, 0, 2, 0, 8, 2, 0, 0, 0], [2, 2, 2, 2, 2, 2, 2, 2, 2, 6, 0, 0], [0, 0, 7, 2, 0, 2, 0, 0, 2, 0, 0, 3], [0, 0, 8, 2, 2, 2, 7, 0, 2, 6, 0, 0], [0, 0, 0, 2, 0, 3, 0, 0, 2, 0, 0, 0]]",
+        "finish_reason": "STOP"
+      },
+      "correct": true
+    },
+    "attempt_2": {
+      "answer": [
+        [
+          0,
+          0,
+          0,
+          8,
+          0,
+          2,
+          0,
+          0,
+          7,
+          0,
+          0,
+          3
+        ],
+        [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        [
+          0,
+          0,
+          6,
+          0,
+          0,
+          2,
+          0,
+          6,
+          2,
+          0,
+          0,
+          0
+        ],
+        [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          6,
+          0,
+          2,
+          0,
+          7,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          2,
+          0,
+          0,
+          2,
+          0,
+          0,
+          6
+        ],
+        [
+          0,
+          0,
+          0,
+          3,
+          0,
+          2,
+          0,
+          8,
+          2,
+          0,
+          0,
+          0
+        ],
+        [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          7,
+          2,
+          0,
+          2,
+          0,
+          0,
+          2,
+          0,
+          0,
+          3
+        ],
+        [
+          0,
+          0,
+          8,
+          2,
+          2,
+          2,
+          7,
+          0,
+          2,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          2,
+          0,
+          3,
+          0,
+          0,
+          2,
+          0,
+          0,
+          0
+        ]
+      ],
+      "metadata": {
+        "model": "gemini-3-pro-preview",
+        "provider": "gemini",
+        "start_timestamp": "2025-11-22T09:17:18.505283+00:00",
+        "end_timestamp": "2025-11-22T09:20:37.481397+00:00",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "user",
+              "content": "You are participating in a puzzle solving competition. You are an expert at solving puzzles.\n\nBelow is a list of input and output pairs with a pattern. Your goal is to identify the pattern or transformation in the training examples that maps the input to the output, then apply that pattern to the test input to give a final output.\n\nRespond in the format of the training output examples\n\n--Training Examples--\n--Example 0-- \n\n INPUT: \n\n[[0, 0, 0, 0, 8, 0, 0, 0, 0, 0], [0, 0, 3, 0, 0, 0, 0, 0, 7, 0], [2, 0, 0, 0, 0, 0, 3, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 7, 0, 8, 0, 0, 6], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 7, 0, 0, 0, 6, 0, 0, 0, 8], [0, 0, 6, 0, 8, 0, 0, 0, 0, 0], [0, 0, 0, 0, 8, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 7, 0, 0, 0]]\n\nOUTPUT: \n\n[[0, 0, 0, 0, 8, 2, 0, 0, 0, 0], [0, 0, 3, 0, 0, 2, 0, 0, 7, 0], [2, 2, 2, 2, 2, 2, 3, 0, 0, 0], [0, 0, 0, 0, 0, 2, 0, 0, 0, 0], [0, 0, 0, 0, 7, 2, 8, 0, 0, 6], [2, 2, 2, 2, 2, 2, 2, 2, 2, 2], [0, 7, 0, 0, 0, 6, 0, 0, 0, 8], [0, 0, 6, 0, 8, 0, 0, 0, 0, 0], [0, 0, 0, 0, 8, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 7, 0, 0, 0]]\n\n--Example 1-- \n\n INPUT: \n\n[[0, 0, 0, 0, 3, 7, 0, 0, 0, 0, 0, 0], [0, 0, 8, 0, 0, 0, 0, 0, 7, 0, 0, 3], [0, 0, 0, 0, 0, 0, 6, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 8, 0, 0, 0, 8, 0, 0], [2, 0, 0, 8, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 7, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 6, 0, 0], [0, 0, 7, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 7, 0, 0, 7, 0, 0], [0, 0, 0, 6, 0, 0, 0, 0, 0, 0, 0, 0], [0, 3, 0, 0, 0, 0, 0, 8, 3, 0, 0, 0], [0, 0, 0, 0, 7, 0, 0, 0, 0, 0, 0, 0]]\n\nOUTPUT: \n\n[[0, 0, 0, 0, 3, 7, 0, 2, 0, 0, 0, 0], [0, 0, 8, 2, 2, 2, 2, 2, 7, 0, 0, 3], [2, 2, 2, 2, 2, 2, 6, 2, 2, 2, 2, 2], [0, 0, 2, 0, 2, 8, 0, 2, 2, 8, 0, 0], [2, 2, 2, 8, 2, 0, 0, 2, 2, 0, 0, 0], [0, 0, 2, 0, 2, 7, 0, 2, 2, 0, 0, 0], [2, 2, 2, 2, 2, 2, 2, 2, 2, 6, 0, 0], [0, 0, 7, 0, 2, 0, 0, 2, 2, 0, 0, 0], [0, 0, 0, 0, 2, 0, 7, 2, 2, 7, 0, 0], [0, 0, 0, 6, 2, 2, 2, 2, 2, 2, 2, 2], [0, 3, 0, 0, 2, 0, 0, 8, 3, 0, 0, 0], [0, 0, 0, 0, 7, 0, 0, 0, 0, 0, 0, 0]]\n\n--Example 2-- \n\n INPUT: \n\n[[0, 0, 3, 0, 0, 7], [0, 0, 0, 0, 0, 0], [2, 0, 0, 0, 3, 0], [0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 8], [0, 0, 3, 0, 0, 0]]\n\nOUTPUT: \n\n[[0, 0, 3, 2, 0, 7], [0, 0, 0, 2, 0, 0], [2, 2, 2, 2, 3, 0], [0, 0, 0, 2, 0, 0], [0, 0, 0, 2, 0, 8], [0, 0, 3, 2, 0, 0]]\n\n--Example 3-- \n\n INPUT: \n\n[[0, 7, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 3], [0, 0, 0, 0, 0, 0, 0, 0], [2, 0, 8, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 7, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]]\n\nOUTPUT: \n\n[[0, 7, 0, 0, 0, 0, 2, 0], [2, 2, 2, 2, 2, 2, 2, 3], [0, 2, 0, 0, 0, 0, 2, 0], [2, 2, 8, 0, 0, 0, 2, 0], [0, 2, 0, 0, 0, 0, 2, 0], [0, 2, 0, 0, 0, 0, 2, 0], [0, 2, 0, 0, 7, 0, 2, 0], [0, 2, 0, 0, 0, 0, 2, 0]]\n\n--Example 4-- \n\n INPUT: \n\n[[0, 0, 0, 0, 0, 0], [2, 0, 0, 0, 8, 0], [0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0]]\n\nOUTPUT: \n\n[[0, 0, 0, 2, 0, 0], [2, 2, 2, 2, 8, 0], [0, 0, 0, 2, 0, 0], [0, 0, 0, 2, 0, 0]]\n\n--Example 5-- \n\n INPUT: \n\n[[0, 0, 0, 7, 0, 0], [6, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0], [2, 0, 0, 0, 8, 0], [0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 8], [0, 0, 0, 0, 0, 0], [7, 0, 0, 0, 0, 0]]\n\nOUTPUT: \n\n[[0, 2, 0, 7, 0, 0], [6, 2, 2, 2, 2, 2], [0, 2, 0, 2, 0, 0], [2, 2, 2, 2, 8, 0], [0, 2, 0, 2, 0, 0], [0, 2, 0, 2, 0, 8], [0, 2, 0, 2, 0, 0], [7, 2, 0, 2, 0, 0]]\n\n\n--End of Training Examples--\n\n--Test Input--\n[[0, 0, 0, 8, 0, 0, 0, 0, 7, 0, 0, 3], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 6, 0, 0, 0, 0, 6, 0, 0, 0, 0], [2, 0, 0, 0, 0, 0, 6, 0, 0, 0, 7, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 6], [0, 0, 0, 3, 0, 0, 0, 8, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 6, 0, 0], [0, 0, 7, 0, 0, 0, 0, 0, 0, 0, 0, 3], [0, 0, 8, 0, 0, 0, 7, 0, 0, 6, 0, 0], [0, 0, 0, 0, 0, 3, 0, 0, 0, 0, 0, 0]]\n--End of Test Input--\n\nYour response:"
+            }
+          },
+          {
+            "index": 1,
+            "message": {
+              "role": "assistant",
+              "content": "Based on the analysis of the training examples, the pattern is a \"beam propagation\" system starting from the number '2'.\n\n**Rules:**\n1.  **Source:** The single '2' in the input grid acts as the source of the first beam. It emits a horizontal beam (usually to the right, or in both directions if not blocked).\n2.  **Propagation:** A beam travels in a straight line (horizontal or vertical) turning all empty cells (0) into '2's.\n3.  **Obstacles:** If a beam encounters a non-zero number (an obstacle), it stops at the cell immediately preceding the obstacle.\n4.  **Branching:** The cell where the beam stops (the last empty cell before the obstacle) becomes a \"Turning Point\". From this point, new beams are emitted in the perpendicular direction (e.g., if a horizontal beam hits an obstacle, vertical beams are spawned up and down from the turning point).\n5.  **Boundaries:** If a beam hits the edge of the grid, it stops, but *no* branching occurs.\n6.  **Termination:** The process continues until no new beams can be generated.\n\n**Applying to Test Input:**\n\n1.  **Start:** '2' at `(3, 0)`.\n    *   **Beam 1 (Row 3 Right):** Travels from `(3, 0)` to the right.\n    *   **Hit:** Encounter `6` at `(3, 6)`.\n    *   **Turning Point:** `(3, 5)`.\n    *   **Action:** Mark `(3, 1)` to `(3, 5)` as '2'. Spawn Vertical beams at `(3, 5)`.\n\n2.  **Beam 2 (Col 5 Up):** From `(3, 5)` up.\n    *   **Hit:** Top edge of grid.\n    *   **Action:** Mark `(2, 5)`, `(1, 5)`, `(0, 5)` as '2'. Stop.\n\n3.  **Beam 3 (Col 5 Down):** From `(3, 5)` down.\n    *   **Hit:** Encounter `3` at `(9, 5)`.\n    *   **Turning Point:** `(8, 5)`.\n    *   **Action:** Mark `(4, 5)` to `(8, 5)` as '2'. Spawn Horizontal beams at `(8, 5)`.\n\n4.  **Beam 4 (Row 8 Left):** From `(8, 5)` left.\n    *   **Hit:** Encounter `8` at `(8, 2)`.\n    *   **Turning Point:** `(8, 3)`.\n    *   **Action:** Mark `(8, 4)`, `(8, 3)` as '2'. Spawn Vertical beams at `(8, 3)`.\n\n5.  **Beam 5 (Row 8 Right):** From `(8, 5)` right.\n    *   **Hit:** Encounter `7` at `(8, 6)`.\n    *   **Turning Point:** `(8, 5)`.\n    *   **Action:** No new cells marked (start is TP). Spawn Vertical beams at `(8, 5)`. (Vertical beams here would re-trace or hit immediate obstacles, effectively dead end).\n\n6.  **Beam 6 (Col 3 Up):** From `(8, 3)` up.\n    *   **Hit:** Encounter `3` at `(5, 3)`.\n    *   **Turning Point:** `(6, 3)`.\n    *   **Action:** Mark `(7, 3)`, `(6, 3)` as '2'. Spawn Horizontal beams at `(6, 3)`.\n\n7.  **Beam 7 (Col 3 Down):** From `(8, 3)` down.\n    *   **Hit:** Bottom edge.\n    *   **Action:** Mark `(9, 3)` as '2'. Stop.\n\n8.  **Beam 8 (Row 6 Left):** From `(6, 3)` left.\n    *   **Hit:** Left edge.\n    *   **Action:** Mark `(6, 2)`, `(6, 1)`, `(6, 0)` as '2'. Stop.\n\n9.  **Beam 9 (Row 6 Right):** From `(6, 3)` right.\n    *   **Hit:** Encounter `6` at `(6, 9)`.\n    *   **Turning Point:** `(6, 8)`.\n    *   **Action:** Mark `(6, 4)` to `(6, 8)` as '2'. Spawn Vertical beams at `(6, 8)`.\n\n10. **Beam 10 (Col 8 Up):** From `(6, 8)` up.\n    *   **Hit:** Encounter `7` at `(0, 8)`.\n    *   **Turning Point:** `(1, 8)`.\n    *   **Action:** Mark `(5, 8)` to `(1, 8)` as '2'. Spawn Horizontal beams at `(1, 8)`.\n\n11. **Beam 11 (Col 8 Down):** From `(6, 8)` down.\n    *   **Hit:** Bottom edge.\n    *   **Action:** Mark `(7, 8)` to `(9, 8)` as '2'. Stop.\n\n12. **Beam 12 (Row 1 Left):** From `(1, 8)` left.\n    *   **Hit:** Left edge.\n    *   **Action:** Mark `(1, 7)` to `(1, 0)` as '2'. Stop.\n\n13. **Beam 13 (Row 1 Right):** From `(1, 8)` right.\n    *   **Hit:** Right edge.\n    *   **Action:** Mark `(1, 9)` to `(1, 11)` as '2'. Stop.\n\n**Final Grid Construction:**\nCombining all marked '2's with the original non-zero numbers.\n\n[[0, 0, 0, 8, 0, 2, 0, 0, 7, 0, 0, 3], [2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2], [0, 0, 6, 0, 0, 2, 0, 6, 2, 0, 0, 0], [2, 2, 2, 2, 2, 2, 6, 0, 2, 0, 7, 0], [0, 0, 0, 0, 0, 2, 0, 0, 2, 0, 0, 6], [0, 0, 0, 3, 0, 2, 0, 8, 2, 0, 0, 0], [2, 2, 2, 2, 2, 2, 2, 2, 2, 6, 0, 0], [0, 0, 7, 2, 0, 2, 0, 0, 2, 0, 0, 3], [0, 0, 8, 2, 2, 2, 7, 0, 2, 6, 0, 0], [0, 0, 0, 2, 0, 3, 0, 0, 2, 0, 0, 0]]"
+            }
+          }
+        ],
+        "reasoning_summary": null,
+        "kwargs": {
+          "temperature": 0.5,
+          "max_output_tokens": 65536
+        },
+        "usage": {
+          "prompt_tokens": 3064,
+          "completion_tokens": 1759,
+          "total_tokens": 26728,
+          "completion_tokens_details": {
+            "reasoning_tokens": 21905,
+            "accepted_prediction_tokens": 1759,
+            "rejected_prediction_tokens": 0
+          }
+        },
+        "cost": {},
+        "task_id": "b942fd60",
+        "pair_index": 0,
+        "test_id": "original-prompt-ablations",
+        "raw_text": "Based on the analysis of the training examples, the pattern is a \"beam propagation\" system starting from the number '2'.\n\n**Rules:**\n1.  **Source:** The single '2' in the input grid acts as the source of the first beam. It emits a horizontal beam (usually to the right, or in both directions if not blocked).\n2.  **Propagation:** A beam travels in a straight line (horizontal or vertical) turning all empty cells (0) into '2's.\n3.  **Obstacles:** If a beam encounters a non-zero number (an obstacle), it stops at the cell immediately preceding the obstacle.\n4.  **Branching:** The cell where the beam stops (the last empty cell before the obstacle) becomes a \"Turning Point\". From this point, new beams are emitted in the perpendicular direction (e.g., if a horizontal beam hits an obstacle, vertical beams are spawned up and down from the turning point).\n5.  **Boundaries:** If a beam hits the edge of the grid, it stops, but *no* branching occurs.\n6.  **Termination:** The process continues until no new beams can be generated.\n\n**Applying to Test Input:**\n\n1.  **Start:** '2' at `(3, 0)`.\n    *   **Beam 1 (Row 3 Right):** Travels from `(3, 0)` to the right.\n    *   **Hit:** Encounter `6` at `(3, 6)`.\n    *   **Turning Point:** `(3, 5)`.\n    *   **Action:** Mark `(3, 1)` to `(3, 5)` as '2'. Spawn Vertical beams at `(3, 5)`.\n\n2.  **Beam 2 (Col 5 Up):** From `(3, 5)` up.\n    *   **Hit:** Top edge of grid.\n    *   **Action:** Mark `(2, 5)`, `(1, 5)`, `(0, 5)` as '2'. Stop.\n\n3.  **Beam 3 (Col 5 Down):** From `(3, 5)` down.\n    *   **Hit:** Encounter `3` at `(9, 5)`.\n    *   **Turning Point:** `(8, 5)`.\n    *   **Action:** Mark `(4, 5)` to `(8, 5)` as '2'. Spawn Horizontal beams at `(8, 5)`.\n\n4.  **Beam 4 (Row 8 Left):** From `(8, 5)` left.\n    *   **Hit:** Encounter `8` at `(8, 2)`.\n    *   **Turning Point:** `(8, 3)`.\n    *   **Action:** Mark `(8, 4)`, `(8, 3)` as '2'. Spawn Vertical beams at `(8, 3)`.\n\n5.  **Beam 5 (Row 8 Right):** From `(8, 5)` right.\n    *   **Hit:** Encounter `7` at `(8, 6)`.\n    *   **Turning Point:** `(8, 5)`.\n    *   **Action:** No new cells marked (start is TP). Spawn Vertical beams at `(8, 5)`. (Vertical beams here would re-trace or hit immediate obstacles, effectively dead end).\n\n6.  **Beam 6 (Col 3 Up):** From `(8, 3)` up.\n    *   **Hit:** Encounter `3` at `(5, 3)`.\n    *   **Turning Point:** `(6, 3)`.\n    *   **Action:** Mark `(7, 3)`, `(6, 3)` as '2'. Spawn Horizontal beams at `(6, 3)`.\n\n7.  **Beam 7 (Col 3 Down):** From `(8, 3)` down.\n    *   **Hit:** Bottom edge.\n    *   **Action:** Mark `(9, 3)` as '2'. Stop.\n\n8.  **Beam 8 (Row 6 Left):** From `(6, 3)` left.\n    *   **Hit:** Left edge.\n    *   **Action:** Mark `(6, 2)`, `(6, 1)`, `(6, 0)` as '2'. Stop.\n\n9.  **Beam 9 (Row 6 Right):** From `(6, 3)` right.\n    *   **Hit:** Encounter `6` at `(6, 9)`.\n    *   **Turning Point:** `(6, 8)`.\n    *   **Action:** Mark `(6, 4)` to `(6, 8)` as '2'. Spawn Vertical beams at `(6, 8)`.\n\n10. **Beam 10 (Col 8 Up):** From `(6, 8)` up.\n    *   **Hit:** Encounter `7` at `(0, 8)`.\n    *   **Turning Point:** `(1, 8)`.\n    *   **Action:** Mark `(5, 8)` to `(1, 8)` as '2'. Spawn Horizontal beams at `(1, 8)`.\n\n11. **Beam 11 (Col 8 Down):** From `(6, 8)` down.\n    *   **Hit:** Bottom edge.\n    *   **Action:** Mark `(7, 8)` to `(9, 8)` as '2'. Stop.\n\n12. **Beam 12 (Row 1 Left):** From `(1, 8)` left.\n    *   **Hit:** Left edge.\n    *   **Action:** Mark `(1, 7)` to `(1, 0)` as '2'. Stop.\n\n13. **Beam 13 (Row 1 Right):** From `(1, 8)` right.\n    *   **Hit:** Right edge.\n    *   **Action:** Mark `(1, 9)` to `(1, 11)` as '2'. Stop.\n\n**Final Grid Construction:**\nCombining all marked '2's with the original non-zero numbers.\n\n[[0, 0, 0, 8, 0, 2, 0, 0, 7, 0, 0, 3], [2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2], [0, 0, 6, 0, 0, 2, 0, 6, 2, 0, 0, 0], [2, 2, 2, 2, 2, 2, 6, 0, 2, 0, 7, 0], [0, 0, 0, 0, 0, 2, 0, 0, 2, 0, 0, 6], [0, 0, 0, 3, 0, 2, 0, 8, 2, 0, 0, 0], [2, 2, 2, 2, 2, 2, 2, 2, 2, 6, 0, 0], [0, 0, 7, 2, 0, 2, 0, 0, 2, 0, 0, 3], [0, 0, 8, 2, 2, 2, 7, 0, 2, 6, 0, 0], [0, 0, 0, 2, 0, 3, 0, 0, 2, 0, 0, 0]]",
+        "finish_reason": "STOP"
+      },
+      "correct": true
+    },
+    "attempt_4": {
+      "answer": [
+        [
+          0,
+          2,
+          0,
+          8,
+          0,
+          2,
+          0,
+          0,
+          7,
+          0,
+          0,
+          3
+        ],
+        [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        [
+          0,
+          2,
+          6,
+          0,
+          0,
+          2,
+          0,
+          6,
+          2,
+          0,
+          0,
+          0
+        ],
+        [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          6,
+          0,
+          2,
+          0,
+          7,
+          0
+        ],
+        [
+          0,
+          2,
+          0,
+          0,
+          0,
+          2,
+          0,
+          0,
+          2,
+          0,
+          0,
+          6
+        ],
+        [
+          0,
+          2,
+          0,
+          3,
+          0,
+          2,
+          0,
+          8,
+          2,
+          0,
+          0,
+          0
+        ],
+        [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          2,
+          7,
+          2,
+          0,
+          2,
+          0,
+          0,
+          2,
+          0,
+          0,
+          3
+        ],
+        [
+          0,
+          2,
+          8,
+          2,
+          2,
+          2,
+          7,
+          0,
+          2,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          2,
+          0,
+          2,
+          0,
+          3,
+          0,
+          0,
+          2,
+          0,
+          0,
+          0
+        ]
+      ],
+      "metadata": {
+        "model": "gemini-3-pro-preview",
+        "provider": "gemini",
+        "start_timestamp": "2025-11-22T09:17:18.506313+00:00",
+        "end_timestamp": "2025-11-22T09:20:58.688623+00:00",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "user",
+              "content": "You are participating in a puzzle solving competition. You are an expert at solving puzzles.\n\nBelow is a list of input and output pairs with a pattern. Your goal is to identify the pattern or transformation in the training examples that maps the input to the output, then apply that pattern to the test input to give a final output.\n\nRespond in the format of the training output examples\n\n--Training Examples--\n--Example 0-- \n\n INPUT: \n\n[[0, 0, 0, 0, 8, 0, 0, 0, 0, 0], [0, 0, 3, 0, 0, 0, 0, 0, 7, 0], [2, 0, 0, 0, 0, 0, 3, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 7, 0, 8, 0, 0, 6], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 7, 0, 0, 0, 6, 0, 0, 0, 8], [0, 0, 6, 0, 8, 0, 0, 0, 0, 0], [0, 0, 0, 0, 8, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 7, 0, 0, 0]]\n\nOUTPUT: \n\n[[0, 0, 0, 0, 8, 2, 0, 0, 0, 0], [0, 0, 3, 0, 0, 2, 0, 0, 7, 0], [2, 2, 2, 2, 2, 2, 3, 0, 0, 0], [0, 0, 0, 0, 0, 2, 0, 0, 0, 0], [0, 0, 0, 0, 7, 2, 8, 0, 0, 6], [2, 2, 2, 2, 2, 2, 2, 2, 2, 2], [0, 7, 0, 0, 0, 6, 0, 0, 0, 8], [0, 0, 6, 0, 8, 0, 0, 0, 0, 0], [0, 0, 0, 0, 8, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 7, 0, 0, 0]]\n\n--Example 1-- \n\n INPUT: \n\n[[0, 0, 0, 0, 3, 7, 0, 0, 0, 0, 0, 0], [0, 0, 8, 0, 0, 0, 0, 0, 7, 0, 0, 3], [0, 0, 0, 0, 0, 0, 6, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 8, 0, 0, 0, 8, 0, 0], [2, 0, 0, 8, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 7, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 6, 0, 0], [0, 0, 7, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 7, 0, 0, 7, 0, 0], [0, 0, 0, 6, 0, 0, 0, 0, 0, 0, 0, 0], [0, 3, 0, 0, 0, 0, 0, 8, 3, 0, 0, 0], [0, 0, 0, 0, 7, 0, 0, 0, 0, 0, 0, 0]]\n\nOUTPUT: \n\n[[0, 0, 0, 0, 3, 7, 0, 2, 0, 0, 0, 0], [0, 0, 8, 2, 2, 2, 2, 2, 7, 0, 0, 3], [2, 2, 2, 2, 2, 2, 6, 2, 2, 2, 2, 2], [0, 0, 2, 0, 2, 8, 0, 2, 2, 8, 0, 0], [2, 2, 2, 8, 2, 0, 0, 2, 2, 0, 0, 0], [0, 0, 2, 0, 2, 7, 0, 2, 2, 0, 0, 0], [2, 2, 2, 2, 2, 2, 2, 2, 2, 6, 0, 0], [0, 0, 7, 0, 2, 0, 0, 2, 2, 0, 0, 0], [0, 0, 0, 0, 2, 0, 7, 2, 2, 7, 0, 0], [0, 0, 0, 6, 2, 2, 2, 2, 2, 2, 2, 2], [0, 3, 0, 0, 2, 0, 0, 8, 3, 0, 0, 0], [0, 0, 0, 0, 7, 0, 0, 0, 0, 0, 0, 0]]\n\n--Example 2-- \n\n INPUT: \n\n[[0, 0, 3, 0, 0, 7], [0, 0, 0, 0, 0, 0], [2, 0, 0, 0, 3, 0], [0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 8], [0, 0, 3, 0, 0, 0]]\n\nOUTPUT: \n\n[[0, 0, 3, 2, 0, 7], [0, 0, 0, 2, 0, 0], [2, 2, 2, 2, 3, 0], [0, 0, 0, 2, 0, 0], [0, 0, 0, 2, 0, 8], [0, 0, 3, 2, 0, 0]]\n\n--Example 3-- \n\n INPUT: \n\n[[0, 7, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 3], [0, 0, 0, 0, 0, 0, 0, 0], [2, 0, 8, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 7, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]]\n\nOUTPUT: \n\n[[0, 7, 0, 0, 0, 0, 2, 0], [2, 2, 2, 2, 2, 2, 2, 3], [0, 2, 0, 0, 0, 0, 2, 0], [2, 2, 8, 0, 0, 0, 2, 0], [0, 2, 0, 0, 0, 0, 2, 0], [0, 2, 0, 0, 0, 0, 2, 0], [0, 2, 0, 0, 7, 0, 2, 0], [0, 2, 0, 0, 0, 0, 2, 0]]\n\n--Example 4-- \n\n INPUT: \n\n[[0, 0, 0, 0, 0, 0], [2, 0, 0, 0, 8, 0], [0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0]]\n\nOUTPUT: \n\n[[0, 0, 0, 2, 0, 0], [2, 2, 2, 2, 8, 0], [0, 0, 0, 2, 0, 0], [0, 0, 0, 2, 0, 0]]\n\n--Example 5-- \n\n INPUT: \n\n[[0, 0, 0, 7, 0, 0], [6, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0], [2, 0, 0, 0, 8, 0], [0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 8], [0, 0, 0, 0, 0, 0], [7, 0, 0, 0, 0, 0]]\n\nOUTPUT: \n\n[[0, 2, 0, 7, 0, 0], [6, 2, 2, 2, 2, 2], [0, 2, 0, 2, 0, 0], [2, 2, 2, 2, 8, 0], [0, 2, 0, 2, 0, 0], [0, 2, 0, 2, 0, 8], [0, 2, 0, 2, 0, 0], [7, 2, 0, 2, 0, 0]]\n\n\n--End of Training Examples--\n\n--Test Input--\n[[0, 0, 0, 8, 0, 0, 0, 0, 7, 0, 0, 3], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 6, 0, 0, 0, 0, 6, 0, 0, 0, 0], [2, 0, 0, 0, 0, 0, 6, 0, 0, 0, 7, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 6], [0, 0, 0, 3, 0, 0, 0, 8, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 6, 0, 0], [0, 0, 7, 0, 0, 0, 0, 0, 0, 0, 0, 3], [0, 0, 8, 0, 0, 0, 7, 0, 0, 6, 0, 0], [0, 0, 0, 0, 0, 3, 0, 0, 0, 0, 0, 0]]\n--End of Test Input--\n\nYour response:"
+            }
+          },
+          {
+            "index": 1,
+            "message": {
+              "role": "assistant",
+              "content": "Based on the analysis of the training examples, the pattern is a recursive generation of \"beams\" (lines of the value 2) starting from a source pixel (value 2).\n\n**Rules:**\n1.  **Source:** Find the starting pixel with value 2. This initiates a horizontal beam on that row.\n2.  **Beam Propagation:** A beam travels in its direction (Horizontal or Vertical) until it hits a non-zero pixel (an obstacle) or the grid edge. The beam fills the empty cells with 2s.\n3.  **Reflection/Trigger:** When a beam hits an obstacle, it triggers a new beam perpendicular to the current one.\n    *   The new beam is positioned at the row/column immediately **before** the obstacle (relative to the beam's direction).\n    *   For example, if a beam moving Right on Row R hits an object at Column C, a new Vertical beam is spawned at Column C-1.\n    *   If a beam moving Up on Column C hits an object at Row R, a new Horizontal beam is spawned at Row R+1.\n4.  **Chain Reaction:** The new beams propagate from the intersection point with the parent beam and can trigger further beams if they hit other obstacles.\n\n**Applying to Test Input:**\n\n1.  **Start:** Source 2 is at `(3, 0)`.\n    *   **Beam 1 (Row 3):** Travels Right from `(3, 0)`.\n    *   Hits object `6` at `(3, 6)`.\n    *   Fills `(3, 0)` to `(3, 5)` with 2s.\n    *   **Trigger:** Hit at `(3, 6)` from Left -> Spawn Vertical Beam at **Col 5**.\n\n2.  **Beam 2 (Col 5):** Source is intersection `(3, 5)`.\n    *   Travels Up to `(0, 5)`. No obstacles. Fills `(0, 5)` to `(3, 5)`.\n    *   Travels Down. Hits object `3` at `(9, 5)`.\n    *   Fills `(3, 5)` to `(8, 5)`.\n    *   **Trigger:** Hit at `(9, 5)` from Top -> Spawn Horizontal Beam at **Row 8**.\n\n3.  **Beam 3 (Row 8):** Source is intersection `(8, 5)`.\n    *   Travels Right. Hits object `7` at `(8, 6)`.\n    *   Fills `(8, 5)`. (Trigger at Col 5 is the parent, so no new line).\n    *   Travels Left. Hits object `8` at `(8, 2)`.\n    *   Fills `(8, 5)` to `(8, 3)`.\n    *   **Trigger:** Hit at `(8, 2)` from Right -> Spawn Vertical Beam at **Col 3**.\n\n4.  **Beam 4 (Col 3):** Source is intersection `(8, 3)`.\n    *   Travels Down. Hits nothing (Row 9 is 0). Fills `(8, 3)` to `(9, 3)`.\n    *   Travels Up. Hits object `3` at `(5, 3)`.\n    *   Fills `(8, 3)` to `(6, 3)`.\n    *   **Trigger:** Hit at `(5, 3)` from Bottom -> Spawn Horizontal Beam at **Row 6**.\n\n5.  **Beam 5 (Row 6):** Source is intersection `(6, 3)`.\n    *   Travels Left. Hits nothing. Fills `(6, 3)` to `(6, 0)`. (Wait, input Row 6 is empty to the left? Yes).\n    *   Travels Right. Hits object `6` at `(6, 9)`.\n    *   Fills `(6, 3)` to `(6, 8)`.\n    *   **Trigger:** Hit at `(6, 9)` from Left -> Spawn Vertical Beam at **Col 8**.\n\n6.  **Beam 6 (Col 8):** Source is intersection `(6, 8)`.\n    *   Travels Down. Hits nothing. Fills `(6, 8)` to `(9, 8)`.\n    *   Travels Up. Hits object `7` at `(0, 8)`.\n    *   Fills `(6, 8)` to `(1, 8)`.\n    *   **Trigger:** Hit at `(0, 8)` from Bottom -> Spawn Horizontal Beam at **Row 1**.\n\n7.  **Beam 7 (Row 1):** Source is intersection `(1, 8)`.\n    *   Travels Left and Right. Hits nothing (Row 1 is empty).\n    *   Fills entire Row 1 with 2s.\n\n**Summary of 2s:**\n*   **Row 1:** All columns `[0-11]`.\n*   **Row 3:** Columns `[0-5]`.\n*   **Row 6:** Columns `[0-8]` (Left to edge, Right to 8).\n*   **Row 8:** Columns `[3-5]`.\n*   **Col 3:** Rows `[6-9]`.\n*   **Col 5:** Rows `[0-8]`.\n*   **Col 8:** Rows `[1-9]`.\n\n**Constructing the Output Grid:**\n\n[[0, 2, 0, 8, 0, 2, 0, 0, 7, 0, 0, 3],\n [2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2],\n [0, 2, 6, 0, 0, 2, 0, 6, 2, 0, 0, 0],\n [2, 2, 2, 2, 2, 2, 6, 0, 2, 0, 7, 0],\n [0, 2, 0, 0, 0, 2, 0, 0, 2, 0, 0, 6],\n [0, 2, 0, 3, 0, 2, 0, 8, 2, 0, 0, 0],\n [2, 2, 2, 2, 2, 2, 2, 2, 2, 6, 0, 0],\n [0, 2, 7, 2, 0, 2, 0, 0, 2, 0, 0, 3],\n [0, 2, 8, 2, 2, 2, 7, 0, 2, 6, 0, 0],\n [0, 2, 0, 2, 0, 3, 0, 0, 2, 0, 0, 0]]\n\n*Double Check Row 6:* Beam starts at `(6,3)`. Goes Left to `(6,0)`. Goes Right to `(6,8)`. So `0-8` are 2s.\n*Double Check Col 8:* Beam starts at `(6,8)`. Goes Up to `(1,8)`. Goes Down to `(9,8)`. So `1-9` are 2s.\n\n**Final Output:**\n[[0, 2, 0, 8, 0, 2, 0, 0, 7, 0, 0, 3], [2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2], [0, 2, 6, 0, 0, 2, 0, 6, 2, 0, 0, 0], [2, 2, 2, 2, 2, 2, 6, 0, 2, 0, 7, 0], [0, 2, 0, 0, 0, 2, 0, 0, 2, 0, 0, 6], [0, 2, 0, 3, 0, 2, 0, 8, 2, 0, 0, 0], [2, 2, 2, 2, 2, 2, 2, 2, 2, 6, 0, 0], [0, 2, 7, 2, 0, 2, 0, 0, 2, 0, 0, 3], [0, 2, 8, 2, 2, 2, 7, 0, 2, 6, 0, 0], [0, 2, 0, 2, 0, 3, 0, 0, 2, 0, 0, 0]]"
+            }
+          }
+        ],
+        "reasoning_summary": null,
+        "kwargs": {
+          "temperature": 0.5,
+          "max_output_tokens": 65536
+        },
+        "usage": {
+          "prompt_tokens": 3064,
+          "completion_tokens": 2103,
+          "total_tokens": 28734,
+          "completion_tokens_details": {
+            "reasoning_tokens": 23567,
+            "accepted_prediction_tokens": 2103,
+            "rejected_prediction_tokens": 0
+          }
+        },
+        "cost": {},
+        "task_id": "b942fd60",
+        "pair_index": 0,
+        "test_id": "original-prompt-ablations",
+        "raw_text": "Based on the analysis of the training examples, the pattern is a recursive generation of \"beams\" (lines of the value 2) starting from a source pixel (value 2).\n\n**Rules:**\n1.  **Source:** Find the starting pixel with value 2. This initiates a horizontal beam on that row.\n2.  **Beam Propagation:** A beam travels in its direction (Horizontal or Vertical) until it hits a non-zero pixel (an obstacle) or the grid edge. The beam fills the empty cells with 2s.\n3.  **Reflection/Trigger:** When a beam hits an obstacle, it triggers a new beam perpendicular to the current one.\n    *   The new beam is positioned at the row/column immediately **before** the obstacle (relative to the beam's direction).\n    *   For example, if a beam moving Right on Row R hits an object at Column C, a new Vertical beam is spawned at Column C-1.\n    *   If a beam moving Up on Column C hits an object at Row R, a new Horizontal beam is spawned at Row R+1.\n4.  **Chain Reaction:** The new beams propagate from the intersection point with the parent beam and can trigger further beams if they hit other obstacles.\n\n**Applying to Test Input:**\n\n1.  **Start:** Source 2 is at `(3, 0)`.\n    *   **Beam 1 (Row 3):** Travels Right from `(3, 0)`.\n    *   Hits object `6` at `(3, 6)`.\n    *   Fills `(3, 0)` to `(3, 5)` with 2s.\n    *   **Trigger:** Hit at `(3, 6)` from Left -> Spawn Vertical Beam at **Col 5**.\n\n2.  **Beam 2 (Col 5):** Source is intersection `(3, 5)`.\n    *   Travels Up to `(0, 5)`. No obstacles. Fills `(0, 5)` to `(3, 5)`.\n    *   Travels Down. Hits object `3` at `(9, 5)`.\n    *   Fills `(3, 5)` to `(8, 5)`.\n    *   **Trigger:** Hit at `(9, 5)` from Top -> Spawn Horizontal Beam at **Row 8**.\n\n3.  **Beam 3 (Row 8):** Source is intersection `(8, 5)`.\n    *   Travels Right. Hits object `7` at `(8, 6)`.\n    *   Fills `(8, 5)`. (Trigger at Col 5 is the parent, so no new line).\n    *   Travels Left. Hits object `8` at `(8, 2)`.\n    *   Fills `(8, 5)` to `(8, 3)`.\n    *   **Trigger:** Hit at `(8, 2)` from Right -> Spawn Vertical Beam at **Col 3**.\n\n4.  **Beam 4 (Col 3):** Source is intersection `(8, 3)`.\n    *   Travels Down. Hits nothing (Row 9 is 0). Fills `(8, 3)` to `(9, 3)`.\n    *   Travels Up. Hits object `3` at `(5, 3)`.\n    *   Fills `(8, 3)` to `(6, 3)`.\n    *   **Trigger:** Hit at `(5, 3)` from Bottom -> Spawn Horizontal Beam at **Row 6**.\n\n5.  **Beam 5 (Row 6):** Source is intersection `(6, 3)`.\n    *   Travels Left. Hits nothing. Fills `(6, 3)` to `(6, 0)`. (Wait, input Row 6 is empty to the left? Yes).\n    *   Travels Right. Hits object `6` at `(6, 9)`.\n    *   Fills `(6, 3)` to `(6, 8)`.\n    *   **Trigger:** Hit at `(6, 9)` from Left -> Spawn Vertical Beam at **Col 8**.\n\n6.  **Beam 6 (Col 8):** Source is intersection `(6, 8)`.\n    *   Travels Down. Hits nothing. Fills `(6, 8)` to `(9, 8)`.\n    *   Travels Up. Hits object `7` at `(0, 8)`.\n    *   Fills `(6, 8)` to `(1, 8)`.\n    *   **Trigger:** Hit at `(0, 8)` from Bottom -> Spawn Horizontal Beam at **Row 1**.\n\n7.  **Beam 7 (Row 1):** Source is intersection `(1, 8)`.\n    *   Travels Left and Right. Hits nothing (Row 1 is empty).\n    *   Fills entire Row 1 with 2s.\n\n**Summary of 2s:**\n*   **Row 1:** All columns `[0-11]`.\n*   **Row 3:** Columns `[0-5]`.\n*   **Row 6:** Columns `[0-8]` (Left to edge, Right to 8).\n*   **Row 8:** Columns `[3-5]`.\n*   **Col 3:** Rows `[6-9]`.\n*   **Col 5:** Rows `[0-8]`.\n*   **Col 8:** Rows `[1-9]`.\n\n**Constructing the Output Grid:**\n\n[[0, 2, 0, 8, 0, 2, 0, 0, 7, 0, 0, 3],\n [2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2],\n [0, 2, 6, 0, 0, 2, 0, 6, 2, 0, 0, 0],\n [2, 2, 2, 2, 2, 2, 6, 0, 2, 0, 7, 0],\n [0, 2, 0, 0, 0, 2, 0, 0, 2, 0, 0, 6],\n [0, 2, 0, 3, 0, 2, 0, 8, 2, 0, 0, 0],\n [2, 2, 2, 2, 2, 2, 2, 2, 2, 6, 0, 0],\n [0, 2, 7, 2, 0, 2, 0, 0, 2, 0, 0, 3],\n [0, 2, 8, 2, 2, 2, 7, 0, 2, 6, 0, 0],\n [0, 2, 0, 2, 0, 3, 0, 0, 2, 0, 0, 0]]\n\n*Double Check Row 6:* Beam starts at `(6,3)`. Goes Left to `(6,0)`. Goes Right to `(6,8)`. So `0-8` are 2s.\n*Double Check Col 8:* Beam starts at `(6,8)`. Goes Up to `(1,8)`. Goes Down to `(9,8)`. So `1-9` are 2s.\n\n**Final Output:**\n[[0, 2, 0, 8, 0, 2, 0, 0, 7, 0, 0, 3], [2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2], [0, 2, 6, 0, 0, 2, 0, 6, 2, 0, 0, 0], [2, 2, 2, 2, 2, 2, 6, 0, 2, 0, 7, 0], [0, 2, 0, 0, 0, 2, 0, 0, 2, 0, 0, 6], [0, 2, 0, 3, 0, 2, 0, 8, 2, 0, 0, 0], [2, 2, 2, 2, 2, 2, 2, 2, 2, 6, 0, 0], [0, 2, 7, 2, 0, 2, 0, 0, 2, 0, 0, 3], [0, 2, 8, 2, 2, 2, 7, 0, 2, 6, 0, 0], [0, 2, 0, 2, 0, 3, 0, 0, 2, 0, 0, 0]]",
+        "finish_reason": "STOP"
+      },
+      "correct": false
+    }
+  }
+]

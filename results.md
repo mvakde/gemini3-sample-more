@@ -1,14 +1,14 @@
 Originally, there were 53/400 tasks wrong in ARC-1 public eval
 
-Out of 53, 12 tasks get solved through retries. 
+Out of 53, 29 were solved atleast once by pass@13
 
-Now we gotta check the 12 tasks whether they get solved first time or not 
+Out of 53, 12 were solved by asking gemini to fix mistakes
 
-Out of 12, 9 were solved atleast once 
+21 tasks were solved by neither. Out of these, 2 solved by pass@25
 
-Out of the remaining 41, 20 were solved atleast once by 
+List of tasks solved by pass@13
 
-List of tasks corrected in 3 loops:
+List of tasks solved by asking gemini to fix mistakes:
 - 0d87d2a6 (attempt 1)
 - 1c56ad9f (attempt 1)
 - 4e45f183 (attempt 1)
@@ -22,7 +22,11 @@ List of tasks corrected in 3 loops:
 - ac0c5833 (attempt 3)
 - d94c3b52 (attempt 3)
 
-List of wrong tasks:
+List of tasks solved by pass@25
+- 62ab2642
+- a04b2602
+
+List of all initial wrong tasks:
 - 0934a4d8
 - 09c534e7
 - 0d87d2a6

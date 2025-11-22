@@ -30,9 +30,9 @@ OUTPUT_ROOT = BASE_DIR / "original-prompt-ablations"
 # (label, temperature, attempts)
 TEMPERATURE_SCHEDULE: List[Tuple[str, float, int]] = [
     # ("temp-0", 0.0, 1),
-    ("temp-0-point-5", 0.5, 4),
-    ("temp-1", 1.0, 4),
-    ("temp-1-point-5", 1.5, 4),
+    # ("temp-0-point-75", 0.75, 4),
+    ("temp-1", 1.0, 5),
+    ("temp-1-point-5", 1.5, 5),
 ]
 
 
